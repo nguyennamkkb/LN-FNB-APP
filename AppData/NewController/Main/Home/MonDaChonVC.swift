@@ -22,6 +22,9 @@ class MonDaChonVC: BaseVC {
     func setupUI(){
         btnXacNhan.layer.cornerRadius = C.CornerRadius.corner5
     }
+    @IBAction func xacNhanPressed(_ sender: Any) {
+        self.pushVC(controller: BanDangPhucVuVC())
+    }
     
 }
 

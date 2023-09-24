@@ -57,6 +57,8 @@
 		0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */; };
 		0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */; };
 		0BCF19852A43696A004F11CB /* ParamSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF19842A43696A004F11CB /* ParamSearch.swift */; };
+		0BE00C032AC023AF002C1C04 /* BanDangPhucVuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE00C012AC023AF002C1C04 /* BanDangPhucVuVC.swift */; };
+		0BE00C042AC023AF002C1C04 /* BanDangPhucVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE00C022AC023AF002C1C04 /* BanDangPhucVuVC.xib */; };
 		0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE038E029F81F6D002CB20F /* AppDelegate.swift */; };
 		0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE038E229F81F6D002CB20F /* SceneDelegate.swift */; };
 		0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE038E429F81F6D002CB20F /* ViewController.swift */; };
@@ -168,6 +170,8 @@
 		0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
 		0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		0BCF19842A43696A004F11CB /* ParamSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamSearch.swift; sourceTree = "<group>"; };
+		0BE00C012AC023AF002C1C04 /* BanDangPhucVuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanDangPhucVuVC.swift; sourceTree = "<group>"; };
+		0BE00C022AC023AF002C1C04 /* BanDangPhucVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BanDangPhucVuVC.xib; sourceTree = "<group>"; };
 		0BE038DD29F81F6D002CB20F /* LN FNB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LN FNB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BE038E029F81F6D002CB20F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BE038E229F81F6D002CB20F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 		0B9CC4CD2AB36F4A00A0711F /* NewController */ = {
 			isa = PBXGroup;
 			children = (
+				0BE00BFC2AC01DF7002C1C04 /* Orther */,
 				0BF42AA82AB6017400592A0E /* Auth */,
 				0B9CC4CE2AB36F5400A0711F /* Main */,
 				0BA5D5222AB768C20031FBF9 /* TabBarVC.swift */,
@@ -285,7 +290,6 @@
 		0B9CC4CE2AB36F5400A0711F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				0B45BC9E2ABA124E0073A380 /* Print */,
 				0BA5D5272AB7693B0031FBF9 /* More */,
 				0BA5D5262AB7691F0031FBF9 /* Serving */,
 				0BA5D4FF2AB6AA7F0031FBF9 /* Home */,
@@ -317,6 +321,8 @@
 			children = (
 				0B45BC9A2ABA0DEA0073A380 /* DangPhucVuVC.swift */,
 				0B45BC9B2ABA0DEA0073A380 /* DangPhucVuVC.xib */,
+				0BE00C012AC023AF002C1C04 /* BanDangPhucVuVC.swift */,
+				0BE00C022AC023AF002C1C04 /* BanDangPhucVuVC.xib */,
 			);
 			path = Serving;
 			sourceTree = "<group>";
@@ -351,6 +357,14 @@
 				0BB43EF229FAD82E00F1DE85 /* Rubik-SemiBoldItalic.ttf */,
 			);
 			path = font;
+			sourceTree = "<group>";
+		};
+		0BE00BFC2AC01DF7002C1C04 /* Orther */ = {
+			isa = PBXGroup;
+			children = (
+				0B45BC9E2ABA124E0073A380 /* Print */,
+			);
+			path = Orther;
 			sourceTree = "<group>";
 		};
 		0BE038D429F81F6D002CB20F = {
@@ -681,6 +695,7 @@
 				0BF42ACF2AB6066B00592A0E /* Roboto-Italic.ttf in Resources */,
 				0BF42AC22AB6066B00592A0E /* Roboto-Medium.ttf in Resources */,
 				0BB43F0029FAD82F00F1DE85 /* Rubik-SemiBoldItalic.ttf in Resources */,
+				0BE00C042AC023AF002C1C04 /* BanDangPhucVuVC.xib in Resources */,
 				0BF42AC72AB6066B00592A0E /* Roboto-BoldCondensedItalic.ttf in Resources */,
 				0BF42AC42AB6066B00592A0E /* Roboto-Regular.ttf in Resources */,
 				0BF42ACA2AB6066B00592A0E /* NOTICE.txt in Resources */,
@@ -785,6 +800,7 @@
 				0BA5D5142AB6D74D0031FBF9 /* ChonMonVC.swift in Sources */,
 				0B45BC992AB9CC670073A380 /* BluetoothHelper.swift in Sources */,
 				0BA5D5182AB6FB2D0031FBF9 /* MonAnCell.swift in Sources */,
+				0BE00C032AC023AF002C1C04 /* BanDangPhucVuVC.swift in Sources */,
 				0BFD87312A518535005DE099 /* ParamSearchBook.swift in Sources */,
 				0BE0391E29F82039002CB20F /* Params.swift in Sources */,
 				0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */,

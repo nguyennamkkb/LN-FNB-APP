@@ -124,7 +124,7 @@ import UIKit
 import WebKit
 
 class DangPhucVuVC: BaseVC {
-    private let bluetoothPrinterManager = BluetoothPrinterManager()
+
     private let dummyPrinter = DummyPrinter()
     
     @IBOutlet var VDataPrint: UIView!

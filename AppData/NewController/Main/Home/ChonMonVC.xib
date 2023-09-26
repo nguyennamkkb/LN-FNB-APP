@@ -81,7 +81,7 @@
                                 <constraint firstItem="Jcv-MJ-1ln" firstAttribute="centerY" secondItem="c14-ci-08p" secondAttribute="centerY" id="zHa-Cy-6CT"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-NF-FTK" userLabel="cart">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-NF-FTK" userLabel="cart">
                             <rect key="frame" x="353" y="9.6666666666666714" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="N1Z-dE-EMX"/>

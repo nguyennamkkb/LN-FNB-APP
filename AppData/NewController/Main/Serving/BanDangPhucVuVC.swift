@@ -23,15 +23,18 @@ class BanDangPhucVuVC: BaseVC {
         btnThanhToan.layer.cornerRadius = C.CornerRadius.corner5
         btnPhieuBep.layer.cornerRadius = C.CornerRadius.corner5
     }
-    @IBAction func phieuBepVC(_ sender: Any) {
+    @IBAction func phieuBepPressed(_ sender: Any) {
         self.pushVC(controller: PhieuBepVC())
+    }
+    @IBAction func ThanhToanPressed(_ sender: Any) {
+        self.pushVC(controller: BillVC())
     }
     
     
 }
 extension BanDangPhucVuVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 3
     }
     
     

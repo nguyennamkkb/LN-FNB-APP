@@ -63,6 +63,9 @@
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Thanh toán"/>
+                            <connections>
+                                <action selector="ThanhToanPressed:" destination="-1" eventType="touchUpInside" id="Hy1-g8-Dae"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx5-eX-rmL">
                             <rect key="frame" x="234" y="9.6666666666666679" width="80" height="25.000000000000004"/>
@@ -75,7 +78,7 @@
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" title="Phiếu bếp"/>
                             <connections>
-                                <action selector="phieuBepVC:" destination="-1" eventType="touchUpInside" id="SKX-Er-eeg"/>
+                                <action selector="phieuBepPressed:" destination="-1" eventType="touchUpInside" id="tyW-9E-hCc"/>
                             </connections>
                         </button>
                     </subviews>

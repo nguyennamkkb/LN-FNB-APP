@@ -18,9 +18,6 @@
         <array key="Roboto-Regular.ttf">
             <string>Roboto-Regular</string>
         </array>
-        <array key="Roboto-Thin.ttf">
-            <string>Roboto-Thin</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InPhieuBepVC" customModule="LN_FNB" customModuleProvider="target">
@@ -157,13 +154,13 @@
                             <rect key="frame" x="5" y="118.66666666666666" width="353" height="40"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Combo nước nhiệt đới" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZH-gQ-tzJ">
-                                    <rect key="frame" x="0.0" y="5.6666666666666838" width="227.66666666666666" height="28.333333333333329"/>
-                                    <fontDescription key="fontDescription" name="Roboto-Thin" family="Roboto" pointSize="24"/>
+                                    <rect key="frame" x="0.0" y="6" width="231.66666666666666" height="28"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="24"/>
                                     <color key="textColor" name="white"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="umZ-aa-GNy">
-                                    <rect key="frame" x="339.33333333333331" y="5.6666666666666838" width="13.666666666666686" height="28.333333333333329"/>
+                                    <rect key="frame" x="339.33333333333331" y="6" width="13.666666666666686" height="28"/>
                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
                                     <color key="textColor" name="white"/>
                                     <nil key="highlightedColor"/>
@@ -182,13 +179,13 @@
                             <rect key="frame" x="5" y="158.66666666666669" width="353" height="40"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dê tái chanh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zbq-mg-eQg">
-                                    <rect key="frame" x="0.0" y="5.666666666666627" width="131.66666666666666" height="28.333333333333329"/>
+                                    <rect key="frame" x="0.0" y="6" width="131.66666666666666" height="28"/>
                                     <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="24"/>
                                     <color key="textColor" name="white"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9wc-1T-xDL">
-                                    <rect key="frame" x="339.33333333333331" y="5.666666666666627" width="13.666666666666686" height="28.333333333333329"/>
+                                    <rect key="frame" x="339.33333333333331" y="6" width="13.666666666666686" height="28"/>
                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
                                     <color key="textColor" name="white"/>
                                     <nil key="highlightedColor"/>
@@ -207,13 +204,13 @@
                             <rect key="frame" x="5" y="198.66666666666669" width="353" height="40"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lẩu hải sản" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTC-gg-wx8">
-                                    <rect key="frame" x="0.0" y="5.666666666666627" width="124.33333333333333" height="28.333333333333329"/>
-                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
+                                    <rect key="frame" x="0.0" y="6" width="121.66666666666667" height="28"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="24"/>
                                     <color key="textColor" name="white"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdF-M9-rPo">
-                                    <rect key="frame" x="339.33333333333331" y="5.666666666666627" width="13.666666666666686" height="28.333333333333329"/>
+                                    <rect key="frame" x="339.33333333333331" y="6" width="13.666666666666686" height="28"/>
                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="24"/>
                                     <color key="textColor" name="white"/>
                                     <nil key="highlightedColor"/>

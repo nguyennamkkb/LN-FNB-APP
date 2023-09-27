@@ -21,7 +21,7 @@ class TabBarVC: UITabBarController {
 //        homeNavi.tabBarItem.
         
         
-        let servingVC = DangPhucVuVC()
+        let servingVC = DSDangPhucVuVC()
         let servingNavi = UINavigationController(rootViewController: servingVC)
         servingNavi.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "ic_bill")?.resizeImage(30.0, opaque:false), tag: 2)
 //        servingNavi.tabBarItem.badgeColor = UIColor.white

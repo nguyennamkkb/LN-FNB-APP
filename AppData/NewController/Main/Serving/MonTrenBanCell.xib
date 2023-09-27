@@ -58,25 +58,25 @@
                                         <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYq-uo-5fk">
-                                                <rect key="frame" x="0.0" y="2" width="16" height="16"/>
+                                                <rect key="frame" x="0.0" y="1.6666666666666661" width="25" height="22"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="16" id="5wm-N6-c0X"/>
-                                                    <constraint firstAttribute="height" constant="16" id="FZp-Zu-dex"/>
+                                                    <constraint firstAttribute="width" constant="25" id="5wm-N6-c0X"/>
+                                                    <constraint firstAttribute="height" constant="25" id="FZp-Zu-dex"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="ic_plus"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thv-Ru-Wlm">
-                                                <rect key="frame" x="16" y="1.6666666666666661" width="28" height="16.666666666666671"/>
+                                                <rect key="frame" x="25" y="4.3333333333333321" width="10" height="16.666666666666668"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                 <color key="textColor" name="white"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7o-FD-7Fb">
-                                                <rect key="frame" x="44" y="2" width="16" height="16"/>
+                                                <rect key="frame" x="35" y="0.0" width="25" height="25"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="16" id="7lo-mC-Rhr"/>
-                                                    <constraint firstAttribute="height" constant="16" id="GYB-4O-Z83"/>
+                                                    <constraint firstAttribute="width" constant="25" id="7lo-mC-Rhr"/>
+                                                    <constraint firstAttribute="height" constant="25" id="GYB-4O-Z83"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="ic_tru"/>

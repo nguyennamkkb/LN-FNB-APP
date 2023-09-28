@@ -71,6 +71,22 @@
 		0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */; };
 		0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */; };
 		0BCF19852A43696A004F11CB /* ParamSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF19842A43696A004F11CB /* ParamSearch.swift */; };
+		0BD56AB92AC5A52B00A41312 /* ThucDonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD56AB72AC5A52B00A41312 /* ThucDonVC.swift */; };
+		0BD56ABA2AC5A52B00A41312 /* ThucDonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD56AB82AC5A52B00A41312 /* ThucDonVC.xib */; };
+		0BD56AC12AC5CAFF00A41312 /* DanhMucCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD56ABF2AC5CAFF00A41312 /* DanhMucCell.swift */; };
+		0BD56AC22AC5CAFF00A41312 /* DanhMucCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD56AC02AC5CAFF00A41312 /* DanhMucCell.xib */; };
+		0BD56AC52AC5D3E800A41312 /* ThemDanhMucVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD56AC32AC5D3E800A41312 /* ThemDanhMucVC.swift */; };
+		0BD56AC62AC5D3E800A41312 /* ThemDanhMucVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD56AC42AC5D3E800A41312 /* ThemDanhMucVC.xib */; };
+		0BD56AC92AC5DDE800A41312 /* DanhMucMonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD56AC72AC5DDE800A41312 /* DanhMucMonVC.swift */; };
+		0BD56ACA2AC5DDE800A41312 /* DanhMucMonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD56AC82AC5DDE800A41312 /* DanhMucMonVC.xib */; };
+		0BD56ACD2AC5E10100A41312 /* MonAnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD56ACB2AC5E10100A41312 /* MonAnVC.swift */; };
+		0BD56ACE2AC5E10100A41312 /* MonAnVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD56ACC2AC5E10100A41312 /* MonAnVC.xib */; };
+		0BD56AD52AC5E55100A41312 /* QLMonAnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD56AD32AC5E55100A41312 /* QLMonAnCell.swift */; };
+		0BD56AD62AC5E55100A41312 /* QLMonAnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD56AD42AC5E55100A41312 /* QLMonAnCell.xib */; };
+		0BD56ADD2AC5E81400A41312 /* ThemMonAnCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD56ADB2AC5E81400A41312 /* ThemMonAnCell.swift */; };
+		0BD56ADE2AC5E81400A41312 /* ThemMonAnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD56ADC2AC5E81400A41312 /* ThemMonAnCell.xib */; };
+		0BD56AE12AC5EDFD00A41312 /* ThemMonAnVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD56ADF2AC5EDFD00A41312 /* ThemMonAnVC.swift */; };
+		0BD56AE22AC5EDFD00A41312 /* ThemMonAnVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD56AE02AC5EDFD00A41312 /* ThemMonAnVC.xib */; };
 		0BE00C032AC023AF002C1C04 /* BanDangPhucVuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE00C012AC023AF002C1C04 /* BanDangPhucVuVC.swift */; };
 		0BE00C042AC023AF002C1C04 /* BanDangPhucVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BE00C022AC023AF002C1C04 /* BanDangPhucVuVC.xib */; };
 		0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE038E029F81F6D002CB20F /* AppDelegate.swift */; };
@@ -198,6 +214,22 @@
 		0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
 		0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		0BCF19842A43696A004F11CB /* ParamSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamSearch.swift; sourceTree = "<group>"; };
+		0BD56AB72AC5A52B00A41312 /* ThucDonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThucDonVC.swift; sourceTree = "<group>"; };
+		0BD56AB82AC5A52B00A41312 /* ThucDonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThucDonVC.xib; sourceTree = "<group>"; };
+		0BD56ABF2AC5CAFF00A41312 /* DanhMucCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanhMucCell.swift; sourceTree = "<group>"; };
+		0BD56AC02AC5CAFF00A41312 /* DanhMucCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DanhMucCell.xib; sourceTree = "<group>"; };
+		0BD56AC32AC5D3E800A41312 /* ThemDanhMucVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemDanhMucVC.swift; sourceTree = "<group>"; };
+		0BD56AC42AC5D3E800A41312 /* ThemDanhMucVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemDanhMucVC.xib; sourceTree = "<group>"; };
+		0BD56AC72AC5DDE800A41312 /* DanhMucMonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanhMucMonVC.swift; sourceTree = "<group>"; };
+		0BD56AC82AC5DDE800A41312 /* DanhMucMonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DanhMucMonVC.xib; sourceTree = "<group>"; };
+		0BD56ACB2AC5E10100A41312 /* MonAnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonAnVC.swift; sourceTree = "<group>"; };
+		0BD56ACC2AC5E10100A41312 /* MonAnVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonAnVC.xib; sourceTree = "<group>"; };
+		0BD56AD32AC5E55100A41312 /* QLMonAnCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QLMonAnCell.swift; sourceTree = "<group>"; };
+		0BD56AD42AC5E55100A41312 /* QLMonAnCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QLMonAnCell.xib; sourceTree = "<group>"; };
+		0BD56ADB2AC5E81400A41312 /* ThemMonAnCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemMonAnCell.swift; sourceTree = "<group>"; };
+		0BD56ADC2AC5E81400A41312 /* ThemMonAnCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemMonAnCell.xib; sourceTree = "<group>"; };
+		0BD56ADF2AC5EDFD00A41312 /* ThemMonAnVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemMonAnVC.swift; sourceTree = "<group>"; };
+		0BD56AE02AC5EDFD00A41312 /* ThemMonAnVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemMonAnVC.xib; sourceTree = "<group>"; };
 		0BE00C012AC023AF002C1C04 /* BanDangPhucVuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanDangPhucVuVC.swift; sourceTree = "<group>"; };
 		0BE00C022AC023AF002C1C04 /* BanDangPhucVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BanDangPhucVuVC.xib; sourceTree = "<group>"; };
 		0BE038DD29F81F6D002CB20F /* LN FNB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "LN FNB.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -379,6 +411,7 @@
 		0BA5D5272AB7693B0031FBF9 /* More */ = {
 			isa = PBXGroup;
 			children = (
+				0BD56AB02AC5A03F00A41312 /* Manager */,
 				0B7B6D9A2AC47AB9005E89D9 /* Bill */,
 				0BA5D52C2AB769A90031FBF9 /* MoreVC.swift */,
 				0BA5D52D2AB769A90031FBF9 /* MoreVC.xib */,
@@ -407,6 +440,37 @@
 				0BB43EF229FAD82E00F1DE85 /* Rubik-SemiBoldItalic.ttf */,
 			);
 			path = font;
+			sourceTree = "<group>";
+		};
+		0BD56AB02AC5A03F00A41312 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0BD56AB62AC5A51500A41312 /* ThucDon */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0BD56AB62AC5A51500A41312 /* ThucDon */ = {
+			isa = PBXGroup;
+			children = (
+				0BD56AB72AC5A52B00A41312 /* ThucDonVC.swift */,
+				0BD56AB82AC5A52B00A41312 /* ThucDonVC.xib */,
+				0BD56ABF2AC5CAFF00A41312 /* DanhMucCell.swift */,
+				0BD56AC02AC5CAFF00A41312 /* DanhMucCell.xib */,
+				0BD56AC32AC5D3E800A41312 /* ThemDanhMucVC.swift */,
+				0BD56AC42AC5D3E800A41312 /* ThemDanhMucVC.xib */,
+				0BD56AC72AC5DDE800A41312 /* DanhMucMonVC.swift */,
+				0BD56AC82AC5DDE800A41312 /* DanhMucMonVC.xib */,
+				0BD56ACB2AC5E10100A41312 /* MonAnVC.swift */,
+				0BD56ACC2AC5E10100A41312 /* MonAnVC.xib */,
+				0BD56AD32AC5E55100A41312 /* QLMonAnCell.swift */,
+				0BD56AD42AC5E55100A41312 /* QLMonAnCell.xib */,
+				0BD56ADB2AC5E81400A41312 /* ThemMonAnCell.swift */,
+				0BD56ADC2AC5E81400A41312 /* ThemMonAnCell.xib */,
+				0BD56ADF2AC5EDFD00A41312 /* ThemMonAnVC.swift */,
+				0BD56AE02AC5EDFD00A41312 /* ThemMonAnVC.xib */,
+			);
+			path = ThucDon;
 			sourceTree = "<group>";
 		};
 		0BE00BFC2AC01DF7002C1C04 /* Orther */ = {
@@ -726,11 +790,14 @@
 				0B7B6DAA2AC49820005E89D9 /* DSDangPhucVuVC.xib in Resources */,
 				0B4CA3302A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png in Resources */,
 				0BA5D5152AB6D74D0031FBF9 /* ChonMonVC.xib in Resources */,
+				0BD56AC22AC5CAFF00A41312 /* DanhMucCell.xib in Resources */,
 				0BF42ACB2AB6066B00592A0E /* Roboto-ThinItalic.ttf in Resources */,
 				0BB43F0429FAD82F00F1DE85 /* Rubik-Regular.ttf in Resources */,
 				0BF42AD12AB6066B00592A0E /* Roboto-Bold.ttf in Resources */,
 				0BA5D5112AB6C8D50031FBF9 /* LoadingVC.xib in Resources */,
+				0BD56AC62AC5D3E800A41312 /* ThemDanhMucVC.xib in Resources */,
 				0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */,
+				0BD56ABA2AC5A52B00A41312 /* ThucDonVC.xib in Resources */,
 				0B45BC9D2ABA0DEA0073A380 /* DangPhucVuVC.xib in Resources */,
 				0BE038F029F81F6F002CB20F /* LaunchScreen.storyboard in Resources */,
 				0BF42ACC2AB6066B00592A0E /* Roboto-BoldItalic.ttf in Resources */,
@@ -741,12 +808,14 @@
 				0BB43F0229FAD82F00F1DE85 /* Rubik-Italic.ttf in Resources */,
 				0BF42AD22AB6066B00592A0E /* Roboto-Thin.ttf in Resources */,
 				0BF42AC92AB6066B00592A0E /* Roboto_Specimen_Book.pdf in Resources */,
+				0BD56AD62AC5E55100A41312 /* QLMonAnCell.xib in Resources */,
 				0BF42ACE2AB6066B00592A0E /* Roboto-CondensedItalic.ttf in Resources */,
 				0BA5D5192AB6FB2D0031FBF9 /* MonAnCell.xib in Resources */,
 				0BF42ACF2AB6066B00592A0E /* Roboto-Italic.ttf in Resources */,
 				0BF42AC22AB6066B00592A0E /* Roboto-Medium.ttf in Resources */,
 				0BB43F0029FAD82F00F1DE85 /* Rubik-SemiBoldItalic.ttf in Resources */,
 				0BE00C042AC023AF002C1C04 /* BanDangPhucVuVC.xib in Resources */,
+				0BD56ADE2AC5E81400A41312 /* ThemMonAnCell.xib in Resources */,
 				0BF42AC72AB6066B00592A0E /* Roboto-BoldCondensedItalic.ttf in Resources */,
 				0BF42AC42AB6066B00592A0E /* Roboto-Regular.ttf in Resources */,
 				0BF42ACA2AB6066B00592A0E /* NOTICE.txt in Resources */,
@@ -755,6 +824,7 @@
 				0BF42ACD2AB6066B00592A0E /* Roboto-LightItalic.ttf in Resources */,
 				0BB43EFE29FAD82F00F1DE85 /* Rubik-ExtraBoldItalic.ttf in Resources */,
 				0B7B6DAE2AC498BE005E89D9 /* BanDangPhucVuCell.xib in Resources */,
+				0BD56ACA2AC5DDE800A41312 /* DanhMucMonVC.xib in Resources */,
 				0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */,
 				0BA5D5252AB768C20031FBF9 /* TabBarVC.xib in Resources */,
 				0B7B6DA22AC49309005E89D9 /* BillActionVC.xib in Resources */,
@@ -776,12 +846,14 @@
 				0BA5D5212AB7644E0031FBF9 /* MonDaChonCell.xib in Resources */,
 				0BB43F0329FAD82F00F1DE85 /* Rubik-SemiBold.ttf in Resources */,
 				0BB43F0129FAD82F00F1DE85 /* Rubik-Light.ttf in Resources */,
+				0BD56AE22AC5EDFD00A41312 /* ThemMonAnVC.xib in Resources */,
 				0B45BCA62ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.xib in Resources */,
 				0BA5D50B2AB6C5440031FBF9 /* TableCell.xib in Resources */,
 				0B69E4032AC3494A00C11C2F /* PhieuBepVC.xib in Resources */,
 				0BB43F0829FAD82F00F1DE85 /* Rubik-ExtraBold.ttf in Resources */,
 				0BA5D5032AB6C0680031FBF9 /* HomeVC.xib in Resources */,
 				0BF42AE72AB61B1800592A0E /* SignUpInfoVC.xib in Resources */,
+				0BD56ACE2AC5E10100A41312 /* MonAnVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -840,12 +912,15 @@
 				0B7B6DAD2AC498BE005E89D9 /* BanDangPhucVuCell.swift in Sources */,
 				0BF42AEA2AB6215E00592A0E /* ForgetPasswordVC.swift in Sources */,
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
+				0BD56ADD2AC5E81400A41312 /* ThemMonAnCell.swift in Sources */,
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,
 				0BA5D5022AB6C0680031FBF9 /* HomeVC.swift in Sources */,
+				0BD56AC52AC5D3E800A41312 /* ThemDanhMucVC.swift in Sources */,
 				0BE0392729F82039002CB20F /* ExDate.swift in Sources */,
 				0B69E3FE2AC345C200C11C2F /* MonTrenBanCell.swift in Sources */,
 				0BF42AE22AB619F300592A0E /* SingUpInfoCell.swift in Sources */,
+				0BD56AE12AC5EDFD00A41312 /* ThemMonAnVC.swift in Sources */,
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
 				0BF42AE62AB61B1800592A0E /* SignUpInfoVC.swift in Sources */,
 				0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */,
@@ -862,6 +937,7 @@
 				0BA5D5182AB6FB2D0031FBF9 /* MonAnCell.swift in Sources */,
 				0BE00C032AC023AF002C1C04 /* BanDangPhucVuVC.swift in Sources */,
 				0BFD87312A518535005DE099 /* ParamSearchBook.swift in Sources */,
+				0BD56AC12AC5CAFF00A41312 /* DanhMucCell.swift in Sources */,
 				0BE0391E29F82039002CB20F /* Params.swift in Sources */,
 				0B7B6D9D2AC47B27005E89D9 /* BillVC.swift in Sources */,
 				0BE038E129F81F6D002CB20F /* AppDelegate.swift in Sources */,
@@ -874,6 +950,7 @@
 				0BE0392429F82039002CB20F /* Constants.swift in Sources */,
 				0B7A4FCC2A8E72600062E878 /* Notifications.swift in Sources */,
 				0BA5D50A2AB6C5440031FBF9 /* TableCell.swift in Sources */,
+				0BD56ACD2AC5E10100A41312 /* MonAnVC.swift in Sources */,
 				0BA5D5242AB768C20031FBF9 /* TabBarVC.swift in Sources */,
 				0B5D18532A0A97D0004E47FD /* KeyCommon.swift in Sources */,
 				0B69E4022AC3494A00C11C2F /* PhieuBepVC.swift in Sources */,
@@ -890,10 +967,13 @@
 				0BE0392029F82039002CB20F /* ServiceManager.swift in Sources */,
 				0BE0392629F82039002CB20F /* Common.swift in Sources */,
 				0BE0392929F82039002CB20F /* CommonExtension.swift in Sources */,
+				0BD56AB92AC5A52B00A41312 /* ThucDonVC.swift in Sources */,
 				0BE0392129F82039002CB20F /* CommonServices.swift in Sources */,
 				0BCF19852A43696A004F11CB /* ParamSearch.swift in Sources */,
+				0BD56AC92AC5DDE800A41312 /* DanhMucMonVC.swift in Sources */,
 				0B69E4062AC34C3F00C11C2F /* InPhieuBepVC.swift in Sources */,
 				0BF42ADA2AB6139100592A0E /* SignUpVC.swift in Sources */,
+				0BD56AD52AC5E55100A41312 /* QLMonAnCell.swift in Sources */,
 				0BE0392D29F82039002CB20F /* ImageHelper.swift in Sources */,
 				0BA5D5102AB6C8D50031FBF9 /* LoadingVC.swift in Sources */,
 				0BA5D51C2AB7614C0031FBF9 /* MonDaChonVC.swift in Sources */,

@@ -42,7 +42,7 @@
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swJ-DI-KW9">
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swJ-DI-KW9" userLabel="back">
                             <rect key="frame" x="15" y="4.6666666666666643" width="35" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="Egd-dX-H92"/>
@@ -92,7 +92,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giờ: 12:30 23/5/2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4co-t3-3OA">
-                            <rect key="frame" x="229.33333333333337" y="6.6666666666666714" width="133.66666666666663" height="17"/>
+                            <rect key="frame" x="229" y="6.6666666666666714" width="134" height="17"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>

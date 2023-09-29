@@ -18,4 +18,13 @@ class MoreVC: BaseVC {
         let vc = ThucDonVC()
         self.pushVC(controller: vc)
     }
+    @IBAction func QLBanPressed(_ sender: Any) {
+        let vc = QLBanVC()
+        self.pushVC(controller: vc)
+    }
+    @IBAction func QLBanDatTruocPressed(_ sender: Any) {
+        let vc = BanDatTruocVC()
+        self.pushVC(controller: vc)
+        
+    }
 }

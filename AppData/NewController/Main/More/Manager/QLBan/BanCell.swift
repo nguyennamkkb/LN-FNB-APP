@@ -1,13 +1,13 @@
 //
-//  QLMonAnCell.swift
+//  BanCell.swift
 //  LN FNB
 //
-//  Created by namnl on 28/09/2023.
+//  Created by namnl on 29/09/2023.
 //
 
 import UIKit
 
-class QLMonAnCell: UITableViewCell {
+class BanCell: UITableViewCell {
 
     var actionEdit: ClosureAction?
     var actionDelete: ClosureAction?
@@ -29,5 +29,4 @@ class QLMonAnCell: UITableViewCell {
     @IBAction func deletePressed(_ sender: Any) {
         actionDelete?()
     }
-    
 }

@@ -54,11 +54,11 @@
                             <state key="normal" image="chevron.backward" catalog="system"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMn-m9-smI">
-                            <rect key="frame" x="319" y="9.6666666666666679" width="80" height="25.000000000000004"/>
+                            <rect key="frame" x="319" y="7" width="80" height="30"/>
                             <color key="backgroundColor" name="green"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="2h8-oT-WPc"/>
-                                <constraint firstAttribute="height" constant="25" id="DoY-hu-vcg"/>
+                                <constraint firstAttribute="height" constant="30" id="DoY-hu-vcg"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -68,10 +68,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sx5-eX-rmL">
-                            <rect key="frame" x="234" y="9.6666666666666679" width="80" height="25.000000000000004"/>
+                            <rect key="frame" x="234" y="7" width="80" height="30"/>
                             <color key="backgroundColor" name="green"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="25" id="bLn-ds-Vjr"/>
+                                <constraint firstAttribute="height" constant="30" id="bLn-ds-Vjr"/>
                                 <constraint firstAttribute="width" constant="80" id="n4S-QY-c6J"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>

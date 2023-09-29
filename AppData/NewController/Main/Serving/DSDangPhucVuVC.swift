@@ -14,7 +14,7 @@ class DSDangPhucVuVC: BaseVC {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-         self.tableView.registerCell(nibName: "BanDangPhucVuCell")
+        self.tableView.registerCell(nibName: "BanDangPhucVuCell")
     }
     
 

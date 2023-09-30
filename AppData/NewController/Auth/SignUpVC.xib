@@ -3,9 +3,10 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -23,6 +24,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
                 <outlet property="btnXacNhan" destination="cle-nw-f7Q" id="9qa-ZT-rjD"/>
+                <outlet property="lbMessage" destination="L6a-sD-PbH" id="kyQ-QP-yBN"/>
+                <outlet property="tfEmail" destination="ihW-KF-rxU" id="UKz-JT-VvL"/>
+                <outlet property="tfPassword" destination="qXU-fy-6ap" id="cSx-Gj-g9H"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="view1" destination="2jY-3O-7hn" id="CfW-Oc-LJ0"/>
                 <outlet property="view2" destination="d4w-MI-9HP" id="HwJ-yx-E4w"/>
@@ -196,6 +200,12 @@
                         <action selector="tieptucPressed:" destination="-1" eventType="touchUpInside" id="yET-cI-t4u"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thong bao" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6a-sD-PbH">
+                    <rect key="frame" x="15" y="403" width="363" height="20.333333333333314"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="black"/>
@@ -214,6 +224,9 @@
                 <constraint firstItem="6py-9H-HY9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="U4P-hf-4J9"/>
                 <constraint firstItem="cle-nw-f7Q" firstAttribute="top" secondItem="Eei-wL-Ron" secondAttribute="bottom" constant="20" id="VXJ-t1-MqR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="LME-IA-NPA" secondAttribute="trailing" id="aWm-KI-QTr"/>
+                <constraint firstItem="L6a-sD-PbH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="azS-N7-nzK"/>
+                <constraint firstItem="L6a-sD-PbH" firstAttribute="top" secondItem="cle-nw-f7Q" secondAttribute="bottom" constant="20" id="cKD-tj-O4D"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="L6a-sD-PbH" secondAttribute="trailing" constant="15" id="d0W-aF-Mb5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6py-9H-HY9" secondAttribute="trailing" id="kS7-wg-XGa"/>
                 <constraint firstItem="i3j-UG-98a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="n8Z-cZ-d3u"/>
                 <constraint firstItem="i3j-UG-98a" firstAttribute="top" secondItem="VtN-pw-Fbo" secondAttribute="bottom" constant="10" id="nxF-SZ-7KO"/>
@@ -225,19 +238,22 @@
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <namedColor name="black">
-            <color red="0.1157124117" green="0.14910301570000001" blue="0.19870966670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gray">
-            <color red="0.69238358739999994" green="0.70646822450000002" blue="0.73308628799999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.69199997186660767" green="0.70599997043609619" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="green">
-            <color red="0.14868938919999999" green="0.64539003370000003" blue="0.2975369692" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.14900000393390656" green="0.64499998092651367" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="navi">
-            <color red="0.1811361611" green="0.23805639149999999" blue="0.28902110460000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.1809999942779541" green="0.23800000548362732" blue="0.289000004529953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

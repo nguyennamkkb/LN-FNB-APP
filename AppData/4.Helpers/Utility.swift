@@ -187,11 +187,11 @@ class BiometricManager {
         //        } else {
         switch getbiometricType() {
         case .face:
-            CacheManager.share.setBiometricType(biometricType: "ic_faceId")
-            return "ic_faceId"
+            CacheManager.share.setBiometricType(biometricType: "faceid")
+            return "faceid"
         case .touch:
-            CacheManager.share.setBiometricType(biometricType: "ic_fingerId")
-            return "ic_fingerId"
+            CacheManager.share.setBiometricType(biometricType: "touchid")
+            return "touchid"
         case .none:
             return CacheManager.share.getBiometricType()//return ""
         //            }

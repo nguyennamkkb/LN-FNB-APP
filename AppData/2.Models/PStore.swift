@@ -11,13 +11,15 @@ import ObjectMapper
 class PStore: Mappable {
     
     var id: Int?
-    var storeName: String?
-    var phone: String?
-    var address: String?
-    var bankCode: String?
-    var accountNumber: String?
     var email: String?
     var password: String?
+    var name_own: String?
+    var storeName: String?
+    var desciption: String?
+    var address: String?
+    var logo: String?
+    var phone: String?
+    var qr: String?
     var createAt: String?
     var updateAt: String?
     var status: Int?
@@ -33,8 +35,8 @@ class PStore: Mappable {
         self.phone = phone
     }
     
-    init (phone: String, password: String){
-        self.phone = phone
+    init (email: String, password: String){
+        self.email = email
         self.password = password
         sign()
     }
@@ -53,13 +55,15 @@ class PStore: Mappable {
     
     func mapping(map: ObjectMapper.Map) {
         id <- map["id"]
-        storeName <- map["storeName"]
-        phone <- map["phone"]
-        address <- map["address"]
-        bankCode <- map["bankCode"]
-        accountNumber <- map["accountNumber"]
         email <- map["email"]
         password <- map["password"]
+        name_own <- map["name_own"]
+        storeName <- map["storeName"]
+        desciption <- map["desciption"]
+        phone <- map["phone"]
+        address <- map["address"]
+        logo <- map["logo"]
+        qr <- map["qr"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]

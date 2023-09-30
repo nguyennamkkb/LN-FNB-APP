@@ -9,7 +9,10 @@ import UIKit
 
 class SignUpVC: BaseVC {
 
-    @IBOutlet var btnXacNhan: UIButton! 
+    @IBOutlet weak var lbMessage: UILabel!
+    @IBOutlet weak var tfPassword: UITextField!
+    @IBOutlet weak var tfEmail: UITextField!
+    @IBOutlet var btnXacNhan: UIButton!
     @IBOutlet var view1: UIView!
     @IBOutlet var view2: UIView!
     override func viewDidLoad() {
@@ -27,7 +30,24 @@ class SignUpVC: BaseVC {
         self.onBackNav()
     }
     @IBAction func tieptucPressed(_ sender: Any) {
-        self.pushVC(controller: SignUpInfoVC( ))
+//        self.pushVC(controller: SignUpInfoVC())
+        view.endEditing(true)
+        guard let email = tfEmail.text else {return}
+        guard let password = tfPassword.text, password.count >= 6 else {return}
+        self.showLoading()
+        
+        let store = PStore(email:email,password: password)
+        ServiceManager.common.checkUser(param: store){
+            (response) in
+            self.hideLoading()
+            if response?.statusCode == 200 {
+                let vc = SignUpInfoVC()
+                vc.bindData(item: store)
+                self.pushVC(controller: vc)
+            } else {
+                self.lbMessage.text = "Thông báo: Lỗi đăng ký"
+            }
+        }
     }
     @IBAction func dangNhapPressed(_ sender: Any) {
         self.pushVC(controller: LoginVC())

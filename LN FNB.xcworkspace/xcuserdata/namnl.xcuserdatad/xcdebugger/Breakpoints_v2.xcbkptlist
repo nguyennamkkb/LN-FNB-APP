@@ -52,5 +52,133 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FE176687-40A0-4808-B027-B0642B0AB0DD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppData/NewController/Auth/SignUpVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "tieptucPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F1ED7E5-5275-4BF9-B6D2-5D835A000CB1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppData/NewController/Auth/SignUpVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "tieptucPressed(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8F1ED7E5-5275-4BF9-B6D2-5D835A000CB1 - bd2ae4cd0af97f3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LN_FNB.SignUpVC.tieptucPressed(Any) -&gt; ()"
+                  moduleName = "LN FNB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnl/Documents/Dev/LN-FNB-APP/AppData/NewController/Auth/SignUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "328">
+               </Location>
+               <Location
+                  uuid = "8F1ED7E5-5275-4BF9-B6D2-5D835A000CB1 - bd2ae4cd0af97f3b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LN_FNB.SignUpVC.tieptucPressed(Any) -&gt; ()"
+                  moduleName = "LN FNB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnl/Documents/Dev/LN-FNB-APP/AppData/NewController/Auth/SignUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "540">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D289B49-343E-4BE7-9486-1D34373CEBF3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppData/NewController/Auth/SignUpVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "tieptucPressed(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0D289B49-343E-4BE7-9486-1D34373CEBF3 - bd2ae4cd0af97f58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LN_FNB.SignUpVC.tieptucPressed(Any) -&gt; ()"
+                  moduleName = "LN FNB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnl/Documents/Dev/LN-FNB-APP/AppData/NewController/Auth/SignUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "696">
+               </Location>
+               <Location
+                  uuid = "0D289B49-343E-4BE7-9486-1D34373CEBF3 - bd2ae4cd0af97f58"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LN_FNB.SignUpVC.tieptucPressed(Any) -&gt; ()"
+                  moduleName = "LN FNB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnl/Documents/Dev/LN-FNB-APP/AppData/NewController/Auth/SignUpVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "908">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D50055DF-8692-4200-A42A-89897E162354"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppData/NewController/Auth/SignUpVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "tieptucPressed(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

@@ -32,6 +32,6 @@ class LoginVC: BaseVC {
     }
     
     @IBAction func xacNhanPressed(_ sender: Any) {
-        self.pushVC(controller: HomeVC())
+        self.pushVC(controller: TabBarVC())
     }
 }

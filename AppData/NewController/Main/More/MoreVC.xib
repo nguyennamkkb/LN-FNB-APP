@@ -222,6 +222,9 @@
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="chevron.right" catalog="system"/>
+                            <connections>
+                                <action selector="QLHoaDonPressed:" destination="-1" eventType="touchUpInside" id="k5I-cf-Vyr"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZk-9e-sVk" userLabel="line">
                             <rect key="frame" x="0.0" y="43.5" width="345" height="0.5"/>
@@ -316,6 +319,9 @@
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="chevron.right" catalog="system"/>
+                            <connections>
+                                <action selector="cuaHangPressed:" destination="-1" eventType="touchUpInside" id="j97-Up-RSD"/>
+                            </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkH-LK-C1i" userLabel="line">
                             <rect key="frame" x="0.0" y="43.5" width="345" height="0.5"/>

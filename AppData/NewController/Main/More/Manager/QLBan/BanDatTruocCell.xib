@@ -44,7 +44,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="29/9/2023 13:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sxI-3d-Z8r">
-                                        <rect key="frame" x="25" y="1.6666666666666643" width="106" height="17"/>
+                                        <rect key="frame" x="25.000000000000007" y="1.6666666666666643" width="105.66666666666669" height="17"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                         <color key="textColor" name="white"/>
                                         <nil key="highlightedColor"/>
@@ -90,15 +90,18 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dV1-H9-4cL" userLabel="delete">
-                                <rect key="frame" x="382" y="15" width="30" height="30"/>
+                                <rect key="frame" x="387" y="17.666666666666668" width="25" height="25.000000000000004"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Avq-BV-qVb"/>
-                                    <constraint firstAttribute="width" constant="30" id="q7k-jf-5WY"/>
+                                    <constraint firstAttribute="height" constant="25" id="Avq-BV-qVb"/>
+                                    <constraint firstAttribute="width" constant="25" id="q7k-jf-5WY"/>
                                 </constraints>
                                 <color key="tintColor" name="white"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="xmark" catalog="system"/>
+                                <connections>
+                                    <action selector="deletePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zEE-0r-5ET"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

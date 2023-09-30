@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        }else {
 //            setRootViewController(UINavigationController(rootViewController: SignUpVC()))
 //        }
-        setRootViewController(UINavigationController(rootViewController: TabBarVC()))
+        setRootViewController(UINavigationController(rootViewController: LoginVC()))
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

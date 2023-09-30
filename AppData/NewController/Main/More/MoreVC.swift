@@ -27,4 +27,19 @@ class MoreVC: BaseVC {
         self.pushVC(controller: vc)
         
     }
+    @IBAction func QLHoaDonPressed(_ sender: Any) {
+        
+        let vc = QLHoaDonVC()
+        self.pushVC(controller: vc)
+    }
+    @IBAction func cuaHangPressed(_ sender: Any) {
+        
+        let vc = CuaHangVC()
+        self.pushVC(controller: vc)
+    }
+    
+    
+    
+    
+    
 }

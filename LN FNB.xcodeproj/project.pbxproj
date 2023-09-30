@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3FB91D2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */; };
+		0B3FB91E2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */; };
+		0B3FB9222AC7D2D4003FBCB5 /* QLHoaDonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB9202AC7D2D4003FBCB5 /* QLHoaDonVC.swift */; };
+		0B3FB9232AC7D2D4003FBCB5 /* QLHoaDonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FB9212AC7D2D4003FBCB5 /* QLHoaDonVC.xib */; };
+		0B3FB9262AC7D797003FBCB5 /* HoaDonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB9242AC7D797003FBCB5 /* HoaDonCell.swift */; };
+		0B3FB9272AC7D797003FBCB5 /* HoaDonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FB9252AC7D797003FBCB5 /* HoaDonCell.xib */; };
+		0B3FB92B2AC7E1A2003FBCB5 /* LocHoaDonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB9292AC7E1A2003FBCB5 /* LocHoaDonVC.swift */; };
+		0B3FB92C2AC7E1A2003FBCB5 /* LocHoaDonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FB92A2AC7E1A2003FBCB5 /* LocHoaDonVC.xib */; };
+		0B3FB9302AC7FC52003FBCB5 /* CuaHangVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB92E2AC7FC51003FBCB5 /* CuaHangVC.swift */; };
+		0B3FB9312AC7FC52003FBCB5 /* CuaHangVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FB92F2AC7FC51003FBCB5 /* CuaHangVC.xib */; };
+		0B3FB9342AC7FC63003FBCB5 /* CuaHangCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB9322AC7FC63003FBCB5 /* CuaHangCell.swift */; };
+		0B3FB9352AC7FC63003FBCB5 /* CuaHangCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FB9332AC7FC63003FBCB5 /* CuaHangCell.xib */; };
 		0B45BC992AB9CC670073A380 /* BluetoothHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45BC982AB9CC670073A380 /* BluetoothHelper.swift */; };
 		0B45BC9C2ABA0DEA0073A380 /* DangPhucVuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45BC9A2ABA0DEA0073A380 /* DangPhucVuVC.swift */; };
 		0B45BC9D2ABA0DEA0073A380 /* DangPhucVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B45BC9B2ABA0DEA0073A380 /* DangPhucVuVC.xib */; };
@@ -162,6 +174,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemBanDatTruocVC.swift; sourceTree = "<group>"; };
+		0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemBanDatTruocVC.xib; sourceTree = "<group>"; };
+		0B3FB9202AC7D2D4003FBCB5 /* QLHoaDonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QLHoaDonVC.swift; sourceTree = "<group>"; };
+		0B3FB9212AC7D2D4003FBCB5 /* QLHoaDonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QLHoaDonVC.xib; sourceTree = "<group>"; };
+		0B3FB9242AC7D797003FBCB5 /* HoaDonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoaDonCell.swift; sourceTree = "<group>"; };
+		0B3FB9252AC7D797003FBCB5 /* HoaDonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoaDonCell.xib; sourceTree = "<group>"; };
+		0B3FB9292AC7E1A2003FBCB5 /* LocHoaDonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocHoaDonVC.swift; sourceTree = "<group>"; };
+		0B3FB92A2AC7E1A2003FBCB5 /* LocHoaDonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocHoaDonVC.xib; sourceTree = "<group>"; };
+		0B3FB92E2AC7FC51003FBCB5 /* CuaHangVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuaHangVC.swift; sourceTree = "<group>"; };
+		0B3FB92F2AC7FC51003FBCB5 /* CuaHangVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CuaHangVC.xib; sourceTree = "<group>"; };
+		0B3FB9322AC7FC63003FBCB5 /* CuaHangCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuaHangCell.swift; sourceTree = "<group>"; };
+		0B3FB9332AC7FC63003FBCB5 /* CuaHangCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CuaHangCell.xib; sourceTree = "<group>"; };
 		0B45BC982AB9CC670073A380 /* BluetoothHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothHelper.swift; sourceTree = "<group>"; };
 		0B45BC9A2ABA0DEA0073A380 /* DangPhucVuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangPhucVuVC.swift; sourceTree = "<group>"; };
 		0B45BC9B2ABA0DEA0073A380 /* DangPhucVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DangPhucVuVC.xib; sourceTree = "<group>"; };
@@ -350,6 +374,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B3FB91F2AC7D249003FBCB5 /* QLHoaDon */ = {
+			isa = PBXGroup;
+			children = (
+				0B3FB9202AC7D2D4003FBCB5 /* QLHoaDonVC.swift */,
+				0B3FB9212AC7D2D4003FBCB5 /* QLHoaDonVC.xib */,
+				0B3FB9252AC7D797003FBCB5 /* HoaDonCell.xib */,
+				0B3FB9242AC7D797003FBCB5 /* HoaDonCell.swift */,
+				0B3FB9292AC7E1A2003FBCB5 /* LocHoaDonVC.swift */,
+				0B3FB92A2AC7E1A2003FBCB5 /* LocHoaDonVC.xib */,
+			);
+			path = QLHoaDon;
+			sourceTree = "<group>";
+		};
+		0B3FB92D2AC7FC36003FBCB5 /* CuaHang */ = {
+			isa = PBXGroup;
+			children = (
+				0B3FB92E2AC7FC51003FBCB5 /* CuaHangVC.swift */,
+				0B3FB92F2AC7FC51003FBCB5 /* CuaHangVC.xib */,
+				0B3FB9322AC7FC63003FBCB5 /* CuaHangCell.swift */,
+				0B3FB9332AC7FC63003FBCB5 /* CuaHangCell.xib */,
+			);
+			path = CuaHang;
+			sourceTree = "<group>";
+		};
 		0B45BC9E2ABA124E0073A380 /* Print */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +431,8 @@
 				0B81D61D2AC736E70003CFF6 /* BanDatTruocVC.xib */,
 				0B81D6202AC737830003CFF6 /* BanDatTruocCell.swift */,
 				0B81D6212AC737830003CFF6 /* BanDatTruocCell.xib */,
+				0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */,
+				0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */,
 			);
 			path = QLBan;
 			sourceTree = "<group>";
@@ -486,6 +536,8 @@
 		0BD56AB02AC5A03F00A41312 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				0B3FB92D2AC7FC36003FBCB5 /* CuaHang */,
+				0B3FB91F2AC7D249003FBCB5 /* QLHoaDon */,
 				0B81D60F2AC71E7A0003CFF6 /* QLBan */,
 				0BD56AB62AC5A51500A41312 /* ThucDon */,
 			);
@@ -832,6 +884,7 @@
 			files = (
 				0B81D61F2AC736E70003CFF6 /* BanDatTruocVC.xib in Resources */,
 				0BF42AD32AB6066B00592A0E /* Roboto-Black.ttf in Resources */,
+				0B3FB9232AC7D2D4003FBCB5 /* QLHoaDonVC.xib in Resources */,
 				0B7B6DAA2AC49820005E89D9 /* DSDangPhucVuVC.xib in Resources */,
 				0B4CA3302A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png in Resources */,
 				0BA5D5152AB6D74D0031FBF9 /* ChonMonVC.xib in Resources */,
@@ -844,6 +897,7 @@
 				0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */,
 				0BD56ABA2AC5A52B00A41312 /* ThucDonVC.xib in Resources */,
 				0B45BC9D2ABA0DEA0073A380 /* DangPhucVuVC.xib in Resources */,
+				0B3FB91E2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib in Resources */,
 				0BE038F029F81F6F002CB20F /* LaunchScreen.storyboard in Resources */,
 				0BF42ACC2AB6066B00592A0E /* Roboto-BoldItalic.ttf in Resources */,
 				0BF42ADB2AB6139100592A0E /* SignUpVC.xib in Resources */,
@@ -863,6 +917,7 @@
 				0BE00C042AC023AF002C1C04 /* BanDangPhucVuVC.xib in Resources */,
 				0BD56ADE2AC5E81400A41312 /* ThemMonAnCell.xib in Resources */,
 				0BF42AC72AB6066B00592A0E /* Roboto-BoldCondensedItalic.ttf in Resources */,
+				0B3FB9272AC7D797003FBCB5 /* HoaDonCell.xib in Resources */,
 				0BF42AC42AB6066B00592A0E /* Roboto-Regular.ttf in Resources */,
 				0BF42ACA2AB6066B00592A0E /* NOTICE.txt in Resources */,
 				0BF42AC62AB6066B00592A0E /* Roboto-BoldCondensed.ttf in Resources */,
@@ -875,12 +930,14 @@
 				0BA5D5252AB768C20031FBF9 /* TabBarVC.xib in Resources */,
 				0B7B6DA22AC49309005E89D9 /* BillActionVC.xib in Resources */,
 				0BF42AE32AB619F300592A0E /* SingUpInfoCell.xib in Resources */,
+				0B3FB92C2AC7E1A2003FBCB5 /* LocHoaDonVC.xib in Resources */,
 				0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */,
 				0BF42AD02AB6066B00592A0E /* Roboto-BlackItalic.ttf in Resources */,
 				0BF42AEB2AB6215E00592A0E /* ForgetPasswordVC.xib in Resources */,
 				0B69E3FF2AC345C200C11C2F /* MonTrenBanCell.xib in Resources */,
 				0BE038E829F81F6D002CB20F /* Main.storyboard in Resources */,
 				0B7B6D9E2AC47B27005E89D9 /* BillVC.xib in Resources */,
+				0B3FB9352AC7FC63003FBCB5 /* CuaHangCell.xib in Resources */,
 				0BB43F0529FAD82F00F1DE85 /* Rubik-Bold.ttf in Resources */,
 				0BB43EFF29FAD82F00F1DE85 /* Rubik-BoldItalic.ttf in Resources */,
 				0BA5D51D2AB7614C0031FBF9 /* MonDaChonVC.xib in Resources */,
@@ -896,6 +953,7 @@
 				0B81D60E2AC709A60003CFF6 /* MessageVC.xib in Resources */,
 				0BD56AE22AC5EDFD00A41312 /* ThemMonAnVC.xib in Resources */,
 				0B45BCA62ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.xib in Resources */,
+				0B3FB9312AC7FC52003FBCB5 /* CuaHangVC.xib in Resources */,
 				0BA5D50B2AB6C5440031FBF9 /* TableCell.xib in Resources */,
 				0B69E4032AC3494A00C11C2F /* PhieuBepVC.xib in Resources */,
 				0BB43F0829FAD82F00F1DE85 /* Rubik-ExtraBold.ttf in Resources */,
@@ -960,11 +1018,15 @@
 				0BA5D52E2AB769A90031FBF9 /* MoreVC.swift in Sources */,
 				0B5D185C2A0A9EB6004E47FD /* MainUser.swift in Sources */,
 				0B7B6DAD2AC498BE005E89D9 /* BanDangPhucVuCell.swift in Sources */,
+				0B3FB9262AC7D797003FBCB5 /* HoaDonCell.swift in Sources */,
 				0BF42AEA2AB6215E00592A0E /* ForgetPasswordVC.swift in Sources */,
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
 				0BD56ADD2AC5E81400A41312 /* ThemMonAnCell.swift in Sources */,
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
+				0B3FB9342AC7FC63003FBCB5 /* CuaHangCell.swift in Sources */,
+				0B3FB91D2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift in Sources */,
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,
+				0B3FB9222AC7D2D4003FBCB5 /* QLHoaDonVC.swift in Sources */,
 				0BA5D5022AB6C0680031FBF9 /* HomeVC.swift in Sources */,
 				0BD56AC52AC5D3E800A41312 /* ThemDanhMucVC.swift in Sources */,
 				0BE0392729F82039002CB20F /* ExDate.swift in Sources */,
@@ -1014,8 +1076,10 @@
 				0B5D18662A0AA54F004E47FD /* PProduct.swift in Sources */,
 				0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */,
 				0BE0392E29F82039002CB20F /* Utility.swift in Sources */,
+				0B3FB92B2AC7E1A2003FBCB5 /* LocHoaDonVC.swift in Sources */,
 				0BE0392529F82039002CB20F /* Logger.swift in Sources */,
 				0B5D18512A0A968C004E47FD /* CacheManager.swift in Sources */,
+				0B3FB9302AC7FC52003FBCB5 /* CuaHangVC.swift in Sources */,
 				0BE0392029F82039002CB20F /* ServiceManager.swift in Sources */,
 				0BE0392629F82039002CB20F /* Common.swift in Sources */,
 				0B81D6162AC724FD0003CFF6 /* BanCell.swift in Sources */,

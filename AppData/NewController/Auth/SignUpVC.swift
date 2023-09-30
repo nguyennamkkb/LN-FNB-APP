@@ -20,14 +20,14 @@ class SignUpVC: BaseVC {
     
     func setupUI() {
         view1.layer.cornerRadius = C.CornerRadius.corner5
-        view2.layer.cornerRadius = C.CornerRadius.corner5
+        view2.layer.cornerRadius = C .CornerRadius.corner5
         btnXacNhan.layer.cornerRadius = C.CornerRadius.corner5
     }
     @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
     }
     @IBAction func tieptucPressed(_ sender: Any) {
-        self.pushVC(controller: SignUpInfoVC())
+        self.pushVC(controller: SignUpInfoVC( ))
     }
     @IBAction func dangNhapPressed(_ sender: Any) {
         self.pushVC(controller: LoginVC())

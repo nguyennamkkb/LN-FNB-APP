@@ -9,21 +9,22 @@ import UIKit
 
 class ForgetPasswordVC: BaseVC {
 
+    @IBOutlet var bXacNhan: UIButton!
     @IBOutlet var view3: UIView!
     @IBOutlet var view2: UIView!
     @IBOutlet var btnSendOtp: UIButton!
     @IBOutlet var view1: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupUI()
     }
     
-    func setupUi(){
-        view1.layer.cornerRadius = C.CornerRadius.corner10
-        view2 .layer.cornerRadius = C.CornerRadius.corner10
-        view3 .layer.cornerRadius = C.CornerRadius.corner10
+    func setupUI(){
+        view1.layer.cornerRadius = C.CornerRadius.corner5
+        view2 .layer.cornerRadius = C.CornerRadius.corner5
+        view3 .layer.cornerRadius = C.CornerRadius.corner5
         btnSendOtp.layer.cornerRadius = C.CornerRadius.corner5
+        bXacNhan.layer.cornerRadius = C.CornerRadius.corner5
     }
     @IBAction func back(_ sender: UIButton) {
         self.onBackNav()

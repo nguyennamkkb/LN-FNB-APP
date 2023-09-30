@@ -9,6 +9,7 @@ import UIKit
 
 class BanDatTruocCell: UITableViewCell {
 
+    var actionDelete: ClosureAction?
     @IBOutlet var bDelete: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +20,9 @@ class BanDatTruocCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    @IBAction func deletePressed(_ sender: Any) {
+        actionDelete?()
     }
     
 }

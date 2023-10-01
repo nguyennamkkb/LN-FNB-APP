@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,6 +24,7 @@
             <connections>
                 <outlet property="V1" destination="tCp-8k-lMp" id="z9w-ys-qtL"/>
                 <outlet property="bXacNhan" destination="8Dw-xE-cSz" id="2gR-P3-3Lo"/>
+                <outlet property="tfTenBan" destination="6sb-3t-ObS" id="kub-4s-yQS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -70,10 +71,10 @@
                         <constraint firstAttribute="bottom" secondItem="v3e-aO-7zF" secondAttribute="bottom" id="sCJ-pb-jz2"/>
                     </constraints>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbS-iB-LCM" userLabel="VDanhMuc">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XbS-iB-LCM" userLabel="vBan">
                     <rect key="frame" x="15" y="102" width="384" height="75"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên bàn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rN-Da-elN" userLabel="danh muc">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên bàn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rN-Da-elN" userLabel="title">
                             <rect key="frame" x="0.0" y="0.0" width="384" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="W7p-hI-Grw"/>
@@ -128,6 +129,9 @@
                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Xác nhận"/>
+                    <connections>
+                        <action selector="xacNhanPressed:" destination="-1" eventType="touchUpInside" id="GG3-Do-lg6"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

@@ -22,6 +22,7 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
             self.navigationController?.navigationBar.barStyle = .default
         }
     }
+    
 
     var getBase64Image: ClosureCustom<String>?
     func setLayoutAlert(){

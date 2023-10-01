@@ -180,5 +180,117 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDFC21A6-1BDF-4CC6-BCAF-57882B305F4F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppData/NewController/Main/More/Manager/QLBan/QLBanVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DDFC21A6-1BDF-4CC6-BCAF-57882B305F4F - bdf63fb6dfaefe77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LN_FNB.QLBanVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "LN FNB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnl/Documents/Dev/LN-FNB-APP/AppData/NewController/Main/More/Manager/QLBan/QLBanVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "112"
+                  endingLineNumber = "112"
+                  offsetFromSymbolStart = "1108">
+               </Location>
+               <Location
+                  uuid = "DDFC21A6-1BDF-4CC6-BCAF-57882B305F4F - 9ee6d5efa358cf99"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (LN_FNB.FTable) -&gt; () in LN_FNB.QLBanVC.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "LN FNB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnl/Documents/Dev/LN-FNB-APP/AppData/NewController/Main/More/Manager/QLBan/QLBanVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "113"
+                  endingLineNumber = "113"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7840376-3AB1-412E-B0AD-F24A504E6DCB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppData/NewController/Main/More/Manager/QLBan/QLBanVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "deleteTable(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3C2FAD4-8080-4349-BC5A-460F744A2E1C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppData/NewController/Main/More/Manager/QLBan/QLBanVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "deleteTable(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F3C2FAD4-8080-4349-BC5A-460F744A2E1C - 860d788f4abbeaac"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LN_FNB.QLBanVC.deleteTable(id: Swift.Int) -&gt; ()"
+                  moduleName = "LN FNB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnl/Documents/Dev/LN-FNB-APP/AppData/NewController/Main/More/Manager/QLBan/QLBanVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  uuid = "F3C2FAD4-8080-4349-BC5A-460F744A2E1C - 8f2c350cbbd6efa6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;LN_FNB.BaseResponse&gt;) -&gt; () in LN_FNB.QLBanVC.deleteTable(id: Swift.Int) -&gt; ()"
+                  moduleName = "LN FNB"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/namnl/Documents/Dev/LN-FNB-APP/AppData/NewController/Main/More/Manager/QLBan/QLBanVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "60">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

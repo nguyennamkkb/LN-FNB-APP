@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
         <array key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
         </array>
@@ -25,7 +28,7 @@
             <connections>
                 <outlet property="bAuth" destination="VP5-bb-gHd" id="fE3-WT-dIO"/>
                 <outlet property="btnXacNhan" destination="oxy-E0-rrc" id="UQE-M0-zhi"/>
-                <outlet property="lbMessage" destination="Ahu-MU-3HP" id="oyH-2T-16l"/>
+                <outlet property="lbMessage" destination="TUw-vN-kaE" id="jgP-KQ-GNR"/>
                 <outlet property="tfEmail" destination="nJI-N4-ojI" id="SEQ-KC-TaB"/>
                 <outlet property="tfMatKhau" destination="FSP-a4-Tpj" id="EPV-d0-CSJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -194,7 +197,7 @@
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" title="Xác nhận"/>
                                     <connections>
-                                        <action selector="xacNhanPressed:" destination="-1" eventType="touchUpInside" id="TE7-EW-UKA"/>
+                                        <action selector="xacNhanPressed:" destination="-1" eventType="touchUpInside" id="f5g-2j-Znv"/>
                                     </connections>
                                 </button>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hb-GS-uxa">
@@ -236,9 +239,9 @@
                         <constraint firstItem="flX-gv-Jvd" firstAttribute="leading" secondItem="Eob-pq-bqk" secondAttribute="leading" id="sBF-7e-8DV"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thong bao" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ahu-MU-3HP">
-                    <rect key="frame" x="15" y="406" width="363" height="20.333333333333314"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TUw-vN-kaE">
+                    <rect key="frame" x="15" y="419" width="363" height="19"/>
+                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="16"/>
                     <color key="textColor" systemColor="systemRedColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -254,20 +257,20 @@
                 <constraint firstItem="ivV-VY-mfX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Efe-HJ-4iq"/>
                 <constraint firstItem="nnz-oj-6HB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="FM3-lk-hyh"/>
                 <constraint firstItem="XPF-hb-azV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FyW-pu-Fh8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TUw-vN-kaE" secondAttribute="trailing" constant="15" id="I99-K2-kYh"/>
+                <constraint firstItem="TUw-vN-kaE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="IAF-od-9Tg"/>
                 <constraint firstItem="Gpd-9I-cOq" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ipz-qA-LwF"/>
-                <constraint firstItem="Ahu-MU-3HP" firstAttribute="top" secondItem="Eob-pq-bqk" secondAttribute="bottom" constant="20" id="Jwg-Qp-vFU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Gpd-9I-cOq" secondAttribute="trailing" id="Lyc-U4-Jjc"/>
                 <constraint firstItem="Eob-pq-bqk" firstAttribute="top" secondItem="Sup-gd-ccZ" secondAttribute="bottom" constant="20" id="MRK-ZC-Y2p"/>
-                <constraint firstItem="Ahu-MU-3HP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="OFF-UL-J4A"/>
                 <constraint firstItem="Gpd-9I-cOq" firstAttribute="bottom" secondItem="XPF-hb-azV" secondAttribute="bottom" id="S54-nc-fPw"/>
                 <constraint firstItem="Eob-pq-bqk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Ts5-2P-J1x"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nnz-oj-6HB" secondAttribute="trailing" constant="15" id="VDO-QS-cP8"/>
                 <constraint firstItem="Sup-gd-ccZ" firstAttribute="top" secondItem="nnz-oj-6HB" secondAttribute="bottom" constant="5" id="YRL-fE-hto"/>
                 <constraint firstItem="Gpd-9I-cOq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cf7-uz-WfQ"/>
                 <constraint firstItem="lJR-71-6GL" firstAttribute="top" secondItem="nnz-oj-6HB" secondAttribute="bottom" constant="5" id="cjf-vZ-yYJ"/>
+                <constraint firstItem="TUw-vN-kaE" firstAttribute="top" secondItem="Sup-gd-ccZ" secondAttribute="bottom" constant="100" id="gAi-B1-416"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Eob-pq-bqk" secondAttribute="bottom" constant="432" id="lle-2l-pJp"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lJR-71-6GL" secondAttribute="trailing" constant="15" id="oan-UL-oZ5"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ahu-MU-3HP" secondAttribute="trailing" constant="15" id="tHS-hd-fWS"/>
                 <constraint firstItem="Sup-gd-ccZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="14" id="tma-en-C4X"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XPF-hb-azV" secondAttribute="trailing" id="ztU-6W-efh"/>
             </constraints>

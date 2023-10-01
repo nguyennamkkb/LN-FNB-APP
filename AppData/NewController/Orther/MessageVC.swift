@@ -9,6 +9,7 @@ import UIKit
 
 class MessageVC: BaseVC {
 
+    var actionOK: ClosureAction?
     @IBOutlet var bXacNhan: UIButton!
     @IBOutlet var bClose: UIButton!
     @IBOutlet var lbMessage: UILabel!
@@ -36,6 +37,7 @@ class MessageVC: BaseVC {
         
     }
     @IBAction func xacNhanPressed(_ sender: Any) {
+        actionOK?()
         self.onBackNav()
     }
 

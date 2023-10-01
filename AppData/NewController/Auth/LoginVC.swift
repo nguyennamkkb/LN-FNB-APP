@@ -36,7 +36,7 @@ class LoginVC: BaseVC {
         view1.layer.cornerRadius = C.CornerRadius.corner5
         view2.layer.cornerRadius = C.CornerRadius.corner5
         btnXacNhan.layer.cornerRadius = C.CornerRadius.corner5
-        
+        lbMessage.isHidden = true
         bAuth.setImage(UIImage(systemName: BiometricManager.getImagetBiometric()), for: .normal)
     }
 
@@ -47,14 +47,21 @@ class LoginVC: BaseVC {
         self.pushVC(controller: ForgetPasswordVC())
     }
     
-    @IBAction func xacNhanPressed(_ sender: Any) {
-//        self.pushVC(controller: TabBarVC())
-        view.endEditing(true)
+//    @IBAction func xacNhanPressed(_ sender: Any) {
+////        self.pushVC(controller: TabBarVC())
+//        view.endEditing(true)
+//        guard let email = tfEmail.text else {return}
+//        guard let password = tfMatKhau.text else {return}
+//        self.showLoading()
+//        login(email: email, password: password)
+//    }
+    @IBAction func xacNhanPressed(_ sender: UIButton) {
         guard let email = tfEmail.text else {return}
         guard let password = tfMatKhau.text else {return}
         self.showLoading()
         login(email: email, password: password)
     }
+    
     
     func login(email: String, password: String){
         print(email)
@@ -71,7 +78,8 @@ class LoginVC: BaseVC {
                 Common.userMaster = data ?? PStore()
                 self.wrapRoot(vc: TabBarVC())
             } else if response?.statusCode == 0 {
-                self.lbMessage.text = "Thông báo: \(response?.message ?? "" )"
+                self.lbMessage.isHidden = false
+                self.lbMessage.text = "Thông báo: email hoặc mật khẩu không đúng"
             }
         }
     }

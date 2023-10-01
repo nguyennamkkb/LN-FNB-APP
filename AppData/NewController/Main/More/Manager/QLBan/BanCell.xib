@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -20,17 +20,10 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="220" id="KGk-i7-Jjw" customClass="BanCell" customModule="LN_FNB" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="348" height="220"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="348" height="220"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5v-nF-1wE" userLabel="line">
-                        <rect key="frame" x="15" y="52" width="318" height="0.6666666666666643"/>
-                        <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="0.5" id="rsK-hi-hNy"/>
-                        </constraints>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljT-bs-UFy">
                         <rect key="frame" x="15" y="0.0" width="318" height="44"/>
                         <subviews>
@@ -84,15 +77,22 @@
                             <constraint firstAttribute="height" constant="44" id="zRH-FJ-xaa"/>
                         </constraints>
                     </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBf-Eb-hmC">
+                        <rect key="frame" x="15" y="44" width="318" height="0.6666666666666643"/>
+                        <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="49L-01-UV1"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="ljT-bs-UFy" secondAttribute="trailing" constant="15" id="3xs-8a-Fgg"/>
-                    <constraint firstItem="x5v-nF-1wE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="99l-uI-h5r"/>
+                    <constraint firstItem="BBf-Eb-hmC" firstAttribute="top" secondItem="ljT-bs-UFy" secondAttribute="bottom" id="Dwm-Gg-Sjj"/>
                     <constraint firstItem="ljT-bs-UFy" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="JdR-2m-4LX"/>
-                    <constraint firstItem="x5v-nF-1wE" firstAttribute="top" secondItem="ljT-bs-UFy" secondAttribute="bottom" constant="8" id="cwX-tk-Rnt"/>
-                    <constraint firstAttribute="trailing" secondItem="x5v-nF-1wE" secondAttribute="trailing" constant="15" id="oMP-fT-EUU"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ljT-bs-UFy" secondAttribute="bottom" constant="8" id="bh6-wy-TjB"/>
+                    <constraint firstAttribute="trailing" secondItem="BBf-Eb-hmC" secondAttribute="trailing" constant="15" id="gop-a8-rU7"/>
+                    <constraint firstItem="BBf-Eb-hmC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="oTb-YH-0cc"/>
                     <constraint firstItem="ljT-bs-UFy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ua2-pr-jSS"/>
-                    <constraint firstAttribute="bottom" secondItem="x5v-nF-1wE" secondAttribute="bottom" constant="8" id="waW-tH-oqu"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -100,6 +100,7 @@
             <connections>
                 <outlet property="bDelete" destination="jJ6-gi-gP2" id="FzY-sl-itb"/>
                 <outlet property="bEdit" destination="jrB-s5-dzt" id="gmO-09-u4k"/>
+                <outlet property="lbTableName" destination="bet-Kr-j2B" id="AU3-md-PSm"/>
             </connections>
             <point key="canvasLocation" x="-273.28244274809157" y="64.788732394366207"/>
         </tableViewCell>

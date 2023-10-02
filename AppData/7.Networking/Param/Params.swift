@@ -11,16 +11,16 @@ import ObjectMapper
 
 
 class LoginParam: Mappable {
-    var phone: String?
+    var email: String?
     var password: String?
     
     init(){}
-    init(phone: String){
-        self.phone  = phone
+    init(email: String){
+        self.email  = email
     }
     
-    init(phone: String, password: String){
-        self.phone  = phone
+    init(email: String, password: String){
+        self.email  = email
         self.password = password
     }
     required init?(map: ObjectMapper.Map) {
@@ -28,7 +28,7 @@ class LoginParam: Mappable {
     }
 
     func mapping(map: ObjectMapper.Map) {
-        phone <- map["phone"]
+        email <- map["email"]
         password <- map["password"]
     }
     

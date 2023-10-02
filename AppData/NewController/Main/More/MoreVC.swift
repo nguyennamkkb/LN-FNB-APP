@@ -37,6 +37,9 @@ class MoreVC: BaseVC {
         let vc = CuaHangVC()
         self.pushVC(controller: vc)
     }
+    @IBAction func dangXuatPressed(_ sender: Any) {
+        self.wrapRoot(vc: LoginVC())
+    }
     
     
     

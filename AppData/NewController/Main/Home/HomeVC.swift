@@ -46,8 +46,6 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let height = 66
         layout.minimumInteritemSpacing = totalSpaceScreen / countItem
         layout.minimumLineSpacing = 20
-//        collectionViewFlowLayout.itemSize = CGSize(width: 63, height: 66)
-
         layout.itemSize.width = width
         layout.itemSize.height = CGFloat(height)
         

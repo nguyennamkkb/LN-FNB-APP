@@ -10,7 +10,7 @@ import ObjectMapper
 
 
 class ParamSearch: Mappable {
-    var store_id: Int?
+    var user_id: Int?
     var status: Int?
     var keySearch: String?
     var name: String?
@@ -22,9 +22,9 @@ class ParamSearch: Mappable {
     init(){}
     
     
-    init(store_id: Int, status: Int? = nil, keySearch: String? = nil, name: String? = nil, from: Int64? = nil, to: Int64? = nil){
+    init(user_id: Int, status: Int? = nil, keySearch: String? = nil, name: String? = nil, from: Int64? = nil, to: Int64? = nil){
         let mili = Common.getMilisecondNow()
-        self.store_id  = store_id
+        self.user_id  = user_id
         self.status = status
         self.keySearch = keySearch
         self.name = name
@@ -38,7 +38,7 @@ class ParamSearch: Mappable {
     }
 
     func mapping(map: ObjectMapper.Map) {
-        store_id <- map["store_id"]
+        user_id <- map["user_id"]
         status <- map["status"]
         keySearch <- map["keySearch"]
         name <- map["name"]

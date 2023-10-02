@@ -13,7 +13,7 @@ import SystemConfiguration
 class ServiceManager {
     static let shared: ServiceManager = ServiceManager()
 //    static let ROOT = "http://14.225.254.151:3456/ln-pos-api/"
-    static let ROOT = "http://192.168.1.4:4444/ln-fnb-api/"
+    static let ROOT = "http://14.225.254.151:3457/ln-fnb-api/"
     public static let common = CommonServices()
     
     public static func isConnectedToInternet() ->Bool {

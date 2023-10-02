@@ -27,12 +27,10 @@ class ThemBanVC: BaseVC {
     func bindDataSua(item: FTable, trangThai: Int) {
         self.item = item
         self.statusThemHoacSua = trangThai
-        print(1)
-        print(self.item.name)
+
     }
     func setupData() {
-        print(2)
-        print(self.item.name)
+
         tfTenBan.text = self.item.name ?? nil
     }
     

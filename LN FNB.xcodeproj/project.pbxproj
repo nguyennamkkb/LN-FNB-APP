@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B3FB9042ACB3C9900B1B974 /* FCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB9032ACB3C9900B1B974 /* FCategory.swift */; };
 		0B3FB91D2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */; };
 		0B3FB91E2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */; };
 		0B3FB9222AC7D2D4003FBCB5 /* QLHoaDonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB9202AC7D2D4003FBCB5 /* QLHoaDonVC.swift */; };
@@ -175,6 +176,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B3FB9032ACB3C9900B1B974 /* FCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCategory.swift; sourceTree = "<group>"; };
 		0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemBanDatTruocVC.swift; sourceTree = "<group>"; };
 		0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemBanDatTruocVC.xib; sourceTree = "<group>"; };
 		0B3FB9202AC7D2D4003FBCB5 /* QLHoaDonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QLHoaDonVC.swift; sourceTree = "<group>"; };
@@ -695,6 +697,7 @@
 				0B5D18672A0AA5F3004E47FD /* PServices.swift */,
 				0B76B93E2A7441F800B91761 /* PReport.swift */,
 				0B4CEEF92AC9B89300C61C3D /* FTable.swift */,
+				0B3FB9032ACB3C9900B1B974 /* FCategory.swift */,
 			);
 			path = 2.Models;
 			sourceTree = "<group>";
@@ -1027,6 +1030,7 @@
 				0BD56ADD2AC5E81400A41312 /* ThemMonAnCell.swift in Sources */,
 				0BE0391B29F82039002CB20F /* BaseResponse.swift in Sources */,
 				0B4CEEFA2AC9B89300C61C3D /* FTable.swift in Sources */,
+				0B3FB9042ACB3C9900B1B974 /* FCategory.swift in Sources */,
 				0B3FB9342AC7FC63003FBCB5 /* CuaHangCell.swift in Sources */,
 				0B3FB91D2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift in Sources */,
 				0BE0393129F82039002CB20F /* BasePopupVC.swift in Sources */,

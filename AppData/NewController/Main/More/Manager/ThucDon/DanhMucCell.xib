@@ -45,6 +45,9 @@
                                 <state key="normal" image="xmark" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                 </state>
+                                <connections>
+                                    <action selector="deletePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5Bi-LP-5IH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gif-uO-taZ" userLabel="edit">
                                 <rect key="frame" x="333" y="9.6666666666666643" width="25" height="25"/>
@@ -58,6 +61,9 @@
                                 <state key="normal" image="pencil" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                                 </state>
+                                <connections>
+                                    <action selector="editPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kNb-RK-Chj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -94,6 +100,7 @@
             <connections>
                 <outlet property="bDelete" destination="LKh-1g-ucd" id="CnJ-Kd-xhb"/>
                 <outlet property="bEdit" destination="gif-uO-taZ" id="hZs-9O-iBb"/>
+                <outlet property="lbName" destination="QeT-t4-hIM" id="tkp-TQ-ISX"/>
             </connections>
             <point key="canvasLocation" x="156.4885496183206" y="59.859154929577471"/>
         </tableViewCell>

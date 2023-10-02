@@ -18,6 +18,7 @@
             <connections>
                 <outlet property="VSearch" destination="GMB-Zg-zgn" id="ZJC-Kk-tqA"/>
                 <outlet property="bAdd" destination="WSZ-ru-8we" id="Yrh-mW-zIH"/>
+                <outlet property="keySearch" destination="dOW-yC-odD" id="9gv-B5-1mI"/>
                 <outlet property="tableView" destination="GD3-YL-jPJ" id="ofv-Rn-c6P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -97,6 +98,9 @@
                             <state key="normal" image="magnifyingglass" catalog="system">
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </state>
+                            <connections>
+                                <action selector="searchPressed:" destination="-1" eventType="touchUpInside" id="djx-AY-Kff"/>
+                            </connections>
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập tên danh mục" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dOW-yC-odD">
                             <rect key="frame" x="10" y="0.0" width="309" height="44"/>

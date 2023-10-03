@@ -101,6 +101,7 @@
             <connections>
                 <outlet property="bDelete" destination="ote-N9-CIH" id="kcp-ej-Cq5"/>
                 <outlet property="bEdit" destination="KCC-ZO-7wJ" id="Roo-C8-d8e"/>
+                <outlet property="lbName" destination="4j1-3c-ijW" id="0YI-74-08K"/>
             </connections>
             <point key="canvasLocation" x="328.24427480916029" y="128.87323943661971"/>
         </tableViewCell>

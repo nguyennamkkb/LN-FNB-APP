@@ -8,32 +8,37 @@
 import Foundation
 import ObjectMapper
 
-class PProduct: Mappable {
-    var id: String?
-    var store_id: Int?
+class FProduct: Mappable {
+    var id: Int?
+    var user_id: Int?
+    var category_id: Int?
     var name: String?
     var price: Int?
+    var description: String?
     var image: String?
-    var note: String?
-    var point: Int?
+    var cost: Int?
+    var isHot: Int?
     var createAt: String?
     var updateAt: String?
     var status: Int?
     var cksRequest: String?
     var timeRequest: Int?
     
+    init(){}
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }
     
     func mapping(map: ObjectMapper.Map) {
         id <- map["id"]
-        store_id <- map["store_id"]
+        user_id <- map["user_id"]
+        category_id <- map["category_id"]
         name <- map["name"]
         price <- map["price"]
+        description <- map["description"]
         image <- map["image"]
-        note <- map["note"]
-        point <- map["point"]
+        cost <- map["cost"]
+        isHot <- map["isHot"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]

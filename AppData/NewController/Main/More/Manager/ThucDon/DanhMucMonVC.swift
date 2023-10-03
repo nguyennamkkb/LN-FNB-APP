@@ -11,6 +11,9 @@ import ObjectMapper
 
 class DanhMucMonVC: BaseVC {
     
+    
+    
+    let refreshControl = UIRefreshControl()
     @IBOutlet var keySearch: UITextField!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var bAdd: UIButton!
@@ -37,9 +40,17 @@ class DanhMucMonVC: BaseVC {
         let sheet = SheetViewController(controller: vc, sizes: [.fixed(300)])
         self.present(sheet, animated: true)
     }
+    @objc func refresh(_ sender: AnyObject) {
+        getCategories()
+        refreshControl.endRefreshing()
+    }
     func setupUI(){
         VSearch.layer.cornerRadius = C.CornerRadius.corner5
         bAdd.layer.cornerRadius = C.CornerRadius.corner5
+        
+        refreshControl.tintColor = .white
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl) // not required when using UITableViewController
     }
     @IBAction func searchPressed(_ sender: Any) {
         getCategories()

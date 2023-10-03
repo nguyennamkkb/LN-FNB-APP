@@ -34,7 +34,7 @@
 		0B5D18602A0AA132004E47FD /* PCustomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D185F2A0AA132004E47FD /* PCustomer.swift */; };
 		0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18612A0AA2DC004E47FD /* PEmployee.swift */; };
 		0B5D18642A0AA355004E47FD /* PBookCalender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18632A0AA355004E47FD /* PBookCalender.swift */; };
-		0B5D18662A0AA54F004E47FD /* PProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18652A0AA54F004E47FD /* PProduct.swift */; };
+		0B5D18662A0AA54F004E47FD /* FProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18652A0AA54F004E47FD /* FProduct.swift */; };
 		0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18672A0AA5F3004E47FD /* PServices.swift */; };
 		0B69E3FE2AC345C200C11C2F /* MonTrenBanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69E3FC2AC345C200C11C2F /* MonTrenBanCell.swift */; };
 		0B69E3FF2AC345C200C11C2F /* MonTrenBanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B69E3FD2AC345C200C11C2F /* MonTrenBanCell.xib */; };
@@ -203,7 +203,7 @@
 		0B5D185F2A0AA132004E47FD /* PCustomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PCustomer.swift; sourceTree = "<group>"; };
 		0B5D18612A0AA2DC004E47FD /* PEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PEmployee.swift; sourceTree = "<group>"; };
 		0B5D18632A0AA355004E47FD /* PBookCalender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBookCalender.swift; sourceTree = "<group>"; };
-		0B5D18652A0AA54F004E47FD /* PProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PProduct.swift; sourceTree = "<group>"; };
+		0B5D18652A0AA54F004E47FD /* FProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FProduct.swift; sourceTree = "<group>"; };
 		0B5D18672A0AA5F3004E47FD /* PServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PServices.swift; sourceTree = "<group>"; };
 		0B69E3FC2AC345C200C11C2F /* MonTrenBanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonTrenBanCell.swift; sourceTree = "<group>"; };
 		0B69E3FD2AC345C200C11C2F /* MonTrenBanCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonTrenBanCell.xib; sourceTree = "<group>"; };
@@ -693,7 +693,7 @@
 				0B5D185F2A0AA132004E47FD /* PCustomer.swift */,
 				0B5D18612A0AA2DC004E47FD /* PEmployee.swift */,
 				0B5D18632A0AA355004E47FD /* PBookCalender.swift */,
-				0B5D18652A0AA54F004E47FD /* PProduct.swift */,
+				0B5D18652A0AA54F004E47FD /* FProduct.swift */,
 				0B5D18672A0AA5F3004E47FD /* PServices.swift */,
 				0B76B93E2A7441F800B91761 /* PReport.swift */,
 				0B4CEEF92AC9B89300C61C3D /* FTable.swift */,
@@ -1081,7 +1081,7 @@
 				0BE0392829F82039002CB20F /* ExData.swift in Sources */,
 				0BE038EB29F81F6D002CB20F /* POS_App.xcdatamodeld in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
-				0B5D18662A0AA54F004E47FD /* PProduct.swift in Sources */,
+				0B5D18662A0AA54F004E47FD /* FProduct.swift in Sources */,
 				0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */,
 				0BE0392E29F82039002CB20F /* Utility.swift in Sources */,
 				0B3FB92B2AC7E1A2003FBCB5 /* LocHoaDonVC.swift in Sources */,
@@ -1271,7 +1271,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vimass.qrvn.ln-fnb";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vimass.qrvn.FNB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1310,7 +1310,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vimass.qrvn.ln-fnb";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vimass.qrvn.FNB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

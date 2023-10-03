@@ -98,7 +98,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" name="white"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                                 <color key="value" name="gray"/>
@@ -147,7 +147,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" name="white"/>
                                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                                 <color key="value" name="gray"/>
@@ -191,26 +191,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ll-mR-8rp">
                                 <rect key="frame" x="0.0" y="25" width="352" height="50"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập danh mục món" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IYS-B0-Mxa">
-                                        <rect key="frame" x="5" y="0.0" width="342" height="50"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="textColor" name="white"/>
-                                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                                <color key="value" name="gray"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn danh mục" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dgp-XF-OxT">
+                                        <rect key="frame" x="10" y="0.0" width="337" height="47"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" name="gray"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bw7-Cv-HUs" userLabel="bChonDanhMuc">
+                                        <rect key="frame" x="0.0" y="0.0" width="352" height="50"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <connections>
+                                            <action selector="chonDanhMucPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="jqh-hZ-yFr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" name="navi"/>
                                 <constraints>
-                                    <constraint firstItem="IYS-B0-Mxa" firstAttribute="top" secondItem="3Ll-mR-8rp" secondAttribute="top" id="55Q-Ut-kDa"/>
-                                    <constraint firstItem="IYS-B0-Mxa" firstAttribute="leading" secondItem="3Ll-mR-8rp" secondAttribute="leading" constant="5" id="MiI-iz-J0n"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dgp-XF-OxT" secondAttribute="bottom" constant="3" id="4Jp-AP-NPG"/>
+                                    <constraint firstItem="Dgp-XF-OxT" firstAttribute="top" secondItem="3Ll-mR-8rp" secondAttribute="top" id="4wG-C2-Miz"/>
+                                    <constraint firstAttribute="trailing" secondItem="Bw7-Cv-HUs" secondAttribute="trailing" id="7y1-Gf-ftw"/>
+                                    <constraint firstItem="Dgp-XF-OxT" firstAttribute="leading" secondItem="3Ll-mR-8rp" secondAttribute="leading" constant="10" id="FvR-br-2Fj"/>
+                                    <constraint firstItem="Bw7-Cv-HUs" firstAttribute="top" secondItem="3Ll-mR-8rp" secondAttribute="top" id="O6O-Ok-ArM"/>
                                     <constraint firstAttribute="height" constant="50" id="Prh-I8-EB7"/>
-                                    <constraint firstAttribute="bottom" secondItem="IYS-B0-Mxa" secondAttribute="bottom" id="doV-CH-t7b"/>
-                                    <constraint firstAttribute="trailing" secondItem="IYS-B0-Mxa" secondAttribute="trailing" constant="5" id="fNd-ku-wEW"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dgp-XF-OxT" secondAttribute="trailing" constant="5" id="QHw-t9-eOU"/>
+                                    <constraint firstAttribute="bottom" secondItem="Bw7-Cv-HUs" secondAttribute="bottom" id="Usk-Hz-10r"/>
+                                    <constraint firstItem="Bw7-Cv-HUs" firstAttribute="leading" secondItem="3Ll-mR-8rp" secondAttribute="leading" id="Xib-0s-59G"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -337,6 +342,9 @@
                         <color key="tintColor" name="white"/>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <state key="normal" title="Xác nhận"/>
+                        <connections>
+                            <action selector="xacNhanPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bJD-fZ-QzP"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -378,6 +386,11 @@
                 <outlet property="bChonAnh" destination="oaN-sK-uQL" id="ldi-8n-R1u"/>
                 <outlet property="bXacNhan" destination="Bdc-I1-UdU" id="vtH-3o-b4z"/>
                 <outlet property="imgMonAn" destination="Ns0-CE-KMT" id="rPo-81-QS9"/>
+                <outlet property="lbCategory" destination="Dgp-XF-OxT" id="Jzc-M2-1Be"/>
+                <outlet property="tfCost" destination="lDb-5f-UEW" id="wFS-Od-ftv"/>
+                <outlet property="tfDescription" destination="TQ0-VD-nN5" id="rpT-ud-cSq"/>
+                <outlet property="tfName" destination="dFF-Yg-f3c" id="lSc-jv-YXW"/>
+                <outlet property="tfPrice" destination="FXS-YA-PxQ" id="dzY-y7-PtG"/>
             </connections>
             <point key="canvasLocation" x="80.916030534351137" y="206.69014084507043"/>
         </tableViewCell>

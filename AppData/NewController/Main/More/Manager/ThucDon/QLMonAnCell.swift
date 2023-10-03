@@ -9,8 +9,10 @@ import UIKit
 
 class QLMonAnCell: UITableViewCell {
 
-    var actionEdit: ClosureAction?
-    var actionDelete: ClosureAction?
+    @IBOutlet var lbName: UILabel!
+    var item = FProduct()
+    var actionEdit: ClosureCustom<FProduct>?
+    var actionDelete: ClosureCustom<FProduct>?
     @IBOutlet var bDelete: UIButton!
     @IBOutlet var bEdit: UIButton!
     override func awakeFromNib() {
@@ -23,11 +25,17 @@ class QLMonAnCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
+
+    func bindData(item: FProduct){
+        self.item = item
+        lbName.text = self.item.name ?? ""
+    }
+    
     @IBAction func editPressed(_ sender: Any) {
-        actionEdit?()
+        actionEdit?(item)
     }
     @IBAction func deletePressed(_ sender: Any) {
-        actionDelete?()
+        actionDelete?(item)
     }
     
 }

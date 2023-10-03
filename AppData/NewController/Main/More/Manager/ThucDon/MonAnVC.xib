@@ -20,6 +20,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MonAnVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
                 <outlet property="bAdd" destination="dxW-df-0IK" id="jP6-PC-sSf"/>
+                <outlet property="keySearch" destination="Znb-oh-Mce" id="UxB-Il-7ap"/>
                 <outlet property="tableView" destination="0zo-Pe-XvQ" id="OQ3-oh-XZ1"/>
                 <outlet property="vSearch" destination="JQq-IR-ImF" id="5yf-0d-igS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -37,6 +38,12 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPs-57-ki3" userLabel="nav">
                     <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                     <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Món ăn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg2-8h-bXq">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
+                            <color key="textColor" name="white"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JlB-b3-J0C" userLabel="back">
                             <rect key="frame" x="15" y="4.6666666666666643" width="35" height="35"/>
                             <constraints>
@@ -52,12 +59,6 @@
                                 <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="JsL-Rr-aB2"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Món ăn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zg2-8h-bXq">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
-                            <color key="textColor" name="white"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxW-df-0IK" userLabel="bAdd">
                             <rect key="frame" x="348" y="7" width="30" height="30"/>
                             <color key="backgroundColor" name="green"/>
@@ -100,6 +101,9 @@
                             <state key="normal" image="magnifyingglass" catalog="system">
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                             </state>
+                            <connections>
+                                <action selector="searchPressed:" destination="-1" eventType="touchUpInside" id="vqN-c0-YhY"/>
+                            </connections>
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập tên món ăn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Znb-oh-Mce">
                             <rect key="frame" x="10" y="0.0" width="309" height="44"/>

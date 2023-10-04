@@ -19,7 +19,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
+                <outlet property="btnChonMon" destination="2Y0-bG-Ldb" id="CF3-kQ-7VO"/>
                 <outlet property="collectionView" destination="qNN-hO-xJ5" id="x5u-Q7-RHd"/>
+                <outlet property="tenBanDaChon" destination="Tj8-SS-efK" id="uzd-X4-4Hw"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -64,7 +66,7 @@
                         <constraint firstAttribute="height" constant="44" id="q77-NF-JJN"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Còn trống: 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tj8-SS-efK" userLabel="Dang nhap">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Còn trống: 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tj8-SS-efK" userLabel="tenbanchon">
                     <rect key="frame" x="15" y="103" width="363" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="1CO-zK-spj"/>

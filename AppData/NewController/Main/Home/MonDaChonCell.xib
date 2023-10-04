@@ -45,34 +45,44 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exq-cL-DyP" userLabel="VAction">
-                                <rect key="frame" x="254" y="12" width="60" height="20"/>
+                                <rect key="frame" x="234" y="7" width="80" height="30"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AEs-2w-rbA">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7o-nj-XdK">
-                                                <rect key="frame" x="0.0" y="2" width="16" height="16"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7o-nj-XdK" userLabel="them">
+                                                <rect key="frame" x="0.0" y="2.6666666666666661" width="25" height="25"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="16" id="FC7-hG-Egk"/>
-                                                    <constraint firstAttribute="width" constant="16" id="xQd-fH-es7"/>
+                                                    <constraint firstAttribute="height" constant="25" id="FC7-hG-Egk"/>
+                                                    <constraint firstAttribute="width" constant="25" id="xQd-fH-es7"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="ic_plus"/>
+                                                <state key="normal" image="ic_plus">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="congPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XgG-wn-5ut"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jv-wt-4f7">
-                                                <rect key="frame" x="16" y="1.6666666666666661" width="28" height="16.666666666666671"/>
+                                                <rect key="frame" x="25" y="6.6666666666666661" width="30" height="16.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                 <color key="textColor" name="white"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOQ-gY-jcm">
-                                                <rect key="frame" x="44" y="2" width="16" height="16"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOQ-gY-jcm" userLabel="tru">
+                                                <rect key="frame" x="55" y="2.6666666666666661" width="25" height="25"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="16" id="hXj-bo-1ox"/>
-                                                    <constraint firstAttribute="height" constant="16" id="scR-CU-1c5"/>
+                                                    <constraint firstAttribute="width" constant="25" id="hXj-bo-1ox"/>
+                                                    <constraint firstAttribute="height" constant="25" id="scR-CU-1c5"/>
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="ic_tru"/>
+                                                <state key="normal" image="ic_tru">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="truPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oc3-0j-lsH"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -80,10 +90,10 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="AEs-2w-rbA" secondAttribute="bottom" id="0os-cN-i1a"/>
-                                    <constraint firstAttribute="height" constant="20" id="93V-eX-lxR"/>
+                                    <constraint firstAttribute="height" constant="30" id="93V-eX-lxR"/>
                                     <constraint firstItem="AEs-2w-rbA" firstAttribute="leading" secondItem="Exq-cL-DyP" secondAttribute="leading" id="ikN-Tp-1H7"/>
                                     <constraint firstAttribute="trailing" secondItem="AEs-2w-rbA" secondAttribute="trailing" id="kL8-B5-IlE"/>
-                                    <constraint firstAttribute="width" constant="60" id="oQs-Sb-VyV"/>
+                                    <constraint firstAttribute="width" constant="80" id="oQs-Sb-VyV"/>
                                     <constraint firstItem="AEs-2w-rbA" firstAttribute="top" secondItem="Exq-cL-DyP" secondAttribute="top" id="wDc-Az-Ger"/>
                                 </constraints>
                             </view>
@@ -121,6 +131,9 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="VLine" destination="YlB-Mb-8Cs" id="dUd-gj-7Cp"/>
+                <outlet property="lbCount" destination="3Jv-wt-4f7" id="XCD-Ms-6sK"/>
+                <outlet property="lbName" destination="gax-T6-hIR" id="iKt-MQ-fkO"/>
+                <outlet property="lbPrice" destination="uj0-Jf-oc4" id="3Mg-fQ-AL1"/>
             </connections>
             <point key="canvasLocation" x="96.18320610687023" y="73.591549295774655"/>
         </tableViewCell>

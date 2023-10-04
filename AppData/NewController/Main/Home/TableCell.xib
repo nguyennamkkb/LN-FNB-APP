@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -18,21 +18,21 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TableCell" customModule="LN_FNB" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="100" height="114"/>
+            <rect key="frame" x="0.0" y="0.0" width="70" height="56"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="100" height="114"/>
+                <rect key="frame" x="0.0" y="0.0" width="70" height="56"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MA3-oX-fBk">
-                        <rect key="frame" x="0.0" y="0.0" width="100" height="114"/>
+                        <rect key="frame" x="0.0" y="0.0" width="70" height="56"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_tablett1" translatesAutoresizingMaskIntoConstraints="NO" id="vp1-dx-67D">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="114"/>
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="56"/>
                                 <color key="tintColor" systemColor="systemPinkColor"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EcG-aG-mac" userLabel="tableName">
-                                <rect key="frame" x="36.666666666666664" y="47" width="26.666666666666664" height="20"/>
+                                <rect key="frame" x="21.666666666666664" y="18" width="26.666666666666664" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="fdJ-Qn-6HZ"/>
                                 </constraints>
@@ -40,9 +40,20 @@
                                 <color key="textColor" name="white"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="eS1-y8-OGc">
+                                <rect key="frame" x="55" y="0.99999999999999822" width="15" height="13.666666666666668"/>
+                                <color key="tintColor" name="green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="AE6-8g-6HX"/>
+                                    <constraint firstAttribute="width" constant="15" id="kuW-Hd-E1x"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Laa-Hz-lIy">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="114"/>
+                                <rect key="frame" x="0.0" y="0.0" width="70" height="56"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <connections>
+                                    <action selector="chonBanPressed:" destination="gTV-IL-0wX" eventType="touchUpInside" id="7ix-pU-2GM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,13 +61,17 @@
                             <constraint firstAttribute="bottom" secondItem="Laa-Hz-lIy" secondAttribute="bottom" id="1p6-Oq-U6M"/>
                             <constraint firstItem="Laa-Hz-lIy" firstAttribute="leading" secondItem="MA3-oX-fBk" secondAttribute="leading" id="CLt-hR-bKF"/>
                             <constraint firstItem="Laa-Hz-lIy" firstAttribute="top" secondItem="MA3-oX-fBk" secondAttribute="top" id="D0h-Nn-yzH"/>
+                            <constraint firstAttribute="trailing" secondItem="eS1-y8-OGc" secondAttribute="trailing" id="JZK-o0-7Hi"/>
                             <constraint firstItem="vp1-dx-67D" firstAttribute="leading" secondItem="MA3-oX-fBk" secondAttribute="leading" id="U9A-me-Rmo"/>
+                            <constraint firstAttribute="trailing" secondItem="eS1-y8-OGc" secondAttribute="trailing" id="Uf8-en-6r3"/>
                             <constraint firstItem="vp1-dx-67D" firstAttribute="top" secondItem="MA3-oX-fBk" secondAttribute="top" id="azH-TB-MM1"/>
                             <constraint firstAttribute="trailing" secondItem="vp1-dx-67D" secondAttribute="trailing" id="cUS-pS-ChZ"/>
                             <constraint firstItem="EcG-aG-mac" firstAttribute="centerY" secondItem="MA3-oX-fBk" secondAttribute="centerY" id="dUM-yr-SIo"/>
                             <constraint firstAttribute="bottom" secondItem="vp1-dx-67D" secondAttribute="bottom" id="dj0-nQ-pkf"/>
+                            <constraint firstItem="eS1-y8-OGc" firstAttribute="top" secondItem="MA3-oX-fBk" secondAttribute="top" id="eHZ-ff-LbN"/>
                             <constraint firstAttribute="trailing" secondItem="Laa-Hz-lIy" secondAttribute="trailing" id="eeQ-er-gTV"/>
                             <constraint firstItem="EcG-aG-mac" firstAttribute="centerX" secondItem="MA3-oX-fBk" secondAttribute="centerX" id="lVh-l8-foH"/>
+                            <constraint firstItem="eS1-y8-OGc" firstAttribute="top" secondItem="MA3-oX-fBk" secondAttribute="top" id="sgC-6h-NDP"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -69,16 +84,21 @@
                 <constraint firstAttribute="trailing" secondItem="MA3-oX-fBk" secondAttribute="trailing" id="eI7-iK-IE9"/>
                 <constraint firstAttribute="bottom" secondItem="MA3-oX-fBk" secondAttribute="bottom" id="lG7-jR-bk6"/>
             </constraints>
-            <size key="customSize" width="100" height="114"/>
+            <size key="customSize" width="70" height="56"/>
             <connections>
+                <outlet property="imgCheck" destination="eS1-y8-OGc" id="UfT-wz-Dn7"/>
                 <outlet property="imgTable" destination="vp1-dx-67D" id="hAs-th-QHA"/>
                 <outlet property="lbTableName" destination="EcG-aG-mac" id="TfR-9c-Ea5"/>
             </connections>
-            <point key="canvasLocation" x="94.656488549618317" y="91.549295774647888"/>
+            <point key="canvasLocation" x="71.755725190839698" y="71.126760563380287"/>
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="123"/>
         <image name="ic_tablett1" width="63" height="66.333335876464844"/>
+        <namedColor name="green">
+            <color red="0.14900000393390656" green="0.64499998092651367" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -9,9 +9,13 @@ import UIKit
 
 class TableCell: UICollectionViewCell {
 
-    
+    @IBOutlet var imgCheck: UIImageView!
+    var passDataSelect: ClosureCustom<FTable>?
+    var passDataDelete: ClosureCustom<FTable>?
+    var item = FTable()
     @IBOutlet weak var lbTableName: UILabel!
     @IBOutlet weak var imgTable: UIImageView!
+    var trangThaiChon: Bool = false
     enum tableStatus: Int {
         case conTrong = 1
         case dangGoiMon = 2
@@ -35,8 +39,26 @@ class TableCell: UICollectionViewCell {
         setTableImage()
     }
 
+    func bindData(item: FTable){
+        self.item = item
+        lbTableName.text = item.name
+        trangThaiChon = false
+        imgCheck.isHidden = true
+    }
     func setTableImage(){
+
+        imgCheck.isHidden = true
         imgTable.image = tableStatus.getImage(.conTrong)()
+    }
+    @IBAction func chonBanPressed(_ sender: Any) {
+        if trangThaiChon == false {
+            imgCheck.isHidden = false
+            passDataSelect?(item)
+        }else {
+            imgCheck.isHidden = true
+            passDataDelete?(item)
+        }
+        trangThaiChon = !trangThaiChon
     }
     
 }

@@ -18,6 +18,7 @@ class FProduct: Mappable {
     var image: String?
     var cost: Int?
     var isHot: Int?
+    var count: Int?
     var createAt: String?
     var updateAt: String?
     var status: Int?
@@ -39,6 +40,7 @@ class FProduct: Mappable {
         image <- map["image"]
         cost <- map["cost"]
         isHot <- map["isHot"]
+        count <- map["count"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]

@@ -14,6 +14,7 @@ class FCategory: Mappable {
     var user_id: Int?
     var createAt: String?
     var updateAt: String?
+    var products: [FProduct]?
     var status: Int?
     var cksRequest: String?
     var timeRequest: Int?
@@ -34,6 +35,7 @@ class FCategory: Mappable {
         id <- map["id"]
         name <- map["name"]
         user_id <- map["user_id"]
+        products <- map["products"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]

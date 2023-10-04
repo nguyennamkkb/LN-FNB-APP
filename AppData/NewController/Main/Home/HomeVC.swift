@@ -6,9 +6,16 @@
 //
 
 import UIKit
+import ObjectMapper
 
 class HomeVC: BaseVC {
     
+    @IBOutlet var tenBanDaChon: UILabel!
+    var listTableSelected: [FTable] = []
+    @IBOutlet var btnChonMon: UIButton!
+    let refreshControl = UIRefreshControl()
+    var collectionData =  [FTable]()
+
     @IBOutlet var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,25 +23,69 @@ class HomeVC: BaseVC {
         collectionView.delegate = self
         let nib = UINib(nibName: "TableCell", bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: "TableCell")        // Do any additional setup after loading the view.
-        
         setLayout()
+        getTables()
+        setupUI()
+    }
+    func setupUI(){
+        btnChonMon.isHidden = true
+        refreshControl.tintColor = .white
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        collectionView.refreshControl = refreshControl
     }
     @IBAction func chonMonPressed(_ sender: UIButton) {
-        self.pushVC(controller: ChonMonVC())
+//        print(listTableSelected.toJSON())
+        let vc = ChonMonVC()
+        vc.bindData(ban: dsBanChon())
+        self.pushVC(controller: vc)
     }
     
-    
-    
+    @objc func refresh(_ sender: AnyObject) {
+        getTables()
+        listTableSelected.removeAll()
+        tenBanDaChon.text = "Còn trống: \(getTableEmpty())"
+        collectionView.refreshControl?.endRefreshing()
+    }
+    func getTables(){
+        guard let id = Common.userMaster.id else {return}
+        
+        let param = ParamSearch(user_id: id, status: 1, keySearch: "")
+        
+        ServiceManager.common.getAllTables(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
+            (response) in
+            if response?.data != nil, response?.statusCode == 200 {
+                self.collectionData = Mapper<FTable>().mapArray(JSONObject: response!.data ) ?? [FTable]()
+                
+                DispatchQueue.main.async {
+                    self.tenBanDaChon.text = "Còn trống: \(self.getTableEmpty())"
+                    self.collectionView.reloadData()
+                }
+            } else if response?.statusCode == 0 {
+                self.showAlert(message: "Không thể thêm mới")
+            }
+        }
+    }
 }
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return collectionData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TableCell", for: indexPath) as? TableCell else {return UICollectionViewCell()}
-        
+        let item = collectionData.itemAtIndex(index: indexPath.row) ?? FTable()
+        cell.bindData(item: item)
+        cell.passDataSelect = {
+            [weak self] data in
+            guard let self = self else {return}
+            addSelect(item: data)
+        }
+        cell.passDataDelete = {
+            [weak self] data in
+            guard let self = self else {return}
+            deleteSelect(item: data)
+        }
         return cell
     }
     
@@ -48,11 +99,50 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         layout.minimumLineSpacing = 20
         layout.itemSize.width = width
         layout.itemSize.height = CGFloat(height)
-        
         collectionView.setCollectionViewLayout(layout, animated: true)
     }
+    func addSelect(item: FTable){
+        listTableSelected.append(item)
+        if listTableSelected.count > 0 {
+            btnChonMon.isHidden = false
+        }
+        updateTenBanChon()
+    }
+    func deleteSelect(item: FTable){
+        listTableSelected = listTableSelected.filter { e in
+            if let id = e.id {
+                return id != item.id
+            }
+            return true
+        }
+
+        if listTableSelected.count <= 0 {
+            btnChonMon.isHidden = true
+            tenBanDaChon.text = "Còn trống: \(getTableEmpty())"
+            return
+        }
+        updateTenBanChon()
+    }
+    func updateTenBanChon(){
+        tenBanDaChon.text = "Đang chọn: \(dsBanChon())"
+    }
+    func dsBanChon() -> String {
+        var s: String = ""
+        for e in listTableSelected {
+            s += "\(e.name ?? "") "
+        }
+        return s
+    }
     
-    
-    
+
+    func getTableEmpty() -> Int {
+        let empty = collectionData.filter { e in
+            if let status = e.status {
+                return status == 1
+            }
+            return false
+        }
+        return empty.count
+    }
 }
  

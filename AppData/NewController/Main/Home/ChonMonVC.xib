@@ -12,14 +12,15 @@
         <array key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
         </array>
-        <array key="Roboto-Regular.ttf">
-            <string>Roboto-Regular</string>
-        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChonMonVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
+                <outlet property="keySearch" destination="rZ3-ke-DEZ" id="Day-Og-PP9"/>
+                <outlet property="lbBanDaChon" destination="QOR-Gi-Dsw" id="Feh-p6-9iL"/>
+                <outlet property="lbCountCart" destination="CnH-BP-Mcb" id="6pP-Pa-d7G"/>
                 <outlet property="tableView" destination="FuI-X5-d5w" id="MEX-pB-a6E"/>
+                <outlet property="tfSoNguoi" destination="ayN-h3-egz" id="ygH-NI-6c3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewSearch" destination="c14-ci-08p" id="ePp-8L-Srn"/>
             </connections>
@@ -69,6 +70,9 @@
                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                     <state key="normal" image="ic_find"/>
+                                    <connections>
+                                        <action selector="searchPressed:" destination="-1" eventType="touchUpInside" id="zzJ-Lv-I0Z"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" name="navi"/>
@@ -81,6 +85,23 @@
                                 <constraint firstItem="Jcv-MJ-1ln" firstAttribute="centerY" secondItem="c14-ci-08p" secondAttribute="centerY" id="zHa-Cy-6CT"/>
                             </constraints>
                         </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_cart" translatesAutoresizingMaskIntoConstraints="NO" id="xhQ-YY-PbP">
+                            <rect key="frame" x="353" y="9.6666666666666714" width="25" height="25"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="25" id="8Ac-kO-az8"/>
+                                <constraint firstAttribute="width" constant="25" id="Q90-eE-SNY"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnH-BP-Mcb">
+                            <rect key="frame" x="368" y="5" width="18" height="15"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="18" id="9Dt-8D-NYe"/>
+                                <constraint firstAttribute="height" constant="15" id="lbn-Tw-NfM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                            <color key="textColor" name="white"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-NF-FTK" userLabel="cart">
                             <rect key="frame" x="353" y="9.6666666666666714" width="25" height="25"/>
                             <constraints>
@@ -89,22 +110,10 @@
                             </constraints>
                             <color key="tintColor" name="green"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="ic_cart"/>
                             <connections>
                                 <action selector="cartPressed:" destination="-1" eventType="touchUpInside" id="9Z2-26-c26"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnH-BP-Mcb">
-                            <rect key="frame" x="371" y="5" width="15" height="15"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="15" id="9Dt-8D-NYe"/>
-                                <constraint firstAttribute="height" constant="15" id="lbn-Tw-NfM"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="12"/>
-                            <color key="textColor" name="white"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -115,8 +124,10 @@
                         <constraint firstAttribute="height" constant="44" id="OVn-23-WwF"/>
                         <constraint firstItem="c14-ci-08p" firstAttribute="centerY" secondItem="pyt-u1-nwC" secondAttribute="centerY" id="RXR-s8-Ohn"/>
                         <constraint firstItem="c14-ci-08p" firstAttribute="leading" secondItem="A47-tZ-mt6" secondAttribute="trailing" constant="5" id="TZD-Nj-1nX"/>
+                        <constraint firstItem="xhQ-YY-PbP" firstAttribute="centerY" secondItem="mpU-NF-FTK" secondAttribute="centerY" id="a4e-ke-AlB"/>
                         <constraint firstItem="A47-tZ-mt6" firstAttribute="centerY" secondItem="pyt-u1-nwC" secondAttribute="centerY" id="bcP-7y-3AZ"/>
                         <constraint firstItem="A47-tZ-mt6" firstAttribute="leading" secondItem="pyt-u1-nwC" secondAttribute="leading" constant="15" id="dRC-HS-Iuk"/>
+                        <constraint firstAttribute="trailing" secondItem="xhQ-YY-PbP" secondAttribute="trailing" constant="15" id="fLX-31-LLe"/>
                         <constraint firstAttribute="trailing" secondItem="mpU-NF-FTK" secondAttribute="trailing" constant="15" id="tTl-w0-uHe"/>
                     </constraints>
                 </view>
@@ -129,19 +140,32 @@
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số người: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-9O-aib" userLabel="Số người:">
-                            <rect key="frame" x="292" y="9" width="71" height="17"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số người:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-9O-aib" userLabel="Số người:">
+                            <rect key="frame" x="263.33333333333331" y="9" width="59.666666666666686" height="17"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ayN-h3-egz">
+                            <rect key="frame" x="328" y="7.6666666666666714" width="35" height="20"/>
+                            <color key="backgroundColor" name="navi"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="RP6-qZ-eVP"/>
+                                <constraint firstAttribute="width" constant="35" id="lbr-gg-Wf2"/>
+                            </constraints>
+                            <color key="textColor" name="white"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="QOR-Gi-Dsw" firstAttribute="centerY" secondItem="Mcl-M3-XzM" secondAttribute="centerY" id="7AP-ya-hmq"/>
                         <constraint firstItem="dnW-9O-aib" firstAttribute="centerY" secondItem="Mcl-M3-XzM" secondAttribute="centerY" id="7Xs-Ut-GYl"/>
                         <constraint firstItem="QOR-Gi-Dsw" firstAttribute="leading" secondItem="Mcl-M3-XzM" secondAttribute="leading" id="Kby-Nk-1mG"/>
-                        <constraint firstAttribute="trailing" secondItem="dnW-9O-aib" secondAttribute="trailing" id="g2T-8v-7oY"/>
+                        <constraint firstItem="ayN-h3-egz" firstAttribute="centerY" secondItem="Mcl-M3-XzM" secondAttribute="centerY" id="T1N-F5-Wc3"/>
+                        <constraint firstAttribute="trailing" secondItem="ayN-h3-egz" secondAttribute="trailing" id="agB-ig-VAX"/>
+                        <constraint firstAttribute="trailing" secondItem="dnW-9O-aib" secondAttribute="trailing" constant="40" id="g2T-8v-7oY"/>
                         <constraint firstAttribute="height" constant="35" id="jIg-LM-Nhh"/>
                     </constraints>
                 </view>

@@ -96,6 +96,7 @@
 		0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFB29FAD82F00F1DE85 /* Rubik-Medium.ttf */; };
 		0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */; };
 		0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */; };
+		0BBA69042ACEF58200963438 /* FOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA69032ACEF58200963438 /* FOrder.swift */; };
 		0BCF19852A43696A004F11CB /* ParamSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF19842A43696A004F11CB /* ParamSearch.swift */; };
 		0BD56AB92AC5A52B00A41312 /* ThucDonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD56AB72AC5A52B00A41312 /* ThucDonVC.swift */; };
 		0BD56ABA2AC5A52B00A41312 /* ThucDonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD56AB82AC5A52B00A41312 /* ThucDonVC.xib */; };
@@ -265,6 +266,7 @@
 		0BB43EFB29FAD82F00F1DE85 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
 		0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		0BBA69032ACEF58200963438 /* FOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOrder.swift; sourceTree = "<group>"; };
 		0BCF19842A43696A004F11CB /* ParamSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamSearch.swift; sourceTree = "<group>"; };
 		0BD56AB72AC5A52B00A41312 /* ThucDonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThucDonVC.swift; sourceTree = "<group>"; };
 		0BD56AB82AC5A52B00A41312 /* ThucDonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThucDonVC.xib; sourceTree = "<group>"; };
@@ -698,6 +700,7 @@
 				0B76B93E2A7441F800B91761 /* PReport.swift */,
 				0B4CEEF92AC9B89300C61C3D /* FTable.swift */,
 				0B3FB9032ACB3C9900B1B974 /* FCategory.swift */,
+				0BBA69032ACEF58200963438 /* FOrder.swift */,
 			);
 			path = 2.Models;
 			sourceTree = "<group>";
@@ -1045,6 +1048,7 @@
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
 				0BF42AE62AB61B1800592A0E /* SignUpInfoVC.swift in Sources */,
 				0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */,
+				0BBA69042ACEF58200963438 /* FOrder.swift in Sources */,
 				0B76B93F2A7441F900B91761 /* PReport.swift in Sources */,
 				0BE0391C29F82039002CB20F /* ConnectionManager.swift in Sources */,
 				0B45BC9C2ABA0DEA0073A380 /* DangPhucVuVC.swift in Sources */,

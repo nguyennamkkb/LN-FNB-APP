@@ -36,7 +36,7 @@ class TableCell: UICollectionViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        setTableImage()
+        
     }
 
     func bindData(item: FTable){
@@ -44,11 +44,12 @@ class TableCell: UICollectionViewCell {
         lbTableName.text = item.name
         trangThaiChon = false
         imgCheck.isHidden = true
+        setTableImage()
     }
     func setTableImage(){
-
+        let status: tableStatus = TableCell.tableStatus(rawValue: item.status ?? 1) ?? .conTrong
         imgCheck.isHidden = true
-        imgTable.image = tableStatus.getImage(.conTrong)()
+        imgTable.image = tableStatus.getImage(status)()
     }
     @IBAction func chonBanPressed(_ sender: Any) {
         if trangThaiChon == false {

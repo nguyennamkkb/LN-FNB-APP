@@ -42,11 +42,12 @@ class MonAnCell: UITableViewCell {
         imgItem.layer.borderWidth = 0.2
         imgItem.layer.borderColor = C.Color.Navi?.cgColor
         imgItem.layer.cornerRadius = C.CornerRadius.corner5
+        btnCong.layer.cornerRadius = C.CornerRadius.corner5
+        btnTru.layer.cornerRadius = C.CornerRadius.corner5
         VLine.layer.shadowOpacity = 0.5
         VLine.layer.shadowOffset = CGSize(width: 0, height: 1)
-        
-        btnTru.isHidden = true
-        lbCount.isHidden = true
+        btnTru.alpha = 0
+        lbCount.alpha = 0
     }
     @IBAction func congPressed(_ sender: Any) {
         guard let count = item.count else {return}
@@ -63,12 +64,12 @@ class MonAnCell: UITableViewCell {
     }
     func updateUICongTru(){
         if item.count == 0 {
-            btnTru.isHidden = true
-            lbCount.isHidden = true
+            btnTru.alpha = 0
+            lbCount.alpha = 0
             
         }else{
-            btnTru.isHidden = false
-            lbCount.isHidden = false
+            btnTru.alpha = 1
+            lbCount.alpha = 1
             lbCount.text = "\(item.count ?? 0)"
         }
         passData?(item)

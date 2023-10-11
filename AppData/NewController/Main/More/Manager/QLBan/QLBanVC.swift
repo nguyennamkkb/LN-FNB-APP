@@ -60,7 +60,7 @@ class QLBanVC: BaseVC {
         let keySearch = keySearch.text
         guard let id = Common.userMaster.id else {return}
         
-        let param = ParamSearch(user_id: id, status: 1, keySearch: keySearch ?? "")
+        let param = ParamSearch(user_id: id, keySearch: keySearch ?? "")
         
         ServiceManager.common.getAllTables(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in

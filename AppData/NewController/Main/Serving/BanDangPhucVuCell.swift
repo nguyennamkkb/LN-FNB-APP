@@ -9,6 +9,10 @@ import UIKit
 
 class BanDangPhucVuCell: UITableViewCell {
     
+    var item = FOrder()
+    @IBOutlet var lbSoNguoi: UILabel!
+    @IBOutlet var lbTongTien: UILabel!
+    @IBOutlet var lbBan: UILabel!
     var actionChon: ClosureAction?
     @IBOutlet var VLine: UIView!
     override func awakeFromNib() {
@@ -17,6 +21,12 @@ class BanDangPhucVuCell: UITableViewCell {
         VLine.layer.shadowOffset = CGSize(width: 0, height: 1)
     }
 
+    func bindData(e: FOrder){
+        item = e
+        lbSoNguoi.text = "\(item.person ?? 0)"
+        lbTongTien.text = "Tổng tiền: "+"\(item.total ?? 0)" + "đ"
+        lbBan.text = "Bàn: "+"\(item.table ?? "")"
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

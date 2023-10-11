@@ -43,7 +43,7 @@
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c14-ci-08p" userLabel="viewSearch">
+                        <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c14-ci-08p" userLabel="viewSearch">
                             <rect key="frame" x="112" y="9.6666666666666714" width="231" height="25"/>
                             <subviews>
                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên món" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rZ3-ke-DEZ">
@@ -103,10 +103,10 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-NF-FTK" userLabel="cart">
-                            <rect key="frame" x="353" y="9.6666666666666714" width="25" height="25"/>
+                            <rect key="frame" x="343" y="2" width="35" height="40"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="25" id="N1Z-dE-EMX"/>
-                                <constraint firstAttribute="width" constant="25" id="Ss3-6S-xJm"/>
+                                <constraint firstAttribute="height" constant="40" id="N1Z-dE-EMX"/>
+                                <constraint firstAttribute="width" constant="35" id="Ss3-6S-xJm"/>
                             </constraints>
                             <color key="tintColor" name="green"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -146,11 +146,11 @@
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ayN-h3-egz">
-                            <rect key="frame" x="328" y="7.6666666666666714" width="35" height="20"/>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ayN-h3-egz">
+                            <rect key="frame" x="328" y="2.6666666666666714" width="35" height="30"/>
                             <color key="backgroundColor" name="navi"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="20" id="RP6-qZ-eVP"/>
+                                <constraint firstAttribute="height" constant="30" id="RP6-qZ-eVP"/>
                                 <constraint firstAttribute="width" constant="35" id="lbr-gg-Wf2"/>
                             </constraints>
                             <color key="textColor" name="white"/>

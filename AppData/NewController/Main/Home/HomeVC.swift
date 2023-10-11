@@ -36,7 +36,9 @@ class HomeVC: BaseVC {
     @IBAction func chonMonPressed(_ sender: UIButton) {
 //        print(listTableSelected.toJSON())
         let vc = ChonMonVC()
-        vc.bindData(ban: dsBanChon())
+        let dsBan: String = dsBanChon()
+        if dsBan.count <= 0 {return}
+        vc.bindData(ban: dsBan)
         self.pushVC(controller: vc)
     }
     
@@ -49,7 +51,7 @@ class HomeVC: BaseVC {
     func getTables(){
         guard let id = Common.userMaster.id else {return}
         
-        let param = ParamSearch(user_id: id, status: 1, keySearch: "")
+        let param = ParamSearch(user_id: id, keySearch: "")
         
         ServiceManager.common.getAllTables(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
@@ -96,7 +98,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let width = 100.0
         let height = 66
         layout.minimumInteritemSpacing = totalSpaceScreen / countItem
-        layout.minimumLineSpacing = 20
+        layout.minimumLineSpacing = 30
         layout.itemSize.width = width
         layout.itemSize.height = CGFloat(height)
         collectionView.setCollectionViewLayout(layout, animated: true)

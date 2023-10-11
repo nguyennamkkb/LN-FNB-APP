@@ -13,7 +13,7 @@ class FOrder: Mappable {
     var user_id: Int?
     var total: Int?
     var table: String?
-    var list_item: [FProduct]?
+    var list_item: String?
     var note: String?
     var person: Int?
     var createAt: String?

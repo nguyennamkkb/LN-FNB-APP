@@ -9,6 +9,8 @@ import UIKit
 
 class MonDaChonCell: UITableViewCell {
     
+    @IBOutlet var btnCong: UIButton!
+    @IBOutlet var btnTru: UIButton!
     var passData: ClosureCustom<FProduct>?
     var item: FProduct = FProduct()
     @IBOutlet var lbCount: UILabel!
@@ -35,6 +37,8 @@ class MonDaChonCell: UITableViewCell {
     }
     
     func setupUI(){
+        btnTru.layer.cornerRadius = C.CornerRadius.corner5
+        btnCong.layer.cornerRadius = C.CornerRadius.corner5
         VLine.layer.shadowOpacity = 0.5
         VLine.layer.shadowOffset = CGSize(width: 0, height: 1)
     }

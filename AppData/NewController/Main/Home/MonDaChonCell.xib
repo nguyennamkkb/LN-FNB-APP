@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -27,7 +28,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiS-Q5-6Y9">
-                        <rect key="frame" x="15" y="0.0" width="314" height="44"/>
+                        <rect key="frame" x="15" y="3" width="314" height="44"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nem nướng 4 vị" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gax-T6-hIR">
                                 <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="19"/>
@@ -36,11 +37,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gía: 100.00đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uj0-Jf-oc4" userLabel="gia">
-                                <rect key="frame" x="0.0" y="23" width="90.333333333333329" height="20"/>
+                                <rect key="frame" x="0.0" y="23" width="79" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="56D-HF-lsY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                 <color key="textColor" name="gray"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -50,38 +51,42 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AEs-2w-rbA">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7o-nj-XdK" userLabel="them">
-                                                <rect key="frame" x="0.0" y="2.6666666666666661" width="25" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="25" id="FC7-hG-Egk"/>
-                                                    <constraint firstAttribute="width" constant="25" id="xQd-fH-es7"/>
-                                                </constraints>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="ic_plus">
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="congPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XgG-wn-5ut"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jv-wt-4f7">
-                                                <rect key="frame" x="25" y="6.6666666666666661" width="30" height="16.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                                <color key="textColor" name="white"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uOQ-gY-jcm" userLabel="tru">
-                                                <rect key="frame" x="55" y="2.6666666666666661" width="25" height="25"/>
+                                                <rect key="frame" x="0.0" y="2.6666666666666661" width="25" height="25"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="hXj-bo-1ox"/>
                                                     <constraint firstAttribute="height" constant="25" id="scR-CU-1c5"/>
                                                 </constraints>
+                                                <color key="tintColor" name="white"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="ic_tru">
+                                                <state key="normal" image="minus" catalog="system">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="truPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oc3-0j-lsH"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Jv-wt-4f7">
+                                                <rect key="frame" x="25" y="6.6666666666666679" width="30" height="16.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" name="white"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7o-nj-XdK" userLabel="them">
+                                                <rect key="frame" x="55" y="2.6666666666666661" width="25" height="25"/>
+                                                <color key="backgroundColor" name="green"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="25" id="FC7-hG-Egk"/>
+                                                    <constraint firstAttribute="width" constant="25" id="xQd-fH-es7"/>
+                                                </constraints>
+                                                <color key="tintColor" name="white"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="plus" catalog="system">
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="congPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XgG-wn-5ut"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -110,7 +115,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlB-Mb-8Cs" userLabel="line">
-                        <rect key="frame" x="15" y="44" width="314" height="1"/>
+                        <rect key="frame" x="15" y="47" width="314" height="1"/>
                         <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="Xof-uM-Mf5"/>
@@ -119,18 +124,20 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="fiS-Q5-6Y9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="O2f-SE-bAW"/>
-                    <constraint firstItem="fiS-Q5-6Y9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="T0w-ZX-OeW"/>
+                    <constraint firstItem="fiS-Q5-6Y9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="T0w-ZX-OeW"/>
                     <constraint firstAttribute="trailing" secondItem="fiS-Q5-6Y9" secondAttribute="trailing" constant="15" id="bP9-Pi-kPM"/>
                     <constraint firstAttribute="trailing" secondItem="YlB-Mb-8Cs" secondAttribute="trailing" constant="15" id="mYg-Ba-J5z"/>
                     <constraint firstItem="YlB-Mb-8Cs" firstAttribute="top" secondItem="fiS-Q5-6Y9" secondAttribute="bottom" id="nCr-Do-jGn"/>
                     <constraint firstItem="YlB-Mb-8Cs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ngZ-Mc-FmI"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fiS-Q5-6Y9" secondAttribute="bottom" constant="10" id="w09-Fw-Zif"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fiS-Q5-6Y9" secondAttribute="bottom" constant="12" id="w09-Fw-Zif"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="VLine" destination="YlB-Mb-8Cs" id="dUd-gj-7Cp"/>
+                <outlet property="btnCong" destination="f7o-nj-XdK" id="QIb-eK-xmh"/>
+                <outlet property="btnTru" destination="uOQ-gY-jcm" id="OjA-FF-lBB"/>
                 <outlet property="lbCount" destination="3Jv-wt-4f7" id="XCD-Ms-6sK"/>
                 <outlet property="lbName" destination="gax-T6-hIR" id="iKt-MQ-fkO"/>
                 <outlet property="lbPrice" destination="uj0-Jf-oc4" id="3Mg-fQ-AL1"/>
@@ -139,13 +146,19 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_plus" width="16" height="16"/>
-        <image name="ic_tru" width="16" height="16"/>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="gray">
             <color red="0.69199997186660767" green="0.70599997043609619" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="green">
+            <color red="0.14900000393390656" green="0.64499998092651367" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

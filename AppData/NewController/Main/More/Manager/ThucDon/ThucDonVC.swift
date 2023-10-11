@@ -27,6 +27,5 @@ class ThucDonVC: BaseVC {
         let vc = MonAnVC()
         self.pushVC(controller: vc)
     }
-    
-    
+
 }

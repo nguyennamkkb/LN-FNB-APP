@@ -19,6 +19,7 @@ fileprivate class ListCommonService {
     static let auth = ServiceManager.ROOT + "auth/signin"
     static let category = ServiceManager.ROOT + "categories"
     static let product = ServiceManager.ROOT + "products"
+    static let order = ServiceManager.ROOT + "orders"
 }
 
 fileprivate enum ECommonURLs {
@@ -28,6 +29,7 @@ fileprivate enum ECommonURLs {
     case checkuser
     case category
     case product
+    case order
     
     
     func getPath() -> String {
@@ -44,6 +46,8 @@ fileprivate enum ECommonURLs {
             return ListCommonService.category
         case .product:
             return ListCommonService.product
+        case .order:
+            return ListCommonService.order
 }
         func getMethod() -> HTTPMethod {
             switch self {
@@ -411,6 +415,85 @@ class CommonServices {
             }
         }
     }
+    
+    //order
+    func getAllOrder(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.order.getPath() + (param ?? "")
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func createOrder(param: FOrder, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.order.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func updateOrder(param: FOrder, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.order.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .put, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func deleteOrder(param: String, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.order.getPath() + "/\(param)"
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .delete, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
     
 //
 //

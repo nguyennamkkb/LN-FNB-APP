@@ -21,6 +21,9 @@
             <connections>
                 <outlet property="btnPhieuBep" destination="Sx5-eX-rmL" id="1qB-EQ-Jcp"/>
                 <outlet property="btnThanhToan" destination="bMn-m9-smI" id="0gg-eA-5Mj"/>
+                <outlet property="lbSoNguoi" destination="PxT-rA-EAE" id="Bz3-nf-sFq"/>
+                <outlet property="lbTitle" destination="P56-DT-Oaj" id="Waa-TS-OPS"/>
+                <outlet property="lbTongTien" destination="OCt-At-ahq" id="MZn-mA-usl"/>
                 <outlet property="tableView" destination="oqb-om-XHa" id="hhs-xn-r89"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

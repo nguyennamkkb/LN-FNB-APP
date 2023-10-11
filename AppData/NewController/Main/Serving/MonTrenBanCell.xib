@@ -122,6 +122,9 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="VLine" destination="ku7-A8-wFw" id="i3N-xd-gBW"/>
+                <outlet property="lbCount" destination="Thv-Ru-Wlm" id="qq0-i6-PfB"/>
+                <outlet property="lbGia" destination="gGR-7E-Fuk" id="i8o-Ll-bAT"/>
+                <outlet property="lbName" destination="97D-2H-WbM" id="YSM-jt-ydZ"/>
             </connections>
             <point key="canvasLocation" x="141.98473282442748" y="59.859154929577471"/>
         </tableViewCell>

@@ -9,6 +9,10 @@ import UIKit
 
 class MonDaChonVC: BaseVC {
 
+    
+    let order = FOrder()
+    var table: String?
+    @IBOutlet var lbTotalMoney: UILabel!
     var tableData: [FProduct] = []
     var soNguoi: Int?
     @IBOutlet var tableView: UITableView!
@@ -19,18 +23,59 @@ class MonDaChonVC: BaseVC {
         tableView.dataSource = self
         self.tableView.registerCell(nibName: "MonDaChonCell")
         setupUI()
+        updateMoney()
         
     }
-    func bindData(list: [FProduct], soNguoi: Int){
+    func bindData(list: [FProduct], soNguoi: Int, table: String){
         self.tableData = list
         self.soNguoi = soNguoi
-        print(list.toJSON())
+        self.table = table
     }
     func setupUI(){
         btnXacNhan.layer.cornerRadius = C.CornerRadius.corner5
     }
     @IBAction func xacNhanPressed(_ sender: Any) {
-        self.pushVC(controller: BanDangPhucVuVC())
+        guard let personNumber = soNguoi else {return}
+        guard let table = table else {return}
+        if tableData.count <= 0 {return}
+
+        order.list_item = tableData.toJSONString()
+        order.person = personNumber
+        order.table = table
+        order.total = getMoney()
+        order.user_id =  Common.userMaster.id
+        order.sign()
+        createOrder()
+//        self.pushVC(controller: vc)
+    }
+    func createOrder(){
+        self.showLoading()
+        ServiceManager.common.createOrder(param: order){
+            (response) in
+            self.hideLoading()
+            if response?.data != nil, response?.statusCode == 200 {
+                self.showAlert(message: "Thành công!")
+                self.wrapRoot(vc: TabBarVC())
+            } else if response?.statusCode == 0 {
+                self.showAlert(message: "Không thể thêm mới")
+            }
+        }
+    }
+    func updateMoney(){
+        lbTotalMoney.text = "\(getMoney())".currencyFormatting() + "đ"
+    }
+    func getMoney() -> Int{
+        var total: Int = 0
+        let _ = tableData.filter{
+            e in
+            if e.count ?? 0 > 0 {
+                let money = (e.count ?? 0) * (e.price ?? 0)
+                total += money
+                return true
+            }
+            return false
+        }
+      return total
     }
     
 }
@@ -46,6 +91,12 @@ extension MonDaChonVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MonDaChonCell", for: indexPath) as? MonDaChonCell else {return UITableViewCell()}
         let item = tableData.itemAtIndex(index: indexPath.row) ?? FProduct()
         cell.bindData(item: item)
+        cell.passData = {
+            [weak self] data in
+            guard let self = self else {return}
+            self.tableData[indexPath.row] = data
+            self.updateMoney()
+        }
         return cell
     }
     

@@ -22,7 +22,6 @@ class DSDangPhucVuVC: BaseVC {
     
     func getOrders(){
         guard let id = Common.userMaster.id else {return}
-        
         let param = ParamSearch(user_id: id, status: 1, keySearch: "")
         ServiceManager.common.getAllOrder(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
@@ -52,6 +51,9 @@ extension DSDangPhucVuVC: UITableViewDelegate, UITableViewDataSource {
         cell.actionChon = {
             let vc = BanDangPhucVuVC()
             vc.bindData(e: item)
+            vc.actionReload = {
+                self.getOrders()
+            }
             self.pushVC(controller: vc)
         }
         return cell

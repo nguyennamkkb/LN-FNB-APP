@@ -27,6 +27,7 @@ class HomeVC: BaseVC {
         getTables()
         setupUI()
     }
+
     func setupUI(){
         btnChonMon.isHidden = true
         refreshControl.tintColor = .white
@@ -87,6 +88,11 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
             [weak self] data in
             guard let self = self else {return}
             deleteSelect(item: data)
+        }
+        cell.actionBanDangPhucVu = {
+            let vc = AlertVC()
+            vc.bindData(s: "Bàn đã có người")
+            self.pushVC(controller: vc,hidesBottomBarWhenPushed: true, animation: false)
         }
         return cell
     }

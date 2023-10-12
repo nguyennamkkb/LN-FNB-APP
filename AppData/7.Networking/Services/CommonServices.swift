@@ -417,7 +417,26 @@ class CommonServices {
     }
     
     //order
-    func getAllOrder(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+    func getAllOrder(param: String, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.order.getPath() + "/\(param)"
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func getOneOrder(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.order.getPath() + (param ?? "")
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)

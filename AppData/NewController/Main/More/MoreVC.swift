@@ -40,6 +40,10 @@ class MoreVC: BaseVC {
     @IBAction func dangXuatPressed(_ sender: Any) {
         self.wrapRoot(vc: LoginVC())
     }
+    @IBAction func caiDatPressed(_ sender: Any) {
+        
+        self.pushVC(controller: DangPhucVuVC())
+    }
     
     
     

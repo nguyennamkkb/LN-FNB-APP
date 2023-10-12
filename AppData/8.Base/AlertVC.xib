@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlertVC" customModule="LN_FNB" customModuleProvider="target">
+            <connections>
+                <outlet property="lbMessage" destination="fxh-x3-dXG" id="GwR-zx-8rl"/>
+                <outlet property="vAleart" destination="IcJ-qR-7K6" id="Nyg-5B-8my"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcJ-qR-7K6" userLabel="vAleart">
+                    <rect key="frame" x="40" y="388.66666666666669" width="313" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông báo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxh-x3-dXG">
+                            <rect key="frame" x="0.0" y="0.0" width="313" height="100"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
+                            <color key="textColor" systemColor="systemYellowColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" name="black"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="3Tx-Sh-iJX"/>
+                        <constraint firstAttribute="bottom" secondItem="fxh-x3-dXG" secondAttribute="bottom" id="4D4-aX-Ag5"/>
+                        <constraint firstItem="fxh-x3-dXG" firstAttribute="top" secondItem="IcJ-qR-7K6" secondAttribute="top" id="Afp-d5-S6a"/>
+                        <constraint firstItem="fxh-x3-dXG" firstAttribute="leading" secondItem="IcJ-qR-7K6" secondAttribute="leading" id="OCd-Cw-5RF"/>
+                        <constraint firstAttribute="trailing" secondItem="fxh-x3-dXG" secondAttribute="trailing" id="cYL-yb-Jwu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="navi"/>
+            <constraints>
+                <constraint firstItem="IcJ-qR-7K6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="CpX-Xs-kR0"/>
+                <constraint firstItem="IcJ-qR-7K6" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="OsZ-yp-D7b"/>
+                <constraint firstItem="IcJ-qR-7K6" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="fHj-F8-hR6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IcJ-qR-7K6" secondAttribute="trailing" constant="40" id="zdV-vI-3p0"/>
+            </constraints>
+            <point key="canvasLocation" x="79" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="black">
+            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="navi">
+            <color red="0.1809999942779541" green="0.23800000548362732" blue="0.289000004529953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

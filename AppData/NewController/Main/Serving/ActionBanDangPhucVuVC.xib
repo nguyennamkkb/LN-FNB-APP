@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionBanDangPhucVuVC" customModule="LN_FNB" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7a-YK-70C">
+                    <rect key="frame" x="15" y="69" width="373" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="i9g-0Q-6xP"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Chọn thêm món">
+                        <color key="titleColor" name="green"/>
+                    </state>
+                    <connections>
+                        <action selector="chonThemMonPressed:" destination="-1" eventType="touchUpInside" id="tvm-gy-a2p"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5M-9q-J2Q">
+                    <rect key="frame" x="15" y="128" width="363" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="QxF-3r-AsQ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="In phiếu bép">
+                        <color key="titleColor" name="green"/>
+                    </state>
+                    <connections>
+                        <action selector="inPhieuBepPressed:" destination="-1" eventType="touchUpInside" id="IRg-hE-REh"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bC3-hp-Umx">
+                    <rect key="frame" x="15" y="187" width="363" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="dRs-T9-Z64"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Thanh toán">
+                        <color key="titleColor" name="green"/>
+                    </state>
+                    <connections>
+                        <action selector="thanhToanPressed:" destination="-1" eventType="touchUpInside" id="VXQ-BH-93k"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="navi"/>
+            <constraints>
+                <constraint firstItem="bC3-hp-Umx" firstAttribute="top" secondItem="N5M-9q-J2Q" secondAttribute="bottom" constant="15" id="2hN-aR-6xy"/>
+                <constraint firstItem="bC3-hp-Umx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="HRk-Ol-dXU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="N5M-9q-J2Q" secondAttribute="trailing" constant="15" id="NOK-U3-PjW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bC3-hp-Umx" secondAttribute="trailing" constant="15" id="Ox4-PB-Qex"/>
+                <constraint firstItem="b7a-YK-70C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Vby-wT-JIU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b7a-YK-70C" secondAttribute="trailing" constant="5" id="f4Y-jd-KBR"/>
+                <constraint firstItem="N5M-9q-J2Q" firstAttribute="top" secondItem="b7a-YK-70C" secondAttribute="bottom" constant="15" id="jaD-vc-Xuh"/>
+                <constraint firstItem="N5M-9q-J2Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="l66-75-EBN"/>
+                <constraint firstItem="b7a-YK-70C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="zgB-1t-x5e"/>
+            </constraints>
+            <point key="canvasLocation" x="79" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="green">
+            <color red="0.14900000393390656" green="0.64499998092651367" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="navi">
+            <color red="0.1809999942779541" green="0.23800000548362732" blue="0.289000004529953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

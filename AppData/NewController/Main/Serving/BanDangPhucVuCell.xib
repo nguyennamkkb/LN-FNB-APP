@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -27,12 +28,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j8g-Og-3BH" userLabel="VItem">
-                        <rect key="frame" x="15" y="0.0" width="355" height="54"/>
+                        <rect key="frame" x="15" y="3" width="355" height="54"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bàn: A1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9N-ND-dPR">
                                 <rect key="frame" x="0.0" y="6" width="355" height="19"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
-                                <color key="textColor" name="white"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng tiền: 360.000đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gdy-3p-Uf7">
@@ -101,7 +102,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNB-sA-ETc" userLabel="line">
-                        <rect key="frame" x="15" y="56" width="355" height="0.6666666666666643"/>
+                        <rect key="frame" x="15" y="59" width="355" height="0.6666666666666643"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="Nt5-xu-ehT"/>
@@ -109,12 +110,12 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="j8g-Og-3BH" secondAttribute="bottom" constant="8" id="Fk1-Fu-SiG"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="j8g-Og-3BH" secondAttribute="bottom" constant="12" id="Fk1-Fu-SiG"/>
                     <constraint firstAttribute="trailing" secondItem="cNB-sA-ETc" secondAttribute="trailing" constant="15" id="My0-w4-qHN"/>
                     <constraint firstItem="cNB-sA-ETc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Rif-b3-38h"/>
                     <constraint firstItem="cNB-sA-ETc" firstAttribute="top" secondItem="j8g-Og-3BH" secondAttribute="bottom" constant="2" id="RsF-tK-OSt"/>
                     <constraint firstAttribute="trailing" secondItem="j8g-Og-3BH" secondAttribute="trailing" constant="15" id="VpP-lW-LOX"/>
-                    <constraint firstItem="j8g-Og-3BH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="nfL-Jl-0Kc"/>
+                    <constraint firstItem="j8g-Og-3BH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="nfL-Jl-0Kc"/>
                     <constraint firstItem="j8g-Og-3BH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="qnr-bO-3Hu"/>
                 </constraints>
             </tableViewCellContentView>
@@ -135,5 +136,8 @@
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

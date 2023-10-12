@@ -44,7 +44,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Shashimi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pbi-1z-lLc">
                                         <rect key="frame" x="5" y="7.9999999999999982" width="107" height="21.333333333333329"/>
                                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
-                                        <color key="textColor" name="white"/>
+                                        <color key="textColor" systemColor="systemYellowColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giá: 550.000đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2zV-4f-AUe">
@@ -57,7 +57,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eGc-8J-s2e" userLabel="Vaction">
-                                        <rect key="frame" x="179" y="42" width="90" height="30"/>
+                                        <rect key="frame" x="177" y="42" width="90" height="30"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="center" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tmq-Qo-5aZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
@@ -117,7 +117,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Pbi-1z-lLc" firstAttribute="leading" secondItem="tQN-Ac-BNs" secondAttribute="leading" constant="5" id="1Xc-Za-Yk8"/>
-                                    <constraint firstAttribute="trailing" secondItem="eGc-8J-s2e" secondAttribute="trailing" id="3Gn-58-CLh"/>
+                                    <constraint firstAttribute="trailing" secondItem="eGc-8J-s2e" secondAttribute="trailing" constant="2" id="3Gn-58-CLh"/>
                                     <constraint firstAttribute="bottom" secondItem="2zV-4f-AUe" secondAttribute="bottom" constant="8" id="iZb-hd-CXC"/>
                                     <constraint firstItem="2zV-4f-AUe" firstAttribute="leading" secondItem="tQN-Ac-BNs" secondAttribute="leading" constant="5" id="ifx-ZR-uj1"/>
                                     <constraint firstAttribute="bottom" secondItem="eGc-8J-s2e" secondAttribute="bottom" constant="1" id="rJv-EH-sD0"/>
@@ -125,7 +125,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="73" id="JRE-QF-ZhT"/>
                             <constraint firstItem="tQN-Ac-BNs" firstAttribute="leading" secondItem="L5S-GT-lZs" secondAttribute="trailing" id="Ndi-MF-v6h"/>
@@ -184,6 +184,9 @@
         </namedColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

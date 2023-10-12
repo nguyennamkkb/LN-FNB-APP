@@ -32,6 +32,7 @@ class ChonMonVC: BaseVC{
     @IBAction func searchPressed(_ sender: Any) {
         getCategories()
     }
+
     func setupUI(){ 
         lbBanDaChon.text = "Bàn: \(banDaChon)"
         viewSearch.layer.cornerRadius = C.CornerRadius.corner5
@@ -41,13 +42,15 @@ class ChonMonVC: BaseVC{
         tableView.addSubview(refreshControl) // not required when using UITableViewController
     }
     @objc func refresh(_ sender: AnyObject) {
-        self.listProductSelected.removeAll()
-        self.listProductFinal.removeAll()
+
         self.tableData.removeAll()
         getCategories()
+        listProductSelected.removeAll()
+          listProductFinal.removeAll()
         refreshControl.endRefreshing()
     }
     @IBAction func cartPressed(_ sender: Any) {
+        dismissKeyboard()
         let vc = MonDaChonVC()
         guard let soNguoi = tfSoNguoi.text, soNguoi.count != 0, listProductFinal.count > 0  else {return}
         vc.bindData(list: listProductFinal, soNguoi: Int(soNguoi) ?? 0, table: banDaChon)
@@ -58,6 +61,7 @@ class ChonMonVC: BaseVC{
     }
     
     func getCategories(){
+        dismissKeyboard()
         let keySearch = keySearch.text
         guard let id = Common.userMaster.id else {return}
         
@@ -84,6 +88,7 @@ class ChonMonVC: BaseVC{
         }
     }
     func updateCountCart(){
+        dismissKeyboard()
         listProductFinal = listProductSelected.filter{
             e in
             if e.count != 0 {

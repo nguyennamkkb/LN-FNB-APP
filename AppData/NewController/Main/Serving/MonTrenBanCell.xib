@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -39,7 +40,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nem nướng 4 vị" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97D-2H-WbM">
                                 <rect key="frame" x="0.0" y="0.0" width="112.66666666666667" height="19"/>
                                 <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
-                                <color key="textColor" name="white"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gía: 100.00đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGR-7E-Fuk" userLabel="gia">
@@ -52,34 +53,47 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6aI-Lb-Cro" userLabel="VAction">
-                                <rect key="frame" x="309" y="7" width="65" height="30"/>
+                                <rect key="frame" x="294" y="7" width="80" height="30"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gLT-6H-d5q">
-                                        <rect key="frame" x="0.0" y="0.0" width="65" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gLT-6H-d5q">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYq-uo-5fk" userLabel="add">
-                                                <rect key="frame" x="0.0" y="2.6666666666666661" width="25" height="25"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="5wm-N6-c0X"/>
-                                                    <constraint firstAttribute="height" constant="25" id="FZp-Zu-dex"/>
-                                                </constraints>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="ic_plus"/>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thv-Ru-Wlm">
-                                                <rect key="frame" x="25" y="6.6666666666666661" width="15" height="16.666666666666671"/>
-                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                                <color key="textColor" name="white"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7o-FD-7Fb" userLabel="div">
-                                                <rect key="frame" x="40" y="2.6666666666666661" width="25" height="25"/>
+                                                <rect key="frame" x="0.0" y="2.6666666666666661" width="25" height="25"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="25" id="7lo-mC-Rhr"/>
                                                     <constraint firstAttribute="height" constant="25" id="GYB-4O-Z83"/>
                                                 </constraints>
+                                                <color key="tintColor" name="white"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" image="ic_tru"/>
+                                                <state key="normal" image="minus" catalog="system"/>
+                                                <connections>
+                                                    <action selector="truPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="0f3-Dh-k9G"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thv-Ru-Wlm">
+                                                <rect key="frame" x="25" y="15" width="20" height="0.0"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="20" id="aOD-eD-iNE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                <color key="textColor" name="white"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYq-uo-5fk" userLabel="add">
+                                                <rect key="frame" x="55" y="2.6666666666666661" width="25" height="25"/>
+                                                <color key="backgroundColor" name="green"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="25" id="5wm-N6-c0X"/>
+                                                    <constraint firstAttribute="height" constant="25" id="FZp-Zu-dex"/>
+                                                </constraints>
+                                                <color key="tintColor" name="white"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="plus" catalog="system"/>
+                                                <connections>
+                                                    <action selector="congPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Qfw-o0-zsq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -89,7 +103,7 @@
                                     <constraint firstItem="gLT-6H-d5q" firstAttribute="leading" secondItem="6aI-Lb-Cro" secondAttribute="leading" id="5lk-n1-wyO"/>
                                     <constraint firstAttribute="trailing" secondItem="gLT-6H-d5q" secondAttribute="trailing" id="9h5-sP-pTD"/>
                                     <constraint firstAttribute="bottom" secondItem="gLT-6H-d5q" secondAttribute="bottom" id="Fsr-oo-2BJ"/>
-                                    <constraint firstAttribute="width" constant="65" id="gfY-7k-bnW"/>
+                                    <constraint firstAttribute="width" constant="80" id="gfY-7k-bnW"/>
                                     <constraint firstAttribute="height" constant="30" id="l1L-IZ-Ceq"/>
                                     <constraint firstItem="gLT-6H-d5q" firstAttribute="top" secondItem="6aI-Lb-Cro" secondAttribute="top" id="xSq-qi-ezy"/>
                                 </constraints>
@@ -122,6 +136,8 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="VLine" destination="ku7-A8-wFw" id="i3N-xd-gBW"/>
+                <outlet property="bAdd" destination="lYq-uo-5fk" id="fUY-FB-QtJ"/>
+                <outlet property="bMinus" destination="q7o-FD-7Fb" id="7Q1-Fk-fPg"/>
                 <outlet property="lbCount" destination="Thv-Ru-Wlm" id="qq0-i6-PfB"/>
                 <outlet property="lbGia" destination="gGR-7E-Fuk" id="i8o-Ll-bAT"/>
                 <outlet property="lbName" destination="97D-2H-WbM" id="YSM-jt-ydZ"/>
@@ -130,13 +146,22 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="ic_plus" width="16" height="16"/>
-        <image name="ic_tru" width="16" height="16"/>
+        <image name="minus" catalog="system" width="128" height="26"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="gray">
             <color red="0.69199997186660767" green="0.70599997043609619" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="green">
+            <color red="0.14900000393390656" green="0.64499998092651367" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

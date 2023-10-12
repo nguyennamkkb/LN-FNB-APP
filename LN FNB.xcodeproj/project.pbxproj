@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B124FE92AD82A5000422198 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B124FE72AD82A5000422198 /* AlertVC.swift */; };
+		0B124FEA2AD82A5000422198 /* AlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B124FE82AD82A5000422198 /* AlertVC.xib */; };
+		0B124FED2AD8689100422198 /* ActionBanDangPhucVuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B124FEB2AD8689100422198 /* ActionBanDangPhucVuVC.swift */; };
+		0B124FEE2AD8689100422198 /* ActionBanDangPhucVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B124FEC2AD8689100422198 /* ActionBanDangPhucVuVC.xib */; };
 		0B3FB9042ACB3C9900B1B974 /* FCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB9032ACB3C9900B1B974 /* FCategory.swift */; };
 		0B3FB91D2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */; };
 		0B3FB91E2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */; };
@@ -177,6 +181,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B124FE72AD82A5000422198 /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
+		0B124FE82AD82A5000422198 /* AlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertVC.xib; sourceTree = "<group>"; };
+		0B124FEB2AD8689100422198 /* ActionBanDangPhucVuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBanDangPhucVuVC.swift; sourceTree = "<group>"; };
+		0B124FEC2AD8689100422198 /* ActionBanDangPhucVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionBanDangPhucVuVC.xib; sourceTree = "<group>"; };
 		0B3FB9032ACB3C9900B1B974 /* FCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCategory.swift; sourceTree = "<group>"; };
 		0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemBanDatTruocVC.swift; sourceTree = "<group>"; };
 		0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemBanDatTruocVC.xib; sourceTree = "<group>"; };
@@ -501,6 +509,8 @@
 				0B7B6DA82AC49820005E89D9 /* DSDangPhucVuVC.xib */,
 				0B7B6DAB2AC498BE005E89D9 /* BanDangPhucVuCell.swift */,
 				0B7B6DAC2AC498BE005E89D9 /* BanDangPhucVuCell.xib */,
+				0B124FEB2AD8689100422198 /* ActionBanDangPhucVuVC.swift */,
+				0B124FEC2AD8689100422198 /* ActionBanDangPhucVuVC.xib */,
 			);
 			path = Serving;
 			sourceTree = "<group>";
@@ -743,6 +753,8 @@
 				0BA5D50F2AB6C8D50031FBF9 /* LoadingVC.xib */,
 				0BE0391929F82039002CB20F /* BaseVC.swift */,
 				0BE0391A29F82039002CB20F /* BasePopupVC.swift */,
+				0B124FE72AD82A5000422198 /* AlertVC.swift */,
+				0B124FE82AD82A5000422198 /* AlertVC.xib */,
 			);
 			path = 8.Base;
 			sourceTree = "<group>";
@@ -950,10 +962,12 @@
 				0BB43F0529FAD82F00F1DE85 /* Rubik-Bold.ttf in Resources */,
 				0BB43EFF29FAD82F00F1DE85 /* Rubik-BoldItalic.ttf in Resources */,
 				0BA5D51D2AB7614C0031FBF9 /* MonDaChonVC.xib in Resources */,
+				0B124FEE2AD8689100422198 /* ActionBanDangPhucVuVC.xib in Resources */,
 				0BF42AAD2AB601A400592A0E /* LoginVC.xib in Resources */,
 				0B81D61B2AC7277A0003CFF6 /* ThemBanVC.xib in Resources */,
 				0B69E4072AC34C3F00C11C2F /* InPhieuBepVC.xib in Resources */,
 				0BB43F0729FAD82F00F1DE85 /* Rubik-LightItalic.ttf in Resources */,
+				0B124FEA2AD82A5000422198 /* AlertVC.xib in Resources */,
 				0BF42AC82AB6066B00592A0E /* Roboto-Condensed.ttf in Resources */,
 				0BB43F0629FAD82F00F1DE85 /* Rubik-BlackItalic.ttf in Resources */,
 				0BA5D5212AB7644E0031FBF9 /* MonDaChonCell.xib in Resources */,
@@ -1086,9 +1100,11 @@
 				0BE038EB29F81F6D002CB20F /* POS_App.xcdatamodeld in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
 				0B5D18662A0AA54F004E47FD /* FProduct.swift in Sources */,
+				0B124FE92AD82A5000422198 /* AlertVC.swift in Sources */,
 				0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */,
 				0BE0392E29F82039002CB20F /* Utility.swift in Sources */,
 				0B3FB92B2AC7E1A2003FBCB5 /* LocHoaDonVC.swift in Sources */,
+				0B124FED2AD8689100422198 /* ActionBanDangPhucVuVC.swift in Sources */,
 				0BE0392529F82039002CB20F /* Logger.swift in Sources */,
 				0B5D18512A0A968C004E47FD /* CacheManager.swift in Sources */,
 				0B3FB9302AC7FC52003FBCB5 /* CuaHangVC.swift in Sources */,

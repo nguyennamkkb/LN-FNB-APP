@@ -24,7 +24,7 @@ class BanDangPhucVuCell: UITableViewCell {
     func bindData(e: FOrder){
         item = e
         lbSoNguoi.text = "\(item.person ?? 0)"
-        lbTongTien.text = "Tổng tiền: "+"\(item.total ?? 0)" + "đ"
+        lbTongTien.text = "Tổng tiền: "+"\(item.total ?? 0)".currencyFormatting() + "đ"
         lbBan.text = "Bàn: "+"\(item.table ?? "")"
     }
     override func setSelected(_ selected: Bool, animated: Bool) {

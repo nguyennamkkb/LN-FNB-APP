@@ -30,6 +30,7 @@ class MonAnCell: UITableViewCell {
         lbGia.text = "\(item.price ?? 0)".currencyFormatting() + "đ"
         lbTenMonAn.text = item.name ?? ""
         self.item.count = 0
+        updateUICongTru()
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -38,7 +39,7 @@ class MonAnCell: UITableViewCell {
     }
     
     func setupUI(){
-//        vItem.layer.cornerRadius = C.CornerRadius.corner10
+   vItem.layer.cornerRadius = C.CornerRadius.corner10
         imgItem.layer.borderWidth = 0.2
         imgItem.layer.borderColor = C.Color.Navi?.cgColor
         imgItem.layer.cornerRadius = C.CornerRadius.corner5

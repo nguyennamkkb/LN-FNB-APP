@@ -8,9 +8,8 @@
 import UIKit
 
 class MonAnCell: UITableViewCell {
-    
-    
-    var passData: ClosureCustom<FProduct>?
+
+    var passData: ((FProduct,Int,Int)->Void)?
     @IBOutlet var lbCount: UILabel!
     @IBOutlet var btnCong: UIButton!
     @IBOutlet var btnTru: UIButton!
@@ -20,16 +19,21 @@ class MonAnCell: UITableViewCell {
     @IBOutlet var imgItem: UIImageView!
     @IBOutlet var VLine: UIView!
     @IBOutlet var vItem: UIView!
+    
+    var st: Int = 0
+    var row: Int = 0
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
     }
     
-    func bindData(item: FProduct){
+    func bindData(item: FProduct, st: Int, row: Int){
+        self.st = st
+        self.row = row
         self.item = item
         lbGia.text = "\(item.price ?? 0)".currencyFormatting() + "đ"
         lbTenMonAn.text = item.name ?? ""
-        self.item.count = 0
+        self.item.count = item.count ?? 0
         updateUICongTru()
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -73,7 +77,7 @@ class MonAnCell: UITableViewCell {
             lbCount.alpha = 1
             lbCount.text = "\(item.count ?? 0)"
         }
-        passData?(item)
+        passData?(item,st,row)
     }
     
 }

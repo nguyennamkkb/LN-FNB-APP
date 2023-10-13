@@ -16,6 +16,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChonMonVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
+                <outlet property="bCart" destination="mpU-NF-FTK" id="agh-3b-CnZ"/>
+                <outlet property="bXacNhanThemMon" destination="aXm-JQ-yGC" id="hQz-pG-CyV"/>
                 <outlet property="keySearch" destination="rZ3-ke-DEZ" id="Day-Og-PP9"/>
                 <outlet property="lbBanDaChon" destination="QOR-Gi-Dsw" id="Feh-p6-9iL"/>
                 <outlet property="lbCountCart" destination="CnH-BP-Mcb" id="6pP-Pa-d7G"/>
@@ -102,46 +104,78 @@
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-NF-FTK" userLabel="cart">
-                            <rect key="frame" x="343" y="2" width="35" height="40"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuN-9X-n5e">
+                            <rect key="frame" x="343" y="4.6666666666666643" width="35" height="35"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vcb-AR-rCu">
+                                    <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                    <subviews>
+                                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXm-JQ-yGC" userLabel="bOk">
+                                            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                            <color key="backgroundColor" name="green"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="cYW-my-itI"/>
+                                                <constraint firstAttribute="height" constant="35" id="esx-s5-3zL"/>
+                                            </constraints>
+                                            <color key="tintColor" name="white"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="checkmark" catalog="system"/>
+                                            <connections>
+                                                <action selector="xacNhanThemMonPressed:" destination="-1" eventType="touchUpInside" id="TOo-YN-bJw"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-NF-FTK" userLabel="cart">
+                                            <rect key="frame" x="0.0" y="0.3333333333333357" width="35" height="34"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="Ss3-6S-xJm"/>
+                                            </constraints>
+                                            <color key="tintColor" name="green"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <connections>
+                                                <action selector="cartPressed:" destination="-1" eventType="touchUpInside" id="9Z2-26-c26"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="40" id="N1Z-dE-EMX"/>
-                                <constraint firstAttribute="width" constant="35" id="Ss3-6S-xJm"/>
+                                <constraint firstAttribute="trailing" secondItem="vcb-AR-rCu" secondAttribute="trailing" id="3Zh-w0-mLH"/>
+                                <constraint firstAttribute="height" constant="35" id="SMp-4j-9xV"/>
+                                <constraint firstAttribute="width" constant="35" id="U0n-Xb-saC"/>
+                                <constraint firstItem="vcb-AR-rCu" firstAttribute="leading" secondItem="MuN-9X-n5e" secondAttribute="leading" id="YfN-x4-q8A"/>
+                                <constraint firstAttribute="bottom" secondItem="vcb-AR-rCu" secondAttribute="bottom" id="i9e-Yt-uk4"/>
+                                <constraint firstItem="vcb-AR-rCu" firstAttribute="top" secondItem="MuN-9X-n5e" secondAttribute="top" id="z2G-In-Id2"/>
                             </constraints>
-                            <color key="tintColor" name="green"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <connections>
-                                <action selector="cartPressed:" destination="-1" eventType="touchUpInside" id="9Z2-26-c26"/>
-                            </connections>
-                        </button>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="CnH-BP-Mcb" firstAttribute="top" secondItem="pyt-u1-nwC" secondAttribute="top" constant="5" id="61k-cA-quy"/>
                         <constraint firstAttribute="trailing" secondItem="CnH-BP-Mcb" secondAttribute="trailing" constant="7" id="97k-aE-9JK"/>
                         <constraint firstAttribute="trailing" secondItem="c14-ci-08p" secondAttribute="trailing" constant="50" id="CSO-2U-vyg"/>
-                        <constraint firstItem="mpU-NF-FTK" firstAttribute="centerY" secondItem="c14-ci-08p" secondAttribute="centerY" id="Hwm-K8-EOF"/>
                         <constraint firstAttribute="height" constant="44" id="OVn-23-WwF"/>
                         <constraint firstItem="c14-ci-08p" firstAttribute="centerY" secondItem="pyt-u1-nwC" secondAttribute="centerY" id="RXR-s8-Ohn"/>
+                        <constraint firstItem="xhQ-YY-PbP" firstAttribute="top" secondItem="c14-ci-08p" secondAttribute="top" id="TQP-JK-8am"/>
                         <constraint firstItem="c14-ci-08p" firstAttribute="leading" secondItem="A47-tZ-mt6" secondAttribute="trailing" constant="5" id="TZD-Nj-1nX"/>
-                        <constraint firstItem="xhQ-YY-PbP" firstAttribute="centerY" secondItem="mpU-NF-FTK" secondAttribute="centerY" id="a4e-ke-AlB"/>
                         <constraint firstItem="A47-tZ-mt6" firstAttribute="centerY" secondItem="pyt-u1-nwC" secondAttribute="centerY" id="bcP-7y-3AZ"/>
                         <constraint firstItem="A47-tZ-mt6" firstAttribute="leading" secondItem="pyt-u1-nwC" secondAttribute="leading" constant="15" id="dRC-HS-Iuk"/>
+                        <constraint firstItem="MuN-9X-n5e" firstAttribute="centerY" secondItem="pyt-u1-nwC" secondAttribute="centerY" id="eoy-2c-7Ru"/>
                         <constraint firstAttribute="trailing" secondItem="xhQ-YY-PbP" secondAttribute="trailing" constant="15" id="fLX-31-LLe"/>
-                        <constraint firstAttribute="trailing" secondItem="mpU-NF-FTK" secondAttribute="trailing" constant="15" id="tTl-w0-uHe"/>
+                        <constraint firstAttribute="trailing" secondItem="MuN-9X-n5e" secondAttribute="trailing" constant="15" id="mia-cB-RSG"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mcl-M3-XzM" userLabel="Vtable">
                     <rect key="frame" x="15" y="103" width="363" height="35"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bàn: A1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOR-Gi-Dsw" userLabel="Bàn: A1">
-                            <rect key="frame" x="0.0" y="9" width="49" height="17"/>
+                            <rect key="frame" x="0.0" y="9.3333333333333304" width="48.666666666666664" height="16.666666666666671"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số người:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-9O-aib" userLabel="Số người:">
-                            <rect key="frame" x="263.33333333333331" y="9" width="59.666666666666686" height="17"/>
+                            <rect key="frame" x="263.33333333333331" y="9.3333333333333304" width="59.666666666666686" height="16.666666666666671"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
@@ -197,6 +231,7 @@
         </view>
     </objects>
     <resources>
+        <image name="checkmark" catalog="system" width="128" height="114"/>
         <image name="ic_cart" width="25" height="25"/>
         <image name="ic_find" width="15" height="15"/>
         <namedColor name="black">

@@ -38,6 +38,13 @@
                         <action selector="chonThemMonPressed:" destination="-1" eventType="touchUpInside" id="tvm-gy-a2p"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7wU-5G-lr5" userLabel="lỉne">
+                    <rect key="frame" x="15" y="117.66666666666667" width="363" height="0.3333333333333286"/>
+                    <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="dvh-j6-cZd"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5M-9q-J2Q">
                     <rect key="frame" x="15" y="128" width="363" height="44"/>
                     <constraints>
@@ -45,13 +52,20 @@
                     </constraints>
                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                    <state key="normal" title="In phiếu bép">
+                    <state key="normal" title="In phiếu bếp">
                         <color key="titleColor" name="green"/>
                     </state>
                     <connections>
                         <action selector="inPhieuBepPressed:" destination="-1" eventType="touchUpInside" id="IRg-hE-REh"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Kb-Em-ihX" userLabel="lỉne">
+                    <rect key="frame" x="15" y="176.66666666666666" width="363" height="0.33333333333334281"/>
+                    <color key="backgroundColor" red="0.96085551100914079" green="1" blue="0.98803963612229861" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="ImN-VZ-3dn"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bC3-hp-Umx">
                     <rect key="frame" x="15" y="187" width="363" height="44"/>
                     <constraints>
@@ -66,19 +80,35 @@
                         <action selector="thanhToanPressed:" destination="-1" eventType="touchUpInside" id="VXQ-BH-93k"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jJ8-cW-MGc" userLabel="lỉne">
+                    <rect key="frame" x="15" y="235.66666666666666" width="363" height="0.33333333333334281"/>
+                    <color key="backgroundColor" red="0.97992328578052368" green="0.97870411450000205" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="mfW-4U-JMj"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="navi"/>
             <constraints>
+                <constraint firstItem="jJ8-cW-MGc" firstAttribute="bottom" secondItem="bC3-hp-Umx" secondAttribute="bottom" constant="5" id="0AA-fd-coh"/>
+                <constraint firstItem="8Kb-Em-ihX" firstAttribute="bottom" secondItem="N5M-9q-J2Q" secondAttribute="bottom" constant="5" id="0gi-MX-jvV"/>
+                <constraint firstAttribute="trailing" secondItem="8Kb-Em-ihX" secondAttribute="trailing" constant="15" id="1dW-ku-JLF"/>
                 <constraint firstItem="bC3-hp-Umx" firstAttribute="top" secondItem="N5M-9q-J2Q" secondAttribute="bottom" constant="15" id="2hN-aR-6xy"/>
+                <constraint firstItem="7wU-5G-lr5" firstAttribute="bottom" secondItem="b7a-YK-70C" secondAttribute="bottom" constant="5" id="6cF-GH-8lk"/>
                 <constraint firstItem="bC3-hp-Umx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="HRk-Ol-dXU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="N5M-9q-J2Q" secondAttribute="trailing" constant="15" id="NOK-U3-PjW"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bC3-hp-Umx" secondAttribute="trailing" constant="15" id="Ox4-PB-Qex"/>
+                <constraint firstItem="7wU-5G-lr5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="TVY-y8-hYS"/>
                 <constraint firstItem="b7a-YK-70C" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Vby-wT-JIU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="b7a-YK-70C" secondAttribute="trailing" constant="5" id="f4Y-jd-KBR"/>
                 <constraint firstItem="N5M-9q-J2Q" firstAttribute="top" secondItem="b7a-YK-70C" secondAttribute="bottom" constant="15" id="jaD-vc-Xuh"/>
                 <constraint firstItem="N5M-9q-J2Q" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="l66-75-EBN"/>
+                <constraint firstItem="8Kb-Em-ihX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="t6X-g3-XCK"/>
+                <constraint firstAttribute="trailing" secondItem="jJ8-cW-MGc" secondAttribute="trailing" constant="15" id="y9p-zO-psB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7wU-5G-lr5" secondAttribute="trailing" constant="15" id="yQg-Zr-hy7"/>
                 <constraint firstItem="b7a-YK-70C" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="zgB-1t-x5e"/>
+                <constraint firstItem="jJ8-cW-MGc" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="zs1-xa-YH6"/>
             </constraints>
             <point key="canvasLocation" x="79" y="21"/>
         </view>

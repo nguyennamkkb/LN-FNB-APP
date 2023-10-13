@@ -120,6 +120,14 @@ class Common {
         return (year, month, day, hour, minute, second)
         
     }
+    public static func layThoiGianGioPhutNgayThangNam() ->String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm dd/M/yyyy"
+
+        let currentDate = Date()
+        let currentDateString = dateFormatter.string(from: currentDate)
+        return currentDateString
+    }
     public static func wLog(_ s: Any) -> Void {
         
         Thread.runOnBackground {

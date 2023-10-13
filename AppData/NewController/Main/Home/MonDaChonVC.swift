@@ -38,8 +38,15 @@ class MonDaChonVC: BaseVC {
         guard let personNumber = soNguoi else {return}
         guard let table = table else {return}
         if tableData.count <= 0 {return}
+        let listProducts = tableData.filter {
+            e in
+            if e.count != 0 {
+                return true
+            }
+            return false
+        }
 
-        order.list_item = tableData.toJSONString()
+        order.list_item = listProducts.toJSONString()
         order.person = personNumber
         order.table = table
         order.total = getMoney()

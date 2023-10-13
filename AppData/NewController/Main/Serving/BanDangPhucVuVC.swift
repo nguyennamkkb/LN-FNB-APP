@@ -71,19 +71,36 @@ class BanDangPhucVuVC: BaseVC {
             }
         }
     }
-    @IBAction func phieuBepPressed(_ sender: Any) {
-        self.pushVC(controller: PhieuBepVC())
-    }
-    @IBAction func ThanhToanPressed(_ sender: Any) {
+    @IBAction func MorePressed(_ sender: Any) {
         let vc = ActionBanDangPhucVuVC()
         vc.actionPhieuBep = {
-            self.pushVC(controller: PhieuBepVC())
+            let phieuBepVC = PhieuBepVC()
+            phieuBepVC.bindData(list: self.listItem, ban: self.lbTitle.text ?? "")
+            self.pushVC(controller: phieuBepVC)
+            
         }
         vc.actionThanhToan = {
-            self.pushVC(controller: BillVC())
+            let billVC = BillVC()
+            self.pushVC(controller: billVC)
         }
         vc.actionChonThemMon = {
-            self.pushVC(controller: ChonMonVC())
+            let chonMonVC = ChonMonVC()
+            chonMonVC.bindDataThemMon(listSelected: self.listItem, ban: self.item.table ?? "", soNguoi: self.item.person ?? 5)
+            
+            chonMonVC.passDataThemMon = {
+                [weak self] listProducts, n in
+                guard let self = self else {return}
+                self.item.list_item = listProducts.toJSONString()
+                self.item.person = n
+                DispatchQueue.main.async {
+                   
+                    self.setupData()
+                    self.bCapNhat.isHidden = false
+                    self.updateMoney()
+                }
+               
+            }
+            self.pushVC(controller: chonMonVC)
         }
         let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
         self.present(sheet, animated: true)
@@ -105,7 +122,14 @@ class BanDangPhucVuVC: BaseVC {
       return total
     }
     func updateOrder(){
-        item.list_item = listItem.toJSONString()
+        let listProducts = listItem.filter {
+            e in
+            if e.count != 0 {
+                return true
+            }
+            return false
+        }
+        item.list_item = listProducts.toJSONString()
         item.total = getMoney()
         item.sign()
         self.showLoading()

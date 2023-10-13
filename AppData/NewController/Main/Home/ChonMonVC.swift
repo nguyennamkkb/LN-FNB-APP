@@ -10,6 +10,10 @@ import ObjectMapper
 
 class ChonMonVC: BaseVC{
     
+    
+    var passDataThemMon: (([FProduct],Int)->Void)?
+    @IBOutlet var bCart: UIButton!
+    @IBOutlet var bXacNhanThemMon: UIButton!
     @IBOutlet var lbCountCart: UILabel!
     var listProductSelected: [FProduct] = [FProduct]()
     var listProductFinal: [FProduct] = [FProduct]()
@@ -20,33 +24,51 @@ class ChonMonVC: BaseVC{
     @IBOutlet var lbBanDaChon: UILabel!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var viewSearch: UIView!
+    
+    var trangThaiChonThemMon: Int = 0
     var banDaChon: String = ""
+    var soNguoi: Int = 5
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "MonAnCell")
         setupUI()
+        setupData()
         getCategories()
+        
+        
     }
     @IBAction func searchPressed(_ sender: Any) {
         getCategories()
     }
-
-    func setupUI(){ 
-        lbBanDaChon.text = "Bàn: \(banDaChon)"
+    
+    func setupUI(){
+        if trangThaiChonThemMon == 1 {
+            bCart.isHidden = true
+            bXacNhanThemMon.isHidden = false
+        }else {
+            bCart.isHidden = false
+            bXacNhanThemMon.isHidden = true
+        }
+        
         viewSearch.layer.cornerRadius = C.CornerRadius.corner5
         lbCountCart.layer.cornerRadius = C.CornerRadius.corner5
+        bXacNhanThemMon.layer.cornerRadius = C.CornerRadius.corner5
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl) // not required when using UITableViewController
     }
+    func setupData(){
+        lbBanDaChon.text = "Bàn: \(banDaChon)"
+        tfSoNguoi.text = "\(soNguoi)"
+    }
     @objc func refresh(_ sender: AnyObject) {
-
+        
         self.tableData.removeAll()
         getCategories()
         listProductSelected.removeAll()
-          listProductFinal.removeAll()
+        listProductFinal.removeAll()
         refreshControl.endRefreshing()
     }
     @IBAction func cartPressed(_ sender: Any) {
@@ -60,6 +82,43 @@ class ChonMonVC: BaseVC{
         banDaChon = ban
     }
     
+    func bindDataThemMon(listSelected: [FProduct], ban: String, soNguoi: Int){
+        banDaChon = ban
+        listProductSelected = listSelected
+        trangThaiChonThemMon = 1
+    }
+    @IBAction func xacNhanThemMonPressed(_ sender: Any) {
+        dismissKeyboard()
+        guard let n = tfSoNguoi.text else {return}
+        passDataThemMon?(listProductFinal,Int(n) ?? 5)
+        self.onBackNav()
+
+    }
+    func updateTableDataThemMon(){
+        if trangThaiChonThemMon == 1, tableData.count > 0{
+//            print("updateTableDataThemMon")
+//            print(tableData.toJSON())
+            var productMap = [Int: FProduct]()
+
+            for p in listProductSelected {
+                productMap[p.id ?? 0] = p
+            }
+//            print(productMap)
+            for e in tableData {
+                for (index, product) in e.products!.enumerated() {
+                    if let newProduct = productMap[product.id!] {
+                        e.products![index] = newProduct
+                        print(newProduct)
+                    }
+                }
+            }
+//            print(tableData.toJSON())
+
+            updateCountCart()
+        }
+    }
+    
+    
     func getCategories(){
         dismissKeyboard()
         let keySearch = keySearch.text
@@ -72,6 +131,9 @@ class ChonMonVC: BaseVC{
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<FCategory>().mapArray(JSONObject: response!.data ) ?? [FCategory]()
                 DispatchQueue.main.async {
+                    if self.trangThaiChonThemMon == 1 {
+                        self.updateTableDataThemMon()
+                    }
                     self.tableView.reloadData()
                 }
             } else if response?.statusCode == 0 {
@@ -96,6 +158,7 @@ class ChonMonVC: BaseVC{
             }
             return false
         }
+        
         lbCountCart.text = "\(listProductFinal.count)"
     }
 }
@@ -112,19 +175,21 @@ extension ChonMonVC: UITableViewDelegate, UITableViewDataSource{
     func numberOfSections(in tableView: UITableView) -> Int {
         return tableData.count
     }
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.itemAtIndex(index: section)?.products?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MonAnCell", for: indexPath) as? MonAnCell else {return UITableViewCell()}
-        let item = tableData.itemAtIndex(index: indexPath.section)?.products?.itemAtIndex(index: indexPath.row) ?? FProduct()
-        
-        cell.bindData(item: item)
+        let section = indexPath.section
+        let row = indexPath.row
+        let item = tableData.itemAtIndex(index: section)?.products?.itemAtIndex(index: row) ?? FProduct()
+        cell.bindData(item: item,st: section,row: row )
         cell.passData = {
-            [weak self] data in
+            [weak self] data,st,r in
             guard let self =  self else {return}
+            self.tableData[st].products?[r] = data
             if self.findObject(item: data){
                 self.listProductSelected = self.listProductSelected.map{ dictionary in
                     if let id = dictionary.id, id == data.id {
@@ -135,7 +200,7 @@ extension ChonMonVC: UITableViewDelegate, UITableViewDataSource{
             }else {
                 self.listProductSelected.append(data)
             }
-        
+            
             self.updateCountCart()
         }
         return cell
@@ -143,9 +208,9 @@ extension ChonMonVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         // Create a custom view for section headers (optional)
         let headerView = UIView()
-//        let headerView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: tableView.frame.size.width, height: 30.0))
+        //        let headerView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: tableView.frame.size.width, height: 30.0))
         headerView.backgroundColor = C.Color.Navi
-
+        
         // Add a label for the section title
         let label = UILabel()
         label.textColor = C.Color.White

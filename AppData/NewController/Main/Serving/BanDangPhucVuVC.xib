@@ -70,7 +70,7 @@
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="ic_more_v"/>
                             <connections>
-                                <action selector="ThanhToanPressed:" destination="-1" eventType="touchUpInside" id="Hy1-g8-Dae"/>
+                                <action selector="MorePressed:" destination="-1" eventType="touchUpInside" id="uRc-6J-AH7"/>
                             </connections>
                         </button>
                     </subviews>
@@ -120,7 +120,7 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oqb-om-XHa">
-                    <rect key="frame" x="0.0" y="131.66666666666669" width="390" height="624.33333333333326"/>
+                    <rect key="frame" x="0.0" y="131.66666666666669" width="390" height="614.33333333333326"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q74-qv-1af" userLabel="vAction">
@@ -190,7 +190,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3cf-2W-suG" secondAttribute="trailing" id="dZ9-mo-1AV"/>
                 <constraint firstAttribute="trailing" secondItem="q74-qv-1af" secondAttribute="trailing" constant="15" id="fWT-SP-7Rh"/>
                 <constraint firstItem="q74-qv-1af" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" constant="-5" id="rKH-m6-c2P"/>
-                <constraint firstItem="q74-qv-1af" firstAttribute="top" secondItem="oqb-om-XHa" secondAttribute="bottom" constant="5" id="vwr-6H-cvz"/>
+                <constraint firstItem="q74-qv-1af" firstAttribute="top" secondItem="oqb-om-XHa" secondAttribute="bottom" constant="15" id="vwr-6H-cvz"/>
                 <constraint firstItem="s4v-q3-lym" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="wVp-BY-RaU"/>
             </constraints>
             <point key="canvasLocation" x="35.384615384615387" y="-12.085308056872037"/>

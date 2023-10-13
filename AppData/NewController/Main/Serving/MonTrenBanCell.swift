@@ -51,6 +51,7 @@ class MonTrenBanCell: UITableViewCell {
         if count > 0 {
             item.count = count - 1
         }
+     
         updateUICongTru()
     }
     func updateUICongTru(){

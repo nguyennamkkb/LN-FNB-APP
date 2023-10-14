@@ -22,7 +22,7 @@ class PhieuBepVC: BaseVC {
         self.tableView.registerCell(nibName: "MonTrenBanCell")
         setupUI()
         lbBan.text = tenBan
-        lbGioTao.text = Common.layThoiGianGioPhutNgayThangNam()
+        lbGioTao.text = "Giờ: "+Common.layThoiGianGioPhutNgayThangNam()
     }
     func setupUI(){
         bXacNhan.layer.cornerRadius = C.CornerRadius.corner5
@@ -40,7 +40,8 @@ class PhieuBepVC: BaseVC {
             return false
         }
         let vc = InPhieuBepVC()
-//        vc.bindData()
+        vc.bindData(list: listProducts, ban: tenBan, gio: lbGioTao.text ?? Common.layThoiGianGioPhutNgayThangNam()  )
+        
         self.pushVC(controller: vc)
     }
     

@@ -151,6 +151,14 @@ extension UIView {
 }
 
 extension UIImage {
+    func resized(toWidth width: CGFloat) -> UIImage {
+        let canvasSize = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
+        let format = imageRendererFormat
+        format.opaque = true
+        return UIGraphicsImageRenderer(size: canvasSize, format: format).image {
+          _ in draw(in: CGRect(origin: .zero, size: canvasSize))
+        }
+      }
     func toBase64() -> String? {
         guard let imageData = self.jpegData(compressionQuality: 1.0) else {
             return nil

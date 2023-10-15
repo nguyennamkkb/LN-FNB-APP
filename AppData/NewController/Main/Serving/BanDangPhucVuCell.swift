@@ -9,6 +9,8 @@ import UIKit
 
 class BanDangPhucVuCell: UITableViewCell {
     
+    
+    @IBOutlet weak var vItem: UIView!
     var item = FOrder()
     @IBOutlet var lbSoNguoi: UILabel!
     @IBOutlet var lbTongTien: UILabel!
@@ -26,6 +28,12 @@ class BanDangPhucVuCell: UITableViewCell {
         lbSoNguoi.text = "\(item.person ?? 0)"
         lbTongTien.text = "Tổng tiền: "+"\(item.total ?? 0)".currencyFormatting() + "đ"
         lbBan.text = "Bàn: "+"\(item.table ?? "")"
+        vItem.layer.cornerRadius = C.CornerRadius.corner5
+        if item.total !=  0 {
+            vItem.backgroundColor = UIColor.clear
+        }else {
+            vItem.backgroundColor = UIColor(hex: "#FFFF0050")
+        }
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

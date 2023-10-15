@@ -16,9 +16,10 @@ class FOrder: Mappable {
     var list_item: String?
     var note: String?
     var person: Int?
+    var time: String?
     var createAt: String?
     var updateAt: String?
-    var status: Int?
+    var status: Int?        //1 bt, 2 đặt trước, 3 đã thanh toán
     var cksRequest: String?
     var timeRequest: Int?
     
@@ -38,6 +39,7 @@ class FOrder: Mappable {
         list_item <- map["list_item"]
         note <- map["note"]
         person <- map["person"]
+        time <- map["time"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]

@@ -8,21 +8,27 @@
 import UIKit
 
 class BanDatTruocCell: UITableViewCell {
-
-    var actionDelete: ClosureAction?
+    
+    
+    var item: FOrder  = FOrder()
+    @IBOutlet weak var lbSoNguoi: UILabel!
+    @IBOutlet weak var lbThoiGIanDen: UILabel!
+    @IBOutlet weak var lbTenBan: UILabel!
+    var actionDelete: ClosureCustom<FOrder>?
     @IBOutlet var bDelete: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         bDelete.layer.cornerRadius = C.CornerRadius.corner5
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func binđata(e: FOrder){
+        item = e
+        lbTenBan.text = "Bàn: " + (item.table ?? "")
+        lbSoNguoi.text = "\(item.person ?? 0)"
+        print(item.toJSON())
+        lbThoiGIanDen.text = "\(Common.getDateFormatFromMiliseonds(time:Int64(item.time ?? "0") ?? 0))"
     }
     @IBAction func deletePressed(_ sender: Any) {
-        actionDelete?()
+        actionDelete?(item)
     }
     
 }

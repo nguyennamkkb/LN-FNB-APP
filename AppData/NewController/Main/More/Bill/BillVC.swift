@@ -17,7 +17,7 @@ class BillVC: BaseVC {
     }
     @IBAction func TuyChonPressed(_ sender: Any) {
         let vc = BillActionVC()
-        let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
+        let sheet = SheetViewController(controller: vc, sizes: [.fixed(150)])
         present(sheet, animated: true)
     }
     

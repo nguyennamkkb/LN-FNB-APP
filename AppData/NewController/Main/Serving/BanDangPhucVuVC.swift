@@ -31,6 +31,10 @@ class BanDangPhucVuVC: BaseVC {
         setupUI()
         setupData()
     }
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
+    }
+    
     func bindData(e: FOrder){
         item = e
     }
@@ -138,7 +142,10 @@ class BanDangPhucVuVC: BaseVC {
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
                 self.actionReload?()
-                self.onBackNav()
+                self.bCapNhat.isHidden = true
+                let vc = AlertVC()
+                vc.bindData(s: "Thành công")
+                self.presentFullScreen(vc: vc)
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể sửa")
             }

@@ -30,6 +30,7 @@ fileprivate enum ECommonURLs {
     case category
     case product
     case order
+    case orderDatTruoc
     
     
     func getPath() -> String {
@@ -48,6 +49,8 @@ fileprivate enum ECommonURLs {
             return ListCommonService.product
         case .order:
             return ListCommonService.order
+        case .orderDatTruoc:
+            return ListCommonService.order + "/dattruoc"
 }
         func getMethod() -> HTTPMethod {
             switch self {
@@ -457,6 +460,26 @@ class CommonServices {
     }
     func createOrder(param: FOrder, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.order.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    //
+    func createDatTruoc(param: FOrder, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.orderDatTruoc.getPath()
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }

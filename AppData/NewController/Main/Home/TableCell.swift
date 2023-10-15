@@ -9,10 +9,11 @@ import UIKit
 
 class TableCell: UICollectionViewCell {
 
-    @IBOutlet var imgCheck: UIImageView!
+
     var passDataSelect: ClosureCustom<FTable>?
     var passDataDelete: ClosureCustom<FTable>?
     var actionBanDangPhucVu: ClosureAction?
+    var actionBanDaDatTruoc: ClosureAction?
     var item = FTable()
     @IBOutlet weak var lbTableName: UILabel!
     @IBOutlet weak var imgTable: UIImageView!
@@ -44,28 +45,30 @@ class TableCell: UICollectionViewCell {
         self.item = item
         lbTableName.text = item.name
         trangThaiChon = false
-        imgCheck.isHidden = true
         setTableImage()
     }
     func setTableImage(){
         let status: tableStatus = TableCell.tableStatus(rawValue: item.status ?? 1) ?? .conTrong
-        imgCheck.isHidden = true
         imgTable.image = tableStatus.getImage(status)()
     }
     @IBAction func chonBanPressed(_ sender: Any) {
         
-        if item.status != 1 {
+        switch item.status {
+            
+        case 2:
             actionBanDangPhucVu?()
             return
+        case 4:
+            actionBanDaDatTruoc?()
+            return
+        default:
+            break
         }
-        
         if trangThaiChon == false {
-            imgCheck.isHidden = false
             imgTable.image = tableStatus.getImage(.dangGoiMon)()
             passDataSelect?(item)
         }else {
             imgTable.image = tableStatus.getImage(.conTrong)()
-            imgCheck.isHidden = true
             passDataDelete?(item)
         }
         trangThaiChon = !trangThaiChon

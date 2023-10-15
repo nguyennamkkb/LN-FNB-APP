@@ -94,6 +94,11 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
             vc.bindData(s: "Bàn đã có người")
             self.pushVC(controller: vc,hidesBottomBarWhenPushed: true, animation: false)
         }
+        cell.actionBanDaDatTruoc = {
+            let vc = AlertVC()
+            vc.bindData(s: "Bàn đã đặt trước")
+            self.pushVC(controller: vc,hidesBottomBarWhenPushed: true, animation: false)
+        }
         return cell
     }
     

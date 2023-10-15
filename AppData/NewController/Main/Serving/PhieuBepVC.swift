@@ -9,9 +9,11 @@ import UIKit
 
 class PhieuBepVC: BaseVC {
 
+    
+    @IBOutlet weak var bChuyenSLVe0: UIButton!
     var danhSachMonAn: [FProduct] = []
     @IBOutlet var lbBan: UILabel!
-    @IBOutlet var lbGioTao: UILabel!
+    @IBOutlet var lbGioTao: UILabel!		
     @IBOutlet var bXacNhan: UIButton!
     @IBOutlet var tableView: UITableView!
     var tenBan: String = ""
@@ -22,15 +24,28 @@ class PhieuBepVC: BaseVC {
         self.tableView.registerCell(nibName: "MonTrenBanCell")
         setupUI()
         lbBan.text = tenBan
-        lbGioTao.text = "Giờ: "+Common.layThoiGianGioPhutNgayThangNam()
+        lbGioTao.text = Common.layThoiGianGioPhutNgayThangNam()
+    }
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
     }
     func setupUI(){
         bXacNhan.layer.cornerRadius = C.CornerRadius.corner5
+        bChuyenSLVe0.layer.cornerRadius = C.CornerRadius.corner5
     }
     func bindData(list: [FProduct], ban: String){
         danhSachMonAn = list
         tenBan = ban
     }
+    @IBAction func chuyenVe0Pressed(_ sender: Any) {
+        for i in 0..<danhSachMonAn.count {
+            danhSachMonAn[i].count = 0
+        }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
     @IBAction func XacNhanPressed(_ sender: Any) {
         let listProducts = danhSachMonAn.filter {
             e in

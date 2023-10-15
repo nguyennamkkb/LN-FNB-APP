@@ -4,13 +4,14 @@ PODS:
     - DGCharts/Core (= 5.0.0)
   - DGCharts/Core (5.0.0)
   - DropDown (2.3.13)
-  - FittedSheets (2.6.1)
-  - IQKeyboardManagerSwift (6.5.12)
+  - FittedSheets (2.5.3)
+  - IQKeyboardManagerSwift (6.5.11)
   - Kingfisher (5.15.8):
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
   - ObjectMapper (4.2.0)
   - Printer (4.1.0)
+  - RSSelectionMenu (7.1.3)
   - SideMenu (6.5.0)
   - XLPagerTabStrip (9.1.0)
 
@@ -23,6 +24,7 @@ DEPENDENCIES:
   - Kingfisher (~> 5.15.7)
   - ObjectMapper
   - Printer (from `https://github.com/KevinGong2013/Printer.git`, branch `refactor`)
+  - RSSelectionMenu (~> 7.1.3)
   - SideMenu (~> 6.0)
   - XLPagerTabStrip (~> 9.0)
 
@@ -35,6 +37,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Kingfisher
     - ObjectMapper
+    - RSSelectionMenu
     - SideMenu
     - XLPagerTabStrip
 
@@ -52,14 +55,15 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   DGCharts: 6e0cf2644e8f81ad13f04caa8bc18502870a1c54
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
-  FittedSheets: 37e35f105c531f3845075f1788dd8517a35315c4
-  IQKeyboardManagerSwift: 371b08cb39664fb56030f5345c815a4ffc74bbc0
+  FittedSheets: c22df4c06036515f247951fa174912e8a65c8ce4
+  IQKeyboardManagerSwift: c7955c0bdbf7b2eb29bb7daaa44e3d90f55a9a85
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   Printer: c762f8704aaa80c2a793a5ebd6757db2c7428e5d
+  RSSelectionMenu: 873d62ebbaef138519f6cf3f073412c2b5d94c2c
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   XLPagerTabStrip: 27f3bfe23c53b4251c6481b06b1c289458a3fc1d
 
-PODFILE CHECKSUM: c9cbd49cd2a0bcc0ac670ad5077fd355113422e6
+PODFILE CHECKSUM: e89cf4b9a9d6eca70c098498eceb2e08474129d3
 
-COCOAPODS: 1.12.0
+COCOAPODS: 1.12.1

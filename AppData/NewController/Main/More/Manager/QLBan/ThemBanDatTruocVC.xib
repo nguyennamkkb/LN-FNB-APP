@@ -3,7 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,6 +24,9 @@
             <connections>
                 <outlet property="V1" destination="gRX-3Q-vb5" id="f0h-lN-jQu"/>
                 <outlet property="bXacNhan" destination="oOG-5A-CPs" id="ndL-D2-1TO"/>
+                <outlet property="dpTime" destination="ski-lc-CW7" id="jy6-CN-49p"/>
+                <outlet property="tfSoNguoi" destination="T64-iY-J82" id="snX-GD-AoV"/>
+                <outlet property="tfTenBan" destination="Cls-9Q-k1A" id="0pO-Tt-lRv"/>
                 <outlet property="v2" destination="TnH-yQ-btk" id="UeJ-Cd-F6M"/>
                 <outlet property="v3" destination="WR4-mM-c9g" id="8Lo-Pd-jZ5"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -98,6 +101,14 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </textField>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKV-2k-L6d" userLabel="bChonBan">
+                                    <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <connections>
+                                        <action selector="chonBanTrongPressed:" destination="-1" eventType="touchUpInside" id="28F-Hd-fVO"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" name="navi"/>
                             <constraints>
@@ -105,7 +116,11 @@
                                 <constraint firstAttribute="height" constant="50" id="6d4-Sr-ALU"/>
                                 <constraint firstAttribute="bottom" secondItem="Cls-9Q-k1A" secondAttribute="bottom" id="Aqb-JT-Uce"/>
                                 <constraint firstAttribute="trailing" secondItem="Cls-9Q-k1A" secondAttribute="trailing" constant="10" id="Kie-SE-ubl"/>
+                                <constraint firstAttribute="trailing" secondItem="PKV-2k-L6d" secondAttribute="trailing" id="fAT-AI-nWQ"/>
+                                <constraint firstItem="PKV-2k-L6d" firstAttribute="top" secondItem="gRX-3Q-vb5" secondAttribute="top" id="obK-Kw-fUV"/>
                                 <constraint firstItem="Cls-9Q-k1A" firstAttribute="top" secondItem="gRX-3Q-vb5" secondAttribute="top" id="uKH-yp-ZWY"/>
+                                <constraint firstAttribute="bottom" secondItem="PKV-2k-L6d" secondAttribute="bottom" id="vnh-lD-k06"/>
+                                <constraint firstItem="PKV-2k-L6d" firstAttribute="leading" secondItem="gRX-3Q-vb5" secondAttribute="leading" id="xNj-Og-QRR"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -188,7 +203,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="textColor" name="white"/>
                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                             <color key="value" name="gray"/>
@@ -226,6 +241,9 @@
                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Xác nhận"/>
+                    <connections>
+                        <action selector="xacNhanThemDatBanPressed:" destination="-1" eventType="touchUpInside" id="pvh-6g-NOi"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

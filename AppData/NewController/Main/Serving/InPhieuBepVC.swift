@@ -29,6 +29,11 @@ class InPhieuBepVC: BaseVC {
         setupUI()
         setupData()
     }
+    
+    
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
+    }
     func bindData(list: [FProduct], ban: String, gio: String){
         listProducts = list
         tenNBan = ban
@@ -63,6 +68,10 @@ class InPhieuBepVC: BaseVC {
         //        guard let image = UIImage(named: "img_main"), let cgImage = image.cgImage else {
         //            return
         //        }
+        let vc = AlertVC()
+        vc.bindData(s: "Đang in phiếu bếp")
+        self.presentFullScreen(vc: vc)
+        
         let image = VLabel.toImage()
         let resizedImage = image?.resized(toWidth: 125)
         guard  let cgImage = resizedImage?.cgImage else {
@@ -78,6 +87,7 @@ class InPhieuBepVC: BaseVC {
         if bluetoothPrinterManager.canPrint {
             bluetoothPrinterManager.write(Data(receipt.data))
         }
+        
         //        dummyPrinter.write(Data(receipt.data))
     }
 }

@@ -16,4 +16,6 @@ pod 'SideMenu', '~> 6.0'
 pod 'DGCharts'
 pod 'XLPagerTabStrip', '~> 9.0'
 pod 'Printer', :git => 'https://github.com/KevinGong2013/Printer.git', :branch => 'refactor'
+pod 'RSSelectionMenu', '~> 7.1.3'
+
 end

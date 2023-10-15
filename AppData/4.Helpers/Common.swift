@@ -19,14 +19,14 @@ class Common {
     public static var userMaster: PStore = PStore()
     public static var anhChupAvatar: String = ""
     static var dateFormatter = DateFormatter()
-    public static func getDateFormatFromMiliseonds(time: String) -> String{
-        let date = Date(milliseconds: Int64(time) ?? 0)
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm dd-MM-yyyy"
-        
-        let formattedDateString = dateFormatter.string(from: date)
-        return (formattedDateString) // Output: "11-03-2023 14:10"
+    public static func getDateFormatFromMiliseonds(time: Int64) -> String{
+        let date = Date(timeIntervalSince1970: TimeInterval(time / 1000))
+
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm dd-MM-yyyy"
+
+        let formattedDate = formatter.string(from: date)
+        return (formattedDate) 
         
     }
     public static func convertTimestampToDate(timestampString: String, dateFormat: String) -> String{

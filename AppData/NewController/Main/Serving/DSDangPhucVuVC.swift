@@ -10,6 +10,8 @@ import ObjectMapper
 
 class DSDangPhucVuVC: BaseVC {
 
+    
+    let refreshControl = UIRefreshControl()
     var tableData: [FOrder] = []
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
@@ -18,11 +20,21 @@ class DSDangPhucVuVC: BaseVC {
         tableView.delegate = self
         self.tableView.registerCell(nibName: "BanDangPhucVuCell")
         getOrders()
+        
+        setupUI()
     }
-    
+    func setupUI(){
+        refreshControl.tintColor = .white
+        refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    @objc func refresh(_ sender: AnyObject) {
+        getOrders()
+        refreshControl.endRefreshing()
+    }
     func getOrders(){
         guard let id = Common.userMaster.id else {return}
-        let param = ParamSearch(user_id: id, status: 1, keySearch: "")
+        let param = ParamSearch(user_id: id)
         ServiceManager.common.getAllOrder(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {

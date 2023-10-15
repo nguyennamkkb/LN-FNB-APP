@@ -88,6 +88,10 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
             self.hideAlert()
         }
     }
+    func presentFullScreen(vc: UIViewController){
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: false, completion: nil)
+    }
     func hideAlert(){
         UIView.animate(withDuration: 0.3) {
             self.alertView.frame = CGRect(x: 40, y: -50, width: self.view.frame.width - 80, height: 44)

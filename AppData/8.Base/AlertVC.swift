@@ -21,7 +21,7 @@ class AlertVC: BaseVC {
         vAleart.layer.shadowRadius = 10
         lbMessage?.text = message ?? ""
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.navigationController?.popViewController(animated: false)
+            self.dismissVC(animated: false)
         }
     }
     func bindData(s: String){

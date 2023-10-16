@@ -85,6 +85,7 @@ class ChonMonVC: BaseVC{
     func bindDataThemMon(listSelected: [FProduct], ban: String, soNguoi: Int){
         banDaChon = ban
         listProductSelected = listSelected
+        self.soNguoi = soNguoi
         trangThaiChonThemMon = 1
     }
     @IBAction func xacNhanThemMonPressed(_ sender: Any) {
@@ -96,14 +97,12 @@ class ChonMonVC: BaseVC{
     }
     func updateTableDataThemMon(){
         if trangThaiChonThemMon == 1, tableData.count > 0{
-//            print("updateTableDataThemMon")
-//            print(tableData.toJSON())
+
             var productMap = [Int: FProduct]()
 
             for p in listProductSelected {
                 productMap[p.id ?? 0] = p
             }
-//            print(productMap)
             for e in tableData {
                 for (index, product) in e.products!.enumerated() {
                     if let newProduct = productMap[product.id!] {
@@ -112,7 +111,6 @@ class ChonMonVC: BaseVC{
                     }
                 }
             }
-//            print(tableData.toJSON())
 
             updateCountCart()
         }

@@ -22,7 +22,7 @@ class ThemMonAnVC: BaseVC {
         tableView.dataSource = self
         self.tableView.registerCell(nibName: "ThemMonAnCell")
         getCategories()
-        print(trangThaiSua)
+//        print(trangThaiSua)
     }
     func bindDataSua(item: FProduct, trangThai: Int){
         self.item = item

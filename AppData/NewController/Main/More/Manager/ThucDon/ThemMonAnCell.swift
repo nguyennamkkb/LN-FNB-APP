@@ -77,7 +77,7 @@ class ThemMonAnCell: UITableViewCell {
 
     
     @IBAction func xacNhanPressed(_ sender: Any) {
-        print(listCategory.toJSON())
+//        print(listCategory.toJSON())
         guard let name = tfName.text else {return}
         guard let price = tfPrice.text else {return}
         guard let cost = tfCost.text else {return}

@@ -46,7 +46,7 @@ class InPhieuBepVC: BaseVC {
         var s: String = ""
         var sl: String = ""
         for (index,e) in listProducts.enumerated() {
-            print(index)
+//            print(index)
             if index == listProducts.count - 1{
                 s +=  "\(e.name ?? "")"
                 sl += "\(e.count ?? 0)"

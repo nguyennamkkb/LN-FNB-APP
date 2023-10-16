@@ -135,6 +135,7 @@ class BanDangPhucVuVC: BaseVC {
         }
         item.list_item = listProducts.toJSONString()
         item.total = getMoney()
+        item.status = 1
         item.sign()
         self.showLoading()
         ServiceManager.common.updateOrder(param: item){

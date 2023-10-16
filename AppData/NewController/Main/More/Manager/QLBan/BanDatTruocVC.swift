@@ -25,6 +25,10 @@ class BanDatTruocVC: BaseVC {
         getOrders()
         setupUI()
     }
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
+    }
+    
     func setupUI(){
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
@@ -36,7 +40,7 @@ class BanDatTruocVC: BaseVC {
     }
     @IBAction func addPressed(_ sender: Any) {
         let vc = ThemBanDatTruocVC()
-        let sheet = SheetViewController(controller: vc, sizes: [.fixed(410)])
+        let sheet = SheetViewController(controller: vc, sizes: [.fixed(520)])
         
         vc.actionReload = {
             self.getOrders()

@@ -53,17 +53,17 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6aI-Lb-Cro" userLabel="VAction">
-                                <rect key="frame" x="294" y="7" width="80" height="30"/>
+                                <rect key="frame" x="284" y="7" width="90" height="30"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gLT-6H-d5q">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="30"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="gLT-6H-d5q">
+                                        <rect key="frame" x="0.0" y="0.0" width="90" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q7o-FD-7Fb" userLabel="div">
-                                                <rect key="frame" x="0.0" y="2.6666666666666661" width="25" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="7lo-mC-Rhr"/>
-                                                    <constraint firstAttribute="height" constant="25" id="GYB-4O-Z83"/>
+                                                    <constraint firstAttribute="width" constant="30" id="7lo-mC-Rhr"/>
+                                                    <constraint firstAttribute="height" constant="30" id="GYB-4O-Z83"/>
                                                 </constraints>
                                                 <color key="tintColor" name="white"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -73,20 +73,21 @@
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Thv-Ru-Wlm">
-                                                <rect key="frame" x="25" y="15" width="20" height="0.0"/>
+                                                <rect key="frame" x="30" y="0.0" width="30" height="30"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="20" id="aOD-eD-iNE"/>
+                                                    <constraint firstAttribute="height" constant="30" id="2Dy-XG-Dfv"/>
+                                                    <constraint firstAttribute="width" constant="30" id="aOD-eD-iNE"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                                 <color key="textColor" name="white"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lYq-uo-5fk" userLabel="add">
-                                                <rect key="frame" x="55" y="2.6666666666666661" width="25" height="25"/>
+                                                <rect key="frame" x="60" y="0.0" width="30" height="30"/>
                                                 <color key="backgroundColor" name="green"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="25" id="5wm-N6-c0X"/>
-                                                    <constraint firstAttribute="height" constant="25" id="FZp-Zu-dex"/>
+                                                    <constraint firstAttribute="width" constant="30" id="5wm-N6-c0X"/>
+                                                    <constraint firstAttribute="height" constant="30" id="FZp-Zu-dex"/>
                                                 </constraints>
                                                 <color key="tintColor" name="white"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -103,7 +104,7 @@
                                     <constraint firstItem="gLT-6H-d5q" firstAttribute="leading" secondItem="6aI-Lb-Cro" secondAttribute="leading" id="5lk-n1-wyO"/>
                                     <constraint firstAttribute="trailing" secondItem="gLT-6H-d5q" secondAttribute="trailing" id="9h5-sP-pTD"/>
                                     <constraint firstAttribute="bottom" secondItem="gLT-6H-d5q" secondAttribute="bottom" id="Fsr-oo-2BJ"/>
-                                    <constraint firstAttribute="width" constant="80" id="gfY-7k-bnW"/>
+                                    <constraint firstAttribute="width" constant="90" id="gfY-7k-bnW"/>
                                     <constraint firstAttribute="height" constant="30" id="l1L-IZ-Ceq"/>
                                     <constraint firstItem="gLT-6H-d5q" firstAttribute="top" secondItem="6aI-Lb-Cro" secondAttribute="top" id="xSq-qi-ezy"/>
                                 </constraints>

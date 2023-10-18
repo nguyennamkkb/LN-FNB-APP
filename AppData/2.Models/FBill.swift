@@ -11,11 +11,12 @@ import ObjectMapper
 class FBill: Mappable {
     var id: Int?
     var user_id: Int?
-    var total: Int?
+    var order_id: Int?
+    var type: Int?
+    var last_total: Int?
     var table: String?
-    var list_item: String?
     var note: String?
-    var person: Int?
+    var voucher: String?
     var createAt: String?
     var updateAt: String?
     var status: Int?
@@ -33,17 +34,18 @@ class FBill: Mappable {
     func mapping(map: ObjectMapper.Map) {
         id <- map["id"]
         user_id <- map["user_id"]
-        total <- map["total"]
+        order_id <- map["order_id"]
+        type <- map["type"]
+        last_total <- map["last_total"]
         table <- map["table"]
-        list_item <- map["list_item"]
         note <- map["note"]
-        person <- map["person"]
+        voucher <- map["voucher"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]
         cksRequest <- map["cksRequest"]
         timeRequest <- map["timeRequest"]
-        
+
     }
     func sign(){
         let mili = Common.getMilisecondNow()

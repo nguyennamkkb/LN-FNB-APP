@@ -7,14 +7,24 @@
 
 import UIKit
 
-class BillActionVC: UIViewController {
+class BillActionVC: BaseVC {
 
+    var actionInHoaDon: ClosureAction?
+    var actionDaThanhToan: ClosureAction?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    
     }
-
+    @IBAction func inPressed(_ sender: Any) {
+        actionInHoaDon?()
+        self.onBackNav()
+    }
+    @IBAction func daThanhToanPressed(_ sender: Any) {
+        actionDaThanhToan?()
+        self.onBackNav()
+    }
+    
 
     /*
     // MARK: - Navigation

@@ -65,9 +65,7 @@ class InPhieuBepVC: BaseVC {
         VLabel.layer.borderColor = C.Color.Gray?.cgColor
     }
     @IBAction func touchPrint(sender: UIButton) {
-        //        guard let image = UIImage(named: "img_main"), let cgImage = image.cgImage else {
-        //            return
-        //        }
+
         let vc = AlertVC()
         vc.bindData(s: "Đang in phiếu bếp")
         self.presentFullScreen(vc: vc)

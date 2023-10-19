@@ -11,6 +11,7 @@ PODS:
   - Kingfisher/Core (5.15.8)
   - ObjectMapper (4.2.0)
   - Printer (4.1.0)
+  - RasterizedReceiptPrinting (0.1.5)
   - RSSelectionMenu (7.1.3)
   - SideMenu (6.5.0)
   - XLPagerTabStrip (9.1.0)
@@ -24,6 +25,7 @@ DEPENDENCIES:
   - Kingfisher (~> 5.15.7)
   - ObjectMapper
   - Printer (from `https://github.com/KevinGong2013/Printer.git`, branch `refactor`)
+  - RasterizedReceiptPrinting
   - RSSelectionMenu (~> 7.1.3)
   - SideMenu (~> 6.0)
   - XLPagerTabStrip (~> 9.0)
@@ -37,6 +39,7 @@ SPEC REPOS:
     - IQKeyboardManagerSwift
     - Kingfisher
     - ObjectMapper
+    - RasterizedReceiptPrinting
     - RSSelectionMenu
     - SideMenu
     - XLPagerTabStrip
@@ -60,10 +63,11 @@ SPEC CHECKSUMS:
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   Printer: c762f8704aaa80c2a793a5ebd6757db2c7428e5d
+  RasterizedReceiptPrinting: 70b2d08ce55b3888026204276929c165272a7012
   RSSelectionMenu: 873d62ebbaef138519f6cf3f073412c2b5d94c2c
   SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   XLPagerTabStrip: 27f3bfe23c53b4251c6481b06b1c289458a3fc1d
 
-PODFILE CHECKSUM: e89cf4b9a9d6eca70c098498eceb2e08474129d3
+PODFILE CHECKSUM: 9f735bf0a8800fe23c591a42df3ae900e118ff8e
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.12.0

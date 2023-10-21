@@ -10,6 +10,7 @@ import UIKit
 class BanDatTruocCell: UITableViewCell {
     
     
+    @IBOutlet var lbGhiChu: UILabel!
     var item: FOrder  = FOrder()
     @IBOutlet weak var lbSoNguoi: UILabel!
     @IBOutlet weak var lbThoiGIanDen: UILabel!
@@ -24,8 +25,8 @@ class BanDatTruocCell: UITableViewCell {
         item = e
         lbTenBan.text = "Bàn: " + (item.table ?? "")
         lbSoNguoi.text = "\(item.person ?? 0)"
-        print(item.toJSON())
         lbThoiGIanDen.text = "\(Common.getDateFormatFromMiliseonds(time:Int64(item.time ?? "0") ?? 0))"
+        lbGhiChu.text = item.note ?? ""
     }
     @IBAction func deletePressed(_ sender: Any) {
         actionDelete?(item)

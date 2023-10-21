@@ -136,4 +136,12 @@ class Common {
 #endif
         }
     }
+    
+    public static func captureTableViewAsImage(tableView: UITableView) -> UIImage? {
+        let renderer = UIGraphicsImageRenderer(size: tableView.contentSize)
+        let image = renderer.image { _ in
+            tableView.drawHierarchy(in: tableView.bounds, afterScreenUpdates: true)
+        }
+        return image
+    }
 }

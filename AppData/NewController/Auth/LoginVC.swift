@@ -64,8 +64,8 @@ class LoginVC: BaseVC {
     
     
     func login(email: String, password: String){
-        print(email)
-        print(password)
+//        print(email)
+//        print(password)
         let paramRequest = LoginParam(email: email, password: password)
         ServiceManager.common.signIn(param: paramRequest){
             (response) in

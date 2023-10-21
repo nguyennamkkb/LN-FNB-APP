@@ -68,6 +68,28 @@ extension UITableView {
             self.estimatedRowHeight = estimatedRowHeight
         }
     }
+    func tableToImage() -> UIImage? {
+            UIGraphicsBeginImageContextWithOptions(self.contentSize, false, 0.0)
+            
+            guard let context = UIGraphicsGetCurrentContext() else { return nil }
+            
+            for i in 0..<self.numberOfSections {
+                let section = self.rect(forSection: i)
+                for j in 0..<self.numberOfRows(inSection: i) {
+                    let indexPath = IndexPath(row: j, section: i)
+                    if let cell = self.cellForRow(at: indexPath) {
+                        let rect = self.rectForRow(at: indexPath)
+                        cell.frame = rect.offsetBy(dx: section.origin.x, dy: section.origin.y)
+                        cell.layer.render(in: context)
+                    }
+                }
+            }
+            
+            let image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+            
+            return image
+        }
 }
 
 extension Array {

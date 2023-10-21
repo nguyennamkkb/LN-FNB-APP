@@ -10,6 +10,7 @@ import ObjectMapper
 
 class HomeVC: BaseVC {
     
+    @IBOutlet var bDatBan: UIButton!
     @IBOutlet var tenBanDaChon: UILabel!
     var listTableSelected: [FTable] = []
     @IBOutlet var btnChonMon: UIButton!
@@ -29,16 +30,25 @@ class HomeVC: BaseVC {
     }
 
     func setupUI(){
-        btnChonMon.isHidden = true
+        btnChonMon.layer.cornerRadius = C.CornerRadius.corner5
+        bDatBan.layer.cornerRadius = C.CornerRadius.corner5
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         collectionView.refreshControl = refreshControl
+    }
+    @IBAction func banDatTruocPressed(_ sender: Any) {
+        self.pushVC(controller: BanDatTruocVC())
     }
     @IBAction func chonMonPressed(_ sender: UIButton) {
 //        print(listTableSelected.toJSON())
         let vc = ChonMonVC()
         let dsBan: String = dsBanChon()
-        if dsBan.count <= 0 {return}
+        if dsBan.count <= 0 {
+            let vc = AlertVC()
+            vc.bindData(s: "Chọn bàn trước")
+            self.pushVC(controller: vc,hidesBottomBarWhenPushed: true, animation: false)
+            return
+        }
         vc.bindData(ban: dsBan)
         self.pushVC(controller: vc)
     }
@@ -117,7 +127,6 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func addSelect(item: FTable){
         listTableSelected.append(item)
         if listTableSelected.count > 0 {
-            btnChonMon.isHidden = false
         }
         updateTenBanChon()
     }
@@ -130,7 +139,6 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         }
 
         if listTableSelected.count <= 0 {
-            btnChonMon.isHidden = true
             tenBanDaChon.text = "Còn trống: \(getTableEmpty())"
             return
         }

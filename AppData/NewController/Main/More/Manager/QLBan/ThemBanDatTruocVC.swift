@@ -13,6 +13,7 @@ class ThemBanDatTruocVC: BaseVC {
 
     
     
+    @IBOutlet var tfGhiChu: UITextField!
     var actionReload: ClosureAction?
     @IBOutlet weak var dpTime: UIDatePicker!
     @IBOutlet weak var tfSoNguoi: UITextField!
@@ -35,8 +36,6 @@ class ThemBanDatTruocVC: BaseVC {
         v3.layer.cornerRadius = C.CornerRadius.corner5
         v2.layer.cornerRadius = C.CornerRadius.corner5
         V1.layer.cornerRadius = C.CornerRadius.corner5
-        
-        
         
     }
     @IBAction func chonBanTrongPressed(_ sender: Any) {
@@ -70,10 +69,14 @@ class ThemBanDatTruocVC: BaseVC {
     }
     @IBAction func xacNhanThemDatBanPressed(_ sender: Any) {
         order.user_id = Common.userMaster.id
-        order.table = tfTenBan.text ?? ""
-        order.person = Int(tfSoNguoi.text ?? "0")
+        guard let table = tfTenBan.text else {return}
+        guard let person = tfSoNguoi.text else {return}
+        guard let note = tfGhiChu.text else {return}
+        order.table = table
+        order.person = Int(person)
         order.total = 0
         order.status = 2
+        order.note = note
         order.time = "\(dpTime.date.millisecondsSince1970)"
         createOrder()
     }

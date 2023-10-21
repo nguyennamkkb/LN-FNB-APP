@@ -102,6 +102,10 @@
 		0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */; };
 		0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */; };
 		0BBA69042ACEF58200963438 /* FOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA69032ACEF58200963438 /* FOrder.swift */; };
+		0BC72AF42ADEC38C00CC69A1 /* BillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC72AF22ADEC38C00CC69A1 /* BillCell.swift */; };
+		0BC72AF52ADEC38C00CC69A1 /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC72AF32ADEC38C00CC69A1 /* BillCell.xib */; };
+		0BC72AF82ADEE47F00CC69A1 /* BillItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC72AF62ADEE47F00CC69A1 /* BillItemCell.swift */; };
+		0BC72AF92ADEE47F00CC69A1 /* BillItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC72AF72ADEE47F00CC69A1 /* BillItemCell.xib */; };
 		0BCF19852A43696A004F11CB /* ParamSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF19842A43696A004F11CB /* ParamSearch.swift */; };
 		0BD56AB92AC5A52B00A41312 /* ThucDonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD56AB72AC5A52B00A41312 /* ThucDonVC.swift */; };
 		0BD56ABA2AC5A52B00A41312 /* ThucDonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD56AB82AC5A52B00A41312 /* ThucDonVC.xib */; };
@@ -277,6 +281,10 @@
 		0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
 		0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		0BBA69032ACEF58200963438 /* FOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOrder.swift; sourceTree = "<group>"; };
+		0BC72AF22ADEC38C00CC69A1 /* BillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCell.swift; sourceTree = "<group>"; };
+		0BC72AF32ADEC38C00CC69A1 /* BillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillCell.xib; sourceTree = "<group>"; };
+		0BC72AF62ADEE47F00CC69A1 /* BillItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillItemCell.swift; sourceTree = "<group>"; };
+		0BC72AF72ADEE47F00CC69A1 /* BillItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillItemCell.xib; sourceTree = "<group>"; };
 		0BCF19842A43696A004F11CB /* ParamSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamSearch.swift; sourceTree = "<group>"; };
 		0BD56AB72AC5A52B00A41312 /* ThucDonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThucDonVC.swift; sourceTree = "<group>"; };
 		0BD56AB82AC5A52B00A41312 /* ThucDonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThucDonVC.xib; sourceTree = "<group>"; };
@@ -430,6 +438,10 @@
 				0B7B6D9C2AC47B27005E89D9 /* BillVC.xib */,
 				0B7B6D9F2AC49309005E89D9 /* BillActionVC.swift */,
 				0B7B6DA02AC49309005E89D9 /* BillActionVC.xib */,
+				0BC72AF22ADEC38C00CC69A1 /* BillCell.swift */,
+				0BC72AF32ADEC38C00CC69A1 /* BillCell.xib */,
+				0BC72AF62ADEE47F00CC69A1 /* BillItemCell.swift */,
+				0BC72AF72ADEE47F00CC69A1 /* BillItemCell.xib */,
 			);
 			path = Bill;
 			sourceTree = "<group>";
@@ -969,6 +981,7 @@
 				0BF42AAD2AB601A400592A0E /* LoginVC.xib in Resources */,
 				0B81D61B2AC7277A0003CFF6 /* ThemBanVC.xib in Resources */,
 				0B69E4072AC34C3F00C11C2F /* InPhieuBepVC.xib in Resources */,
+				0BC72AF92ADEE47F00CC69A1 /* BillItemCell.xib in Resources */,
 				0BB43F0729FAD82F00F1DE85 /* Rubik-LightItalic.ttf in Resources */,
 				0B124FEA2AD82A5000422198 /* AlertVC.xib in Resources */,
 				0BF42AC82AB6066B00592A0E /* Roboto-Condensed.ttf in Resources */,
@@ -977,6 +990,7 @@
 				0BB43F0329FAD82F00F1DE85 /* Rubik-SemiBold.ttf in Resources */,
 				0BB43F0129FAD82F00F1DE85 /* Rubik-Light.ttf in Resources */,
 				0B81D60E2AC709A60003CFF6 /* MessageVC.xib in Resources */,
+				0BC72AF52ADEC38C00CC69A1 /* BillCell.xib in Resources */,
 				0BD56AE22AC5EDFD00A41312 /* ThemMonAnVC.xib in Resources */,
 				0B45BCA62ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.xib in Resources */,
 				0B3FB9312AC7FC52003FBCB5 /* CuaHangVC.xib in Resources */,
@@ -1046,6 +1060,7 @@
 				0B7B6DAD2AC498BE005E89D9 /* BanDangPhucVuCell.swift in Sources */,
 				0B4445EE2ADBD41500E7C098 /* FBill.swift in Sources */,
 				0B3FB9262AC7D797003FBCB5 /* HoaDonCell.swift in Sources */,
+				0BC72AF42ADEC38C00CC69A1 /* BillCell.swift in Sources */,
 				0BF42AEA2AB6215E00592A0E /* ForgetPasswordVC.swift in Sources */,
 				0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */,
 				0BD56ADD2AC5E81400A41312 /* ThemMonAnCell.swift in Sources */,
@@ -1092,6 +1107,7 @@
 				0B7B6DA92AC49820005E89D9 /* DSDangPhucVuVC.swift in Sources */,
 				0BE0392B29F82039002CB20F /* ExString.swift in Sources */,
 				0BE0392429F82039002CB20F /* Constants.swift in Sources */,
+				0BC72AF82ADEE47F00CC69A1 /* BillItemCell.swift in Sources */,
 				0B7A4FCC2A8E72600062E878 /* Notifications.swift in Sources */,
 				0BA5D50A2AB6C5440031FBF9 /* TableCell.swift in Sources */,
 				0BD56ACD2AC5E10100A41312 /* MonAnVC.swift in Sources */,
@@ -1284,6 +1300,8 @@
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "ket noi may in";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "luu anh";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "luu anh";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1295,7 +1313,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vimass.qrvn.FNB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vimass.qrvn.FnB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -1323,6 +1341,8 @@
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "ket noi may in";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "luu anh";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "luu anh";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -1334,7 +1354,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.vimass.qrvn.FNB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vimass.qrvn.FnB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

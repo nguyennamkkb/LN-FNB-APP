@@ -12,6 +12,7 @@ import FittedSheets
 class BanDangPhucVuVC: BaseVC {
     
     
+    @IBOutlet var VACTION: UIView!
     @IBOutlet var bCapNhat: UIButton!
     var actionReload: ClosureAction?
     @IBOutlet var bHuyban: UIButton!
@@ -85,6 +86,7 @@ class BanDangPhucVuVC: BaseVC {
         }
         vc.actionThanhToan = {
             let billVC = BillVC()
+            billVC.bindData(e: self.item)
             self.pushVC(controller: billVC)
         }
         vc.actionChonThemMon = {
@@ -114,14 +116,10 @@ class BanDangPhucVuVC: BaseVC {
     }
     func getMoney() -> Int{
         var total: Int = 0
-        let _ = listItem.filter{
-            e in
-            if e.count ?? 0 > 0 {
-                let money = (e.count ?? 0) * (e.price ?? 0)
-                total += money
-                return true
-            }
-            return false
+        for (index, e) in listItem.enumerated() {
+            let money = (e.count ?? 0) * (e.price ?? 0)
+            listItem[index].total = money
+            total += money
         }
       return total
     }
@@ -135,6 +133,7 @@ class BanDangPhucVuVC: BaseVC {
         }
         item.list_item = listProducts.toJSONString()
         item.total = getMoney()
+        item.status = 1
         item.sign()
         self.showLoading()
         ServiceManager.common.updateOrder(param: item){

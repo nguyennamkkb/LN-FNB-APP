@@ -13,7 +13,7 @@ class MonDaChonVC: BaseVC {
     let order = FOrder()
     var table: String?
     @IBOutlet var lbTotalMoney: UILabel!
-    var tableData: [FProduct] = []
+    var tableData: [FProduct] = [FProduct]()
     var soNguoi: Int?
     @IBOutlet var tableView: UITableView!
     @IBOutlet var btnXacNhan: UIButton!
@@ -73,14 +73,10 @@ class MonDaChonVC: BaseVC {
     }
     func getMoney() -> Int{
         var total: Int = 0
-        let _ = tableData.filter{
-            e in
-            if e.count ?? 0 > 0 {
-                let money = (e.count ?? 0) * (e.price ?? 0)
-                total += money
-                return true
-            }
-            return false
+        for (index, e) in tableData.enumerated() {
+            let money = (e.count ?? 0) * (e.price ?? 0)
+            tableData[index].total = money
+            total += money
         }
       return total
     }

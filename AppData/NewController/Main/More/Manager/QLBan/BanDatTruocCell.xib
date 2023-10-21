@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -25,7 +25,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7J-Eg-qqG">
-                        <rect key="frame" x="15" y="0.0" width="412" height="60"/>
+                        <rect key="frame" x="15" y="0.0" width="412" height="85"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bàn: A1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MfZ-Ru-dkd">
                                 <rect key="frame" x="0.0" y="12" width="55.333333333333336" height="19"/>
@@ -34,7 +34,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOo-kd-QtZ">
-                                <rect key="frame" x="0.0" y="37" width="412" height="20"/>
+                                <rect key="frame" x="0.0" y="36" width="412" height="20"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jiu-Jj-9jV">
                                         <rect key="frame" x="0.0" y="1.6666666666666643" width="20" height="17.000000000000004"/>
@@ -90,7 +90,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dV1-H9-4cL" userLabel="delete">
-                                <rect key="frame" x="387" y="17.666666666666668" width="25" height="25.000000000000004"/>
+                                <rect key="frame" x="387" y="30" width="25" height="25"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="Avq-BV-qVb"/>
@@ -103,21 +103,29 @@
                                     <action selector="deletePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zEE-0r-5ET"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ghiChu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cE5-Uc-81g">
+                                <rect key="frame" x="0.0" y="61" width="44.333333333333336" height="17"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                <color key="textColor" systemColor="systemYellowColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="dV1-H9-4cL" firstAttribute="centerY" secondItem="w7J-Eg-qqG" secondAttribute="centerY" id="2RE-VW-YWN"/>
                             <constraint firstItem="VOo-kd-QtZ" firstAttribute="leading" secondItem="w7J-Eg-qqG" secondAttribute="leading" id="75Q-s2-Su6"/>
-                            <constraint firstAttribute="height" constant="60" id="8te-nA-OE3"/>
+                            <constraint firstAttribute="height" constant="85" id="8te-nA-OE3"/>
                             <constraint firstItem="MfZ-Ru-dkd" firstAttribute="top" secondItem="w7J-Eg-qqG" secondAttribute="top" constant="12" id="D4M-yx-AgN"/>
                             <constraint firstAttribute="trailing" secondItem="VOo-kd-QtZ" secondAttribute="trailing" id="JIn-SR-YFC"/>
                             <constraint firstItem="MfZ-Ru-dkd" firstAttribute="leading" secondItem="w7J-Eg-qqG" secondAttribute="leading" id="MSu-q6-CWt"/>
+                            <constraint firstItem="cE5-Uc-81g" firstAttribute="leading" secondItem="w7J-Eg-qqG" secondAttribute="leading" id="PxI-zU-kPb"/>
                             <constraint firstAttribute="trailing" secondItem="dV1-H9-4cL" secondAttribute="trailing" id="aRQ-FI-LNy"/>
-                            <constraint firstAttribute="bottom" secondItem="VOo-kd-QtZ" secondAttribute="bottom" constant="3" id="xFS-Ov-QJM"/>
+                            <constraint firstItem="VOo-kd-QtZ" firstAttribute="top" secondItem="MfZ-Ru-dkd" secondAttribute="bottom" constant="5" id="g9F-0s-h42"/>
+                            <constraint firstItem="cE5-Uc-81g" firstAttribute="top" secondItem="VOo-kd-QtZ" secondAttribute="bottom" constant="5" id="qQo-OF-t6h"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="17i-E7-npG">
-                        <rect key="frame" x="15" y="60" width="412" height="0.6666666666666643"/>
+                        <rect key="frame" x="15" y="85" width="412" height="0.6666666666666714"/>
                         <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="pty-ek-TJk"/>
@@ -138,6 +146,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="bDelete" destination="dV1-H9-4cL" id="WVD-iO-mnJ"/>
+                <outlet property="lbGhiChu" destination="cE5-Uc-81g" id="lJ7-r4-V9j"/>
                 <outlet property="lbSoNguoi" destination="kcv-OO-Usv" id="nNM-mj-TrR"/>
                 <outlet property="lbTenBan" destination="MfZ-Ru-dkd" id="Ddm-U4-p4O"/>
                 <outlet property="lbThoiGIanDen" destination="sxI-3d-Z8r" id="ACJ-cg-JJY"/>
@@ -157,6 +166,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

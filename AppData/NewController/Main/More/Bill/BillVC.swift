@@ -9,17 +9,19 @@ import UIKit
 import FittedSheets
 import Printer
 import Photos
+import ObjectMapper
 
 class BillVC: BaseVC {
     
     
-    
+    let totalCharacterInline: Int = 31
     private let dummyPrinter = DummyPrinter()
     @IBOutlet var vBill: UIView!
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet var tableView: UITableView!
     var order: FOrder = FOrder()
     var bill: FBill = FBill()
+    var listItem: [FProduct] = [FProduct]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,12 +30,14 @@ class BillVC: BaseVC {
         self.tableView.registerCell(nibName: "BillCell")
         setupData()
 //        tableViewHeightConstraint.constant = CGFloat(100)
+        
     }
     func setupData(){
         bill.user_id = order.user_id
         bill.order_id = order.id
         bill.table = order.table
         bill.last_total = order.total
+        listItem = Mapper<FProduct>().mapArray(JSONString: order.list_item ?? "") ?? [FProduct]()
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
@@ -58,7 +62,9 @@ class BillVC: BaseVC {
 //            guard  let cgImage = resizedImage.cgImage else {
 //                return
 //            }
-            let receipt = Receipt(.init(maxWidthDensity: 500 , fontDensity: 12, encoding: .utf8))
+
+            let receipt = Receipt(.init(maxWidthDensity: 380 , fontDensity: 12, encoding: .utf8))
+         
             <<~ .style(.initialize)
             <<~ .page(.printAndFeed(lines: 0))
             <<~ .layout(.justification(.center))
@@ -67,10 +73,25 @@ class BillVC: BaseVC {
             <<< removeVietnameseDiacritics(from: Common.userMaster.phone!)
             <<< removeVietnameseDiacritics(from: Common.userMaster.email!)
             <<< Dividing.`default`()
+//            <<< "NguyenLuongNamNguyenLuongNamNguyenLuongNamNguyenLuongNam"
+//            <<< KVItem("k", "v")
+            
+            <<~ .page(.printAndFeed(lines: 1))
             <<< removeVietnameseDiacritics(from: "Thong tin dich vu")
-//            <<< ImageItem(cgImage, grayThreshold: 24)
-            <<~ .page(.printAndFeed(lines: 0))
-            <<~ .page(.printAndFeed(lines: 0))
+            <<~ .page(.printAndFeed(lines: 1))
+            <<~ .layout(.justification(.left))
+            <<< removeVietnameseDiacritics(from: "Ban: \(order.table ?? "" )")
+            <<< KVItem("\(order.updateAt!)", "Nguoi: \(order.person!)")
+            <<< Dividing.`default`()
+            <<< KVItem("Mon", "Gia")
+            <<< printItem() 
+            <<~ .style(.clear)
+            <<~ .page(.printAndFeed(lines: 1))
+            <<~ .page(.printAndFeed(lines: 1))
+            <<< removeVietnameseDiacritics(from: "Cam on quy khach")
+            <<~ .cursor(.lineFeed)
+            <<< Command.cursor(.lineFeed)
+            <<~ .cursor(.lineFeed)
 
             if bluetoothPrinterManager.canPrint {
 //                divideAndPrintData(data: totalBytes, chunkCount: 2)
@@ -99,6 +120,15 @@ class BillVC: BaseVC {
         }
         
         return ""
+    }
+    func printItem() -> String {
+        var str: String = ""
+        for (index,_) in listItem.enumerated() {
+            str += "\n"
+            str += "\(listItem[index].name!)\n"
+            str += "\(listItem[index].price!) * \(listItem[index].count!) = \(listItem[index].total ?? 0) \n"
+        }
+        return removeVietnameseDiacritics(from: str)
     }
     func requestPhotoLibraryAddAccess() {
         PHPhotoLibrary.requestAuthorization { status in

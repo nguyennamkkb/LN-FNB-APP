@@ -26,6 +26,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InPhieuBepVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
                 <outlet property="VLabel" destination="fqO-hh-7EL" id="h0a-HD-tLX"/>
+                <outlet property="bInPhieuBep" destination="bct-5d-MXQ" id="vLY-EC-xZx"/>
                 <outlet property="lbGioIn" destination="dgi-Vs-qgM" id="bJT-CC-2TA"/>
                 <outlet property="lbSoLuong" destination="5Le-ki-F6F" id="Pqp-Hk-lCv"/>
                 <outlet property="lbTenBan" destination="GFN-Vh-7A4" id="tVt-ok-BUm"/>

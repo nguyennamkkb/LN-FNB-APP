@@ -11,6 +11,7 @@
 		0B124FEA2AD82A5000422198 /* AlertVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B124FE82AD82A5000422198 /* AlertVC.xib */; };
 		0B124FED2AD8689100422198 /* ActionBanDangPhucVuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B124FEB2AD8689100422198 /* ActionBanDangPhucVuVC.swift */; };
 		0B124FEE2AD8689100422198 /* ActionBanDangPhucVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B124FEC2AD8689100422198 /* ActionBanDangPhucVuVC.xib */; };
+		0B20C0EA2AE4B700001462FD /* CommonPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20C0E92AE4B700001462FD /* CommonPrint.swift */; };
 		0B3FB9042ACB3C9900B1B974 /* FCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB9032ACB3C9900B1B974 /* FCategory.swift */; };
 		0B3FB91D2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */; };
 		0B3FB91E2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */; };
@@ -190,6 +191,7 @@
 		0B124FE82AD82A5000422198 /* AlertVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlertVC.xib; sourceTree = "<group>"; };
 		0B124FEB2AD8689100422198 /* ActionBanDangPhucVuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBanDangPhucVuVC.swift; sourceTree = "<group>"; };
 		0B124FEC2AD8689100422198 /* ActionBanDangPhucVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionBanDangPhucVuVC.xib; sourceTree = "<group>"; };
+		0B20C0E92AE4B700001462FD /* CommonPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPrint.swift; sourceTree = "<group>"; };
 		0B3FB9032ACB3C9900B1B974 /* FCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCategory.swift; sourceTree = "<group>"; };
 		0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemBanDatTruocVC.swift; sourceTree = "<group>"; };
 		0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemBanDatTruocVC.xib; sourceTree = "<group>"; };
@@ -744,6 +746,7 @@
 				0B5D18522A0A97D0004E47FD /* KeyCommon.swift */,
 				0B7A4FCB2A8E72600062E878 /* Notifications.swift */,
 				0B45BC982AB9CC670073A380 /* BluetoothHelper.swift */,
+				0B20C0E92AE4B700001462FD /* CommonPrint.swift */,
 			);
 			path = 4.Helpers;
 			sourceTree = "<group>";
@@ -1116,6 +1119,7 @@
 				0B69E4022AC3494A00C11C2F /* PhieuBepVC.swift in Sources */,
 				0B45BCA52ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.swift in Sources */,
 				0B5D18642A0AA355004E47FD /* PBookCalender.swift in Sources */,
+				0B20C0EA2AE4B700001462FD /* CommonPrint.swift in Sources */,
 				0BE0392829F82039002CB20F /* ExData.swift in Sources */,
 				0BE038EB29F81F6D002CB20F /* POS_App.xcdatamodeld in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,

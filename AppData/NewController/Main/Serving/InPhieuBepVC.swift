@@ -12,6 +12,7 @@ class InPhieuBepVC: BaseVC {
     
     
     
+    @IBOutlet weak var bInPhieuBep: UIButton!
     @IBOutlet var lbSoLuong: UILabel!
     @IBOutlet var lbTenMon: UILabel!
     
@@ -61,6 +62,7 @@ class InPhieuBepVC: BaseVC {
     }
     
     func setupUI(){
+        bInPhieuBep.layer.cornerRadius = C.CornerRadius.corner5
         VLabel.layer.borderWidth = 1
         VLabel.layer.borderColor = C.Color.Gray?.cgColor
     }
@@ -69,23 +71,44 @@ class InPhieuBepVC: BaseVC {
         let vc = AlertVC()
         vc.bindData(s: "Đang in phiếu bếp")
         self.presentFullScreen(vc: vc)
+
+
+        let receipt = Receipt(.init(maxWidthDensity: 380 , fontDensity: 12, encoding: .utf8))
         
-        let image = VLabel.toImage()
-        let resizedImage = image?.resized(toWidth: 125)
-        guard  let cgImage = resizedImage?.cgImage else {
-            return
-        }
-        
-        let receipt = Receipt(.init(maxWidthDensity: 500, fontDensity: 12, encoding: .utf8))
         <<~ .style(.initialize)
         <<~ .page(.printAndFeed(lines: 0))
-        <<< ImageItem(cgImage, grayThreshold: 20)
-        <<~ .page(.printAndFeed(lines: 0))
-        <<~ .page(.printAndFeed(lines: 0))
+        <<~ .layout(.justification(.center))
+        <<~ .layout(.lineSpace(.l1_8))
+        <<< CommonPrint.removeVietnameseDiacritics(from: "PHIEU BEP")
+        <<~ .page(.printAndFeed(lines: 1))
+        <<~ .layout(.justification(.left))
+        <<< CommonPrint.removeVietnameseDiacritics(from:  tenNBan)
+        <<< CommonPrint.removeVietnameseDiacritics(from: "Gio: " + gioIn)
+    
+        <<< Dividing.`default`()
+        <<< KVItem("Mon", "So luong")
+        <<< setLbItem()
+        <<< Dividing.`default`()
+        	
+        <<~ .layout(.justification(.center))
+        <<~ .page(.printAndFeed(lines: 1))
+        <<< CommonPrint.removeVietnameseDiacritics(from: "Ung dung LN FnB")
+        <<~ .cursor(.lineFeed)
+        <<< Command.cursor(.lineFeed)
+        <<~ .cursor(.lineFeed)
+        
         if bluetoothPrinterManager.canPrint {
             bluetoothPrinterManager.write(Data(receipt.data))
         }
         
         //        dummyPrinter.write(Data(receipt.data))
+    }
+    func setLbItem() -> String {
+        var str: String = ""
+        for (index,_) in listProducts.enumerated() {
+            str += "\n"
+            str += CommonPrint.NamKVItem(left: "\(listProducts[index].name!)", right: "\(listProducts[index].count ?? 0)") + "\n"
+        }
+        return CommonPrint.removeVietnameseDiacritics(from: str)
     }
 }

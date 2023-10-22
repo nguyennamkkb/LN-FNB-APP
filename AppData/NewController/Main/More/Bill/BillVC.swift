@@ -68,24 +68,27 @@ class BillVC: BaseVC {
             <<~ .style(.initialize)
             <<~ .page(.printAndFeed(lines: 0))
             <<~ .layout(.justification(.center))
-            <<< removeVietnameseDiacritics(from: Common.userMaster.storeName!)
-            <<< removeVietnameseDiacritics(from: Common.userMaster.address!)
-            <<< removeVietnameseDiacritics(from: Common.userMaster.phone!)
+            <<< CommonPrint.removeVietnameseDiacritics(from: Common.userMaster.storeName!)
+            <<< CommonPrint.removeVietnameseDiacritics(from: Common.userMaster.address!)
+            <<< CommonPrint.removeVietnameseDiacritics(from: Common.userMaster.phone!)
             <<< Dividing.`default`()
-            <<< removeVietnameseDiacritics(from: "Thong tin dich vu")
+            <<< CommonPrint.removeVietnameseDiacritics(from: "Thong tin dich vu")
             <<~ .page(.printAndFeed(lines: 1))
             <<~ .layout(.justification(.left))
-            <<< removeVietnameseDiacritics(from: "Ban: \(order.table ?? "" )")
-            <<< KVItem("\(Common.getDateFormatFromMiliseonds(time: Int64(order.time ?? "0") ?? 0))", "Nguoi: \(order.person!)")
+            <<< CommonPrint.removeVietnameseDiacritics(from: "Ban: \(order.table ?? "" )")
+            <<< KVItem( "Nguoi: \(order.person!)","\(Common.getDateFormatFromMiliseonds(time: Int64(order.time ?? "0") ?? 0))")
             <<< Dividing.`default`()
             <<< KVItem("Mon", "Thanh tien")
             <<< setLbItem()
             <<< Dividing.`default`()
-            <<< NamKVItem(left: "Tong tien", right: "\(order.total!)".currencyFormatting())
+            <<< CommonPrint.NamKVItem(left: "Tong tien", right: "\(order.total!)".currencyFormatting())
             
             <<~ .layout(.justification(.center))
             <<~ .page(.printAndFeed(lines: 1))
-            <<< removeVietnameseDiacritics(from: "Cam on quy khach")
+            <<< CommonPrint.removeVietnameseDiacritics(from: "Cam on quy khach")
+            <<~ .page(.printAndFeed(lines: 1))
+            <<~ .page(.printAndFeed(lines: 1))
+            <<< CommonPrint.removeVietnameseDiacritics(from: "LN FnB")
             <<~ .cursor(.lineFeed)
             <<< Command.cursor(.lineFeed)
             <<~ .cursor(.lineFeed)
@@ -108,62 +111,20 @@ class BillVC: BaseVC {
             }
         }
     }
-    func removeVietnameseDiacritics(from input: String) -> String {
-        let mutableString = NSMutableString(string: input)
-        
-        if CFStringTransform(mutableString, nil, kCFStringTransformStripCombiningMarks, false) {
-            return mutableString as String
-        }
-        
-        return ""
-    }
+
     func setLbItem() -> String {
         var str: String = ""
         for (index,_) in listItem.enumerated() {
             str += "\n"
             str += "\(listItem[index].name!)\n"
-            str += NamKVItem(left: "\(listItem[index].price!)".currencyFormatting() + " x " + "\(listItem[index].count!)", right: "\(listItem[index].total ?? 0)".currencyFormatting()) + "\n"
+            str += CommonPrint.NamKVItem(left: "\(listItem[index].price!)".currencyFormatting() + " x " + "\(listItem[index].count!)", right: "\(listItem[index].total ?? 0)".currencyFormatting()) + "\n"
         }
         print(str)
-        return removeVietnameseDiacritics(from: str)
+        return CommonPrint.removeVietnameseDiacritics(from: str)
     }
-    func NamKVItem(left: String, right: String) -> String {
-        let total: Int = right.count + left.count
-        var newRString: String = left
-        if total < totalCharacterInline {
-            let spacesToAdd = totalCharacterInline - total
-            for _ in 0..<spacesToAdd {
-                newRString += " "
-            }
-        }
-        return newRString + right
-        
-    }
-    func requestPhotoLibraryAddAccess() {
-        PHPhotoLibrary.requestAuthorization { status in
-            if status == .authorized {
-                if let tableImage = self.tableView.tableToImage() {
-                    //                    self.saveImageToPhotoLibrary(image: tableImage)
-                    let resizedImage = tableImage.resized(toWidth: 125)
-                    print(resizedImage.size.height)
-                    guard  let cgImage = resizedImage.cgImage else {
-                        return
-                    }
-                    let receipt = Receipt(.init(maxWidthDensity: 1500 , fontDensity: 12, encoding: .utf8))
-                    <<~ .style(.initialize)
-                    <<~ .page(.printAndFeed(lines: 0))
-                    <<< ImageItem(cgImage, grayThreshold: 20)
-                    <<~ .page(.printAndFeed(lines: 0))
-                    <<~ .page(.printAndFeed(lines: 0))
-                    if bluetoothPrinterManager.canPrint {
-                        bluetoothPrinterManager.write(Data(receipt.data))
-                    }
-                }
-            } else {
-                // Xử lý trường hợp người dùng từ chối cấp quyền.
-            }
-        }
-    }
+    
+
+    
     func saveImageToPhotoLibrary(image: UIImage) {
         // Tạo một đối tượng thể hiện của thư viện ảnh
         PHPhotoLibrary.shared().performChanges {

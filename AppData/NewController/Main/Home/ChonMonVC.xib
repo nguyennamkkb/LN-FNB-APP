@@ -174,8 +174,8 @@
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số người:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-9O-aib" userLabel="Số người:">
-                            <rect key="frame" x="263.33333333333331" y="9.3333333333333304" width="59.666666666666686" height="16.666666666666671"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số khách:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-9O-aib" userLabel="Số người:">
+                            <rect key="frame" x="261" y="9.3333333333333304" width="62" height="16.666666666666671"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>

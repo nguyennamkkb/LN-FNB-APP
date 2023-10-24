@@ -104,6 +104,11 @@ extension Array {
 }
 
 extension String {
+    func removeAccents() -> String {
+            let string = self as NSString
+            let folded = string.folding(options: .diacriticInsensitive, locale: Locale.current)
+            return folded
+        }
     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
         let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)

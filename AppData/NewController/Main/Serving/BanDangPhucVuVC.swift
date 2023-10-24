@@ -41,7 +41,7 @@ class BanDangPhucVuVC: BaseVC {
     }
     func setupData(){
         lbTitle.text = "Bàn: " + "\(item.table ?? "")"
-        lbSoNguoi.text = "Số người: " + "\(item.person ?? 0)"
+        lbSoNguoi.text = "Số khách: " + "\(item.person ?? 0)"
         lbTongTien.text = "Tổng tiền: " + "\(item.total ?? 0)".currencyFormatting() + "đ"
         listItem = Mapper<FProduct>().mapArray(JSONString: item.list_item ?? "") ?? [FProduct]()
 

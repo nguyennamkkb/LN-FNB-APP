@@ -10,11 +10,12 @@ import UIKit
 class MonDaChonVC: BaseVC {
 
     
+    @IBOutlet var lbSoKhach: UILabel!
     let order = FOrder()
     var table: String?
     @IBOutlet var lbTotalMoney: UILabel!
     var tableData: [FProduct] = [FProduct]()
-    var soNguoi: Int?
+    var soNguoi: Int? = 5
     @IBOutlet var tableView: UITableView!
     @IBOutlet var btnXacNhan: UIButton!
     override func viewDidLoad() {
@@ -24,7 +25,7 @@ class MonDaChonVC: BaseVC {
         self.tableView.registerCell(nibName: "MonDaChonCell")
         setupUI()
         updateMoney()
-        
+        lbSoKhach.text = "Số khách: \(soNguoi ?? 5)"
     }
     func bindData(list: [FProduct], soNguoi: Int, table: String){
         self.tableData = list
@@ -51,6 +52,7 @@ class MonDaChonVC: BaseVC {
         order.table = table
         order.total = getMoney()
         order.user_id =  Common.userMaster.id
+        order.time =  "\(Common.getMilisecondNow())"
         order.sign()
         createOrder()
 //        self.pushVC(controller: vc)

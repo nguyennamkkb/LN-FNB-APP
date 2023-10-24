@@ -9,6 +9,8 @@ import UIKit
 
 class MessageVC: BaseVC {
 
+    var title1: String = "Thông báo"
+    var content1: String = "Đồng ý với lựa chọn?"
     var actionOK: ClosureAction?
     @IBOutlet var bXacNhan: UIButton!
     @IBOutlet var bClose: UIButton!
@@ -19,14 +21,16 @@ class MessageVC: BaseVC {
         super.viewDidLoad()
 
         setupUI()
+        lbTitle.text = title1
+        lbMessage.text = content1
     }
 
     @IBAction func closePressed(_ sender: Any) {
         self.onBackNav()
     }
     func bindData(title: String?, content: String?){
-        lbTitle.text = "\(title ?? "Thông báo")"
-        lbMessage.text = "\(content ?? "Đồng ý với lựa chọn?")"
+        title1 = "\(title ?? "Thông báo")"
+        content1 = "\(content ?? "Đồng ý với lựa chọn?")"
     }
     func setupUI() {
         bClose.layer.cornerRadius = C.CornerRadius.corner5

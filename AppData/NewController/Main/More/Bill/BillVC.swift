@@ -46,58 +46,60 @@ class BillVC: BaseVC {
         order = e
         
     }
-    @IBAction func TuyChonPressed(_ sender: Any) {
-        let vc = BillActionVC()
-        let sheet = SheetViewController(controller: vc, sizes: [.fixed(150)])
-        vc.actionInHoaDon = {
-            self.inHoaDon()
+    
+    @IBAction func thanhToanPressed(_ sender: Any) {
+        let vc = MessageVC()
+        vc.bindData(title: "Đã thanh toán", content: "Hoá đơn này đã được thanh toán?")
+        vc.actionOK  = {
+            
         }
-        present(sheet, animated: true)
+        let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
+        self.present(sheet, animated: true)
     }
     
+    
+    @IBAction func inHoaDonPressed(_ sender: Any) {
+        inHoaDon()
+    }
     func inHoaDon(){
-        if let tableImage = self.tableView.tableToImage() {
-            let resizedImage = tableImage.resized(toWidth: 125)
-            //            print(resizedImage.size.height)
-            //            guard  let cgImage = resizedImage.cgImage else {
-            //                return
-            //            }
-            
-            let receipt = Receipt(.init(maxWidthDensity: 380 , fontDensity: 12, encoding: .utf8))
-            
-            <<~ .style(.initialize)
-            <<~ .page(.printAndFeed(lines: 0))
-            <<~ .layout(.justification(.center))
-            <<< CommonPrint.removeVietnameseDiacritics(from: Common.userMaster.storeName!)
-            <<< CommonPrint.removeVietnameseDiacritics(from: Common.userMaster.address!)
-            <<< CommonPrint.removeVietnameseDiacritics(from: Common.userMaster.phone!)
-            <<< Dividing.`default`()
-            <<< CommonPrint.removeVietnameseDiacritics(from: "Thong tin dich vu")
-            <<~ .page(.printAndFeed(lines: 1))
-            <<~ .layout(.justification(.left))
-            <<< CommonPrint.removeVietnameseDiacritics(from: "Ban: \(order.table ?? "" )")
-            <<< KVItem( "Nguoi: \(order.person!)","\(Common.getDateFormatFromMiliseonds(time: Int64(order.time ?? "0") ?? 0))")
-            <<< Dividing.`default`()
-            <<< KVItem("Mon", "Thanh tien")
-            <<< setLbItem()
-            <<< Dividing.`default`()
-            <<< CommonPrint.NamKVItem(left: "Tong tien", right: "\(order.total!)".currencyFormatting())
-            
-            <<~ .layout(.justification(.center))
-            <<~ .page(.printAndFeed(lines: 1))
-            <<< CommonPrint.removeVietnameseDiacritics(from: "Cam on quy khach")
-            <<~ .page(.printAndFeed(lines: 1))
-            <<~ .page(.printAndFeed(lines: 1))
-            <<< CommonPrint.removeVietnameseDiacritics(from: "LN FnB")
-            <<~ .cursor(.lineFeed)
-            <<< Command.cursor(.lineFeed)
-            <<~ .cursor(.lineFeed)
-            
-            if bluetoothPrinterManager.canPrint {
-                bluetoothPrinterManager.write(Data(receipt.data))
-            }
-            //            dummyPrinter.write(Data(receipt.data))
+        let vc = AlertVC()
+        vc.bindData(s: "Đang in phiếu bếp")
+        self.presentFullScreen(vc: vc)
+        
+        let receipt = Receipt(.init(maxWidthDensity: 380 , fontDensity: 12, encoding: .utf8))
+        
+        <<~ .style(.initialize)
+        <<~ .page(.printAndFeed(lines: 0))
+        <<~ .layout(.justification(.center))
+        <<< CommonPrint.removeVietnameseDiacritics(from: Common.userMaster.storeName!)
+        <<< CommonPrint.removeVietnameseDiacritics(from: Common.userMaster.address!)
+        <<< CommonPrint.removeVietnameseDiacritics(from: Common.userMaster.phone!)
+        <<< Dividing.`default`()
+        <<< CommonPrint.removeVietnameseDiacritics(from: "Thong tin dich vu")
+        <<~ .page(.printAndFeed(lines: 1))
+        <<~ .layout(.justification(.left))
+        <<< CommonPrint.removeVietnameseDiacritics(from: "Ban: \(order.table ?? "" )")
+        <<< KVItem( "Nguoi: \(order.person!)","\(Common.getDateFormatFromMiliseonds(time: Int64(order.time ?? "0") ?? 0))")
+        <<< Dividing.`default`()
+        <<< KVItem("Mon", "Thanh tien")
+        <<< setLbItem()
+        <<< Dividing.`default`()
+        <<< CommonPrint.NamKVItem(left: "Tong tien", right: "\(order.total!)".currencyFormatting())
+        
+        <<~ .layout(.justification(.center))
+        <<~ .page(.printAndFeed(lines: 1))
+        <<< CommonPrint.removeVietnameseDiacritics(from: "Cam on quy khach")
+        <<~ .page(.printAndFeed(lines: 1))
+        <<~ .page(.printAndFeed(lines: 1))
+        <<< CommonPrint.removeVietnameseDiacritics(from: "LN FnB")
+        <<~ .cursor(.lineFeed)
+        <<< Command.cursor(.lineFeed)
+        <<~ .cursor(.lineFeed)
+        
+        if bluetoothPrinterManager.canPrint {
+            bluetoothPrinterManager.write(Data(receipt.data))
         }
+        
     }
     func divideAndPrintData(data: [UInt8], chunkCount: Int) {
         let chunkSize = data.count / chunkCount
@@ -111,7 +113,7 @@ class BillVC: BaseVC {
             }
         }
     }
-
+    
     func setLbItem() -> String {
         var str: String = ""
         for (index,_) in listItem.enumerated() {
@@ -123,7 +125,7 @@ class BillVC: BaseVC {
         return CommonPrint.removeVietnameseDiacritics(from: str)
     }
     
-
+    
     
     func saveImageToPhotoLibrary(image: UIImage) {
         // Tạo một đối tượng thể hiện của thư viện ảnh

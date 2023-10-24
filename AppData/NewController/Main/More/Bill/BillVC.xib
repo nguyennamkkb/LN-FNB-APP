@@ -50,25 +50,42 @@
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="chevron.backward" catalog="system"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmK-aK-dWB" userLabel="more">
-                            <rect key="frame" x="353" y="9.6666666666666714" width="25" height="25"/>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TmK-aK-dWB" userLabel="more">
+                            <rect key="frame" x="343" y="4.6666666666666643" width="35" height="35"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="25" id="Fql-fS-ltZ"/>
-                                <constraint firstAttribute="width" constant="25" id="NhD-UR-sHW"/>
+                                <constraint firstAttribute="height" constant="35" id="Fql-fS-ltZ"/>
+                                <constraint firstAttribute="width" constant="35" id="NhD-UR-sHW"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <color key="tintColor" name="green"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="ic_more"/>
+                            <state key="normal" image="ic_print"/>
                             <connections>
-                                <action selector="TuyChonPressed:" destination="-1" eventType="touchUpInside" id="sof-jn-X80"/>
+                                <action selector="inHoaDonPressed:" destination="-1" eventType="touchUpInside" id="a3e-Xm-eXy"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1m-cc-pzt" userLabel="printHD">
+                            <rect key="frame" x="288" y="4.6666666666666643" width="35" height="35"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="goS-WL-EqU"/>
+                                <constraint firstAttribute="height" constant="35" id="ts6-KG-f9Q"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                            <color key="tintColor" name="green"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_cash"/>
+                            <connections>
+                                <action selector="thanhToanPressed:" destination="-1" eventType="touchUpInside" id="R9d-Mu-r9f"/>
                             </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="TmK-aK-dWB" firstAttribute="centerY" secondItem="oid-4Q-C5r" secondAttribute="centerY" id="D2s-FE-CAz"/>
+                        <constraint firstItem="TmK-aK-dWB" firstAttribute="leading" secondItem="D1m-cc-pzt" secondAttribute="trailing" constant="20" id="FQv-hr-d6A"/>
+                        <constraint firstItem="D1m-cc-pzt" firstAttribute="centerY" secondItem="kz6-BE-DsV" secondAttribute="centerY" id="Kn8-Uj-Npd"/>
                         <constraint firstAttribute="height" constant="44" id="M8P-vT-d4f"/>
                         <constraint firstItem="kz6-BE-DsV" firstAttribute="top" secondItem="oid-4Q-C5r" secondAttribute="top" id="Mj2-3F-NX8"/>
                         <constraint firstItem="rvZ-2v-dy5" firstAttribute="centerY" secondItem="oid-4Q-C5r" secondAttribute="centerY" id="ZYb-Mp-y26"/>
@@ -120,7 +137,8 @@
     </objects>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
-        <image name="ic_more" width="35" height="35"/>
+        <image name="ic_cash" width="30" height="30"/>
+        <image name="ic_print" width="30" height="30"/>
         <namedColor name="black">
             <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

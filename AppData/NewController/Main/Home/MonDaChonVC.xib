@@ -17,6 +17,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MonDaChonVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
                 <outlet property="btnXacNhan" destination="5ah-ym-QWE" id="mGi-eP-95C"/>
+                <outlet property="lbSoKhach" destination="pIk-PH-ksN" id="ooa-q2-KkR"/>
                 <outlet property="lbTotalMoney" destination="Mjf-sj-0j2" id="V2M-eX-xVL"/>
                 <outlet property="tableView" destination="2wN-RJ-45u" id="XlY-KH-1X6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

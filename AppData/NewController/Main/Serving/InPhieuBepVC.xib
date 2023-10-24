@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -67,14 +67,14 @@
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bct-5d-MXQ">
                             <rect key="frame" x="343" y="9.6666666666666714" width="35" height="25"/>
-                            <color key="backgroundColor" name="green"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="35" id="UtP-pO-70P"/>
                                 <constraint firstAttribute="height" constant="25" id="vwc-m6-MXB"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" title="In"/>
+                            <state key="normal" image="ic_print"/>
                             <connections>
                                 <action selector="touchPrintWithSender:" destination="-1" eventType="touchUpInside" id="As3-FB-Chj"/>
                             </connections>
@@ -216,14 +216,12 @@
     </objects>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
+        <image name="ic_print" width="30" height="30"/>
         <namedColor name="black">
             <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="gray">
             <color red="0.69199997186660767" green="0.70599997043609619" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="green">
-            <color red="0.14900000393390656" green="0.64499998092651367" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

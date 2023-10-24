@@ -10,13 +10,13 @@ import Foundation
 class CommonPrint {
     static var totalCharacterInline: Int = 31
     public static func removeVietnameseDiacritics(from input: String) -> String {
-        let mutableString = NSMutableString(string: input)
+//        let mutableString = NSMutableString(string: input)
+//ssssssssssss
+//        if CFStringTransform(mutableString, nil, kCFStringTransformStripCombiningMarks, false) {
+//            return mutableString as String
+//        }
         
-        if CFStringTransform(mutableString, nil, kCFStringTransformStripCombiningMarks, false) {
-            return mutableString as String
-        }
-        
-        return ""
+        return input.removeAccents()
     }
     public static func NamKVItem(left: String, right: String) -> String {
         let total: Int = right.count + left.count

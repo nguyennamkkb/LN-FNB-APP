@@ -8,11 +8,13 @@
 import UIKit
 
 class SignUpInfoVC: BaseVC {
+    
+    @IBOutlet var vTop: UIView!
     var store = PStore()
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        vTop.addCornerRadiusToBottom(radius: 10.0)
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.registerCell(nibName: "SingUpInfoCell")

@@ -56,7 +56,7 @@ class SingUpInfoCell: UITableViewCell {
         view4.layer.cornerRadius = C.CornerRadius.corner10
         btnChonLogo.layer.cornerRadius = C.CornerRadius.corner10
         btnChonQR.layer.cornerRadius = C.CornerRadius.corner10
-        btnXacNhan.layer.cornerRadius = C.CornerRadius.corner5
+        btnXacNhan.layer.cornerRadius = C.CornerRadius.corner10
     }
     @IBAction func xacNhanPressed(_ sender: Any) {
         getData()

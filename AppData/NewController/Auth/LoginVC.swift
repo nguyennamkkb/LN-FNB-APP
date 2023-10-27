@@ -33,18 +33,21 @@ class LoginVC: BaseVC {
         tfMatKhau.text = store.password ?? "123456"
     }
     func setupUI() {
-        view1.layer.cornerRadius = C.CornerRadius.corner5
-        view2.layer.cornerRadius = C.CornerRadius.corner5
-        btnXacNhan.layer.cornerRadius = C.CornerRadius.corner5
+        view1.layer.cornerRadius = C.CornerRadius.corner10
+        view2.layer.cornerRadius = C.CornerRadius.corner10
+        btnXacNhan.layer.cornerRadius = C.CornerRadius.corner10
         lbMessage.isHidden = true
-        bAuth.setImage(UIImage(systemName: BiometricManager.getImagetBiometric()), for: .normal)
+        imgAuth.image = UIImage(systemName: BiometricManager.getImagetBiometric())
+//        imgAuth.setImage(UIImage(systemName: BiometricManager.getImag etBiometric()), for: .normal)
     }
 
     @IBAction func dangkyPressed(_ sender: Any) {
-        self.pushVC(controller: SignUpVC())
+        let vc = SignUpVC()
+        self.pushVC(controller: vc)
     }
     @IBAction func quenMKPressed(_ sender: Any) {
-        self.pushVC(controller: ForgetPasswordVC())
+        let vc = ForgetPasswordVC()
+        self.pushVC(controller: vc)
     }
     
 //    @IBAction func xacNhanPressed(_ sender: Any) {
@@ -56,8 +59,8 @@ class LoginVC: BaseVC {
 //        login(email: email, password: password)
 //    }
     @IBAction func xacNhanPressed(_ sender: UIButton) {
-        guard let email = tfEmail.text else {return}
-        guard let password = tfMatKhau.text else {return}
+        guard let email = tfEmail.text, email.count > 10  else {return}
+        guard let password = tfMatKhau.text, password.count > 4  else {return}
         self.showLoading()
         login(email: email, password: password)
     }

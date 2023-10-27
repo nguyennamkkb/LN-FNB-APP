@@ -22,9 +22,10 @@ class SignUpVC: BaseVC {
     }
     
     func setupUI() {
-        view1.layer.cornerRadius = C.CornerRadius.corner5
-        view2.layer.cornerRadius = C .CornerRadius.corner5
-        btnXacNhan.layer.cornerRadius = C.CornerRadius.corner5
+        view1.layer.cornerRadius = C.CornerRadius.corner10
+        view2.layer.cornerRadius = C .CornerRadius.corner10
+        btnXacNhan.layer.cornerRadius = C.CornerRadius.corner10
+        lbMessage.isHidden = true
     }
     @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
@@ -45,13 +46,11 @@ class SignUpVC: BaseVC {
                 vc.bindData(item: store)
                 self.pushVC(controller: vc)
             } else {
+                self.lbMessage.isHidden = false
                 self.lbMessage.text = "Thông báo: Lỗi đăng ký"
             }
         }
     }
-    @IBAction func dangNhapPressed(_ sender: Any) {
-        self.pushVC(controller: LoginVC())
-    }
-    
+
 
 }

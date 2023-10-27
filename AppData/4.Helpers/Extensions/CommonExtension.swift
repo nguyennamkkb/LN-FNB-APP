@@ -175,6 +175,15 @@ extension UIView {
         self.layer.shadowOffset = CGSize(width: 1, height: 1)
         self.layer.shadowOpacity = 1
     }
+    func addCornerRadiusToBottom(radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds,
+                                byRoundingCorners: [.bottomLeft, .bottomRight],
+                                cornerRadii: CGSize(width: radius, height: radius))
+        
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+    }
 }
 
 extension UIImage {
@@ -427,6 +436,7 @@ extension UIView {
         }
         return nil
     }
+    
     
 }
 

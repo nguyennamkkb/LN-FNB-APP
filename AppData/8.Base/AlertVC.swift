@@ -9,6 +9,7 @@ import UIKit
 
 class AlertVC: BaseVC {
 
+    var actionFinish: ClosureAction?
     var message: String?
     @IBOutlet var lbMessage: UILabel?
     @IBOutlet var vAleart: UIView!
@@ -21,6 +22,7 @@ class AlertVC: BaseVC {
         vAleart.layer.shadowRadius = 10
         lbMessage?.text = message ?? ""
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.actionFinish?()
             self.dismissVC(animated: false)
         }
     }

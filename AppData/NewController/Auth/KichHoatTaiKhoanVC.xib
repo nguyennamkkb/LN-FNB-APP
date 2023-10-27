@@ -23,6 +23,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KichHoatTaiKhoanVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
                 <outlet property="bXacNhan" destination="iht-eH-SPd" id="PKI-7p-rya"/>
+                <outlet property="lbMess" destination="7r3-W4-ZIY" id="nB5-Wu-v6L"/>
+                <outlet property="tfOtp" destination="gTY-rI-WqT" id="HIj-uz-ag4"/>
                 <outlet property="v1" destination="vAu-OQ-Pvh" id="za5-qw-3h9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -93,12 +95,12 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAu-OQ-Pvh">
                             <rect key="frame" x="0.0" y="25" width="363" height="50"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập mã xác nhận từ email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-rI-WqT" userLabel="Nhập mk">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập mã xác nhận từ email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-rI-WqT" userLabel="Nhập otp">
                                     <rect key="frame" x="10" y="0.0" width="343" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="textColor" name="white"/>
                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
+                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
                                             <color key="value" name="gray"/>

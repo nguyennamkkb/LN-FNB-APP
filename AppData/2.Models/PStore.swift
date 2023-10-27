@@ -22,6 +22,7 @@ class PStore: Mappable {
     var qr: String?
     var createAt: String?
     var updateAt: String?
+    var otp: String?
     var status: Int?
     var access_token: String?
     var cksRequest: String?
@@ -64,6 +65,7 @@ class PStore: Mappable {
         address <- map["address"]
         logo <- map["logo"]
         qr <- map["qr"]
+        otp <- map["otp"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]

@@ -71,12 +71,17 @@ class LoginVC: BaseVC {
             (response) in
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
+                
                 CacheManager.share.setRegister(true)
                 let data = Mapper<PStore>().map(JSONObject: response?.data)
                 data?.password = paramRequest.password
                 CacheManager.share.setUserMaster(value: data?.toJSONString())
                 Common.userMaster = data ?? PStore()
                 self.wrapRoot(vc: TabBarVC())
+            } else if response?.data != nil, response?.statusCode == 199 {
+                let vc = KichHoatTaiKhoanVC()
+                vc.bindData(email: paramRequest.email ?? "")
+                self.pushVC(controller: vc)
             } else if response?.statusCode == 0 {
                 self.lbMessage.isHidden = false
                 self.lbMessage.text = "Thông báo: email hoặc mật khẩu không đúng"

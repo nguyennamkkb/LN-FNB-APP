@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -24,18 +24,18 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGd-OO-URl" userLabel="top">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <rect key="frame" x="0.0" y="0.0" width="390" height="91"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJk-F3-goy" userLabel="nav">
-                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quản lý" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JsF-d4-gin">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="44"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
@@ -51,23 +51,23 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHg-AQ-fHU" userLabel="VTD">
-                    <rect key="frame" x="15" y="74" width="345" height="44"/>
+                    <rect key="frame" x="15" y="101" width="360" height="44"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_3gach" translatesAutoresizingMaskIntoConstraints="NO" id="EAp-6Y-ZLv">
-                            <rect key="frame" x="0.0" y="9.5" width="25" height="25"/>
+                            <rect key="frame" x="0.0" y="9.6666666666666714" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="8Co-66-Xyn"/>
                                 <constraint firstAttribute="width" constant="25" id="geb-Gh-0C0"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QL Thực đơn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTK-7l-zlK">
-                            <rect key="frame" x="35" y="12.5" width="92" height="19"/>
+                            <rect key="frame" x="35" y="12.666666666666671" width="92" height="19"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVU-PY-QxY">
-                            <rect key="frame" x="25" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="25" y="0.0" width="335" height="44"/>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -77,7 +77,7 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RGa-Ps-GqG" userLabel="line">
-                            <rect key="frame" x="0.0" y="43.5" width="345" height="0.5"/>
+                            <rect key="frame" x="0.0" y="43.666666666666657" width="360" height="0.3333333333333357"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="UIl-2l-l1n"/>
@@ -101,23 +101,23 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lBm-WV-Wo5" userLabel="VBan">
-                    <rect key="frame" x="15" y="123" width="345" height="44"/>
+                    <rect key="frame" x="15" y="150" width="360" height="44"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_3gach" translatesAutoresizingMaskIntoConstraints="NO" id="ssz-B5-pNU">
-                            <rect key="frame" x="0.0" y="9.5" width="25" height="25"/>
+                            <rect key="frame" x="0.0" y="9.6666666666666572" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="kVe-HY-biJ"/>
                                 <constraint firstAttribute="width" constant="25" id="mVR-LF-DSe"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QL Bàn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wD-Yc-gBo">
-                            <rect key="frame" x="35" y="12.5" width="52" height="19"/>
+                            <rect key="frame" x="35" y="12.666666666666657" width="52" height="19"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPI-xc-AKB">
-                            <rect key="frame" x="25" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="25" y="0.0" width="335" height="44"/>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -127,7 +127,7 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7z-4T-Fmg" userLabel="line">
-                            <rect key="frame" x="0.0" y="43.5" width="345" height="0.5"/>
+                            <rect key="frame" x="0.0" y="43.666666666666657" width="360" height="0.3333333333333357"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="dgW-de-khE"/>
@@ -151,23 +151,23 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGd-4J-gxM" userLabel="VDatTruoc">
-                    <rect key="frame" x="15" y="172" width="345" height="44"/>
+                    <rect key="frame" x="15" y="199" width="360" height="44"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_3gach" translatesAutoresizingMaskIntoConstraints="NO" id="vWS-oL-t5r">
-                            <rect key="frame" x="0.0" y="9.5" width="25" height="25"/>
+                            <rect key="frame" x="0.0" y="9.6666666666666572" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="5PQ-xT-nQO"/>
                                 <constraint firstAttribute="width" constant="25" id="stR-1W-Ncf"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QL Bàn đặt trước" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJd-et-ZVq">
-                            <rect key="frame" x="35" y="12.5" width="121.5" height="19"/>
+                            <rect key="frame" x="35.000000000000007" y="12.666666666666657" width="121.66666666666669" height="19"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zO3-1q-Nzj">
-                            <rect key="frame" x="25" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="25" y="0.0" width="335" height="44"/>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -177,7 +177,7 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x2g-eA-PsE" userLabel="line">
-                            <rect key="frame" x="0.0" y="43.5" width="345" height="0.5"/>
+                            <rect key="frame" x="0.0" y="43.666666666666657" width="360" height="0.3333333333333357"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="URf-TM-grT"/>
@@ -201,23 +201,23 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Q9-aH-KT2" userLabel="VHoaDon">
-                    <rect key="frame" x="15" y="221" width="345" height="44"/>
+                    <rect key="frame" x="15" y="248" width="360" height="44"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_3gach" translatesAutoresizingMaskIntoConstraints="NO" id="anr-LV-Ohf">
-                            <rect key="frame" x="0.0" y="9.5" width="25" height="25"/>
+                            <rect key="frame" x="0.0" y="9.6666666666666856" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="Cc7-gf-oT3"/>
                                 <constraint firstAttribute="height" constant="25" id="Yeb-CW-wNc"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hoá đơn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-FC-KrB">
-                            <rect key="frame" x="35" y="12.5" width="60.5" height="19"/>
+                            <rect key="frame" x="35" y="12.666666666666686" width="60.666666666666657" height="19"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bb-uj-KTS">
-                            <rect key="frame" x="25" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="25" y="0.0" width="335" height="44"/>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -227,7 +227,7 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZk-9e-sVk" userLabel="line">
-                            <rect key="frame" x="0.0" y="43.5" width="345" height="0.5"/>
+                            <rect key="frame" x="0.0" y="43.666666666666686" width="360" height="0.3333333333333357"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="fEK-Le-Usl"/>
@@ -251,30 +251,30 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eoc-O8-ZdX" userLabel="VBaoCao">
-                    <rect key="frame" x="15" y="270" width="345" height="44"/>
+                    <rect key="frame" x="15" y="297" width="360" height="44"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_3gach" translatesAutoresizingMaskIntoConstraints="NO" id="lhj-WW-VBL">
-                            <rect key="frame" x="0.0" y="9.5" width="25" height="25"/>
+                            <rect key="frame" x="0.0" y="9.6666666666666856" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="3qm-xJ-Ij2"/>
                                 <constraint firstAttribute="height" constant="25" id="TgL-1g-mFv"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Báo cáo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jtk-v3-pLk">
-                            <rect key="frame" x="35" y="12.5" width="58.5" height="19"/>
+                            <rect key="frame" x="35" y="12.666666666666686" width="58.666666666666657" height="19"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDm-EY-wHN">
-                            <rect key="frame" x="25" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="25" y="0.0" width="335" height="44"/>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="chevron.right" catalog="system"/>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="okt-RA-SRu" userLabel="line">
-                            <rect key="frame" x="0.0" y="43.5" width="345" height="0.5"/>
+                            <rect key="frame" x="0.0" y="43.666666666666686" width="360" height="0.3333333333333357"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="0py-Ij-OYV"/>
@@ -298,23 +298,23 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="psH-9o-7C1" userLabel="VCuaHang">
-                    <rect key="frame" x="15" y="319" width="345" height="44"/>
+                    <rect key="frame" x="15" y="346" width="360" height="44"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_3gach" translatesAutoresizingMaskIntoConstraints="NO" id="roa-ZI-Iji">
-                            <rect key="frame" x="0.0" y="9.5" width="25" height="25"/>
+                            <rect key="frame" x="0.0" y="9.6666666666666856" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="7Sc-qD-iIK"/>
                                 <constraint firstAttribute="width" constant="25" id="hLE-4m-lue"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin cửa hàng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dkm-xP-PQ6">
-                            <rect key="frame" x="35" y="12.5" width="139.5" height="19"/>
+                            <rect key="frame" x="35" y="12.666666666666686" width="139.66666666666666" height="19"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kpU-qB-t4H">
-                            <rect key="frame" x="25" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="25" y="0.0" width="335" height="44"/>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -324,7 +324,7 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkH-LK-C1i" userLabel="line">
-                            <rect key="frame" x="0.0" y="43.5" width="345" height="0.5"/>
+                            <rect key="frame" x="0.0" y="43.666666666666686" width="360" height="0.3333333333333357"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="MQL-S9-Ry6"/>
@@ -348,30 +348,30 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yy3-fV-5IB" userLabel="VLienHe">
-                    <rect key="frame" x="15" y="368" width="345" height="44"/>
+                    <rect key="frame" x="15" y="395" width="360" height="44"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_3gach" translatesAutoresizingMaskIntoConstraints="NO" id="PIH-co-gD7">
-                            <rect key="frame" x="0.0" y="9.5" width="25" height="25"/>
+                            <rect key="frame" x="0.0" y="9.6666666666666856" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="Gk3-jP-630"/>
                                 <constraint firstAttribute="height" constant="25" id="zPf-YN-Uwc"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liên hệ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKu-M8-fhR">
-                            <rect key="frame" x="35" y="12.5" width="52" height="19"/>
+                            <rect key="frame" x="35" y="12.666666666666686" width="52" height="19"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tST-bN-8t7">
-                            <rect key="frame" x="25" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="25" y="0.0" width="335" height="44"/>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="chevron.right" catalog="system"/>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKI-qs-Mbd" userLabel="line">
-                            <rect key="frame" x="0.0" y="43.5" width="345" height="0.5"/>
+                            <rect key="frame" x="0.0" y="43.666666666666686" width="360" height="0.3333333333333357"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="dXF-31-lyg"/>
@@ -395,23 +395,23 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IqX-do-hZj" userLabel="VCaiDat">
-                    <rect key="frame" x="15" y="417" width="345" height="44"/>
+                    <rect key="frame" x="15" y="444" width="360" height="44"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_3gach" translatesAutoresizingMaskIntoConstraints="NO" id="0jK-6M-1u1">
-                            <rect key="frame" x="0.0" y="9.5" width="25" height="25"/>
+                            <rect key="frame" x="0.0" y="9.6666666666666856" width="25" height="25"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="25" id="fo9-cf-6dx"/>
                                 <constraint firstAttribute="height" constant="25" id="ujK-NP-0Jy"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cài đặt" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzI-uF-0co">
-                            <rect key="frame" x="35" y="12.5" width="50.5" height="19"/>
+                            <rect key="frame" x="35" y="12.666666666666686" width="50.666666666666657" height="19"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byq-fd-bAU">
-                            <rect key="frame" x="25" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="25" y="0.0" width="335" height="44"/>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -421,7 +421,7 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLn-qv-Gw2" userLabel="line">
-                            <rect key="frame" x="0.0" y="43.5" width="345" height="0.5"/>
+                            <rect key="frame" x="0.0" y="43.666666666666686" width="360" height="0.3333333333333357"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="3PP-cm-vUD"/>
@@ -445,10 +445,10 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KrL-L3-x5I" userLabel="VDangXuat">
-                    <rect key="frame" x="15" y="466" width="345" height="44"/>
+                    <rect key="frame" x="15" y="493" width="360" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FZ9-cR-VaU">
-                            <rect key="frame" x="0.0" y="0.0" width="345" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="360" height="44"/>
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -458,7 +458,7 @@
                             </connections>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gj4-QV-Gm3" userLabel="line">
-                            <rect key="frame" x="0.0" y="43.5" width="345" height="0.5"/>
+                            <rect key="frame" x="0.0" y="43.666666666666629" width="360" height="0.3333333333333357"/>
                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="fCa-gQ-0Zo"/>
@@ -478,7 +478,7 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phiên bản: 1.0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBJ-Fa-arB">
-                    <rect key="frame" x="0.0" y="648" width="375" height="19"/>
+                    <rect key="frame" x="0.0" y="791" width="390" height="19"/>
                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                     <color key="textColor" name="white"/>
                     <nil key="highlightedColor"/>

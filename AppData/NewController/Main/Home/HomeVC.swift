@@ -10,6 +10,7 @@ import ObjectMapper
 
 class HomeVC: BaseVC {
     
+    @IBOutlet var vTop: UIView!
     @IBOutlet var bDatBan: UIButton!
     @IBOutlet var tenBanDaChon: UILabel!
     var listTableSelected: [FTable] = []
@@ -30,6 +31,7 @@ class HomeVC: BaseVC {
     }
 
     func setupUI(){
+        vTop.addCornerRadiusToBottom(radius: 10.0)
         btnChonMon.layer.cornerRadius = C.CornerRadius.corner5
         bDatBan.layer.cornerRadius = C.CornerRadius.corner5
         refreshControl.tintColor = .white

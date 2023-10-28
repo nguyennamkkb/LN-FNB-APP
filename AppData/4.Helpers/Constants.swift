@@ -23,6 +23,8 @@ struct myColor {
     static let MYellow = UIColor(hex: "#fdf498")
     static let MGreen = UIColor(hex: "#7bc043")
     static let MBlue = UIColor(hex: "#0392CF")
+    
+
 
 }
 struct myCornerRadius {
@@ -42,6 +44,12 @@ enum C: Any {
         static let Navi = UIColor(hex: "#2E3D4A")
         static let Gray = UIColor(hex: "#B1B4BB")
         static let Blue = UIColor(hex: "#1A72DD")
+        
+        static let NWGray = UIColor(hex: "#F4F4F4")
+        static let NWhite = UIColor(hex: "#FFFFFF")
+        static let NGrey  = UIColor(hex: "#CED1D4")
+        static let NYellow  = UIColor(hex: "#F37D34")
+        static let NBlack  = UIColor(hex: "#1E2633")
     }
     enum CornerRadius {
         static let corner5 = 5.0

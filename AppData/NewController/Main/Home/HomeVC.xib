@@ -20,6 +20,7 @@
                 <outlet property="btnChonMon" destination="mWt-nh-LDd" id="MOL-av-Ppz"/>
                 <outlet property="collectionView" destination="chs-4a-359" id="h6B-aV-pLu"/>
                 <outlet property="tenBanDaChon" destination="hUI-eH-DT0" id="it5-XX-efM"/>
+                <outlet property="vTop" destination="LEV-gK-K3T" id="Eqy-NF-QUY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,11 +29,11 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEV-gK-K3T" userLabel="top">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEV-gK-K3T" userLabel="top">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="159"/>
                     <color key="backgroundColor" name="n yellow"/>
                 </view>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmJ-4i-Pmz">
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmJ-4i-Pmz">
                     <rect key="frame" x="0.0" y="59" width="393" height="100"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danh sách bàn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNA-9r-Rtr" userLabel="Dang nhap">
@@ -122,7 +123,7 @@
                 </collectionView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="n gray"/>
+            <color key="backgroundColor" name="n wgrey"/>
             <constraints>
                 <constraint firstItem="chs-4a-359" firstAttribute="top" secondItem="LEV-gK-K3T" secondAttribute="bottom" constant="10" id="1KS-C4-dUO"/>
                 <constraint firstItem="LEV-gK-K3T" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="E8H-Pb-iyK"/>
@@ -140,14 +141,14 @@
         </view>
     </objects>
     <resources>
-        <namedColor name="n gray">
-            <color red="0.80729728940000001" green="0.82080262900000001" blue="0.83198261259999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="n wgrey">
+            <color red="0.95599997043609619" green="0.95599997043609619" blue="0.95599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="n white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="n yellow">
-            <color red="0.95155936480000003" green="0.49133276939999998" blue="0.2037396729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95200002193450928" green="0.49099999666213989" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

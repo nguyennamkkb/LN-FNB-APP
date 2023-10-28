@@ -52,9 +52,10 @@ class ChonMonVC: BaseVC{
             bXacNhanThemMon.isHidden = true
         }
         
-        viewSearch.layer.cornerRadius = C.CornerRadius.corner5
-        lbCountCart.layer.cornerRadius = C.CornerRadius.corner5
-        bXacNhanThemMon.layer.cornerRadius = C.CornerRadius.corner5
+        viewSearch.layer.cornerRadius = C.CornerRadius.corner10
+        tfSoNguoi.layer.cornerRadius = C.CornerRadius.corner10
+        lbCountCart.layer.cornerRadius = C.CornerRadius.corner10
+        bXacNhanThemMon.layer.cornerRadius = C.CornerRadius.corner10
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl) // not required when using UITableViewController
@@ -207,11 +208,11 @@ extension ChonMonVC: UITableViewDelegate, UITableViewDataSource{
         // Create a custom view for section headers (optional)
         let headerView = UIView()
         //        let headerView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: tableView.frame.size.width, height: 30.0))
-        headerView.backgroundColor = C.Color.Navi
+        headerView.backgroundColor = C.Color.NWhite
         
         // Add a label for the section title
         let label = UILabel()
-        label.textColor = C.Color.White
+        label.textColor = C.Color.NBlack
         label.font =  UIFont(name: "Roboto-Medium", size: 16)
         label.text = tableData.itemAtIndex(index: section)?.name
         label.frame = CGRect(x: 15, y: 0, width: tableView.frame.size.width, height: 30)

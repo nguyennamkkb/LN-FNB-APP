@@ -16,7 +16,35 @@ typealias ClosureCustom<T> = ((_ item: T) -> Void)
 
 
 extension UIButton{
+    enum ViewSide {
+        case Left, Right, Top, Bottom
+    }
     
+    func addBorder(edges: UIRectEdge, color: UIColor, thickness: CGFloat) {
+            let border = CALayer()
+            border.backgroundColor = color.cgColor
+
+            func addBorder(to edges: UIRectEdge) {
+                if edges.contains(.top) {
+                    border.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: thickness)
+                    self.layer.addSublayer(border)
+                }
+                if edges.contains(.left) {
+                    border.frame = CGRect(x: 0, y: 0, width: thickness, height: self.frame.size.height)
+                    self.layer.addSublayer(border)
+                }
+                if edges.contains(.right) {
+                    border.frame = CGRect(x: self.frame.size.width - thickness, y: 0, width: thickness, height: self.frame.size.height)
+                    self.layer.addSublayer(border)
+                }
+                if edges.contains(.bottom) {
+                    border.frame = CGRect(x: 0, y: self.frame.size.height - thickness, width: self.frame.size.width, height: thickness)
+                    self.layer.addSublayer(border)
+                }
+            }
+
+            addBorder(to: edges)
+        }
     func setImageTintColor(_ color: UIColor) {
         let tintedImage = self.imageView?.image?.withRenderingMode(.alwaysTemplate)
         self.setImage(tintedImage, for: .normal)
@@ -436,7 +464,24 @@ extension UIView {
         }
         return nil
     }
+    enum ViewSide {
+        case Left, Right, Top, Bottom
+    }
     
+    func addBorder(toSide side: ViewSide, withColor color: CGColor, andThickness thickness: CGFloat) {
+        
+        let border = CALayer()
+        border.backgroundColor = color
+        
+        switch side {
+        case .Left: border.frame = CGRect(x: frame.minX, y: frame.minY, width: thickness, height: frame.height); break
+        case .Right: border.frame = CGRect(x: frame.maxX, y: frame.minY, width: thickness, height: frame.height); break
+        case .Top: border.frame = CGRect(x: frame.minX, y: frame.minY, width: frame.width, height: thickness); break
+        case .Bottom: border.frame = CGRect(x: frame.minX, y: frame.maxY, width: frame.width, height: thickness); break
+        }
+        
+        layer.addSublayer(border)
+    }
     
 }
 

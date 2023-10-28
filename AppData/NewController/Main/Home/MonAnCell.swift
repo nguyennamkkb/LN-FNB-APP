@@ -9,6 +9,7 @@ import UIKit
 
 class MonAnCell: UITableViewCell {
 
+    @IBOutlet weak var vAction: UIView!
     var passData: ((FProduct,Int,Int)->Void)?
     @IBOutlet var lbCount: UILabel!
     @IBOutlet var btnCong: UIButton!
@@ -17,7 +18,6 @@ class MonAnCell: UITableViewCell {
     @IBOutlet var lbGia: UILabel!
     @IBOutlet var lbTenMonAn: UILabel!
     @IBOutlet var imgItem: UIImageView!
-    @IBOutlet var VLine: UIView!
     @IBOutlet var vItem: UIView!
     
     var st: Int = 0
@@ -43,16 +43,18 @@ class MonAnCell: UITableViewCell {
     }
     
     func setupUI(){
-   vItem.layer.cornerRadius = C.CornerRadius.corner10
-        imgItem.layer.borderWidth = 0.2
-        imgItem.layer.borderColor = C.Color.Navi?.cgColor
-        imgItem.layer.cornerRadius = C.CornerRadius.corner5
-        btnCong.layer.cornerRadius = C.CornerRadius.corner5
-        btnTru.layer.cornerRadius = C.CornerRadius.corner5
-        VLine.layer.shadowOpacity = 0.5
-        VLine.layer.shadowOffset = CGSize(width: 0, height: 1)
-        btnTru.alpha = 0
-        lbCount.alpha = 0
+        vItem.layer.cornerRadius = C.CornerRadius.corner10
+        vAction.layer.cornerRadius = C.CornerRadius.corner10
+        vAction.layer.borderColor = C.Color.NGrey?.cgColor
+        vAction.layer.borderWidth = 0.2
+//        imgItem.layer.borderWidth = 0.2
+//        imgItem.layer.borderColor = C.Color.Navi?.cgColor
+        imgItem.layer.cornerRadius = C.CornerRadius.corner10
+
+        btnTru.addBorder(edges: [.right], color: C.Color.NGrey!, thickness: 0.2)
+        btnCong.addBorder(edges: [.left], color: C.Color.NGrey!, thickness: 0.2)
+
+        lbCount.alpha = 0.1
     }
     @IBAction func congPressed(_ sender: Any) {
         guard let count = item.count else {return}
@@ -69,11 +71,10 @@ class MonAnCell: UITableViewCell {
     }
     func updateUICongTru(){
         if item.count == 0 {
-            btnTru.alpha = 0
-            lbCount.alpha = 0
+            lbCount.alpha = 0.1
+            lbCount.text = "0"
             
         }else{
-            btnTru.alpha = 1
             lbCount.alpha = 1
             lbCount.text = "\(item.count ?? 0)"
         }

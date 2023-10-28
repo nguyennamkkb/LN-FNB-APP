@@ -33,7 +33,7 @@ class MonDaChonVC: BaseVC {
         self.table = table
     }
     func setupUI(){
-        btnXacNhan.layer.cornerRadius = C.CornerRadius.corner5
+        btnXacNhan.layer.cornerRadius = C.CornerRadius.corner10
     }
     @IBAction func xacNhanPressed(_ sender: Any) {
         guard let personNumber = soNguoi else {return}

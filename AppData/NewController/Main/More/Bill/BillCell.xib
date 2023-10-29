@@ -3,7 +3,7 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -32,13 +32,13 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ten cua hang" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgW-Wb-JLd">
                         <rect key="frame" x="15" y="5" width="466" height="26"/>
                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
-                        <color key="textColor" name="white"/>
+                        <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dia chi" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nrE-Kw-C0d">
                         <rect key="frame" x="15" y="41" width="466" height="21.333333333333329"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
-                        <color key="textColor" name="white"/>
+                        <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="so dien thoai" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vin-Er-FkR">
@@ -47,19 +47,19 @@
                             <constraint firstAttribute="height" constant="25" id="0PK-RE-3v7"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
-                        <color key="textColor" name="white"/>
+                        <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EWa-Nz-uO1" userLabel="line">
                         <rect key="frame" x="15" y="107.33333333333333" width="466" height="0.6666666666666714"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="n gray"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="H2R-0A-WDD"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d75-t6-dr9" userLabel="line">
                         <rect key="frame" x="15" y="221.66666666666666" width="466" height="0.33333333333334281"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="n gray"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="nCj-fF-6Dz"/>
                         </constraints>
@@ -67,37 +67,37 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin dịch vụ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fdq-Ic-xvk">
                         <rect key="frame" x="15" y="118" width="466" height="26"/>
                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
-                        <color key="textColor" name="white"/>
+                        <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bàn: A1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2k-Mt-KnC">
                         <rect key="frame" x="15" y="159" width="466" height="21.333333333333343"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
-                        <color key="textColor" name="white"/>
+                        <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giờ: 12:30 8/9/2023" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRR-n5-5a9">
                         <rect key="frame" x="15" y="190.33333333333334" width="161.66666666666666" height="21.333333333333343"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
-                        <color key="textColor" name="white"/>
+                        <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số người: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8u-8Y-8we">
                         <rect key="frame" x="390" y="190.33333333333334" width="91" height="21.333333333333343"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
-                        <color key="textColor" name="white"/>
+                        <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Món" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUo-Bw-2eA">
                         <rect key="frame" x="15.000000000000004" y="232" width="44.333333333333343" height="26"/>
                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
-                        <color key="textColor" name="white"/>
+                        <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành tiền" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRF-yg-0IH">
                         <rect key="frame" x="376" y="232" width="105" height="26"/>
                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
-                        <color key="textColor" name="white"/>
+                        <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pgm-Vq-lhI">
@@ -109,7 +109,7 @@
                     </tableView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Q-9z-30r" userLabel="line">
                         <rect key="frame" x="15" y="478" width="466" height="0.66666666666668561"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="n gray"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="W5t-Kv-SDZ"/>
                         </constraints>
@@ -117,19 +117,19 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng tiền" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBy-7O-Yom">
                         <rect key="frame" x="15" y="488.66666666666669" width="75.333333333333329" height="21.333333333333314"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
-                        <color key="textColor" name="white"/>
+                        <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="104.000đ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOK-Li-H5V">
                         <rect key="frame" x="405" y="488.66666666666669" width="76" height="21.333333333333314"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
-                        <color key="textColor" name="white"/>
+                        <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cảm ơn quý khách!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vD8-4a-m1k">
                         <rect key="frame" x="15" y="530" width="466" height="26"/>
                         <fontDescription key="fontDescription" name="Roboto-BoldItalic" family="Roboto" pointSize="22"/>
-                        <color key="textColor" name="white"/>
+                        <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
@@ -197,8 +197,11 @@
         </tableViewCell>
     </objects>
     <resources>
-        <namedColor name="white">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="n black">
+            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="n gray">
+            <color red="0.80699998140335083" green="0.82099997997283936" blue="0.8320000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

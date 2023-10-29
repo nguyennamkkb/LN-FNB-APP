@@ -9,14 +9,19 @@ import UIKit
 
 class MonTrenBanCell: UITableViewCell {
 
+    
+    
+    @IBOutlet weak var vItem: UIView!
+    @IBOutlet weak var vAction: UIView!
+    
+    
     var passData: ClosureCustom<FProduct>?
-    @IBOutlet var bMinus: UIButton!
-    @IBOutlet var bAdd: UIButton!
+    @IBOutlet var btnTru: UIButton!
+    @IBOutlet var btnCong: UIButton!
     @IBOutlet var lbCount: UILabel!
     @IBOutlet var lbGia: UILabel!
     @IBOutlet var lbName: UILabel!
     var item =  FProduct()
-    @IBOutlet var VLine: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
@@ -35,10 +40,12 @@ class MonTrenBanCell: UITableViewCell {
         lbCount.text = "\(item.count ?? 0)"
     }
     func setupUI(){
-        bMinus.layer.cornerRadius = C.CornerRadius.corner5
-        bAdd.layer.cornerRadius = C.CornerRadius.corner5
-        VLine.layer.shadowOpacity = 0.5
-        VLine.layer.shadowOffset = CGSize(width: 0, height: 1)
+        vAction.layer.cornerRadius = C.CornerRadius.corner10
+        vAction.layer.borderColor = C.Color.NGrey?.cgColor
+        vAction.layer.borderWidth = 0.2
+        vItem.layer.cornerRadius = C.CornerRadius.corner10
+        btnTru.addBorder(edges: [.right], color: C.Color.NGrey!, thickness: 0.2)
+        btnCong.addBorder(edges: [.left], color: C.Color.NGrey!, thickness: 0.2)
     }
     @IBAction func congPressed(_ sender: Any) {
         guard let count = item.count else {return}
@@ -55,6 +62,12 @@ class MonTrenBanCell: UITableViewCell {
         updateUICongTru()
     }
     func updateUICongTru(){
+        if item.count == 0 {
+            lbCount.alpha = 0.1
+            
+        }else{
+            lbCount.alpha = 1
+        }
         lbCount.text = "\(item.count ?? 0)"
         passData?(item)
     }

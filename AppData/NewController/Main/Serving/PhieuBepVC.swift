@@ -30,8 +30,8 @@ class PhieuBepVC: BaseVC {
         self.onBackNav()
     }
     func setupUI(){
-        bXacNhan.layer.cornerRadius = C.CornerRadius.corner5
-        bChuyenSLVe0.layer.cornerRadius = C.CornerRadius.corner5
+        bXacNhan.layer.cornerRadius = C.CornerRadius.corner10
+        bChuyenSLVe0.layer.cornerRadius = C.CornerRadius.corner10
     }
     func bindData(list: [FProduct], ban: String){
         danhSachMonAn = list

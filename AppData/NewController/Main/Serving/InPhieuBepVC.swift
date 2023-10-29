@@ -62,7 +62,7 @@ class InPhieuBepVC: BaseVC {
     }
     
     func setupUI(){
-        bInPhieuBep.layer.cornerRadius = C.CornerRadius.corner5
+        bInPhieuBep.layer.cornerRadius = C.CornerRadius.corner10
         VLabel.layer.borderWidth = 1
         VLabel.layer.borderColor = C.Color.Gray?.cgColor
     }

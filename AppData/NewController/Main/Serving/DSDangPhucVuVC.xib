@@ -27,7 +27,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4vQ-Wt-q9a" userLabel="top">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="n yellow"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Foc-6l-8cI" userLabel="nav">
                     <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -49,12 +49,12 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="8EV-hy-ru9">
-                    <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                    <rect key="frame" x="0.0" y="93" width="414" height="769"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="black"/>
+            <color key="backgroundColor" name="n wgrey"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="Foc-6l-8cI" secondAttribute="leading" id="1Y9-Ud-cug"/>
                 <constraint firstItem="4vQ-Wt-q9a" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6Nf-GT-F2v"/>
@@ -66,14 +66,17 @@
                 <constraint firstItem="Foc-6l-8cI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="aMN-Iq-70G"/>
                 <constraint firstItem="Foc-6l-8cI" firstAttribute="bottom" secondItem="4vQ-Wt-q9a" secondAttribute="bottom" id="clq-eZ-t71"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="leading" secondItem="4vQ-Wt-q9a" secondAttribute="leading" id="wzY-Lu-fhO"/>
-                <constraint firstItem="8EV-hy-ru9" firstAttribute="top" secondItem="4vQ-Wt-q9a" secondAttribute="bottom" id="xMw-6K-WJY"/>
+                <constraint firstItem="8EV-hy-ru9" firstAttribute="top" secondItem="4vQ-Wt-q9a" secondAttribute="bottom" constant="5" id="xMw-6K-WJY"/>
             </constraints>
             <point key="canvasLocation" x="58" y="21"/>
         </view>
     </objects>
     <resources>
-        <namedColor name="black">
-            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="n wgrey">
+            <color red="0.95599997043609619" green="0.95599997043609619" blue="0.95599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="n yellow">
+            <color red="0.95200002193450928" green="0.49099999666213989" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -101,7 +101,7 @@
                                 <constraint firstAttribute="height" constant="15" id="lbn-Tw-NfM"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
-                            <color key="textColor" name="white"/>
+                            <color key="textColor" name="n black"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuN-9X-n5e">

@@ -558,7 +558,7 @@
 		1EFC8C280943DC7E9A1BB1F50733172F /* ImageModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageModifier.swift; path = Sources/Networking/ImageModifier.swift; sourceTree = "<group>"; };
 		1F04CB84DE94DE42B00124CAE2D98B98 /* Alamofire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.debug.xcconfig; sourceTree = "<group>"; };
 		1F8DD10E6DC6366A88D1D1D2BE58A309 /* FXPageControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FXPageControl.h; path = ObjC/FXPageControl.h; sourceTree = "<group>"; };
-		21AAE79511133937606E376EE52BED4F /* FittedSheets */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = FittedSheets; path = FittedSheets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		21AAE79511133937606E376EE52BED4F /* FittedSheets.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FittedSheets.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		21B84ECF2DAF6B45F13AAAB366C64FD6 /* PieRadarChartViewBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PieRadarChartViewBase.swift; path = Source/Charts/Charts/PieRadarChartViewBase.swift; sourceTree = "<group>"; };
 		21E22E8EF84589E4AC5C5853AF7BF702 /* ButtonBarViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ButtonBarViewCell.swift; path = Sources/XLPagerTabStrip/ButtonBarViewCell.swift; sourceTree = "<group>"; };
 		21F20CFA0334D494FDF15889E13DB309 /* Deprecated.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Deprecated.swift; path = Sources/General/Deprecated.swift; sourceTree = "<group>"; };
@@ -1151,7 +1151,7 @@
 				5D797E9A5C5782CE845840781FA1CC81 /* Alamofire.framework */,
 				A3D30211B199757A7A2F0AC792234325 /* DGCharts */,
 				9B6725B782188F18CB76A740433F14E4 /* DropDown.framework */,
-				21AAE79511133937606E376EE52BED4F /* FittedSheets */,
+				21AAE79511133937606E376EE52BED4F /* FittedSheets.framework */,
 				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
 				C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */,
 				B9084FE779702931E8DF1D00A2D725FB /* ObjectMapper.framework */,
@@ -2062,7 +2062,7 @@
 			);
 			name = FittedSheets;
 			productName = FittedSheets;
-			productReference = 21AAE79511133937606E376EE52BED4F /* FittedSheets */;
+			productReference = 21AAE79511133937606E376EE52BED4F /* FittedSheets.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C4A0A7D8591B67FB75E2E8D215E3735B /* SideMenu */ = {
@@ -2234,6 +2234,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
+				TargetAttributes = {
+					060BF96EA71B2C6F53FC7D8E8E79074F = {
+						LastSwiftMigration = "";
+					};
+				};
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -3378,7 +3383,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FittedSheets/FittedSheets-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FittedSheets/FittedSheets-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -3922,7 +3927,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/FittedSheets/FittedSheets-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/FittedSheets/FittedSheets-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

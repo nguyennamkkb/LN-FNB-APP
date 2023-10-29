@@ -30,12 +30,13 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ZO-cg-MdJ">
                         <rect key="frame" x="15" y="10" width="399" height="90"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_food" translatesAutoresizingMaskIntoConstraints="NO" id="L5S-GT-lZs">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_food" translatesAutoresizingMaskIntoConstraints="NO" id="L5S-GT-lZs">
                                 <rect key="frame" x="0.0" y="0.0" width="99" height="90"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.15677102196295531" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10378967689362582" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="99" id="lTz-wu-e1J"/>
                                 </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tQN-Ac-BNs">
                                 <rect key="frame" x="99" y="0.0" width="300" height="90"/>
@@ -160,7 +161,7 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="img_food" width="1024" height="1024"/>
+        <image name="img_food" width="50" height="50"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="gray">

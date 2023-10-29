@@ -14,6 +14,9 @@ import ObjectMapper
 class BillVC: BaseVC {
     
     
+    @IBOutlet weak var vPrint: UIView!
+    @IBOutlet weak var vPay: UIView!
+    
     let totalCharacterInline: Int = 31
     private let dummyPrinter = DummyPrinter()
     @IBOutlet var vBill: UIView!
@@ -29,7 +32,8 @@ class BillVC: BaseVC {
         self.tableView.dataSource = self
         self.tableView.registerCell(nibName: "BillCell")
         setupData()
-        //        tableViewHeightConstraint.constant = CGFloat(100)
+        vPrint.layer.cornerRadius = C.CornerRadius.corner10
+        vPay.layer.cornerRadius = C.CornerRadius.corner10
         
     }
     func setupData(){
@@ -121,7 +125,6 @@ class BillVC: BaseVC {
             str += "\(listItem[index].name!)\n"
             str += CommonPrint.NamKVItem(left: "\(listItem[index].price!)".currencyFormatting() + " x " + "\(listItem[index].count!)", right: "\(listItem[index].total ?? 0)".currencyFormatting()) + "\n"
         }
-        print(str)
         return CommonPrint.removeVietnameseDiacritics(from: str)
     }
     

@@ -28,9 +28,9 @@ class BanDangPhucVuCell: UITableViewCell {
         lbSoNguoi.text = "\(item.person ?? 0)"
         lbTongTien.text = "Tổng tiền: "+"\(item.total ?? 0)".currencyFormatting() + "đ"
         lbBan.text = "Bàn: "+"\(item.table ?? "")"
-        vItem.layer.cornerRadius = C.CornerRadius.corner5
+        vItem.layer.cornerRadius = C.CornerRadius.corner10
         if item.total !=  0 {
-            vItem.backgroundColor = UIColor.clear
+            vItem.backgroundColor = C.Color.NWhite
         }else {
             vItem.backgroundColor = UIColor(hex: "#FFFF0050")
         }

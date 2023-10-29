@@ -15,14 +15,12 @@ class BanDangPhucVuVC: BaseVC {
     @IBOutlet var VACTION: UIView!
     @IBOutlet var bCapNhat: UIButton!
     var actionReload: ClosureAction?
-    @IBOutlet var bHuyban: UIButton!
     @IBOutlet var lbSoNguoi: UILabel!
     @IBOutlet var lbTongTien: UILabel!
     @IBOutlet var lbTitle: UILabel!
     var item = FOrder()
     var listItem = [FProduct]()
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var btnPhieuBep: UIButton!
     @IBOutlet weak var btnThanhToan: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,19 +49,12 @@ class BanDangPhucVuVC: BaseVC {
     }
     func  setupUI() {
         btnThanhToan.layer.cornerRadius = C.CornerRadius.corner5
-        bCapNhat.layer.cornerRadius = C.CornerRadius.corner5
-        bHuyban.layer.cornerRadius = C.CornerRadius.corner5
+        bCapNhat.layer.cornerRadius = C.CornerRadius.corner10
         bCapNhat.isHidden = true
     }
-    @IBAction func huyBanPressed(_ sender: Any) {
-        let vc = MessageVC()
-        vc.actionOK = {
-            self.deleteOrder()
-        }
-        let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
-        self.present(sheet, animated: true)
-    }
+
     func deleteOrder(){
+        print("deleteOrder")
         let param = ParamSearch(user_id: Common.userMaster.id ?? 0)
         ServiceManager.common.deleteOrder(param: "\(item.id ?? 0)?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
@@ -108,7 +99,16 @@ class BanDangPhucVuVC: BaseVC {
             }
             self.pushVC(controller: chonMonVC)
         }
-        let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
+        vc.actionDelete = {
+
+            let messVC = MessageVC()
+            messVC.actionOK = {
+                self.deleteOrder()
+            }
+            let sheet = SheetViewController(controller: messVC, sizes: [.fixed(250)])
+            self.present(sheet, animated: true)
+        }
+        let sheet = SheetViewController(controller: vc, sizes: [.fixed(300)])
         self.present(sheet, animated: true)
     }
     func updateMoney(){

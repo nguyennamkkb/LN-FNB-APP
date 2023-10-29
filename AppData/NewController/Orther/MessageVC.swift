@@ -33,8 +33,8 @@ class MessageVC: BaseVC {
         content1 = "\(content ?? "Đồng ý với lựa chọn?")"
     }
     func setupUI() {
-        bClose.layer.cornerRadius = C.CornerRadius.corner5
-        bXacNhan.layer.cornerRadius = C.CornerRadius.corner5
+        bClose.layer.cornerRadius = C.CornerRadius.corner10
+        bXacNhan.layer.cornerRadius = C.CornerRadius.corner10
         lbTitle.text = "Thông báo"
         lbMessage.text = "Đồng ý với lựa chọn?"
         VScreen.backgroundColor = C.Color.Black

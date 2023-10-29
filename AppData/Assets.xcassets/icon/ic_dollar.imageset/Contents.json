@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Vector.svg",
+      "filename" : "dollar-sign.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Vector@2x.svg",
+      "filename" : "dollar-sign@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Vector@3x.svg",
+      "filename" : "dollar-sign@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

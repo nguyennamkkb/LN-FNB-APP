@@ -38,6 +38,10 @@ class MonTrenBanCell: UITableViewCell {
         lbGia.text = "Gia: " + "\(item.price ?? 0)".currencyFormatting() + "đ"
         lbName.text = "\(item.name ?? "")"
         lbCount.text = "\(item.count ?? 0)"
+        if item.count == 0 {
+            lbCount.alpha = 0.1
+            
+        }
     }
     func setupUI(){
         vAction.layer.cornerRadius = C.CornerRadius.corner10

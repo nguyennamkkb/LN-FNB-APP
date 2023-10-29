@@ -10,6 +10,7 @@ import UIKit
 class BanDatTruocCell: UITableViewCell {
     
     
+    @IBOutlet weak var vItem: UIView!
     @IBOutlet var lbGhiChu: UILabel!
     var item: FOrder  = FOrder()
     @IBOutlet weak var lbSoNguoi: UILabel!
@@ -19,7 +20,7 @@ class BanDatTruocCell: UITableViewCell {
     @IBOutlet var bDelete: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-        bDelete.layer.cornerRadius = C.CornerRadius.corner5
+        vItem.layer.cornerRadius = C.CornerRadius.corner10
     }
     func binđata(e: FOrder){
         item = e

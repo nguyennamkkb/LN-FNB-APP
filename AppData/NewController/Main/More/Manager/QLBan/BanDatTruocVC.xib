@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,7 +28,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZSv-dJ-PZO" userLabel="top">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="103"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="n yellow"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9I-OL-E2t" userLabel="nav">
                     <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -41,12 +41,12 @@
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wwz-N5-vlf" userLabel="add">
                             <rect key="frame" x="348" y="7" width="30" height="30"/>
-                            <color key="backgroundColor" name="green"/>
+                            <color key="backgroundColor" name="n white"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="RZQ-fl-vSm"/>
                                 <constraint firstAttribute="width" constant="30" id="TsI-5E-qbW"/>
                             </constraints>
-                            <color key="tintColor" name="white"/>
+                            <color key="tintColor" name="n yellow"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="plus" catalog="system">
                                 <color key="titleColor" name="white"/>
@@ -86,12 +86,12 @@
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aKY-HN-uQn">
-                    <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                    <rect key="frame" x="0.0" y="108" width="393" height="710"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="black"/>
+            <color key="backgroundColor" name="n wgrey"/>
             <constraints>
                 <constraint firstItem="ZSv-dJ-PZO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6kP-V3-Slm"/>
                 <constraint firstItem="c9I-OL-E2t" firstAttribute="bottom" secondItem="ZSv-dJ-PZO" secondAttribute="bottom" id="7ac-p0-Lqg"/>
@@ -103,7 +103,7 @@
                 <constraint firstItem="ZSv-dJ-PZO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qnp-Zq-U0I"/>
                 <constraint firstItem="c9I-OL-E2t" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sHO-Qg-fJc"/>
                 <constraint firstItem="aKY-HN-uQn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="u51-Lo-zgH"/>
-                <constraint firstItem="aKY-HN-uQn" firstAttribute="top" secondItem="ZSv-dJ-PZO" secondAttribute="bottom" id="ynl-8u-TS5"/>
+                <constraint firstItem="aKY-HN-uQn" firstAttribute="top" secondItem="ZSv-dJ-PZO" secondAttribute="bottom" constant="5" id="ynl-8u-TS5"/>
             </constraints>
             <point key="canvasLocation" x="79" y="21"/>
         </view>
@@ -111,11 +111,14 @@
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <namedColor name="black">
-            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="n wgrey">
+            <color red="0.95599997043609619" green="0.95599997043609619" blue="0.95599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="green">
-            <color red="0.14900000393390656" green="0.64499998092651367" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="n white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="n yellow">
+            <color red="0.95200002193450928" green="0.49099999666213989" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

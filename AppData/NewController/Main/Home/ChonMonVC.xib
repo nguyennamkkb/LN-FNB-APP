@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -169,16 +169,16 @@
                     <rect key="frame" x="0.0" y="103" width="393" height="35"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bàn: A1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOR-Gi-Dsw" userLabel="Bàn: A1">
-                            <rect key="frame" x="14.999999999999996" y="9.3333333333333304" width="48.666666666666657" height="16.666666666666671"/>
+                            <rect key="frame" x="14.999999999999996" y="5" width="48.666666666666657" height="16.666666666666668"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ayN-h3-egz">
-                            <rect key="frame" x="343" y="2.6666666666666714" width="35" height="30"/>
+                            <rect key="frame" x="343" y="1" width="35" height="25"/>
                             <color key="backgroundColor" name="n white"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="30" id="RP6-qZ-eVP"/>
+                                <constraint firstAttribute="height" constant="25" id="RP6-qZ-eVP"/>
                                 <constraint firstAttribute="width" constant="35" id="lbr-gg-Wf2"/>
                             </constraints>
                             <color key="textColor" name="n black"/>
@@ -186,7 +186,7 @@
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số khách:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-9O-aib" userLabel="Số người:">
-                            <rect key="frame" x="281" y="9.3333333333333304" width="62" height="16.666666666666671"/>
+                            <rect key="frame" x="281" y="5" width="62" height="16.666666666666668"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
@@ -194,17 +194,17 @@
                     </subviews>
                     <color key="backgroundColor" name="n yellow"/>
                     <constraints>
-                        <constraint firstItem="QOR-Gi-Dsw" firstAttribute="centerY" secondItem="Mcl-M3-XzM" secondAttribute="centerY" id="7AP-ya-hmq"/>
-                        <constraint firstItem="dnW-9O-aib" firstAttribute="centerY" secondItem="Mcl-M3-XzM" secondAttribute="centerY" id="7Xs-Ut-GYl"/>
+                        <constraint firstItem="dnW-9O-aib" firstAttribute="centerY" secondItem="QOR-Gi-Dsw" secondAttribute="centerY" id="3DS-PI-NGa"/>
+                        <constraint firstItem="ayN-h3-egz" firstAttribute="centerY" secondItem="QOR-Gi-Dsw" secondAttribute="centerY" id="4r8-nd-MH6"/>
                         <constraint firstItem="ayN-h3-egz" firstAttribute="leading" secondItem="dnW-9O-aib" secondAttribute="trailing" id="9yh-qd-8dl"/>
                         <constraint firstItem="QOR-Gi-Dsw" firstAttribute="leading" secondItem="Mcl-M3-XzM" secondAttribute="leading" constant="15" id="Kby-Nk-1mG"/>
-                        <constraint firstItem="ayN-h3-egz" firstAttribute="centerY" secondItem="Mcl-M3-XzM" secondAttribute="centerY" id="T1N-F5-Wc3"/>
+                        <constraint firstItem="QOR-Gi-Dsw" firstAttribute="top" secondItem="Mcl-M3-XzM" secondAttribute="top" constant="5" id="VPv-IB-4L0"/>
                         <constraint firstAttribute="trailing" secondItem="ayN-h3-egz" secondAttribute="trailing" constant="15" id="agB-ig-VAX"/>
                         <constraint firstAttribute="height" constant="35" id="jIg-LM-Nhh"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FuI-X5-d5w">
-                    <rect key="frame" x="0.0" y="139" width="393" height="679"/>
+                    <rect key="frame" x="0.0" y="143" width="393" height="675"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
@@ -223,7 +223,7 @@
                 <constraint firstItem="SV9-vS-Y3a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Occ-Gk-BbQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="SV9-vS-Y3a" secondAttribute="trailing" id="ZHV-P4-LTc"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mcl-M3-XzM" secondAttribute="trailing" id="dIx-jD-0QD"/>
-                <constraint firstItem="FuI-X5-d5w" firstAttribute="top" secondItem="Mcl-M3-XzM" secondAttribute="bottom" constant="1" id="eXJ-df-qRl"/>
+                <constraint firstItem="FuI-X5-d5w" firstAttribute="top" secondItem="Mcl-M3-XzM" secondAttribute="bottom" constant="5" id="eXJ-df-qRl"/>
                 <constraint firstItem="Mcl-M3-XzM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="nqk-eb-bxN"/>
                 <constraint firstItem="FuI-X5-d5w" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xWm-6P-Tve"/>
             </constraints>

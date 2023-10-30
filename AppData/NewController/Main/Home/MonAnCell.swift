@@ -49,7 +49,7 @@ class MonAnCell: UITableViewCell {
         vAction.layer.borderWidth = 0.2
 //        imgItem.layer.borderWidth = 0.2
 //        imgItem.layer.borderColor = C.Color.Navi?.cgColor
-        imgItem.layer.cornerRadius = C.CornerRadius.corner10
+//        imgItem.layer.cornerRadius = C.CornerRadius.corner10
 
         btnTru.addBorder(edges: [.right], color: C.Color.NGrey!, thickness: 0.2)
         btnCong.addBorder(edges: [.left], color: C.Color.NGrey!, thickness: 0.2)

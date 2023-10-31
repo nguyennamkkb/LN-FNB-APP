@@ -10,6 +10,9 @@ import FittedSheets
 import ObjectMapper
 
 class QLBanVC: BaseVC {
+    
+    
+    @IBOutlet var bSearch: UIButton!
     let refreshControl = UIRefreshControl()
     @IBOutlet weak var keySearch: UITextField!
     @IBOutlet weak var vSearch: UIView!
@@ -46,9 +49,9 @@ class QLBanVC: BaseVC {
     }
     
     func setupUI() {
-        bAdd.layer.cornerRadius = C.CornerRadius.corner5
-        vSearch.layer.cornerRadius = C.CornerRadius.corner5
-        refreshControl.tintColor = .white
+        bAdd.layer.cornerRadius = C.CornerRadius.corner10
+        vSearch.layer.cornerRadius = C.CornerRadius.corner10
+        refreshControl.tintColor = .black
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl) // not required when using UITableViewController
     }

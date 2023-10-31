@@ -1308,7 +1308,7 @@
 				DEVELOPMENT_TEAM = 4524TL74Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppData/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "LN FNB";
+				INFOPLIST_KEY_CFBundleDisplayName = "LN Nha hang";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "ket noi may in";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";
@@ -1349,7 +1349,7 @@
 				DEVELOPMENT_TEAM = 4524TL74Z9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppData/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "LN FNB";
+				INFOPLIST_KEY_CFBundleDisplayName = "LN Nha hang";
 				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "ket noi may in";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Sử dụng máy ảnh để chụp ảnh đại diện";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Login app";

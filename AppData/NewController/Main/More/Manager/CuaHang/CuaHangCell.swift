@@ -19,11 +19,11 @@ class CuaHangCell: UITableViewCell {
        setupUI()
     }
     func setupUI() {
-        v4.layer.cornerRadius = C.CornerRadius.corner5
-        v3.layer.cornerRadius = C.CornerRadius.corner5
-        v2.layer.cornerRadius = C.CornerRadius.corner5
-        v1.layer.cornerRadius = C.CornerRadius.corner5
-        bXacNhan.layer.cornerRadius = C.CornerRadius.corner5
+        v4.layer.cornerRadius = C.CornerRadius.corner10
+        v3.layer.cornerRadius = C.CornerRadius.corner10
+        v2.layer.cornerRadius = C.CornerRadius.corner10
+        v1.layer.cornerRadius = C.CornerRadius.corner10
+        bXacNhan.layer.cornerRadius = C.CornerRadius.corner10
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

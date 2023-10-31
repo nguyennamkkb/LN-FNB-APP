@@ -22,6 +22,7 @@ class ThemBanDatTruocVC: BaseVC {
     var listTable: [FTable] = []
     var tableDaChon:[String] = []
     var dsTenBan:[String] = []
+    @IBOutlet var v4: UIView!
     @IBOutlet var v3: UIView!
     @IBOutlet var v2: UIView!
     @IBOutlet var V1: UIView!
@@ -32,15 +33,14 @@ class ThemBanDatTruocVC: BaseVC {
         setupUI()
     }
     func setupUI() {
-        bXacNhan.layer.cornerRadius = C.CornerRadius.corner5
-        v3.layer.cornerRadius = C.CornerRadius.corner5
-        v2.layer.cornerRadius = C.CornerRadius.corner5
-        V1.layer.cornerRadius = C.CornerRadius.corner5
-        
+        bXacNhan.layer.cornerRadius = C.CornerRadius.corner10
+        v4.layer.cornerRadius = C.CornerRadius.corner10
+        v3.layer.cornerRadius = C.CornerRadius.corner10
+        v2.layer.cornerRadius = C.CornerRadius.corner10
+        V1.layer.cornerRadius = C.CornerRadius.corner10
     }
     @IBAction func chonBanTrongPressed(_ sender: Any) {
         let selectionMenu = RSSelectionMenu(selectionStyle: .multiple, dataSource: dsTenBan) { (cell, name, indexPath) in
-
             cell.textLabel?.text = name
             cell.tintColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
         }

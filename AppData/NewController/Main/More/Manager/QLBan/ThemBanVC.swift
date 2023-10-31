@@ -9,7 +9,9 @@ import UIKit
 
 class ThemBanVC: BaseVC {
 
+    @IBOutlet var lbTitle: UILabel!
     var statusThemHoacSua: Int = 1 //1 them, 2 sua
+    var sTitle: String = "Thêm bàn"
     var actionOK: ClosureAction?
     @IBOutlet weak var tfTenBan: UITextField!
     @IBOutlet var V1: UIView!
@@ -17,8 +19,8 @@ class ThemBanVC: BaseVC {
     @IBOutlet var bXacNhan: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        V1.layer.cornerRadius = C.CornerRadius.corner5
-        bXacNhan.layer.cornerRadius = C.CornerRadius.corner5
+        V1.layer.cornerRadius = C.CornerRadius.corner10
+        bXacNhan.layer.cornerRadius = C.CornerRadius.corner10
         setupData()
     }
     @IBAction func backPressed(_ sender: Any) {
@@ -26,11 +28,13 @@ class ThemBanVC: BaseVC {
     }
     func bindDataSua(item: FTable, trangThai: Int) {
         self.item = item
+        sTitle = "Sửa bàn"
         self.statusThemHoacSua = trangThai
+        
 
     }
     func setupData() {
-
+        lbTitle.text = self.sTitle
         tfTenBan.text = self.item.name ?? nil
     }
     

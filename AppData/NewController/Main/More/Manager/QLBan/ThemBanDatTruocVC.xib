@@ -30,6 +30,7 @@
                 <outlet property="tfTenBan" destination="Cls-9Q-k1A" id="0pO-Tt-lRv"/>
                 <outlet property="v2" destination="TnH-yQ-btk" id="UeJ-Cd-F6M"/>
                 <outlet property="v3" destination="WR4-mM-c9g" id="8Lo-Pd-jZ5"/>
+                <outlet property="v4" destination="oyy-pM-ZIk" id="cTL-BU-oaM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,7 +41,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRW-6N-K7i" userLabel="top">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="n yellow"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6LQ-hI-wdJ" userLabel="nav">
                     <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -78,23 +79,23 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kM3-kf-dh1" userLabel="ChonBan">
                     <rect key="frame" x="15" y="74" width="345" height="75"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tên bàn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKy-Oc-5V9" userLabel="chon ban">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn bàn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iKy-Oc-5V9" userLabel="chon ban">
                             <rect key="frame" x="0.0" y="0.0" width="345" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="rdn-Iz-uYR"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
-                            <color key="textColor" name="white"/>
+                            <color key="textColor" name="n black"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRX-3Q-vb5">
                             <rect key="frame" x="0.0" y="25" width="345" height="50"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Chọn các bàn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cls-9Q-k1A">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Chọn các bàn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cls-9Q-k1A">
                                     <rect key="frame" x="10" y="0.0" width="325" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="textColor" name="white"/>
-                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                    <color key="textColor" name="n black"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
@@ -111,7 +112,7 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" name="navi"/>
+                            <color key="backgroundColor" name="n white"/>
                             <constraints>
                                 <constraint firstItem="Cls-9Q-k1A" firstAttribute="leading" secondItem="gRX-3Q-vb5" secondAttribute="leading" constant="10" id="4mS-9C-Kem"/>
                                 <constraint firstAttribute="height" constant="50" id="6d4-Sr-ALU"/>
@@ -145,16 +146,16 @@
                                 <constraint firstAttribute="height" constant="20" id="SoS-KV-Raq"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
-                            <color key="textColor" name="white"/>
+                            <color key="textColor" name="n black"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TnH-yQ-btk">
                             <rect key="frame" x="0.0" y="25" width="345" height="50"/>
                             <subviews>
-                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="ski-lc-CW7">
+                                <datePicker clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" datePickerMode="dateAndTime" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="ski-lc-CW7">
                                     <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="tintColor" name="white"/>
+                                    <color key="tintColor" name="n black"/>
                                     <locale key="locale" localeIdentifier="vi_VN"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -163,7 +164,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </datePicker>
                             </subviews>
-                            <color key="backgroundColor" name="navi"/>
+                            <color key="backgroundColor" name="n white"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="ski-lc-CW7" secondAttribute="bottom" id="1Fo-rA-dg6"/>
                                 <constraint firstItem="ski-lc-CW7" firstAttribute="leading" secondItem="TnH-yQ-btk" secondAttribute="leading" id="7ce-qg-BPD"/>
@@ -193,17 +194,17 @@
                                 <constraint firstAttribute="height" constant="20" id="BAp-hT-VQc"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
-                            <color key="textColor" name="white"/>
+                            <color key="textColor" name="n black"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WR4-mM-c9g">
                             <rect key="frame" x="0.0" y="25" width="345" height="50"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập số người" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T64-iY-J82">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập số người" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T64-iY-J82">
                                     <rect key="frame" x="10" y="0.0" width="325" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="textColor" name="white"/>
-                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                    <color key="textColor" name="n black"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
@@ -212,7 +213,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                             </subviews>
-                            <color key="backgroundColor" name="navi"/>
+                            <color key="backgroundColor" name="n white"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Uk4-Vy-ubf"/>
                                 <constraint firstAttribute="trailing" secondItem="T64-iY-J82" secondAttribute="trailing" constant="10" id="hpO-Il-zHJ"/>
@@ -235,7 +236,7 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oOG-5A-CPs">
                     <rect key="frame" x="15" y="414" width="345" height="44"/>
-                    <color key="backgroundColor" name="green"/>
+                    <color key="backgroundColor" name="n yellow"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="bBy-bl-1ms"/>
                     </constraints>
@@ -255,17 +256,17 @@
                                 <constraint firstAttribute="height" constant="20" id="wWw-5O-uBn"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
-                            <color key="textColor" name="white"/>
+                            <color key="textColor" name="n black"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oyy-pM-ZIk">
                             <rect key="frame" x="0.0" y="25" width="344" height="50"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên và sdt" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R2J-Dz-rY5">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập tên và sdt" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R2J-Dz-rY5">
                                     <rect key="frame" x="10" y="0.0" width="324" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="textColor" name="white"/>
-                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                    <color key="textColor" name="n black"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
@@ -274,7 +275,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                             </subviews>
-                            <color key="backgroundColor" name="navi"/>
+                            <color key="backgroundColor" name="n white"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="5Pe-Ai-Bvj"/>
                                 <constraint firstItem="R2J-Dz-rY5" firstAttribute="leading" secondItem="oyy-pM-ZIk" secondAttribute="leading" constant="10" id="7E7-GY-glQ"/>
@@ -297,7 +298,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="black"/>
+            <color key="backgroundColor" name="n wgrey"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kM3-kf-dh1" secondAttribute="trailing" constant="15" id="0jT-SN-hH1"/>
                 <constraint firstItem="iRW-6N-K7i" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1kg-E3-tJC"/>
@@ -327,17 +328,20 @@
     </objects>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
-        <namedColor name="black">
-            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="gray">
             <color red="0.69199997186660767" green="0.70599997043609619" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="green">
-            <color red="0.14900000393390656" green="0.64499998092651367" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="n black">
+            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="navi">
-            <color red="0.1809999942779541" green="0.23800000548362732" blue="0.289000004529953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="n wgrey">
+            <color red="0.95599997043609619" green="0.95599997043609619" blue="0.95599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="n white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="n yellow">
+            <color red="0.95200002193450928" green="0.49099999666213989" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

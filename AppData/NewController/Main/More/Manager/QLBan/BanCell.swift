@@ -9,6 +9,7 @@ import UIKit
 
 class BanCell: UITableViewCell {
 
+    @IBOutlet var vItem: UIView!
     @IBOutlet weak var lbTableName: UILabel!
     var actionEdit: ClosureCustom<FTable>?
     var actionDelete: ClosureCustom<FTable>?
@@ -17,8 +18,8 @@ class BanCell: UITableViewCell {
     var item = FTable()
     override func awakeFromNib() {
         super.awakeFromNib()
-        bEdit.layer.cornerRadius = C.CornerRadius.corner5
-        bDelete.layer.cornerRadius = C.CornerRadius.corner5
+        vItem.layer.cornerRadius = C.CornerRadius.corner10
+
         setupData()
     }
     func bindData(item: FTable){

@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -24,6 +24,7 @@
             <connections>
                 <outlet property="V1" destination="tCp-8k-lMp" id="z9w-ys-qtL"/>
                 <outlet property="bXacNhan" destination="8Dw-xE-cSz" id="2gR-P3-3Lo"/>
+                <outlet property="lbTitle" destination="v3e-aO-7zF" id="wlx-h8-esv"/>
                 <outlet property="tfTenBan" destination="6sb-3t-ObS" id="kub-4s-yQS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -35,15 +36,16 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yPv-rQ-qle" userLabel="top">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="n yellow"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBA-Nm-JAu" userLabel="nav">
                     <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thêm bàn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v3e-aO-7zF">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <color key="tintColor" name="n white"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
-                            <color key="textColor" name="white"/>
+                            <color key="textColor" name="n white"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJB-Rq-Mh7" userLabel="back">
@@ -52,7 +54,7 @@
                                 <constraint firstAttribute="height" constant="35" id="kKb-Bz-C4y"/>
                                 <constraint firstAttribute="width" constant="35" id="pM7-5z-gkG"/>
                             </constraints>
-                            <color key="tintColor" name="white"/>
+                            <color key="tintColor" name="n white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             <state key="normal" image="chevron.backward" catalog="system"/>
                             <connections>
@@ -80,16 +82,16 @@
                                 <constraint firstAttribute="height" constant="20" id="W7p-hI-Grw"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
-                            <color key="textColor" name="white"/>
+                            <color key="textColor" name="n black"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tCp-8k-lMp">
                             <rect key="frame" x="0.0" y="25" width="384" height="50"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên bàn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6sb-3t-ObS">
-                                    <rect key="frame" x="5" y="0.0" width="374" height="50"/>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập tên bàn" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6sb-3t-ObS">
+                                    <rect key="frame" x="10" y="0.0" width="364" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="textColor" name="white"/>
+                                    <color key="textColor" name="n black"/>
                                     <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
                                     <userDefinedRuntimeAttributes>
@@ -99,13 +101,13 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                             </subviews>
-                            <color key="backgroundColor" name="navi"/>
+                            <color key="backgroundColor" name="n white"/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="6sb-3t-ObS" secondAttribute="bottom" id="92B-JM-7tN"/>
                                 <constraint firstAttribute="height" constant="50" id="EaM-vu-Fjs"/>
                                 <constraint firstItem="6sb-3t-ObS" firstAttribute="top" secondItem="tCp-8k-lMp" secondAttribute="top" id="afT-GE-Eso"/>
-                                <constraint firstAttribute="trailing" secondItem="6sb-3t-ObS" secondAttribute="trailing" constant="5" id="hzT-gO-ikS"/>
-                                <constraint firstItem="6sb-3t-ObS" firstAttribute="leading" secondItem="tCp-8k-lMp" secondAttribute="leading" constant="5" id="pWJ-98-VZp"/>
+                                <constraint firstAttribute="trailing" secondItem="6sb-3t-ObS" secondAttribute="trailing" constant="10" id="hzT-gO-ikS"/>
+                                <constraint firstItem="6sb-3t-ObS" firstAttribute="leading" secondItem="tCp-8k-lMp" secondAttribute="leading" constant="10" id="pWJ-98-VZp"/>
                             </constraints>
                         </view>
                     </subviews>
@@ -122,11 +124,11 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Dw-xE-cSz">
                     <rect key="frame" x="15" y="187" width="384" height="44"/>
-                    <color key="backgroundColor" name="green"/>
+                    <color key="backgroundColor" name="n yellow"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="u20-Sq-rct"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Xác nhận"/>
                     <connections>
@@ -135,7 +137,7 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="black"/>
+            <color key="backgroundColor" name="n wgrey"/>
             <constraints>
                 <constraint firstItem="yPv-rQ-qle" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2vX-Mi-Rux"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="8Dw-xE-cSz" secondAttribute="trailing" constant="15" id="40y-J1-IR4"/>
@@ -156,20 +158,20 @@
     </objects>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
-        <namedColor name="black">
-            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="gray">
             <color red="0.69199997186660767" green="0.70599997043609619" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="green">
-            <color red="0.14900000393390656" green="0.64499998092651367" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="n black">
+            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="navi">
-            <color red="0.1809999942779541" green="0.23800000548362732" blue="0.289000004529953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="n wgrey">
+            <color red="0.95599997043609619" green="0.95599997043609619" blue="0.95599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="white">
+        <namedColor name="n white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="n yellow">
+            <color red="0.95200002193450928" green="0.49099999666213989" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

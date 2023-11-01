@@ -9,6 +9,8 @@ import UIKit
 
 class ThemDanhMucVC: BaseVC {
 
+    @IBOutlet var lbTieuDe: UILabel!
+    var tieuDe: String =  "Thêm danh mục"
     var statusThemHoacSua: Int = 1 //1 them, 2 sua
     var item = FCategory()
     var actionOK: ClosureAction?
@@ -17,8 +19,8 @@ class ThemDanhMucVC: BaseVC {
     @IBOutlet var VTFDanhMuc: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        VTFDanhMuc.layer.cornerRadius = C.CornerRadius.corner5
-        bXacNhan.layer.cornerRadius = C.CornerRadius.corner5
+        VTFDanhMuc.layer.cornerRadius = C.CornerRadius.corner10
+        bXacNhan.layer.cornerRadius = C.CornerRadius.corner10
         setupData()
     }
     @IBAction func xacNhanPressed(_ sender: Any) {
@@ -35,12 +37,15 @@ class ThemDanhMucVC: BaseVC {
     func bindDataSua(item: FCategory, trangThai: Int){
         self.item = item
         statusThemHoacSua = trangThai
+        tieuDe = "Sửa danh mục"
     }
     func setupData() {
+        lbTieuDe.text = tieuDe
         tfDanhMuc.text = self.item.name ?? nil
     }
     func createCategory(){
         item.sign()
+       
         self.showLoading()
         ServiceManager.common.createCategory(param: item){
             (response) in
@@ -56,6 +61,9 @@ class ThemDanhMucVC: BaseVC {
     }
     func updateCategory(){
         item.sign()
+        item.products = nil
+        print("edit")
+        print(item.toJSON())
         self.showLoading()
         ServiceManager.common.updateCategory(param: item){
             (response) in

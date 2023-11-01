@@ -45,7 +45,7 @@
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Còn trống: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUI-eH-DT0" userLabel="Dang nhap">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Còn trống: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUI-eH-DT0" userLabel="ban">
                             <rect key="frame" x="15" y="35" width="363" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="rOz-to-azb"/>

@@ -31,16 +31,19 @@ class ThemMonAnCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+        
+        
+       
     }
     func setupUI(){
-        V1.layer.cornerRadius = C.CornerRadius.corner5
-        V2.layer.cornerRadius = C.CornerRadius.corner5
-        V3.layer.cornerRadius = C.CornerRadius.corner5
-        V4.layer.cornerRadius = C.CornerRadius.corner5
-        V5.layer.cornerRadius = C.CornerRadius.corner5
-        bChonAnh.layer.cornerRadius = C.CornerRadius.corner5
-        imgMonAn.layer.cornerRadius = C.CornerRadius.corner5
-        bXacNhan.layer.cornerRadius = C.CornerRadius.corner5
+        V1.layer.cornerRadius = C.CornerRadius.corner10
+        V2.layer.cornerRadius = C.CornerRadius.corner10
+        V3.layer.cornerRadius = C.CornerRadius.corner10
+        V4.layer.cornerRadius = C.CornerRadius.corner10
+        V5.layer.cornerRadius = C.CornerRadius.corner10
+        bChonAnh.layer.cornerRadius = C.CornerRadius.corner10
+        imgMonAn.layer.cornerRadius = C.CornerRadius.corner10
+        bXacNhan.layer.cornerRadius = C.CornerRadius.corner10
     }
     func bindDataCategories(list: [FCategory]){
         self.listCategory = list

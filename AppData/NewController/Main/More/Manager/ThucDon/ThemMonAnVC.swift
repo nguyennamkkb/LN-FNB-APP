@@ -10,6 +10,8 @@ import ObjectMapper
 
 class ThemMonAnVC: BaseVC {
 
+    @IBOutlet var lbTieuDe: UILabel!
+    var tieuDe: String = "Thêm món ăn"
     var listCategory = [FCategory]()
     var item = FProduct()
     var actionOK: ClosureAction?
@@ -22,11 +24,12 @@ class ThemMonAnVC: BaseVC {
         tableView.dataSource = self
         self.tableView.registerCell(nibName: "ThemMonAnCell")
         getCategories()
-//        print(trangThaiSua)
+        lbTieuDe.text = tieuDe
     }
     func bindDataSua(item: FProduct, trangThai: Int){
         self.item = item
         self.trangThaiSua = trangThai
+        tieuDe = "Sửa món ăn"
 
     }
     func getCategories(){

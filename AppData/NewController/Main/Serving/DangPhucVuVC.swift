@@ -11,21 +11,53 @@ import WebKit
 
 class DangPhucVuVC: BaseVC {
 
+    @IBOutlet var vDangXuat: UIView!
+    @IBOutlet var vChonMayIn: UIView!
+    @IBOutlet var vCuaHang: UIView!
     private let dummyPrinter = DummyPrinter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dummyPrinter.ticketRender = self
+        vChonMayIn.layer.cornerRadius = C.CornerRadius.corner10
+        vCuaHang.layer.cornerRadius = C.CornerRadius.corner10
+        vDangXuat.layer.cornerRadius = C.CornerRadius.corner10
         
     }
     @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
     }
     
+    @IBAction func dangXuatPressed(_ sender: Any) {
+        let vc = LoginVC()
+        self.wrapRoot(vc: vc)
+    }
     @IBAction func show(_ sender: Any) {
         let vc = BluetoothPrinterSelectTableViewController()
         vc.bindData(data: bluetoothPrinterManager)
         self.pushVC(controller: vc)
+    }
+    @IBAction func inThuPressed(_ sender: Any) {
+        let vc = AlertVC()
+        vc.bindData(s: "Đang in thử")
+        self.presentFullScreen(vc: vc)
+        
+        
+        let receipt = Receipt(.init(maxWidthDensity: 380 , fontDensity: 12, encoding: .utf8))
+        <<~ .style(.initialize)
+        <<~ .page(.printAndFeed(lines: 0))
+        <<~ .layout(.justification(.center))
+        <<~ .layout(.lineSpace(.l1_8))
+        <<< CommonPrint.removeVietnameseDiacritics(from: "IN THU")
+        <<~ .page(.printAndFeed(lines: 1))
+        <<< CommonPrint.removeVietnameseDiacritics(from: "Ung dung LN Quan ly nha hang")
+        <<~ .cursor(.lineFeed)
+        <<< Command.cursor(.lineFeed)
+        <<~ .cursor(.lineFeed)
+        
+        if bluetoothPrinterManager.canPrint {
+            bluetoothPrinterManager.write(Data(receipt.data))
+        }
     }
     func printUIView(view: UIView){
         let vc = AlertVC()

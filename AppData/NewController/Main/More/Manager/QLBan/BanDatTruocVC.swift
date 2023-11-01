@@ -18,7 +18,7 @@ class BanDatTruocVC: BaseVC {
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        bAdd.layer.cornerRadius = C.CornerRadius.corner5
+        
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "BanDatTruocCell")
@@ -30,6 +30,7 @@ class BanDatTruocVC: BaseVC {
     }
     
     func setupUI(){
+        bAdd.layer.cornerRadius = C.CornerRadius.corner10
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl) 

@@ -45,8 +45,8 @@ class DanhMucMonVC: BaseVC {
         refreshControl.endRefreshing()
     }
     func setupUI(){
-        VSearch.layer.cornerRadius = C.CornerRadius.corner5
-        bAdd.layer.cornerRadius = C.CornerRadius.corner5
+        VSearch.layer.cornerRadius = C.CornerRadius.corner10
+        bAdd.layer.cornerRadius = C.CornerRadius.corner10
         
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)

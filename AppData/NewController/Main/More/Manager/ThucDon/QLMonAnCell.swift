@@ -9,6 +9,7 @@ import UIKit
 
 class QLMonAnCell: UITableViewCell {
 
+    @IBOutlet var vItem: UIView!
     @IBOutlet var lbName: UILabel!
     var item = FProduct()
     var actionEdit: ClosureCustom<FProduct>?
@@ -17,8 +18,8 @@ class QLMonAnCell: UITableViewCell {
     @IBOutlet var bEdit: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-        bEdit.layer.cornerRadius = C.CornerRadius.corner5
-        bDelete.layer.cornerRadius = C.CornerRadius.corner5
+        vItem.layer.cornerRadius = C.CornerRadius.corner10
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

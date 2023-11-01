@@ -24,62 +24,55 @@
                 <rect key="frame" x="0.0" y="0.0" width="432" height="178"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YuW-Lw-MXc" userLabel="line">
-                        <rect key="frame" x="15" y="44" width="402" height="0.6666666666666643"/>
-                        <color key="backgroundColor" white="1" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="0.5" id="Lpr-qC-AUe"/>
-                        </constraints>
-                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bVi-jV-7Hb">
-                        <rect key="frame" x="15" y="0.0" width="402" height="44"/>
+                        <rect key="frame" x="15" y="5" width="402" height="50"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bò mỹ vị" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4j1-3c-ijW">
-                                <rect key="frame" x="0.0" y="12.666666666666664" width="62" height="19"/>
+                                <rect key="frame" x="10" y="15.666666666666668" width="62" height="19.000000000000004"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
-                                <color key="textColor" name="white"/>
+                                <color key="textColor" name="n black"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ote-N9-CIH" userLabel="delete">
-                                <rect key="frame" x="377" y="9.6666666666666643" width="25" height="25"/>
-                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <rect key="frame" x="357" y="7.6666666666666643" width="35" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="X1F-2w-HkD"/>
-                                    <constraint firstAttribute="height" constant="25" id="hKk-ZU-5wb"/>
+                                    <constraint firstAttribute="width" constant="35" id="X1F-2w-HkD"/>
+                                    <constraint firstAttribute="height" constant="35" id="hKk-ZU-5wb"/>
                                 </constraints>
-                                <color key="tintColor" name="white"/>
+                                <color key="tintColor" systemColor="systemRedColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="xmark" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="bold"/>
                                 </state>
                                 <connections>
                                     <action selector="deletePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="luu-lM-Z4R"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCC-ZO-7wJ" userLabel="edit">
-                                <rect key="frame" x="342" y="9.6666666666666643" width="25" height="25"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <rect key="frame" x="312" y="7.6666666666666643" width="35" height="35"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="f7N-SC-ieV"/>
-                                    <constraint firstAttribute="width" constant="25" id="lw7-SC-XdJ"/>
+                                    <constraint firstAttribute="height" constant="35" id="f7N-SC-ieV"/>
+                                    <constraint firstAttribute="width" constant="35" id="lw7-SC-XdJ"/>
                                 </constraints>
-                                <color key="tintColor" name="white"/>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="pencil" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                <state key="normal" image="pencil.line" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="bold"/>
                                 </state>
                                 <connections>
                                     <action selector="editPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kkr-Vi-31O"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="n white"/>
                         <constraints>
-                            <constraint firstItem="4j1-3c-ijW" firstAttribute="leading" secondItem="bVi-jV-7Hb" secondAttribute="leading" id="KqF-L6-qSK"/>
-                            <constraint firstAttribute="height" constant="44" id="M0h-k9-CUh"/>
+                            <constraint firstItem="4j1-3c-ijW" firstAttribute="leading" secondItem="bVi-jV-7Hb" secondAttribute="leading" constant="10" id="KqF-L6-qSK"/>
+                            <constraint firstAttribute="height" constant="50" id="M0h-k9-CUh"/>
                             <constraint firstItem="ote-N9-CIH" firstAttribute="leading" secondItem="KCC-ZO-7wJ" secondAttribute="trailing" constant="10" id="WzP-t3-k21"/>
                             <constraint firstItem="KCC-ZO-7wJ" firstAttribute="centerY" secondItem="bVi-jV-7Hb" secondAttribute="centerY" id="b4j-om-Ni3"/>
-                            <constraint firstAttribute="trailing" secondItem="ote-N9-CIH" secondAttribute="trailing" id="fYn-8e-3ab"/>
+                            <constraint firstAttribute="trailing" secondItem="ote-N9-CIH" secondAttribute="trailing" constant="10" id="fYn-8e-3ab"/>
                             <constraint firstItem="4j1-3c-ijW" firstAttribute="centerY" secondItem="bVi-jV-7Hb" secondAttribute="centerY" id="fko-F9-wRD"/>
                             <constraint firstItem="ote-N9-CIH" firstAttribute="centerY" secondItem="bVi-jV-7Hb" secondAttribute="centerY" id="o7U-MZ-eN6"/>
                         </constraints>
@@ -87,12 +80,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="bVi-jV-7Hb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="3ph-Yx-JnN"/>
-                    <constraint firstItem="bVi-jV-7Hb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="DDY-dg-9re"/>
-                    <constraint firstAttribute="trailing" secondItem="bVi-jV-7Hb" secondAttribute="trailing" constant="15" id="a9B-vE-JpG"/>
-                    <constraint firstItem="YuW-Lw-MXc" firstAttribute="top" secondItem="bVi-jV-7Hb" secondAttribute="bottom" id="aIc-JI-N6G"/>
-                    <constraint firstItem="bVi-jV-7Hb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hAn-cZ-UM0"/>
-                    <constraint firstAttribute="trailing" secondItem="YuW-Lw-MXc" secondAttribute="trailing" constant="15" id="nKW-HZ-4zr"/>
-                    <constraint firstItem="YuW-Lw-MXc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="pCD-dU-xAX"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="bVi-jV-7Hb" secondAttribute="bottom" constant="10" id="6Tg-4W-WbE"/>
+                    <constraint firstItem="bVi-jV-7Hb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="hAn-cZ-UM0"/>
                     <constraint firstAttribute="trailing" secondItem="bVi-jV-7Hb" secondAttribute="trailing" constant="15" id="yrt-Zf-GDp"/>
                 </constraints>
             </tableViewCellContentView>
@@ -102,14 +91,18 @@
                 <outlet property="bDelete" destination="ote-N9-CIH" id="kcp-ej-Cq5"/>
                 <outlet property="bEdit" destination="KCC-ZO-7wJ" id="Roo-C8-d8e"/>
                 <outlet property="lbName" destination="4j1-3c-ijW" id="0YI-74-08K"/>
+                <outlet property="vItem" destination="bVi-jV-7Hb" id="IkC-YF-buM"/>
             </connections>
-            <point key="canvasLocation" x="328.24427480916029" y="128.87323943661971"/>
+            <point key="canvasLocation" x="328.24427480916029" y="128.16901408450704"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="pencil.line" catalog="system" width="128" height="98"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
-        <namedColor name="white">
+        <namedColor name="n black">
+            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="n white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemRedColor">

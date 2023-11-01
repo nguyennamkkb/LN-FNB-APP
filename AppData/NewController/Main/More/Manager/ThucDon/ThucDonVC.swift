@@ -10,9 +10,12 @@ import FittedSheets
 
 class ThucDonVC: BaseVC {
     
+    @IBOutlet var v2: UIView!
+    @IBOutlet var v1: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        v1.layer.cornerRadius = C.CornerRadius.corner10
+        v2.layer.cornerRadius = C.CornerRadius.corner10
         // Do any additional setup after loading the view.
     }
     @IBAction func backPreesed(_ sender: Any) {

@@ -9,6 +9,7 @@ import UIKit
 
 class DanhMucCell: UITableViewCell {
 
+    @IBOutlet var vItem: UIView!
     var item = FCategory()
     @IBOutlet var lbName: UILabel!
     @IBOutlet var bDelete: UIButton!
@@ -17,8 +18,7 @@ class DanhMucCell: UITableViewCell {
     var actionDelete: ClosureCustom<FCategory>?
     override func awakeFromNib() {
         super.awakeFromNib()
-        bDelete.layer.cornerRadius = C.CornerRadius.corner5
-        bEdit.layer.cornerRadius = C.CornerRadius.corner5
+        vItem.layer.cornerRadius = C.CornerRadius.corner10
     }
 
     func bindData(item: FCategory){

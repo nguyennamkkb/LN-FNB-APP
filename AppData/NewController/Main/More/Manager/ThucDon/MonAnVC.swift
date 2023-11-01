@@ -42,8 +42,8 @@ class MonAnVC: BaseVC {
         self.onBackNav()
     }
     func setupUI(){
-        vSearch.layer.cornerRadius = C.CornerRadius.corner5
-        bAdd.layer.cornerRadius = C.CornerRadius.corner5
+        vSearch.layer.cornerRadius = C.CornerRadius.corner10
+        bAdd.layer.cornerRadius = C.CornerRadius.corner10
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl) // not required when using UITableViewController
@@ -73,7 +73,7 @@ class MonAnVC: BaseVC {
     func deleteProduct(id: Int){
         let param = ParamSearch(user_id: id)
         ServiceManager.common.deleteProduct(param: "\(id)?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
-            (response) in
+            (response) in 
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
 //                self.showAlert(message: "Thành công!")

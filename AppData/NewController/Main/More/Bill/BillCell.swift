@@ -47,6 +47,7 @@ class BillCell: UITableViewCell {
         lbSoDienThoai.text = Common.userMaster.phone
         lbBan.text = "Bàn: \(order.table ?? "")"
         lbSoNguoi.text = "Số người: \(order.person ?? 0)"
+        lbGio.text = "Giờ: \(Common.getDateFormatFromMiliseonds(time: Int64(((bill.timeRequest == nil) ? order.time : "\(bill.timeRequest ?? 0)")!) ?? 0))"
         lbTongTien.text = "\(order.total ?? 0)".currencyFormatting() + "đ"
         DispatchQueue.main.async {
             self.tableView.reloadData()

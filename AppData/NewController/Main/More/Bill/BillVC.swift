@@ -41,6 +41,7 @@ class BillVC: BaseVC {
         bill.order_id = order.id
         bill.table = order.table
         bill.last_total = order.total
+        bill.type = 1
         listItem = Mapper<FProduct>().mapArray(JSONString: order.list_item ?? "") ?? [FProduct]()
         DispatchQueue.main.async {
             self.tableView.reloadData()
@@ -52,10 +53,39 @@ class BillVC: BaseVC {
     }
     
     @IBAction func thanhToanPressed(_ sender: Any) {
+       
         let vc = MessageVC()
         vc.bindData(title: "Đã thanh toán", content: "Hoá đơn này đã được thanh toán?")
         vc.actionOK  = {
-            
+            [weak self] in
+            guard let self = self else {return}
+            self.bill.sign()
+            self.showLoading()
+            ServiceManager.common.createBill(param: bill){
+                (response) in
+                self.hideLoading()
+                if response?.data != nil, response?.statusCode == 200 {
+                    self.bill = Mapper<FBill>().map(JSONObject: response!.data ) ?? FBill()
+                    Thread.runOnBackground {
+                        self.order.sign()
+                        self.order.list_item = nil
+                        ServiceManager.common.ketThucOrder(param: self.order){
+                            (response) in
+                            if response?.statusCode == 200 {
+                                self.showAlert(message: "Thành công")
+                                DispatchQueue.main.async {
+                                    self.tableView.reloadData()
+                                }
+                            } else {
+                              
+                            }
+                        }
+                    }
+                    
+                } else if response?.statusCode == 0 {
+                    self.showAlert(message: "Không thể thêm mới")
+                }
+            }
         }
         let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
         self.present(sheet, animated: true)
@@ -67,7 +97,7 @@ class BillVC: BaseVC {
     }
     func inHoaDon(){
         let vc = AlertVC()
-        vc.bindData(s: "Đang in phiếu bếp")
+        vc.bindData(s: "Đang in hoá đơn")
         self.presentFullScreen(vc: vc)
         
         let receipt = Receipt(.init(maxWidthDensity: 380 , fontDensity: 12, encoding: .utf8))
@@ -82,8 +112,9 @@ class BillVC: BaseVC {
         <<< CommonPrint.removeVietnameseDiacritics(from: "Thong tin dich vu")
         <<~ .page(.printAndFeed(lines: 1))
         <<~ .layout(.justification(.left))
+        <<< CommonPrint.removeVietnameseDiacritics(from: bill.id == nil ? "": "Ma hd: \(bill.id ?? 0)")
         <<< CommonPrint.removeVietnameseDiacritics(from: "Ban: \(order.table ?? "" )")
-        <<< KVItem( "Nguoi: \(order.person!)","\(Common.getDateFormatFromMiliseonds(time: Int64(order.time ?? "0") ?? 0))")
+        <<< KVItem( "Khach: \(order.person!)","\(Common.getDateFormatFromMiliseonds(time: Int64(((bill.timeRequest == nil) ? (order.time ?? "0") : "\(bill.timeRequest ?? 0)")) ?? 0))")
         <<< Dividing.`default`()
         <<< KVItem("Mon", "Thanh tien")
         <<< setLbItem()
@@ -105,18 +136,6 @@ class BillVC: BaseVC {
         }
         
     }
-    func divideAndPrintData(data: [UInt8], chunkCount: Int) {
-        let chunkSize = data.count / chunkCount
-        for i in 0..<chunkCount {
-            let start = i * chunkSize
-            let end = min((i + 1) * chunkSize, data.count)
-            let chunk = Array(data[start..<end])
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(i * 3)) {
-                //                print(chunk.count)
-                bluetoothPrinterManager.write(Data(chunk))
-            }
-        }
-    }
     
     func setLbItem() -> String {
         var str: String = ""
@@ -128,20 +147,7 @@ class BillVC: BaseVC {
         return CommonPrint.removeVietnameseDiacritics(from: str)
     }
     
-    
-    
-    func saveImageToPhotoLibrary(image: UIImage) {
-        // Tạo một đối tượng thể hiện của thư viện ảnh
-        PHPhotoLibrary.shared().performChanges {
-            let request = PHAssetChangeRequest.creationRequestForAsset(from: image)
-        } completionHandler: { success, error in
-            if success {
-                print("Hình ảnh đã được lưu vào thư viện ảnh.")
-            } else {
-                print("Lỗi khi lưu hình ảnh: \(error?.localizedDescription ?? "Lỗi không xác định")")
-            }
-        }
-    }
+
     
 }
 

@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DangPhucVuVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
+                <outlet property="bThuIn" destination="gxj-A5-EyZ" id="fdj-DZ-1c8"/>
                 <outlet property="vChonMayIn" destination="oAN-ks-hf8" id="k02-ZG-DTL"/>
                 <outlet property="vCuaHang" destination="RKp-pz-wQf" id="tVf-ka-aVc"/>
                 <outlet property="vDangXuat" destination="3yV-W7-mlP" id="GnO-Sj-8J1"/>

@@ -98,7 +98,6 @@
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="chevron.right" catalog="system"/>
                             <connections>
                                 <action selector="DanhMucPressed:" destination="-1" eventType="touchUpInside" id="V6e-4q-tR2"/>
                             </connections>
@@ -149,7 +148,6 @@
                             <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                             <color key="tintColor" name="white"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="chevron.right" catalog="system"/>
                             <connections>
                                 <action selector="CacMonAnPressed:" destination="-1" eventType="touchUpInside" id="I8G-YP-ZD1"/>
                             </connections>

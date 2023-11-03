@@ -34,7 +34,7 @@ class DSDangPhucVuVC: BaseVC {
     }
     func getOrders(){
         guard let id = Common.userMaster.id else {return}
-        let param = ParamSearch(user_id: id)
+        let param = ParamSearch(user_id: id,status: 1)
         ServiceManager.common.getAllOrder(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {

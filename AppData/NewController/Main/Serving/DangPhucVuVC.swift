@@ -11,14 +11,23 @@ import WebKit
 
 class DangPhucVuVC: BaseVC {
 
+    @IBOutlet var bThuIn: UIButton!
     @IBOutlet var vDangXuat: UIView!
     @IBOutlet var vChonMayIn: UIView!
     @IBOutlet var vCuaHang: UIView!
-    private let dummyPrinter = DummyPrinter()
+    
+    
+    
+    
+    
+    
+    private let dummyPrinter =
+    DummyPrinter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dummyPrinter.ticketRender = self
+        bThuIn.layer.cornerRadius = C.CornerRadius.corner5
         vChonMayIn.layer.cornerRadius = C.CornerRadius.corner10
         vCuaHang.layer.cornerRadius = C.CornerRadius.corner10
         vDangXuat.layer.cornerRadius = C.CornerRadius.corner10

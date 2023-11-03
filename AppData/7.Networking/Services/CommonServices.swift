@@ -20,6 +20,8 @@ fileprivate class ListCommonService {
     static let category = ServiceManager.ROOT + "categories"
     static let product = ServiceManager.ROOT + "products"
     static let order = ServiceManager.ROOT + "orders"
+    static let orderKetThuc = ServiceManager.ROOT + "orders/ketthuc"
+    static let bill = ServiceManager.ROOT + "bills"
     static let verify = ServiceManager.ROOT + "user/verify"
 }
 
@@ -32,7 +34,9 @@ fileprivate enum ECommonURLs {
     case product
     case order
     case orderDatTruoc
+    case orderKetThuc
     case verify
+    case bill
     
     
     func getPath() -> String {
@@ -55,6 +59,10 @@ fileprivate enum ECommonURLs {
             return ListCommonService.order + "/dattruoc"
         case .verify:
             return ListCommonService.verify
+        case .bill:
+            return ListCommonService.bill
+        case .orderKetThuc:
+            return ListCommonService.orderKetThuc
 }
         func getMethod() -> HTTPMethod {
             switch self {
@@ -500,6 +508,25 @@ class CommonServices {
             }
         }
     }
+    func ketThucOrder(param: FOrder, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.orderKetThuc.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
     //
     func createDatTruoc(param: FOrder, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.orderDatTruoc.getPath()
@@ -559,6 +586,27 @@ class CommonServices {
         }
     }
     
+    // bill
+    
+    func createBill(param: FBill, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.bill.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
     
 //
 //

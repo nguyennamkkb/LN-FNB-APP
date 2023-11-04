@@ -13,7 +13,7 @@ import ObjectMapper
 
 class BillVC: BaseVC {
     
-    
+
     @IBOutlet weak var vPrint: UIView!
     @IBOutlet weak var vPay: UIView!
     
@@ -98,7 +98,8 @@ class BillVC: BaseVC {
     func inHoaDon(){
         let vc = AlertVC()
         vc.bindData(s: "Đang in hoá đơn")
-        self.presentFullScreen(vc: vc)
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false)
         
         let receipt = Receipt(.init(maxWidthDensity: 380 , fontDensity: 12, encoding: .utf8))
         

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AlertVC: BaseVC {
+class AlertVC: UIViewController {
 
     var actionFinish: ClosureAction?
     var message: String?
@@ -23,7 +23,7 @@ class AlertVC: BaseVC {
         lbMessage?.text = message ?? ""
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             self.actionFinish?()
-            self.dismissVC(animated: false)
+            self.dismiss(animated: false)
         }
     }
     func bindData(s: String){

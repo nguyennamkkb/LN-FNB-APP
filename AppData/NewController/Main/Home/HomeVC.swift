@@ -48,7 +48,8 @@ class HomeVC: BaseVC {
         if dsBan.count <= 0 {
             let vc = AlertVC()
             vc.bindData(s: "Chọn bàn trước")
-            self.pushVC(controller: vc,hidesBottomBarWhenPushed: true, animation: false)
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: false)
             return
         }
         vc.bindData(ban: dsBan)
@@ -104,12 +105,14 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.actionBanDangPhucVu = {
             let vc = AlertVC()
             vc.bindData(s: "Bàn đã có người")
-            self.pushVC(controller: vc,hidesBottomBarWhenPushed: true, animation: false)
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: false)
         }
         cell.actionBanDaDatTruoc = {
             let vc = AlertVC()
             vc.bindData(s: "Bàn đã đặt trước")
-            self.pushVC(controller: vc,hidesBottomBarWhenPushed: true, animation: false)
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: false)
         }
         return cell
     }

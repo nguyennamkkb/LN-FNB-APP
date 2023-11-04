@@ -9,9 +9,10 @@ import UIKit
 
 class HoaDonCell: UITableViewCell {
 
+    @IBOutlet weak var vItem: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        vItem.layer.cornerRadius = C.CornerRadius.corner10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

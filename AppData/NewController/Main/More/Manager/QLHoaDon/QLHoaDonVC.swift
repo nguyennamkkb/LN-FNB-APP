@@ -17,10 +17,13 @@ class QLHoaDonVC: BaseVC {
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "HoaDonCell")
-        vFilter.layer.cornerRadius = C.CornerRadius.corner5
+        vFilter.layer.cornerRadius = C.CornerRadius.corner10
     }
     @IBAction func locPressed(_ sender: Any) {
         
+    }
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
     }
     
 

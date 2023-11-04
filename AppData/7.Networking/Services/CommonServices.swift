@@ -608,7 +608,7 @@ class CommonServices {
         }
     }
     func getAllBill(param: String, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
-        let router = ECommonURLs.order.getPath() + "/\(param)"
+        let router = ECommonURLs.bill.getPath() + "/\(param)"
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }

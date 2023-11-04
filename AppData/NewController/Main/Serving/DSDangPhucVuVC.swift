@@ -11,6 +11,7 @@ import ObjectMapper
 class DSDangPhucVuVC: BaseVC {
 
     
+    @IBOutlet weak var bCapNhat: UIButton!
     let refreshControl = UIRefreshControl()
     var tableData: [FOrder] = []
     @IBOutlet var tableView: UITableView!
@@ -24,15 +25,20 @@ class DSDangPhucVuVC: BaseVC {
         setupUI()
     }
     func setupUI(){
+        bCapNhat.layer.cornerRadius = C.CornerRadius.corner10
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         tableView.addSubview(refreshControl)
+    }
+    @IBAction func capNhatPressed(_ sender: Any) {
+        getOrders()
     }
     @objc func refresh(_ sender: AnyObject) {
         getOrders()
         refreshControl.endRefreshing()
     }
     func getOrders(){
+        self.showLoading()
         guard let id = Common.userMaster.id else {return}
         let param = ParamSearch(user_id: id,status: 1)
         ServiceManager.common.getAllOrder(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
@@ -45,6 +51,7 @@ class DSDangPhucVuVC: BaseVC {
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể thêm mới")
             }
+            self.hideLoading()
         }
     }
 

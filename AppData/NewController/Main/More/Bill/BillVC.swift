@@ -40,7 +40,9 @@ class BillVC: BaseVC {
         bill.user_id = order.user_id
         bill.order_id = order.id
         bill.table = order.table
+        bill.person = order.person
         bill.last_total = order.total
+        
         bill.type = 1
         listItem = Mapper<FProduct>().mapArray(JSONString: order.list_item ?? "") ?? [FProduct]()
         DispatchQueue.main.async {

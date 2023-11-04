@@ -14,6 +14,7 @@ class FBill: Mappable {
     var order_id: Int?
     var type: Int?
     var last_total: Int?
+    var person: Int?
     var table: String?
     var note: String?
     var voucher: String?
@@ -37,6 +38,7 @@ class FBill: Mappable {
         order_id <- map["order_id"]
         type <- map["type"]
         last_total <- map["last_total"]
+        person <- map["person"]
         table <- map["table"]
         note <- map["note"]
         voucher <- map["voucher"]

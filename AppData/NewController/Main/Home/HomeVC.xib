@@ -3,7 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
+                <outlet property="bCapNhat" destination="3UR-ke-s6L" id="Gnx-bT-3Jk"/>
                 <outlet property="bDatBan" destination="lni-pD-dWG" id="Li9-Hs-N95"/>
                 <outlet property="btnChonMon" destination="mWt-nh-LDd" id="MOL-av-Ppz"/>
                 <outlet property="collectionView" destination="chs-4a-359" id="h6B-aV-pLu"/>
@@ -36,7 +37,7 @@
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bmJ-4i-Pmz">
                     <rect key="frame" x="0.0" y="59" width="393" height="100"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danh sách bàn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNA-9r-Rtr" userLabel="Dang nhap">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Danh sách bàn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNA-9r-Rtr" userLabel="dan dang phuc vu">
                             <rect key="frame" x="15" y="0.0" width="363" height="35"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="35" id="9gO-dQ-8Pk"/>
@@ -45,6 +46,19 @@
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UR-ke-s6L" userLabel="bSync">
+                            <rect key="frame" x="343" y="0.0" width="35" height="35"/>
+                            <color key="backgroundColor" name="n white"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="KbH-Bp-KbZ"/>
+                                <constraint firstAttribute="width" constant="35" id="xtp-jZ-Umb"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_sync"/>
+                            <connections>
+                                <action selector="capNhatPressed:" destination="-1" eventType="touchUpInside" id="ImX-zY-Opr"/>
+                            </connections>
+                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Còn trống: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUI-eH-DT0" userLabel="ban">
                             <rect key="frame" x="15" y="35" width="363" height="20"/>
                             <constraints>
@@ -102,12 +116,14 @@
                         <constraint firstAttribute="height" constant="100" id="0WL-as-nvB"/>
                         <constraint firstItem="hUI-eH-DT0" firstAttribute="top" secondItem="gNA-9r-Rtr" secondAttribute="bottom" id="AcZ-g9-XVO"/>
                         <constraint firstAttribute="trailing" secondItem="gNA-9r-Rtr" secondAttribute="trailing" constant="15" id="PHR-16-yR4"/>
+                        <constraint firstAttribute="trailing" secondItem="3UR-ke-s6L" secondAttribute="trailing" constant="15" id="azb-b9-LuP"/>
                         <constraint firstItem="gNA-9r-Rtr" firstAttribute="top" secondItem="bmJ-4i-Pmz" secondAttribute="top" id="bVd-79-FTg"/>
                         <constraint firstItem="hUI-eH-DT0" firstAttribute="leading" secondItem="bmJ-4i-Pmz" secondAttribute="leading" constant="15" id="hPN-96-s9Z"/>
                         <constraint firstAttribute="bottom" secondItem="wVo-SS-5TN" secondAttribute="bottom" constant="5" id="jc0-rn-xS3"/>
                         <constraint firstItem="gNA-9r-Rtr" firstAttribute="leading" secondItem="bmJ-4i-Pmz" secondAttribute="leading" constant="15" id="k17-Wb-0Mm"/>
                         <constraint firstItem="wVo-SS-5TN" firstAttribute="leading" secondItem="bmJ-4i-Pmz" secondAttribute="leading" constant="15" id="qP7-z2-WD2"/>
                         <constraint firstAttribute="trailing" secondItem="hUI-eH-DT0" secondAttribute="trailing" constant="15" id="uqV-kt-vH6"/>
+                        <constraint firstItem="3UR-ke-s6L" firstAttribute="centerY" secondItem="gNA-9r-Rtr" secondAttribute="centerY" id="wBl-CR-Noy"/>
                         <constraint firstAttribute="trailing" secondItem="wVo-SS-5TN" secondAttribute="trailing" constant="15" id="wd1-Mf-G5H"/>
                     </constraints>
                 </view>
@@ -141,6 +157,7 @@
         </view>
     </objects>
     <resources>
+        <image name="ic_sync" width="24" height="24"/>
         <namedColor name="n wgrey">
             <color red="0.95599997043609619" green="0.95599997043609619" blue="0.95599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

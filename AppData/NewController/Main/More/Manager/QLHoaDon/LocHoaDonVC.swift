@@ -9,10 +9,11 @@ import UIKit
 
 class LocHoaDonVC: BaseVC {
     
+    var layThoiGian: ((Int64,Int64)->Void)?
     @IBOutlet weak var bXacNhan: UIButton!
     let datePickerTuNgay = UIDatePicker()
     let datePickerDenNgay = UIDatePicker()
-    @IBOutlet weak var ftDenNgay: UITextField!
+    @IBOutlet weak var tfDenNgay: UITextField!
     @IBOutlet weak var tfTuNgay: UITextField!
     @IBOutlet weak var v2: UIView!
     @IBOutlet weak var v1: UIView!
@@ -43,15 +44,21 @@ class LocHoaDonVC: BaseVC {
         if #available(iOS 13.4, *) {
             datePickerDenNgay.preferredDatePickerStyle = .wheels
         }
-        ftDenNgay.inputView = datePickerDenNgay
+        tfDenNgay.inputView = datePickerDenNgay
         
     }
     @IBAction func xacNhanPressed(_ sender: Any) {
+
+        guard let tuNgay = tfTuNgay.text else {return}
+        guard let denNgay = tfDenNgay.text else {return}
+        let tuNgayMilis:Int64 = Common.dateStringToMilis(dateString: tuNgay) ?? 0
+        let denNgayMilis:Int64 = Common.dateStringToMilis(dateString: denNgay) ?? 0 + 86399999
+        layThoiGian?(tuNgayMilis,denNgayMilis)
         self.onBackNav()
     }
     func setupData(){
         tfTuNgay.text = formatDate(date: Date())
-        ftDenNgay.text = formatDate(date: Date())
+        tfDenNgay.text = formatDate(date: Date())
         
     }
    
@@ -59,7 +66,7 @@ class LocHoaDonVC: BaseVC {
         tfTuNgay.text = formatDate(date: datePicker.date)
     }
     @objc func dateChangeDen(datePicker: UIDatePicker) {
-        ftDenNgay.text = formatDate(date: datePicker.date)
+        tfDenNgay.text = formatDate(date: datePicker.date)
     }
     func formatDate(date: Date) -> String {
         let formatrer =  DateFormatter()

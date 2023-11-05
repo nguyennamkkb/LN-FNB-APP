@@ -81,7 +81,7 @@ class Common {
     }
     public static func  dateStringToMilis(dateString: String) -> Int64? {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
+        dateFormatter.dateFormat = "dd/MM/yyyy"
         dateFormatter.locale = Locale(identifier: "vi_VN")
         
         if let date = dateFormatter.date(from: dateString) {

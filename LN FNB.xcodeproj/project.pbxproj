@@ -12,6 +12,8 @@
 		0B124FED2AD8689100422198 /* ActionBanDangPhucVuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B124FEB2AD8689100422198 /* ActionBanDangPhucVuVC.swift */; };
 		0B124FEE2AD8689100422198 /* ActionBanDangPhucVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B124FEC2AD8689100422198 /* ActionBanDangPhucVuVC.xib */; };
 		0B20C0EA2AE4B700001462FD /* CommonPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20C0E92AE4B700001462FD /* CommonPrint.swift */; };
+		0B3A3B5E2AF7D11900851083 /* BillActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A3B5C2AF7D11900851083 /* BillActionVC.swift */; };
+		0B3A3B5F2AF7D11900851083 /* BillActionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3A3B5D2AF7D11900851083 /* BillActionVC.xib */; };
 		0B3FB9042ACB3C9900B1B974 /* FCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB9032ACB3C9900B1B974 /* FCategory.swift */; };
 		0B3FB91D2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */; };
 		0B3FB91E2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */; };
@@ -192,6 +194,8 @@
 		0B124FEB2AD8689100422198 /* ActionBanDangPhucVuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBanDangPhucVuVC.swift; sourceTree = "<group>"; };
 		0B124FEC2AD8689100422198 /* ActionBanDangPhucVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionBanDangPhucVuVC.xib; sourceTree = "<group>"; };
 		0B20C0E92AE4B700001462FD /* CommonPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPrint.swift; sourceTree = "<group>"; };
+		0B3A3B5C2AF7D11900851083 /* BillActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillActionVC.swift; sourceTree = "<group>"; };
+		0B3A3B5D2AF7D11900851083 /* BillActionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillActionVC.xib; sourceTree = "<group>"; };
 		0B3FB9032ACB3C9900B1B974 /* FCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCategory.swift; sourceTree = "<group>"; };
 		0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemBanDatTruocVC.swift; sourceTree = "<group>"; };
 		0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemBanDatTruocVC.xib; sourceTree = "<group>"; };
@@ -442,6 +446,8 @@
 				0BC72AF32ADEC38C00CC69A1 /* BillCell.xib */,
 				0BC72AF62ADEE47F00CC69A1 /* BillItemCell.swift */,
 				0BC72AF72ADEE47F00CC69A1 /* BillItemCell.xib */,
+				0B3A3B5C2AF7D11900851083 /* BillActionVC.swift */,
+				0B3A3B5D2AF7D11900851083 /* BillActionVC.xib */,
 			);
 			path = Bill;
 			sourceTree = "<group>";
@@ -922,6 +928,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B81D61F2AC736E70003CFF6 /* BanDatTruocVC.xib in Resources */,
+				0B3A3B5F2AF7D11900851083 /* BillActionVC.xib in Resources */,
 				0BF42AD32AB6066B00592A0E /* Roboto-Black.ttf in Resources */,
 				0B3FB9232AC7D2D4003FBCB5 /* QLHoaDonVC.xib in Resources */,
 				0B7B6DAA2AC49820005E89D9 /* DSDangPhucVuVC.xib in Resources */,
@@ -1123,6 +1130,7 @@
 				0BE0392829F82039002CB20F /* ExData.swift in Sources */,
 				0BE038EB29F81F6D002CB20F /* POS_App.xcdatamodeld in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
+				0B3A3B5E2AF7D11900851083 /* BillActionVC.swift in Sources */,
 				0B5D18662A0AA54F004E47FD /* FProduct.swift in Sources */,
 				0B124FE92AD82A5000422198 /* AlertVC.swift in Sources */,
 				0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */,

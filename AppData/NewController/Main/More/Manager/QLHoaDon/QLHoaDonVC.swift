@@ -10,7 +10,7 @@ import ObjectMapper
 import FittedSheets
 
 class QLHoaDonVC: BaseVC {
-
+    var param = ParamSearch(status: 1)
     var actionFilter: ClosureAction?
     @IBOutlet var tableView: UITableView!
     var tableData: [FBill] = []
@@ -21,13 +21,18 @@ class QLHoaDonVC: BaseVC {
         tableView.delegate = self
         self.tableView.registerCell(nibName: "HoaDonCell")
         vFilter.layer.cornerRadius = C.CornerRadius.corner10
+        setupData()
         getHoaDons()
+    }
+    func setupData(){
+        let milliseconds = Int(Date().timeIntervalSince1970 * 1000)
+        param.from = Int64(milliseconds)
+        param.to = Int64(milliseconds + 86399999 )
+        
     }
     func getHoaDons(){
       
         guard let id = Common.userMaster.id else {return}
-        let param = ParamSearch(user_id: id, status: 1)
-        
         ServiceManager.common.getAllBill(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
@@ -42,6 +47,13 @@ class QLHoaDonVC: BaseVC {
     }
     @IBAction func locPressed(_ sender: Any) {
         let vc = LocHoaDonVC()
+        vc.layThoiGian = {
+            [weak self] (tu,den) in
+            guard let self = self else {return}
+            self.param.from = tu
+            self.param.to = den
+            self.getHoaDons()
+        }
         let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
         self.present(sheet, animated: true)
     }

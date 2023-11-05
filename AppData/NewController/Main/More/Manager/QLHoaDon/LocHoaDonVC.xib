@@ -18,7 +18,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LocHoaDonVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
                 <outlet property="bXacNhan" destination="f8Q-n7-zxy" id="jeI-gS-oZx"/>
-                <outlet property="ftDenNgay" destination="T68-EX-UcF" id="SLf-db-iAL"/>
+                <outlet property="tfDenNgay" destination="T68-EX-UcF" id="HDK-lg-KuG"/>
                 <outlet property="tfTuNgay" destination="JJa-j1-BK3" id="CfY-Oj-Keb"/>
                 <outlet property="v1" destination="CQt-vO-QAR" id="aRU-0O-Mai"/>
                 <outlet property="v2" destination="1iO-Um-qfV" id="pfF-tJ-o0P"/>

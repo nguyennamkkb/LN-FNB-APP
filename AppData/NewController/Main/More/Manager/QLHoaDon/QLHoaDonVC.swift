@@ -14,6 +14,7 @@ class QLHoaDonVC: BaseVC {
     var actionFilter: ClosureAction?
     @IBOutlet var tableView: UITableView!
     var tableData: [FBill] = []
+    var bill: FBill? = nil
     @IBOutlet var vFilter: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +32,7 @@ class QLHoaDonVC: BaseVC {
         
     }
     func getHoaDons(){
-      
-        guard let id = Common.userMaster.id else {return}
+        guard let _ = Common.userMaster.id else {return}
         ServiceManager.common.getAllBill(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
@@ -60,7 +60,20 @@ class QLHoaDonVC: BaseVC {
     @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
     }
-    
+    func getOneBill(id: Int){
+        let param = ParamSearch(user_id: Common.userMaster.id ?? 0)
+        print("getOneBill")
+        ServiceManager.common.getOneBill(param: "\(id)?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
+            (response) in
+            self.hideLoading()
+            if response?.data != nil, response?.statusCode == 200 {
+                self.bill = Mapper<FBill>().map(JSONObject: response!.data ) ?? FBill()
+                print(self.bill?.toJSON())
+            } else if response?.statusCode == 0 {
+                self.showAlert(message: "Không thể xoá")
+            }
+        }
+    }
 
 
 }
@@ -73,6 +86,14 @@ extension QLHoaDonVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HoaDonCell", for: indexPath) as? HoaDonCell else { return UITableViewCell()}
         let item = tableData.itemAtIndex(index: indexPath.row) ?? FBill()
         cell.bindData(e: item)
+        
+        cell.ActLayHoaDon = {
+            [weak self] data in
+            guard let self = self else {return}
+            print("va0")
+            self.getOneBill(id: data.id ?? 0)
+        }
+        
         return cell
     }
     

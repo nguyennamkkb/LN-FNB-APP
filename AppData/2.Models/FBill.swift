@@ -18,6 +18,7 @@ class FBill: Mappable {
     var table: String?
     var note: String?
     var voucher: String?
+    var order: FOrder?
     var createAt: String?
     var updateAt: String?
     var status: Int?
@@ -42,6 +43,7 @@ class FBill: Mappable {
         table <- map["table"]
         note <- map["note"]
         voucher <- map["voucher"]
+        order <- map["order"]
         createAt <- map["createAt"]
         updateAt <- map["updateAt"]
         status <- map["status"]

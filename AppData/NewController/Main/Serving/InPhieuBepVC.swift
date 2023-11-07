@@ -70,7 +70,8 @@ class InPhieuBepVC: BaseVC {
 
         let vc = AlertVC()
         vc.bindData(s: "Đang in phiếu bếp")
-        self.presentFullScreen(vc: vc)
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false)
 
 
         let receipt = Receipt(.init(maxWidthDensity: 380 , fontDensity: 12, encoding: .utf8))

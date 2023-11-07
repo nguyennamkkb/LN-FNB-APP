@@ -49,7 +49,8 @@ class DangPhucVuVC: BaseVC {
     @IBAction func inThuPressed(_ sender: Any) {
         let vc = AlertVC()
         vc.bindData(s: "Đang in thử")
-        self.presentFullScreen(vc: vc)
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false)
         
         
         let receipt = Receipt(.init(maxWidthDensity: 380 , fontDensity: 12, encoding: .utf8))
@@ -71,7 +72,8 @@ class DangPhucVuVC: BaseVC {
     func printUIView(view: UIView){
         let vc = AlertVC()
         vc.bindData(s: "Đang in phiếu bếp")
-        self.presentFullScreen(vc: vc)
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false)
         
         let image = view.toImage()
         let resizedImage = image?.resized(toWidth: 125)

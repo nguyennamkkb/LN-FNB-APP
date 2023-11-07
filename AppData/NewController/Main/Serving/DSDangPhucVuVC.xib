@@ -16,6 +16,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DSDangPhucVuVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
+                <outlet property="bCapNhat" destination="IoA-K5-AdZ" id="yc8-li-jG3"/>
                 <outlet property="tableView" destination="8EV-hy-ru9" id="ESh-tM-jd9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -38,11 +39,26 @@
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IoA-K5-AdZ" userLabel="bSync">
+                            <rect key="frame" x="364" y="4.6666666666666643" width="35" height="35"/>
+                            <color key="backgroundColor" name="n white"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="6v9-PB-75h"/>
+                                <constraint firstAttribute="height" constant="35" id="eDY-lF-deL"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="ic_sync"/>
+                            <connections>
+                                <action selector="capNhatPressed:" destination="-1" eventType="touchUpInside" id="x5l-yJ-Zha"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="IoA-K5-AdZ" firstAttribute="centerY" secondItem="Foc-6l-8cI" secondAttribute="centerY" id="5Ps-ev-IaM"/>
                         <constraint firstAttribute="trailing" secondItem="DRw-5z-EaM" secondAttribute="trailing" id="IKs-bk-ivi"/>
                         <constraint firstItem="DRw-5z-EaM" firstAttribute="top" secondItem="Foc-6l-8cI" secondAttribute="top" id="SBh-ps-IRh"/>
+                        <constraint firstAttribute="trailing" secondItem="IoA-K5-AdZ" secondAttribute="trailing" constant="15" id="TZo-DK-C5E"/>
                         <constraint firstItem="DRw-5z-EaM" firstAttribute="leading" secondItem="Foc-6l-8cI" secondAttribute="leading" id="gg6-1v-bMg"/>
                         <constraint firstAttribute="bottom" secondItem="DRw-5z-EaM" secondAttribute="bottom" id="iV6-Ur-edz"/>
                         <constraint firstAttribute="height" constant="44" id="tu9-xn-6m6"/>
@@ -72,8 +88,12 @@
         </view>
     </objects>
     <resources>
+        <image name="ic_sync" width="24" height="24"/>
         <namedColor name="n wgrey">
             <color red="0.95599997043609619" green="0.95599997043609619" blue="0.95599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="n white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="n yellow">
             <color red="0.95200002193450928" green="0.49099999666213989" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

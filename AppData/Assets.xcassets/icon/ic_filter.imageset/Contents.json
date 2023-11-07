@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Filter.svg",
+      "filename" : "Filter.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Filter@2x.svg",
+      "filename" : "Filter@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Filter@3x.svg",
+      "filename" : "Filter@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

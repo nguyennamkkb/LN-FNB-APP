@@ -10,6 +10,7 @@ import ObjectMapper
 
 class HomeVC: BaseVC {
     
+    @IBOutlet weak var bCapNhat: UIButton!
     @IBOutlet var vTop: UIView!
     @IBOutlet var bDatBan: UIButton!
     @IBOutlet var tenBanDaChon: UILabel!
@@ -32,11 +33,16 @@ class HomeVC: BaseVC {
 
     func setupUI(){
         vTop.addCornerRadiusToBottom(radius: 10.0)
-        btnChonMon.layer.cornerRadius = C.CornerRadius.corner5
-        bDatBan.layer.cornerRadius = C.CornerRadius.corner5
+        
+        bCapNhat.layer.cornerRadius = C.CornerRadius.corner10
+        btnChonMon.layer.cornerRadius = C.CornerRadius.corner10
+        bDatBan.layer.cornerRadius = C.CornerRadius.corner10
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
         collectionView.refreshControl = refreshControl
+    }
+    @IBAction func capNhatPressed(_ sender: Any) {
+        getTables()
     }
     @IBAction func banDatTruocPressed(_ sender: Any) {
         self.pushVC(controller: BanDatTruocVC())
@@ -48,7 +54,8 @@ class HomeVC: BaseVC {
         if dsBan.count <= 0 {
             let vc = AlertVC()
             vc.bindData(s: "Chọn bàn trước")
-            self.pushVC(controller: vc,hidesBottomBarWhenPushed: true, animation: false)
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: false)
             return
         }
         vc.bindData(ban: dsBan)
@@ -62,6 +69,7 @@ class HomeVC: BaseVC {
         collectionView.refreshControl?.endRefreshing()
     }
     func getTables(){
+        self.showLoading()
         guard let id = Common.userMaster.id else {return}
         
         let param = ParamSearch(user_id: id, keySearch: "")
@@ -78,6 +86,7 @@ class HomeVC: BaseVC {
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể thêm mới")
             }
+            self.hideLoading()
         }
     }
 }
@@ -104,12 +113,14 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         cell.actionBanDangPhucVu = {
             let vc = AlertVC()
             vc.bindData(s: "Bàn đã có người")
-            self.pushVC(controller: vc,hidesBottomBarWhenPushed: true, animation: false)
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: false)
         }
         cell.actionBanDaDatTruoc = {
             let vc = AlertVC()
             vc.bindData(s: "Bàn đã đặt trước")
-            self.pushVC(controller: vc,hidesBottomBarWhenPushed: true, animation: false)
+            vc.modalPresentationStyle = .overFullScreen
+            self.present(vc, animated: false)
         }
         return cell
     }

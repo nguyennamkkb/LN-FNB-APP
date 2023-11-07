@@ -43,6 +43,8 @@ class KichHoatTaiKhoanVC: BaseVC {
             if response?.statusCode == 200 {
                 let vc = AlertVC()
                 vc.bindData(s: "Thành công")
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: false)
                 self.presentFullScreen(vc: vc)
                 vc.actionFinish = {
                     self.onBackNav()

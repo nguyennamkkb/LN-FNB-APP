@@ -11,6 +11,7 @@ import ObjectMapper
 
 class BanDatTruocVC: BaseVC {
     
+    @IBOutlet weak var bCapNhat: UIButton!
     let refreshControl = UIRefreshControl()
     var actionReload: ClosureAction?
     var tableData: [FOrder] = []
@@ -25,11 +26,16 @@ class BanDatTruocVC: BaseVC {
         getOrders()
         setupUI()
     }
+    
+    @IBAction func bCapNhatPressed(_ sender: Any) {
+        getOrders()
+    }
     @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
     }
     
     func setupUI(){
+        bCapNhat.layer.cornerRadius = C.CornerRadius.corner10
         bAdd.layer.cornerRadius = C.CornerRadius.corner10
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
@@ -49,6 +55,7 @@ class BanDatTruocVC: BaseVC {
         self.present(sheet, animated: true)
     }
     func getOrders(){
+        self.showLoading()
         guard let id = Common.userMaster.id else {return}
         let param = ParamSearch(user_id: id, status: 2)
         ServiceManager.common.getAllOrder(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
@@ -61,6 +68,7 @@ class BanDatTruocVC: BaseVC {
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể thêm mới")
             }
+            self.hideLoading()
         }
     }
     func deleteOrder(idOrder: Int){

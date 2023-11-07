@@ -13,7 +13,7 @@ import ObjectMapper
 
 class BillVC: BaseVC {
     
-    
+
     @IBOutlet weak var vPrint: UIView!
     @IBOutlet weak var vPay: UIView!
     
@@ -40,7 +40,9 @@ class BillVC: BaseVC {
         bill.user_id = order.user_id
         bill.order_id = order.id
         bill.table = order.table
+        bill.person = order.person
         bill.last_total = order.total
+        
         bill.type = 1
         listItem = Mapper<FProduct>().mapArray(JSONString: order.list_item ?? "") ?? [FProduct]()
         DispatchQueue.main.async {
@@ -51,41 +53,52 @@ class BillVC: BaseVC {
         order = e
         
     }
-    
-    @IBAction func thanhToanPressed(_ sender: Any) {
-       
-        let vc = MessageVC()
-        vc.bindData(title: "Đã thanh toán", content: "Hoá đơn này đã được thanh toán?")
-        vc.actionOK  = {
-            [weak self] in
-            guard let self = self else {return}
-            self.bill.sign()
-            self.showLoading()
-            ServiceManager.common.createBill(param: bill){
+    func updateOrder(){
+        Thread.runOnBackground {
+            self.order.sign()
+            self.order.list_item = nil
+            ServiceManager.common.ketThucOrder(param: self.order){
                 (response) in
-                self.hideLoading()
-                if response?.data != nil, response?.statusCode == 200 {
-                    self.bill = Mapper<FBill>().map(JSONObject: response!.data ) ?? FBill()
-                    Thread.runOnBackground {
-                        self.order.sign()
-                        self.order.list_item = nil
-                        ServiceManager.common.ketThucOrder(param: self.order){
-                            (response) in
-                            if response?.statusCode == 200 {
-                                self.showAlert(message: "Thành công")
-                                DispatchQueue.main.async {
-                                    self.tableView.reloadData()
-                                }
-                            } else {
-                              
-                            }
-                        }
+                if response?.statusCode == 200 {
+                    self.showAlert(message: "Thành công")
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
                     }
-                    
-                } else if response?.statusCode == 0 {
-                    self.showAlert(message: "Không thể thêm mới")
+                } else {
+                  
                 }
             }
+        }
+    }
+    func taoHoaDon(){
+        self.bill.sign()
+        self.showLoading()
+        ServiceManager.common.createBill(param: bill){
+            (response) in
+            self.hideLoading()
+            if response?.data != nil, response?.statusCode == 200 {
+                self.bill = Mapper<FBill>().map(JSONObject: response!.data ) ?? FBill()
+                self.updateOrder()
+                
+            } else if response?.statusCode == 0 {
+                self.showAlert(message: "Không thể thêm mới")
+            }
+        }
+    }
+    @IBAction func thanhToanPressed(_ sender: Any) {
+       
+        let vc = BillActionVC()
+        vc.actionTienMat = {
+            [weak self] in
+            guard let self = self else {return}
+            self.bill.type = 1
+            self.taoHoaDon()
+        }
+        vc.actionNganHang = {
+            [weak self] in
+            guard let self = self else {return}
+            self.bill.type = 2
+            self.taoHoaDon()
         }
         let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
         self.present(sheet, animated: true)
@@ -98,7 +111,8 @@ class BillVC: BaseVC {
     func inHoaDon(){
         let vc = AlertVC()
         vc.bindData(s: "Đang in hoá đơn")
-        self.presentFullScreen(vc: vc)
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false)
         
         let receipt = Receipt(.init(maxWidthDensity: 380 , fontDensity: 12, encoding: .utf8))
         

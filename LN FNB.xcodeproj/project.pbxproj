@@ -12,6 +12,8 @@
 		0B124FED2AD8689100422198 /* ActionBanDangPhucVuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B124FEB2AD8689100422198 /* ActionBanDangPhucVuVC.swift */; };
 		0B124FEE2AD8689100422198 /* ActionBanDangPhucVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B124FEC2AD8689100422198 /* ActionBanDangPhucVuVC.xib */; };
 		0B20C0EA2AE4B700001462FD /* CommonPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B20C0E92AE4B700001462FD /* CommonPrint.swift */; };
+		0B3A3B5E2AF7D11900851083 /* BillActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3A3B5C2AF7D11900851083 /* BillActionVC.swift */; };
+		0B3A3B5F2AF7D11900851083 /* BillActionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3A3B5D2AF7D11900851083 /* BillActionVC.xib */; };
 		0B3FB9042ACB3C9900B1B974 /* FCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB9032ACB3C9900B1B974 /* FCategory.swift */; };
 		0B3FB91D2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */; };
 		0B3FB91E2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */; };
@@ -54,8 +56,6 @@
 		0B7A4FCC2A8E72600062E878 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7A4FCB2A8E72600062E878 /* Notifications.swift */; };
 		0B7B6D9D2AC47B27005E89D9 /* BillVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B6D9B2AC47B27005E89D9 /* BillVC.swift */; };
 		0B7B6D9E2AC47B27005E89D9 /* BillVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B6D9C2AC47B27005E89D9 /* BillVC.xib */; };
-		0B7B6DA12AC49309005E89D9 /* BillActionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B6D9F2AC49309005E89D9 /* BillActionVC.swift */; };
-		0B7B6DA22AC49309005E89D9 /* BillActionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B6DA02AC49309005E89D9 /* BillActionVC.xib */; };
 		0B7B6DA92AC49820005E89D9 /* DSDangPhucVuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B6DA72AC49820005E89D9 /* DSDangPhucVuVC.swift */; };
 		0B7B6DAA2AC49820005E89D9 /* DSDangPhucVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B7B6DA82AC49820005E89D9 /* DSDangPhucVuVC.xib */; };
 		0B7B6DAD2AC498BE005E89D9 /* BanDangPhucVuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B7B6DAB2AC498BE005E89D9 /* BanDangPhucVuCell.swift */; };
@@ -194,6 +194,8 @@
 		0B124FEB2AD8689100422198 /* ActionBanDangPhucVuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBanDangPhucVuVC.swift; sourceTree = "<group>"; };
 		0B124FEC2AD8689100422198 /* ActionBanDangPhucVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionBanDangPhucVuVC.xib; sourceTree = "<group>"; };
 		0B20C0E92AE4B700001462FD /* CommonPrint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonPrint.swift; sourceTree = "<group>"; };
+		0B3A3B5C2AF7D11900851083 /* BillActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillActionVC.swift; sourceTree = "<group>"; };
+		0B3A3B5D2AF7D11900851083 /* BillActionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillActionVC.xib; sourceTree = "<group>"; };
 		0B3FB9032ACB3C9900B1B974 /* FCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FCategory.swift; sourceTree = "<group>"; };
 		0B3FB91B2AC7B961003FBCB5 /* ThemBanDatTruocVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemBanDatTruocVC.swift; sourceTree = "<group>"; };
 		0B3FB91C2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThemBanDatTruocVC.xib; sourceTree = "<group>"; };
@@ -236,8 +238,6 @@
 		0B7A4FCB2A8E72600062E878 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		0B7B6D9B2AC47B27005E89D9 /* BillVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillVC.swift; sourceTree = "<group>"; };
 		0B7B6D9C2AC47B27005E89D9 /* BillVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillVC.xib; sourceTree = "<group>"; };
-		0B7B6D9F2AC49309005E89D9 /* BillActionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillActionVC.swift; sourceTree = "<group>"; };
-		0B7B6DA02AC49309005E89D9 /* BillActionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillActionVC.xib; sourceTree = "<group>"; };
 		0B7B6DA72AC49820005E89D9 /* DSDangPhucVuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSDangPhucVuVC.swift; sourceTree = "<group>"; };
 		0B7B6DA82AC49820005E89D9 /* DSDangPhucVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DSDangPhucVuVC.xib; sourceTree = "<group>"; };
 		0B7B6DAB2AC498BE005E89D9 /* BanDangPhucVuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanDangPhucVuCell.swift; sourceTree = "<group>"; };
@@ -442,12 +442,12 @@
 			children = (
 				0B7B6D9B2AC47B27005E89D9 /* BillVC.swift */,
 				0B7B6D9C2AC47B27005E89D9 /* BillVC.xib */,
-				0B7B6D9F2AC49309005E89D9 /* BillActionVC.swift */,
-				0B7B6DA02AC49309005E89D9 /* BillActionVC.xib */,
 				0BC72AF22ADEC38C00CC69A1 /* BillCell.swift */,
 				0BC72AF32ADEC38C00CC69A1 /* BillCell.xib */,
 				0BC72AF62ADEE47F00CC69A1 /* BillItemCell.swift */,
 				0BC72AF72ADEE47F00CC69A1 /* BillItemCell.xib */,
+				0B3A3B5C2AF7D11900851083 /* BillActionVC.swift */,
+				0B3A3B5D2AF7D11900851083 /* BillActionVC.xib */,
 			);
 			path = Bill;
 			sourceTree = "<group>";
@@ -928,6 +928,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B81D61F2AC736E70003CFF6 /* BanDatTruocVC.xib in Resources */,
+				0B3A3B5F2AF7D11900851083 /* BillActionVC.xib in Resources */,
 				0BF42AD32AB6066B00592A0E /* Roboto-Black.ttf in Resources */,
 				0B3FB9232AC7D2D4003FBCB5 /* QLHoaDonVC.xib in Resources */,
 				0B7B6DAA2AC49820005E89D9 /* DSDangPhucVuVC.xib in Resources */,
@@ -974,7 +975,6 @@
 				0BD56ACA2AC5DDE800A41312 /* DanhMucMonVC.xib in Resources */,
 				0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */,
 				0BA5D5252AB768C20031FBF9 /* TabBarVC.xib in Resources */,
-				0B7B6DA22AC49309005E89D9 /* BillActionVC.xib in Resources */,
 				0BF42AE32AB619F300592A0E /* SingUpInfoCell.xib in Resources */,
 				0B3FB92C2AC7E1A2003FBCB5 /* LocHoaDonVC.xib in Resources */,
 				0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */,
@@ -1100,7 +1100,6 @@
 				0BE0392A29F82039002CB20F /* ExUIDevice.swift in Sources */,
 				0BF42AAC2AB601A400592A0E /* LoginVC.swift in Sources */,
 				0B5D18602A0AA132004E47FD /* PCustomer.swift in Sources */,
-				0B7B6DA12AC49309005E89D9 /* BillActionVC.swift in Sources */,
 				0BA5D5142AB6D74D0031FBF9 /* ChonMonVC.swift in Sources */,
 				0B45BC992AB9CC670073A380 /* BluetoothHelper.swift in Sources */,
 				0BA5D5182AB6FB2D0031FBF9 /* MonAnCell.swift in Sources */,
@@ -1131,6 +1130,7 @@
 				0BE0392829F82039002CB20F /* ExData.swift in Sources */,
 				0BE038EB29F81F6D002CB20F /* POS_App.xcdatamodeld in Sources */,
 				0BE0391D29F82039002CB20F /* BaseNetworking.swift in Sources */,
+				0B3A3B5E2AF7D11900851083 /* BillActionVC.swift in Sources */,
 				0B5D18662A0AA54F004E47FD /* FProduct.swift in Sources */,
 				0B124FE92AD82A5000422198 /* AlertVC.swift in Sources */,
 				0BE038E329F81F6D002CB20F /* SceneDelegate.swift in Sources */,

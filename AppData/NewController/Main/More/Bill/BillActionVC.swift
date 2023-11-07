@@ -2,26 +2,30 @@
 //  BillActionVC.swift
 //  LN FNB
 //
-//  Created by namnl on 27/09/2023.
+//  Created by namnl on 05/11/2023.
 //
 
 import UIKit
 
 class BillActionVC: BaseVC {
 
-    var actionInHoaDon: ClosureAction?
-    var actionDaThanhToan: ClosureAction?
+    @IBOutlet weak var bNganHang: UIButton!
+    @IBOutlet weak var bTienMat: UIButton!
+    var actionTienMat: ClosureAction?
+    var actionNganHang: ClosureAction?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    
+        bNganHang.layer.cornerRadius = C.CornerRadius.corner10
+        bTienMat.layer.cornerRadius = C.CornerRadius.corner10
+        // Do any additional setup after loading the view.
     }
-    @IBAction func inPressed(_ sender: Any) {
-        actionInHoaDon?()
+    @IBAction func tienMatPressed(_ sender: Any) {
+        actionTienMat?()
         self.onBackNav()
     }
-    @IBAction func daThanhToanPressed(_ sender: Any) {
-        actionDaThanhToan?()
+    @IBAction func nganHangPressed(_ sender: Any) {
+        actionNganHang?()
         self.onBackNav()
     }
     

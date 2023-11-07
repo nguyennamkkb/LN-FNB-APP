@@ -144,7 +144,8 @@ class BanDangPhucVuVC: BaseVC {
                 self.bCapNhat.isHidden = true
                 let vc = AlertVC()
                 vc.bindData(s: "Thành công")
-                self.presentFullScreen(vc: vc)
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: false)
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể sửa")
             }

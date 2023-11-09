@@ -14,7 +14,7 @@ class QLHoaDonVC: BaseVC {
     var actionFilter: ClosureAction?
     @IBOutlet var tableView: UITableView!
     var tableData: [FBill] = []
-    var bill: FBill? = nil
+    var bill: FBill = FBill()
     @IBOutlet var vFilter: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,14 +61,16 @@ class QLHoaDonVC: BaseVC {
         self.onBackNav()
     }
     func getOneBill(id: Int){
+        self.showLoading()
         let param = ParamSearch(user_id: Common.userMaster.id ?? 0)
-        print("getOneBill")
         ServiceManager.common.getOneBill(param: "\(id)?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
                 self.bill = Mapper<FBill>().map(JSONObject: response!.data ) ?? FBill()
-                print(self.bill?.toJSON())
+                let vc = BillVC()
+                vc.bindDataXemHD(e: self.bill)
+                self.pushVC(controller: vc)
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể xoá")
             }
@@ -92,6 +94,7 @@ extension QLHoaDonVC: UITableViewDelegate, UITableViewDataSource {
             guard let self = self else {return}
             print("va0")
             self.getOneBill(id: data.id ?? 0)
+            
         }
         
         return cell

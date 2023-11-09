@@ -28,6 +28,7 @@ class BanDatTruocVC: BaseVC {
     }
     
     @IBAction func bCapNhatPressed(_ sender: Any) {
+        self.showLoading()
         getOrders()
     }
     @IBAction func backPressed(_ sender: Any) {
@@ -55,11 +56,11 @@ class BanDatTruocVC: BaseVC {
         self.present(sheet, animated: true)
     }
     func getOrders(){
-        self.showLoading()
         guard let id = Common.userMaster.id else {return}
         let param = ParamSearch(user_id: id, status: 2)
         ServiceManager.common.getAllOrder(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
+            self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<FOrder>().mapArray(JSONObject: response!.data ) ?? [FOrder]()
                 DispatchQueue.main.async {
@@ -68,7 +69,7 @@ class BanDatTruocVC: BaseVC {
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể thêm mới")
             }
-            self.hideLoading()
+
         }
     }
     func deleteOrder(idOrder: Int){

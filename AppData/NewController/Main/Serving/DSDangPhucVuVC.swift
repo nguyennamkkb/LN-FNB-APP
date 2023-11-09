@@ -38,7 +38,6 @@ class DSDangPhucVuVC: BaseVC {
         refreshControl.endRefreshing()
     }
     func getOrders(){
-        self.showLoading()
         guard let id = Common.userMaster.id else {return}
         let param = ParamSearch(user_id: id,status: 1)
         ServiceManager.common.getAllOrder(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
@@ -51,7 +50,7 @@ class DSDangPhucVuVC: BaseVC {
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể thêm mới")
             }
-            self.hideLoading()
+            
         }
     }
 

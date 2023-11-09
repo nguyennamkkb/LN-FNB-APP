@@ -158,8 +158,8 @@
             filePath = "AppData/NewController/Main/More/Manager/QLBan/BanDatTruocVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
             landmarkName = "setupUI()"
             landmarkType = "7">
          </BreakpointContent>

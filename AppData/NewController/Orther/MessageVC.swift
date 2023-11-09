@@ -41,8 +41,8 @@ class MessageVC: BaseVC {
         
     }
     @IBAction func xacNhanPressed(_ sender: Any) {
-        actionOK?()
         self.onBackNav()
+        actionOK?()
     }
 
 }

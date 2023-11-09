@@ -25,16 +25,30 @@ class BillVC: BaseVC {
     var order: FOrder = FOrder()
     var bill: FBill = FBill()
     var listItem: [FProduct] = [FProduct]()
+    var trangThaiXemHoaDon: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupData()
+        setupUI()
         
+    }
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
+    }
+    func setupUI(){
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.registerCell(nibName: "BillCell")
-        setupData()
         vPrint.layer.cornerRadius = C.CornerRadius.corner10
         vPay.layer.cornerRadius = C.CornerRadius.corner10
-        
+        if trangThaiXemHoaDon == 1 {
+            vPay.isHidden = true
+        }
+    }
+    func bindDataXemHD(e: FBill){
+        bill = e
+        order = e.order ?? FOrder()
+        trangThaiXemHoaDon = 1
     }
     func setupData(){
         bill.user_id = order.user_id

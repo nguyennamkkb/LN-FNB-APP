@@ -54,28 +54,36 @@ class BanDangPhucVuVC: BaseVC {
     }
 
     func deleteOrder(){
-        print("deleteOrder")
         let param = ParamSearch(user_id: Common.userMaster.id ?? 0)
         ServiceManager.common.deleteOrder(param: "\(item.id ?? 0)?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
-            self.hideLoading()
-            if response?.data != nil, response?.statusCode == 200 {
+           
+            if response?.statusCode == 200 {
                 self.actionReload?()
                 self.onBackNav()
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể xoá")
             }
+           
         }
     }
     @IBAction func MorePressed(_ sender: Any) {
         let vc = ActionBanDangPhucVuVC()
         vc.actionPhieuBep = {
+            if self.listItem.count == 0 {
+                self.showAlert(message: "Chưa chọn món")
+                return
+            }
             let phieuBepVC = PhieuBepVC()
             phieuBepVC.bindData(list: self.listItem, ban: self.lbTitle.text ?? "")
             self.pushVC(controller: phieuBepVC)
             
         }
         vc.actionThanhToan = {
+            if self.listItem.count == 0 {
+                self.showAlert(message: "Chưa chọn món")
+                return
+            }
             let billVC = BillVC()
             billVC.bindData(e: self.item)
             self.pushVC(controller: billVC)
@@ -104,6 +112,7 @@ class BanDangPhucVuVC: BaseVC {
             let messVC = MessageVC()
             messVC.actionOK = {
                 self.deleteOrder()
+                
             }
             let sheet = SheetViewController(controller: messVC, sizes: [.fixed(250)])
             self.present(sheet, animated: true)

@@ -133,14 +133,14 @@ class BanDangPhucVuVC: BaseVC {
       return total
     }
     func updateOrder(){
-        let listProducts = listItem.filter {
+         listItem = listItem.filter {
             e in
             if e.count != 0 {
                 return true
             }
             return false
         }
-        item.list_item = listProducts.toJSONString()
+        item.list_item = listItem.toJSONString()
         item.total = getMoney()
         item.status = 1
         item.sign()
@@ -149,6 +149,9 @@ class BanDangPhucVuVC: BaseVC {
             (response) in
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
+                Thread.runOnMain {
+                    self.tableView.reloadData()
+                }
                 self.actionReload?()
                 self.bCapNhat.isHidden = true
                 let vc = AlertVC()

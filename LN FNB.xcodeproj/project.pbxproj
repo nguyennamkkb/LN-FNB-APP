@@ -33,6 +33,10 @@
 		0B45BC9D2ABA0DEA0073A380 /* DangPhucVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B45BC9B2ABA0DEA0073A380 /* DangPhucVuVC.xib */; };
 		0B45BCA52ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45BCA32ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.swift */; };
 		0B45BCA62ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B45BCA42ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.xib */; };
+		0B49A26A2B01000300B59A23 /* BaoCaoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49A2682B01000300B59A23 /* BaoCaoVC.swift */; };
+		0B49A26B2B01000300B59A23 /* BaoCaoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B49A2692B01000300B59A23 /* BaoCaoVC.xib */; };
+		0B49A26E2B0100ED00B59A23 /* BaoCaoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49A26C2B0100ED00B59A23 /* BaoCaoCell.swift */; };
+		0B49A26F2B0100ED00B59A23 /* BaoCaoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B49A26D2B0100ED00B59A23 /* BaoCaoCell.xib */; };
 		0B4CA3302A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png in Resources */ = {isa = PBXBuildFile; fileRef = 0B4CA32F2A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png */; };
 		0B4CEEFA2AC9B89300C61C3D /* FTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4CEEF92AC9B89300C61C3D /* FTable.swift */; };
 		0B5D18512A0A968C004E47FD /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18502A0A968C004E47FD /* CacheManager.swift */; };
@@ -215,6 +219,10 @@
 		0B45BC9B2ABA0DEA0073A380 /* DangPhucVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DangPhucVuVC.xib; sourceTree = "<group>"; };
 		0B45BCA32ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPrinterSelectTableViewController.swift; sourceTree = "<group>"; };
 		0B45BCA42ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BluetoothPrinterSelectTableViewController.xib; sourceTree = "<group>"; };
+		0B49A2682B01000300B59A23 /* BaoCaoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaoCaoVC.swift; sourceTree = "<group>"; };
+		0B49A2692B01000300B59A23 /* BaoCaoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaoCaoVC.xib; sourceTree = "<group>"; };
+		0B49A26C2B0100ED00B59A23 /* BaoCaoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaoCaoCell.swift; sourceTree = "<group>"; };
+		0B49A26D2B0100ED00B59A23 /* BaoCaoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaoCaoCell.xib; sourceTree = "<group>"; };
 		0B4CA32F2A7821240084B845 /* beautiful-color-palettes-combinations-schemes-rainbow-dash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beautiful-color-palettes-combinations-schemes-rainbow-dash.png"; sourceTree = "<group>"; };
 		0B4CEEF92AC9B89300C61C3D /* FTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTable.swift; sourceTree = "<group>"; };
 		0B5D18502A0A968C004E47FD /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
@@ -437,6 +445,17 @@
 			path = Print;
 			sourceTree = "<group>";
 		};
+		0B49A2672B00FFED00B59A23 /* BaoCao */ = {
+			isa = PBXGroup;
+			children = (
+				0B49A2682B01000300B59A23 /* BaoCaoVC.swift */,
+				0B49A2692B01000300B59A23 /* BaoCaoVC.xib */,
+				0B49A26C2B0100ED00B59A23 /* BaoCaoCell.swift */,
+				0B49A26D2B0100ED00B59A23 /* BaoCaoCell.xib */,
+			);
+			path = BaoCao;
+			sourceTree = "<group>";
+		};
 		0B7B6D9A2AC47AB9005E89D9 /* Bill */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,6 +591,7 @@
 		0BD56AB02AC5A03F00A41312 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				0B49A2672B00FFED00B59A23 /* BaoCao */,
 				0B3FB92D2AC7FC36003FBCB5 /* CuaHang */,
 				0B3FB91F2AC7D249003FBCB5 /* QLHoaDon */,
 				0B81D60F2AC71E7A0003CFF6 /* QLBan */,
@@ -988,6 +1008,7 @@
 				0BB43EFF29FAD82F00F1DE85 /* Rubik-BoldItalic.ttf in Resources */,
 				0BA5D51D2AB7614C0031FBF9 /* MonDaChonVC.xib in Resources */,
 				0B124FEE2AD8689100422198 /* ActionBanDangPhucVuVC.xib in Resources */,
+				0B49A26B2B01000300B59A23 /* BaoCaoVC.xib in Resources */,
 				0BF42AAD2AB601A400592A0E /* LoginVC.xib in Resources */,
 				0B81D61B2AC7277A0003CFF6 /* ThemBanVC.xib in Resources */,
 				0B69E4072AC34C3F00C11C2F /* InPhieuBepVC.xib in Resources */,
@@ -1009,6 +1030,7 @@
 				0BB43F0829FAD82F00F1DE85 /* Rubik-ExtraBold.ttf in Resources */,
 				0BA5D5032AB6C0680031FBF9 /* HomeVC.xib in Resources */,
 				0BF42AE72AB61B1800592A0E /* SignUpInfoVC.xib in Resources */,
+				0B49A26F2B0100ED00B59A23 /* BaoCaoCell.xib in Resources */,
 				0BD56ACE2AC5E10100A41312 /* MonAnVC.xib in Resources */,
 				0B81D6132AC71E950003CFF6 /* QLBanVC.xib in Resources */,
 				0B81D6232AC737830003CFF6 /* BanDatTruocCell.xib in Resources */,
@@ -1102,6 +1124,7 @@
 				0B5D18602A0AA132004E47FD /* PCustomer.swift in Sources */,
 				0BA5D5142AB6D74D0031FBF9 /* ChonMonVC.swift in Sources */,
 				0B45BC992AB9CC670073A380 /* BluetoothHelper.swift in Sources */,
+				0B49A26E2B0100ED00B59A23 /* BaoCaoCell.swift in Sources */,
 				0BA5D5182AB6FB2D0031FBF9 /* MonAnCell.swift in Sources */,
 				0B81D61E2AC736E70003CFF6 /* BanDatTruocVC.swift in Sources */,
 				0BE00C032AC023AF002C1C04 /* BanDangPhucVuVC.swift in Sources */,
@@ -1123,6 +1146,7 @@
 				0BD56ACD2AC5E10100A41312 /* MonAnVC.swift in Sources */,
 				0BA5D5242AB768C20031FBF9 /* TabBarVC.swift in Sources */,
 				0B5D18532A0A97D0004E47FD /* KeyCommon.swift in Sources */,
+				0B49A26A2B01000300B59A23 /* BaoCaoVC.swift in Sources */,
 				0B69E4022AC3494A00C11C2F /* PhieuBepVC.swift in Sources */,
 				0B45BCA52ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.swift in Sources */,
 				0B5D18642A0AA355004E47FD /* PBookCalender.swift in Sources */,

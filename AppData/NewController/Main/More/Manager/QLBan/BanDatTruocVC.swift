@@ -23,12 +23,12 @@ class BanDatTruocVC: BaseVC {
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "BanDatTruocCell")
+
         getOrders()
         setupUI()
     }
     
     @IBAction func bCapNhatPressed(_ sender: Any) {
-        self.showLoading()
         getOrders()
     }
     @IBAction func backPressed(_ sender: Any) {
@@ -56,7 +56,9 @@ class BanDatTruocVC: BaseVC {
         self.present(sheet, animated: true)
     }
     func getOrders(){
+       
         guard let id = Common.userMaster.id else {return}
+        self.showLoading()
         let param = ParamSearch(user_id: id, status: 2)
         ServiceManager.common.getAllOrder(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in

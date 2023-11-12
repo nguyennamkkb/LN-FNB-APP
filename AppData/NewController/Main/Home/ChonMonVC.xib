@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -87,23 +87,6 @@
                                 <constraint firstItem="Jcv-MJ-1ln" firstAttribute="centerY" secondItem="c14-ci-08p" secondAttribute="centerY" id="zHa-Cy-6CT"/>
                             </constraints>
                         </view>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_cart" translatesAutoresizingMaskIntoConstraints="NO" id="xhQ-YY-PbP">
-                            <rect key="frame" x="353" y="9.6666666666666714" width="25" height="25"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="25" id="8Ac-kO-az8"/>
-                                <constraint firstAttribute="width" constant="25" id="Q90-eE-SNY"/>
-                            </constraints>
-                        </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnH-BP-Mcb">
-                            <rect key="frame" x="368" y="5" width="18" height="15"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="18" id="9Dt-8D-NYe"/>
-                                <constraint firstAttribute="height" constant="15" id="lbn-Tw-NfM"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
-                            <color key="textColor" name="n black"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuN-9X-n5e">
                             <rect key="frame" x="343" y="4.6666666666666643" width="35" height="35"/>
                             <subviews>
@@ -112,25 +95,30 @@
                                     <subviews>
                                         <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXm-JQ-yGC" userLabel="bOk">
                                             <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
-                                            <color key="backgroundColor" name="green"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="35" id="cYW-my-itI"/>
                                                 <constraint firstAttribute="height" constant="35" id="esx-s5-3zL"/>
                                             </constraints>
                                             <color key="tintColor" name="white"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" image="checkmark" catalog="system"/>
+                                            <state key="normal" image="cart" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
+                                            </state>
                                             <connections>
                                                 <action selector="xacNhanThemMonPressed:" destination="-1" eventType="touchUpInside" id="TOo-YN-bJw"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-NF-FTK" userLabel="cart">
-                                            <rect key="frame" x="0.0" y="0.3333333333333357" width="35" height="34"/>
+                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="top" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-NF-FTK" userLabel="cart">
+                                            <rect key="frame" x="0.0" y="4.6666666666666625" width="35" height="25.333333333333329"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="35" id="Ss3-6S-xJm"/>
                                             </constraints>
-                                            <color key="tintColor" name="green"/>
+                                            <color key="tintColor" name="n white"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="cart" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
+                                            </state>
                                             <connections>
                                                 <action selector="cartPressed:" destination="-1" eventType="touchUpInside" id="9Z2-26-c26"/>
                                             </connections>
@@ -148,20 +136,29 @@
                                 <constraint firstItem="vcb-AR-rCu" firstAttribute="top" secondItem="MuN-9X-n5e" secondAttribute="top" id="z2G-In-Id2"/>
                             </constraints>
                         </view>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CnH-BP-Mcb" userLabel="soSanPham">
+                            <rect key="frame" x="361" y="8" width="20" height="18"/>
+                            <color key="backgroundColor" name="n white"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="MOA-zY-VAH"/>
+                                <constraint firstAttribute="height" constant="18" id="lbn-Tw-NfM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                            <color key="textColor" name="n yellow"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="CnH-BP-Mcb" firstAttribute="top" secondItem="pyt-u1-nwC" secondAttribute="top" constant="5" id="61k-cA-quy"/>
-                        <constraint firstAttribute="trailing" secondItem="CnH-BP-Mcb" secondAttribute="trailing" constant="7" id="97k-aE-9JK"/>
+                        <constraint firstItem="CnH-BP-Mcb" firstAttribute="top" secondItem="pyt-u1-nwC" secondAttribute="top" constant="8" id="61k-cA-quy"/>
+                        <constraint firstAttribute="trailing" secondItem="CnH-BP-Mcb" secondAttribute="trailing" constant="12" id="97k-aE-9JK"/>
                         <constraint firstAttribute="trailing" secondItem="c14-ci-08p" secondAttribute="trailing" constant="50" id="CSO-2U-vyg"/>
                         <constraint firstAttribute="height" constant="44" id="OVn-23-WwF"/>
                         <constraint firstItem="c14-ci-08p" firstAttribute="centerY" secondItem="pyt-u1-nwC" secondAttribute="centerY" id="RXR-s8-Ohn"/>
-                        <constraint firstItem="xhQ-YY-PbP" firstAttribute="top" secondItem="c14-ci-08p" secondAttribute="top" id="TQP-JK-8am"/>
                         <constraint firstItem="c14-ci-08p" firstAttribute="leading" secondItem="A47-tZ-mt6" secondAttribute="trailing" constant="5" id="TZD-Nj-1nX"/>
                         <constraint firstItem="A47-tZ-mt6" firstAttribute="centerY" secondItem="pyt-u1-nwC" secondAttribute="centerY" id="bcP-7y-3AZ"/>
                         <constraint firstItem="A47-tZ-mt6" firstAttribute="leading" secondItem="pyt-u1-nwC" secondAttribute="leading" constant="15" id="dRC-HS-Iuk"/>
                         <constraint firstItem="MuN-9X-n5e" firstAttribute="centerY" secondItem="pyt-u1-nwC" secondAttribute="centerY" id="eoy-2c-7Ru"/>
-                        <constraint firstAttribute="trailing" secondItem="xhQ-YY-PbP" secondAttribute="trailing" constant="15" id="fLX-31-LLe"/>
                         <constraint firstAttribute="trailing" secondItem="MuN-9X-n5e" secondAttribute="trailing" constant="15" id="mia-cB-RSG"/>
                     </constraints>
                 </view>
@@ -231,14 +228,10 @@
         </view>
     </objects>
     <resources>
-        <image name="checkmark" catalog="system" width="128" height="114"/>
-        <image name="ic_cart" width="25" height="25"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <image name="ic_find" width="15" height="15"/>
         <namedColor name="gray">
             <color red="0.69199997186660767" green="0.70599997043609619" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="green">
-            <color red="0.14900000393390656" green="0.64499998092651367" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="n black">
             <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

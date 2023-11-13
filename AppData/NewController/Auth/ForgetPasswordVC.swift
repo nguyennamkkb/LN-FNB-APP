@@ -39,7 +39,7 @@ class ForgetPasswordVC: BaseVC {
         self.present(vc, animated: false)
     }
     @IBAction func guiOTPDenEmail(_ sender: Any) {
-        guard let email = tfEmail.text else {
+        guard let email = tfEmail.text, email.count > 5 else {
             thongBao()
             return
         }
@@ -63,18 +63,18 @@ class ForgetPasswordVC: BaseVC {
         self.onBackNav()
     }
     @IBAction func xacNhanPressed(_ sender: Any) {
-        guard let email = tfEmail.text else {
-            lbMessage.isHidden = true
+        guard let email = tfEmail.text, email.count > 5 else {
+            lbMessage.isHidden = false
             lbMessage.text = "Nhập đủ các trường thông tin"
             return
         }
-        guard let otp = tfOtp.text else {
-            lbMessage.isHidden = true
+        guard let otp = tfOtp.text, otp.count == 6 else {
+            lbMessage.isHidden = false
             lbMessage.text = "Nhập đủ các trường thông tin"
             return
         }
-        guard let matKhau = tfMatKhau.text else {
-            lbMessage.isHidden = true
+        guard let matKhau = tfMatKhau.text, matKhau.count > 0 else {
+            lbMessage.isHidden = false
             lbMessage.text = "Nhập đủ các trường thông tin"
             return
         }

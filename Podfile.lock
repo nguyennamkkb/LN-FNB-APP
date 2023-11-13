@@ -5,7 +5,7 @@ PODS:
   - DGCharts/Core (5.0.0)
   - DropDown (2.3.13)
   - FittedSheets (2.6.1)
-  - IQKeyboardManagerSwift (6.5.16)
+  - IQKeyboardManagerSwift (6.5.12)
   - Kingfisher (5.15.8):
     - Kingfisher/Core (= 5.15.8)
   - Kingfisher/Core (5.15.8)
@@ -59,7 +59,7 @@ SPEC CHECKSUMS:
   DGCharts: 6e0cf2644e8f81ad13f04caa8bc18502870a1c54
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   FittedSheets: 37e35f105c531f3845075f1788dd8517a35315c4
-  IQKeyboardManagerSwift: 12d89768845bb77b55cc092ecc2b1f9370f06b76
+  IQKeyboardManagerSwift: 371b08cb39664fb56030f5345c815a4ffc74bbc0
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   Printer: c762f8704aaa80c2a793a5ebd6757db2c7428e5d
@@ -70,4 +70,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 9f735bf0a8800fe23c591a42df3ae900e118ff8e
 
-COCOAPODS: 1.14.2
+COCOAPODS: 1.12.0

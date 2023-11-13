@@ -18,8 +18,8 @@ class KichHoatTaiKhoanVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        v1.layer.cornerRadius = C.CornerRadius.corner5
-        bXacNhan.layer.cornerRadius = C.CornerRadius.corner5
+        v1.layer.cornerRadius = C.CornerRadius.corner10
+        bXacNhan.layer.cornerRadius = C.CornerRadius.corner10
         lbMess.text = "Mã xác nhận được gửi đến email: \(email)"
     }
     func bindData(email: String){
@@ -50,7 +50,6 @@ class KichHoatTaiKhoanVC: BaseVC {
                     self.onBackNav()
                 }
                 
-
             } else {
                 self.showAlert(message: response?.message ?? "")
             }

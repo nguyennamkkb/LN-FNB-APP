@@ -36,7 +36,7 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SiH-S2-Bix" userLabel="top">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="112"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" name="n yellow"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ndT-W0-Xl6" userLabel="nav">
                     <rect key="frame" x="0.0" y="68" width="384" height="44"/>
@@ -77,7 +77,7 @@
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mã xác nhận được gửi đến email: nguyennam.kkb@gmal.com" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7r3-W4-ZIY" userLabel="msg">
                     <rect key="frame" x="15" y="132" width="363" height="37.666666666666657"/>
                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
-                    <color key="textColor" name="white"/>
+                    <color key="textColor" name="n yellow"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqu-wt-Wnh" userLabel="OTP">
@@ -89,13 +89,13 @@
                                 <constraint firstAttribute="height" constant="20" id="5PU-At-BJd"/>
                             </constraints>
                             <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
-                            <color key="textColor" name="white"/>
+                            <color key="textColor" name="n black"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAu-OQ-Pvh">
                             <rect key="frame" x="0.0" y="25" width="363" height="50"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập mã xác nhận từ email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-rI-WqT" userLabel="Nhập otp">
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập mã xác nhận từ email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-rI-WqT" userLabel="Nhập otp">
                                     <rect key="frame" x="10" y="0.0" width="343" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="textColor" name="white"/>
@@ -108,7 +108,7 @@
                                     </userDefinedRuntimeAttributes>
                                 </textField>
                             </subviews>
-                            <color key="backgroundColor" name="navi"/>
+                            <color key="backgroundColor" name="n white"/>
                             <constraints>
                                 <constraint firstItem="gTY-rI-WqT" firstAttribute="leading" secondItem="vAu-OQ-Pvh" secondAttribute="leading" constant="10" id="6aj-cp-H21"/>
                                 <constraint firstAttribute="trailing" secondItem="gTY-rI-WqT" secondAttribute="trailing" constant="10" id="B68-na-Q0B"/>
@@ -131,7 +131,7 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iht-eH-SPd">
                     <rect key="frame" x="15" y="284.66666666666669" width="363" height="44"/>
-                    <color key="backgroundColor" name="green"/>
+                    <color key="backgroundColor" name="n yellow"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="aqG-qt-izL"/>
                     </constraints>
@@ -144,7 +144,7 @@
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" name="black"/>
+            <color key="backgroundColor" name="n wgrey"/>
             <constraints>
                 <constraint firstItem="iht-eH-SPd" firstAttribute="top" secondItem="hqu-wt-Wnh" secondAttribute="bottom" constant="20" id="25p-5W-68s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7r3-W4-ZIY" secondAttribute="trailing" constant="15" id="4dC-qe-KEm"/>
@@ -168,17 +168,20 @@
     </objects>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>
-        <namedColor name="black">
-            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="gray">
             <color red="0.69199997186660767" green="0.70599997043609619" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="green">
-            <color red="0.14900000393390656" green="0.64499998092651367" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="n black">
+            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="navi">
-            <color red="0.1809999942779541" green="0.23800000548362732" blue="0.289000004529953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="n wgrey">
+            <color red="0.95599997043609619" green="0.95599997043609619" blue="0.95599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="n white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="n yellow">
+            <color red="0.95200002193450928" green="0.49099999666213989" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

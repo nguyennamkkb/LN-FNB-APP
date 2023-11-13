@@ -16,6 +16,7 @@ fileprivate class ListCommonService {
     static let user = ServiceManager.ROOT + "user"
     static let checkuser = ServiceManager.ROOT + "user/checkuser"
     static let sendOtpFogotPassword = ServiceManager.ROOT + "user/sendOtpFogotPassword"
+    static let verifyChangePassword = ServiceManager.ROOT + "user/verifyChangePassword"
     
     static let table = ServiceManager.ROOT + "tables"
     static let auth = ServiceManager.ROOT + "auth/signin"
@@ -40,6 +41,7 @@ fileprivate enum ECommonURLs {
     case verify
     case bill
     case sendOtpFogotPassword
+    case verifyChangePassword
     
     
     func getPath() -> String {
@@ -68,6 +70,9 @@ fileprivate enum ECommonURLs {
             return ListCommonService.orderKetThuc
         case .sendOtpFogotPassword:
             return ListCommonService.sendOtpFogotPassword
+
+        case .verifyChangePassword:
+            return ListCommonService.verifyChangePassword
 
 }
         func getMethod() -> HTTPMethod {
@@ -126,6 +131,25 @@ class CommonServices {
     }
     func sendOtp(param: PStore?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.sendOtpFogotPassword.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param?.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil {
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    func verifyChangePassword(param: PStore?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.verifyChangePassword.getPath()
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }

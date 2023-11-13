@@ -9,6 +9,8 @@ import UIKit
 
 class ForgetPasswordVC: BaseVC {
 
+    @IBOutlet var tfMatKhau: UITextField!
+    @IBOutlet var tfOtp: UITextField!
     @IBOutlet var tfEmail: UITextField!
     @IBOutlet var lbMessage: UILabel!
     @IBOutlet var bXacNhan: UIButton!
@@ -61,7 +63,40 @@ class ForgetPasswordVC: BaseVC {
         self.onBackNav()
     }
     @IBAction func xacNhanPressed(_ sender: Any) {
-        self.pushVC(controller: LoginVC())
+        guard let email = tfEmail.text else {
+            lbMessage.isHidden = true
+            lbMessage.text = "Nhập đủ các trường thông tin"
+            return
+        }
+        guard let otp = tfOtp.text else {
+            lbMessage.isHidden = true
+            lbMessage.text = "Nhập đủ các trường thông tin"
+            return
+        }
+        guard let matKhau = tfMatKhau.text else {
+            lbMessage.isHidden = true
+            lbMessage.text = "Nhập đủ các trường thông tin"
+            return
+        }
+        let param = PStore()
+        param.email = email
+        param.otp = otp
+        param.password = matKhau
+        ServiceManager.common.verifyChangePassword(param: param){
+            (response) in
+            self.hideLoading()
+            if response?.statusCode == 200 {
+                let vc = AlertVC()
+                vc.bindData(s: "Thành công")
+                vc.modalPresentationStyle = .overFullScreen
+                self.present(vc, animated: false)
+                vc.actionFinish = {
+                    self.wrapRoot(vc: LoginVC())
+                }
+            } else {
+                self.showAlert(message: response?.message ?? "")
+            }
+        }
     }
     
 

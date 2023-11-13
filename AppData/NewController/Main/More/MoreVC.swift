@@ -60,6 +60,11 @@ class MoreVC: BaseVC {
 //        self.wrapRoot(vc: LoginVC())
 //    }
 //
+    @IBAction func baoCaoPressed(_ sender: Any) {
+        let vc = BaoCaoVC()
+        self.pushVC(controller: vc)
+        
+    }
     
     @IBAction func caiDatPressed(_ sender: Any) {
         let vc = DangPhucVuVC()

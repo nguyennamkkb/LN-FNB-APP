@@ -31,7 +31,9 @@ class DSDangPhucVuVC: BaseVC {
         tableView.addSubview(refreshControl)
     }
     @IBAction func capNhatPressed(_ sender: Any) {
+        self.showLoading()
         getOrders()
+        self.hideLoading()
     }
     @objc func refresh(_ sender: AnyObject) {
         getOrders()

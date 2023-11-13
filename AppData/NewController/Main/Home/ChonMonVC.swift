@@ -53,8 +53,8 @@ class ChonMonVC: BaseVC{
         }
         
         viewSearch.layer.cornerRadius = C.CornerRadius.corner10
-        tfSoNguoi.layer.cornerRadius = C.CornerRadius.corner10
-        lbCountCart.layer.cornerRadius = C.CornerRadius.corner10
+        tfSoNguoi.layer.cornerRadius = C.CornerRadius.corner5
+        lbCountCart.layer.cornerRadius = C.CornerRadius.corner5
         bXacNhanThemMon.layer.cornerRadius = C.CornerRadius.corner10
         refreshControl.tintColor = .white
         refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)

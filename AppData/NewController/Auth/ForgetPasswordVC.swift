@@ -1,4 +1,4 @@
-//
+			//
 //  ForgetPasswordVC.swift
 //  LN FNB
 //
@@ -22,7 +22,7 @@ class ForgetPasswordVC: BaseVC {
         super.viewDidLoad()
         setupUI()
     }
-    
+    	
     func setupUI(){
         view1.layer.cornerRadius = C.CornerRadius.corner10
         view2 .layer.cornerRadius = C.CornerRadius.corner10

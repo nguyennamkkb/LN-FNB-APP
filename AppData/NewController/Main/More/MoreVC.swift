@@ -61,7 +61,7 @@ class MoreVC: BaseVC {
 //    }
 //
     @IBAction func baoCaoPressed(_ sender: Any) {
-        let vc = BaoCaoVC()
+        let vc = BaoCaoHomNayVC()
         self.pushVC(controller: vc)
         
     }

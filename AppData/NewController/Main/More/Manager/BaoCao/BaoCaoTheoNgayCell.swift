@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BaoCaoCell: UITableViewCell {
+class BaoCaoTheoNgayCell: UITableViewCell {
 
     
     @IBOutlet weak var vTheoNgay: UIView!

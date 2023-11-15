@@ -409,6 +409,24 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="lbAnTaiBan" destination="qSO-pJ-HSh" id="LA5-to-VVl"/>
+                <outlet property="lbChuaDen" destination="Yk9-u4-wba" id="Mzj-Ts-wqd"/>
+                <outlet property="lbDoanhThu" destination="3C0-vY-Rr9" id="kZc-rX-2Fe"/>
+                <outlet property="lbShip" destination="bRT-UU-rsz" id="B6q-e4-JOe"/>
+                <outlet property="lbSoKhach" destination="pAC-HS-D8a" id="TsZ-qX-gEY"/>
+                <outlet property="lbTNTongCK" destination="Id6-Ao-XXU" id="VVc-3d-WWC"/>
+                <outlet property="lbTNTongDoanhThu" destination="nx8-Vg-Y1y" id="sRw-Fs-iC1"/>
+                <outlet property="lbTNTongHoaDon" destination="1eR-Qp-6Np" id="stG-Th-hgv"/>
+                <outlet property="lbTNTongSoKhach" destination="221-vX-OuS" id="eOO-ef-5nW"/>
+                <outlet property="lbTNTongTienMat" destination="gVw-rt-M76" id="2Dj-JL-cTH"/>
+                <outlet property="lbTheoNgayNgay" destination="yUh-2D-lfr" id="hGf-Qx-1NX"/>
+                <outlet property="lbThuCK" destination="JAg-yQ-BqX" id="AiC-tm-LDL"/>
+                <outlet property="lbThuDuTinh" destination="lLD-aT-FpY" id="ApQ-Lh-Oba"/>
+                <outlet property="lbThuTienMat" destination="6RV-Ks-ZXM" id="Ovf-Xd-dk2"/>
+                <outlet property="lbTongHoaDon" destination="0AI-Nt-drR" id="e7p-CJ-X9q"/>
+                <outlet property="lbTongKhach" destination="fWB-85-kss" id="ve4-DX-C7A"/>
+            </connections>
             <point key="canvasLocation" x="182.44274809160305" y="347.53521126760563"/>
         </tableViewCell>
     </objects>

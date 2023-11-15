@@ -117,6 +117,7 @@
 		0BC72AF52ADEC38C00CC69A1 /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC72AF32ADEC38C00CC69A1 /* BillCell.xib */; };
 		0BC72AF82ADEE47F00CC69A1 /* BillItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC72AF62ADEE47F00CC69A1 /* BillItemCell.swift */; };
 		0BC72AF92ADEE47F00CC69A1 /* BillItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC72AF72ADEE47F00CC69A1 /* BillItemCell.xib */; };
+		0BCCBD372B0534810014C109 /* FThongKeHomNay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCCBD362B0534810014C109 /* FThongKeHomNay.swift */; };
 		0BCF19852A43696A004F11CB /* ParamSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCF19842A43696A004F11CB /* ParamSearch.swift */; };
 		0BD56AB92AC5A52B00A41312 /* ThucDonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BD56AB72AC5A52B00A41312 /* ThucDonVC.swift */; };
 		0BD56ABA2AC5A52B00A41312 /* ThucDonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BD56AB82AC5A52B00A41312 /* ThucDonVC.xib */; };
@@ -307,6 +308,7 @@
 		0BC72AF32ADEC38C00CC69A1 /* BillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillCell.xib; sourceTree = "<group>"; };
 		0BC72AF62ADEE47F00CC69A1 /* BillItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillItemCell.swift; sourceTree = "<group>"; };
 		0BC72AF72ADEE47F00CC69A1 /* BillItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillItemCell.xib; sourceTree = "<group>"; };
+		0BCCBD362B0534810014C109 /* FThongKeHomNay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FThongKeHomNay.swift; sourceTree = "<group>"; };
 		0BCF19842A43696A004F11CB /* ParamSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParamSearch.swift; sourceTree = "<group>"; };
 		0BD56AB72AC5A52B00A41312 /* ThucDonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThucDonVC.swift; sourceTree = "<group>"; };
 		0BD56AB82AC5A52B00A41312 /* ThucDonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThucDonVC.xib; sourceTree = "<group>"; };
@@ -764,6 +766,7 @@
 				0B3FB9032ACB3C9900B1B974 /* FCategory.swift */,
 				0BBA69032ACEF58200963438 /* FOrder.swift */,
 				0B4445ED2ADBD41500E7C098 /* FBill.swift */,
+				0BCCBD362B0534810014C109 /* FThongKeHomNay.swift */,
 			);
 			path = 2.Models;
 			sourceTree = "<group>";
@@ -1119,6 +1122,7 @@
 				0B3FB9222AC7D2D4003FBCB5 /* QLHoaDonVC.swift in Sources */,
 				0BA5D5022AB6C0680031FBF9 /* HomeVC.swift in Sources */,
 				0BD56AC52AC5D3E800A41312 /* ThemDanhMucVC.swift in Sources */,
+				0BCCBD372B0534810014C109 /* FThongKeHomNay.swift in Sources */,
 				0BE0392729F82039002CB20F /* ExDate.swift in Sources */,
 				0B81D6122AC71E950003CFF6 /* QLBanVC.swift in Sources */,
 				0B187DE72B03D263009B9010 /* BaoCaoTheoNgayVC.swift in Sources */,

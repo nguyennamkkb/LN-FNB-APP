@@ -144,4 +144,12 @@ class Common {
         }
         return image
     }
+    
+    public static func layMilisNgayHomNay() -> Int64 {
+        let date = Date() // Ngày và giờ hiện tại
+        let calendar = Calendar.current // Lịch hiện tại
+        let startOfDay = calendar.startOfDay(for: date) // Thời điểm bắt đầu của ngày hiện tại
+        let milliseconds = startOfDay.timeIntervalSince1970 * 1000
+        return Int64(milliseconds)
+    }
 }

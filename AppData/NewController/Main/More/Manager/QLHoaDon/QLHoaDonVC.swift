@@ -15,6 +15,9 @@ class QLHoaDonVC: BaseVC {
     @IBOutlet var tableView: UITableView!
     var tableData: [FBill] = []
     var bill: FBill = FBill()
+    
+    var tuNgay: Int64 = Common.dateStringToMilis(dateString: Common.layThoiGianNgayThangNamHienTai(date: Date())) ?? 0
+    var denNgay: Int64 = Int64(Common.getMilisecondNow())
     @IBOutlet var vFilter: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +25,14 @@ class QLHoaDonVC: BaseVC {
         tableView.delegate = self
         self.tableView.registerCell(nibName: "HoaDonCell")
         vFilter.layer.cornerRadius = C.CornerRadius.corner10
+
         setupData()
         getHoaDons()
     }
     func setupData(){
-        let milliseconds = Int(Date().timeIntervalSince1970 * 1000)
-        param.from = Int64(milliseconds)
-        param.to = Int64(milliseconds + 86399999 )
+        param.user_id = Common.userMaster.id
+        param.from = tuNgay
+        param.to = denNgay
         
     }
     func getHoaDons(){

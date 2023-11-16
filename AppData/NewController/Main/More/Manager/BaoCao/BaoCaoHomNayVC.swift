@@ -13,8 +13,8 @@ class BaoCaoHomNayVC: BaseVC {
     var data: FThongKeHomNay = FThongKeHomNay()
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var bXemNgayKhac: UIButton!
-    var timeFrom: Int = 0
-    var timeto: Int = Common.getMilisecondNow()
+    var timeFrom: Int64 = 0
+//    var timeto: Int64 = Common.getMilisecondNow()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -31,10 +31,12 @@ class BaoCaoHomNayVC: BaseVC {
         self.pushVC(controller: vc)
     }
     func layBaoCaoHomNay(){
+        self.showLoading()
         guard let id = Common.userMaster.id else {return}
-        let param = ParamSearch(user_id: id,status: 1,from: 0, to:2699113941329)
+        let param = ParamSearch(user_id: id,status: 1,from: 0, to: Int64(Common.getMilisecondNow()))
         ServiceManager.common.taoBaoCaoHomNay(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
+            self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
                 self.data = Mapper<FThongKeHomNay>().map(JSONObject: response!.data ) ?? FThongKeHomNay()
                 DispatchQueue.main.async {
@@ -58,6 +60,9 @@ extension BaoCaoHomNayVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "BaoCaoHomNayCell", for: indexPath) as? BaoCaoHomNayCell else { return UITableViewCell()}
         cell.bindData(e: data)
+        cell.actionReload = {
+            self.layBaoCaoHomNay()
+        }
         return cell
     }
     

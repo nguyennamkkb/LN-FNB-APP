@@ -37,6 +37,9 @@ class Common {
         return (formattedDateString) // Output: "11-03-2023 14:10"
         
     }
+    public static func layMilisNgayHomNay() -> Int64 {
+        return Int64(CACurrentMediaTime() * 1000)
+    }
     public static func getStringStatus(status: Int) -> String {
         switch status {
         case 0:
@@ -128,6 +131,11 @@ class Common {
         let currentDateString = dateFormatter.string(from: currentDate)
         return currentDateString
     }
+    public static func layThoiGianNgayThangNamHienTai(date: Date) -> String {
+        let formatrer =  DateFormatter()
+        formatrer.dateFormat = "dd/MM/yyyy"
+        return formatrer.string(from: date)
+    }
     public static func wLog(_ s: Any) -> Void {
         
         Thread.runOnBackground {
@@ -145,11 +153,5 @@ class Common {
         return image
     }
     
-    public static func layMilisNgayHomNay() -> Int64 {
-        let date = Date() // Ngày và giờ hiện tại
-        let calendar = Calendar.current // Lịch hiện tại
-        let startOfDay = calendar.startOfDay(for: date) // Thời điểm bắt đầu của ngày hiện tại
-        let milliseconds = startOfDay.timeIntervalSince1970 * 1000
-        return Int64(milliseconds)
-    }
+
 }

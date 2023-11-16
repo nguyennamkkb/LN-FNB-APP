@@ -17,6 +17,8 @@ class LocHoaDonVC: BaseVC {
     @IBOutlet weak var tfTuNgay: UITextField!
     @IBOutlet weak var v2: UIView!
     @IBOutlet weak var v1: UIView!
+    var tuNgay: String = ""
+    var denNgay: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,7 +54,9 @@ class LocHoaDonVC: BaseVC {
         guard let tuNgay = tfTuNgay.text else {return}
         guard let denNgay = tfDenNgay.text else {return}
         let tuNgayMilis:Int64 = Common.dateStringToMilis(dateString: tuNgay) ?? 0
-        let denNgayMilis:Int64 = Common.dateStringToMilis(dateString: denNgay) ?? 0 + 86399999
+        let denNgayMilis:Int64 = (Common.dateStringToMilis(dateString: denNgay) ?? 0) + 86399999
+        print(tuNgayMilis)
+        print(denNgayMilis)
         layThoiGian?(tuNgayMilis,denNgayMilis)
         self.onBackNav()
     }

@@ -43,6 +43,7 @@ class HomeVC: BaseVC {
     }
     @IBAction func capNhatPressed(_ sender: Any) {
         getTables()
+        tenBanDaChon.text = ""
     }
     @IBAction func banDatTruocPressed(_ sender: Any) {
         self.pushVC(controller: BanDatTruocVC())

@@ -11,7 +11,11 @@ import UIKit
 class BaoCaoHomNayCell: UITableViewCell {
 
     
-    
+    @IBOutlet var vTheoTungGio: UIView!
+    @IBOutlet var vDaHoanThanh: UIView!
+    @IBOutlet var vChuaHoanThanh: UIView!
+    var actionReload: ClosureAction?
+    @IBOutlet var bReload: UIButton!
     var item = FThongKeHomNay()
     @IBOutlet var lbTNTongSoKhach: UILabel!
     @IBOutlet var lbTNTongHoaDon: UILabel!
@@ -32,21 +36,29 @@ class BaoCaoHomNayCell: UITableViewCell {
     @IBOutlet var lbAnTaiBan: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-      
+        bReload.layer.cornerRadius = C.CornerRadius.corner10
+        vChuaHoanThanh.layer.cornerRadius = C.CornerRadius.corner10
+        vDaHoanThanh.layer.cornerRadius = C.CornerRadius.corner10
+        vTheoTungGio.layer.cornerRadius = C.CornerRadius.corner10
+        
     }
     func bindData(e: FThongKeHomNay){
         item = e
-        lbAnTaiBan.text = "\(item.chuaHoanThanh?.tongDangPhucVu ?? 0)"
-        lbShip.text = "\(item.chuaHoanThanh?.tongShip ?? 0)"
-        lbChuaDen.text = "\(item.chuaHoanThanh?.tongDatTruoc ?? 0)"
-        lbSoKhach.text = "\(item.chuaHoanThanh?.tongKhach ?? 0)"
+        lbAnTaiBan.text = "\(item.chuaHoanThanh?.tongDangPhucVu ?? 0)".currencyFormatting()
+        lbShip.text = "\(item.chuaHoanThanh?.tongShip ?? 0)".currencyFormatting()
+        lbChuaDen.text = "\(item.chuaHoanThanh?.tongDatTruoc ?? 0)".currencyFormatting()
+        lbSoKhach.text = "\(item.chuaHoanThanh?.tongKhach ?? 0)".currencyFormatting()
+        lbThuDuTinh.text = "\(item.chuaHoanThanh?.tongThuDuTinh ?? 0)".currencyFormatting()
         
-        lbTNTongDoanhThu.text = "\((item.daHoanThanh?.tongTienCK ?? 0)  + (item.daHoanThanh?.tongTienMat ?? 0 ))"
-        lbTNTongTienMat.text = "\(item.daHoanThanh?.tongTienMat ?? 0 )"
-        lbTNTongCK.text = "\(item.daHoanThanh?.tongTienCK ?? 0 )"
-        lbTNTongHoaDon.text = "\(item.daHoanThanh?.tongSoDonHang ?? 0 )"
-        lbTNTongSoKhach.text = "\(item.daHoanThanh?.tongSoKhach ?? 0 )"
-        
+        lbDoanhThu.text = "Doanh thu:" + "\((item.daHoanThanh?.tongTienCK ?? 0)  + (item.daHoanThanh?.tongTienMat ?? 0 ))".currencyFormatting()
+        lbThuTienMat.text = "• Tiền măt: " + "\(item.daHoanThanh?.tongTienMat ?? 0 )".currencyFormatting()
+        lbThuCK.text = "• Chuyển khoản: " + "\(item.daHoanThanh?.tongTienCK ?? 0 )".currencyFormatting()
+        lbTongHoaDon.text = "Hoá đơn: " + "\(item.daHoanThanh?.tongSoDonHang ?? 0 )".currencyFormatting()
+        lbTongKhach.text = "Số khách: " + "\(item.daHoanThanh?.tongSoKhach ?? 0 )".currencyFormatting()
+                
+    }
+    @IBAction func reloadPressed(_ sender: Any) {
+        actionReload?()
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

@@ -306,20 +306,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rtj-7t-rmD">
                         <rect key="frame" x="15" y="465" width="352" height="200"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oaN-sK-uQL">
-                                <rect key="frame" x="0.0" y="0.0" width="100" height="44"/>
-                                <color key="backgroundColor" name="n yellow"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="F6s-ac-w5N"/>
-                                    <constraint firstAttribute="height" constant="44" id="yA6-Y3-557"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
-                                <color key="tintColor" name="white"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Chọn ảnh"/>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_monan" translatesAutoresizingMaskIntoConstraints="NO" id="Ns0-CE-KMT">
-                                <rect key="frame" x="152" y="0.0" width="200" height="200"/>
+                                <rect key="frame" x="76" y="0.0" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="mkF-zN-10U"/>
                                     <constraint firstAttribute="width" constant="200" id="wwh-fw-7rv"/>
@@ -328,10 +316,8 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Ns0-CE-KMT" secondAttribute="trailing" id="JBu-d6-YUl"/>
                             <constraint firstAttribute="height" constant="200" id="KOr-Oo-dRD"/>
-                            <constraint firstItem="oaN-sK-uQL" firstAttribute="top" secondItem="Rtj-7t-rmD" secondAttribute="top" id="lsd-YQ-I18"/>
-                            <constraint firstItem="oaN-sK-uQL" firstAttribute="leading" secondItem="Rtj-7t-rmD" secondAttribute="leading" id="qxY-SG-OCU"/>
+                            <constraint firstItem="Ns0-CE-KMT" firstAttribute="centerX" secondItem="Rtj-7t-rmD" secondAttribute="centerX" id="NWS-2j-1Q8"/>
                             <constraint firstItem="Ns0-CE-KMT" firstAttribute="top" secondItem="Rtj-7t-rmD" secondAttribute="top" id="t6H-xS-8hY"/>
                         </constraints>
                     </view>
@@ -386,7 +372,6 @@
                 <outlet property="V3" destination="thS-FC-R7E" id="Dkn-WG-wc8"/>
                 <outlet property="V4" destination="3Ll-mR-8rp" id="cN4-FL-hhu"/>
                 <outlet property="V5" destination="YQv-oC-la0" id="otz-kM-9cE"/>
-                <outlet property="bChonAnh" destination="oaN-sK-uQL" id="ldi-8n-R1u"/>
                 <outlet property="bXacNhan" destination="Bdc-I1-UdU" id="vtH-3o-b4z"/>
                 <outlet property="imgMonAn" destination="Ns0-CE-KMT" id="rPo-81-QS9"/>
                 <outlet property="lbCategory" destination="Dgp-XF-OxT" id="Jzc-M2-1Be"/>

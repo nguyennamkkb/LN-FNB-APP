@@ -167,6 +167,40 @@
             </constraints>
             <point key="canvasLocation" x="79" y="21"/>
         </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGy-in-8JS" userLabel="bAdd">
+            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+            <color key="backgroundColor" name="n white"/>
+            <constraints>
+                <constraint firstAttribute="width" constant="35" id="Dcl-gf-US4"/>
+                <constraint firstAttribute="height" constant="35" id="PwT-gP-GJZ"/>
+            </constraints>
+            <color key="tintColor" name="n yellow"/>
+            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+            <state key="normal" image="plus" catalog="system">
+                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="bold"/>
+            </state>
+            <connections>
+                <action selector="AddPressed:" destination="-1" eventType="touchUpInside" id="ne0-Hs-LdR"/>
+            </connections>
+            <point key="canvasLocation" x="-227" y="-338"/>
+        </button>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m1w-2c-0sH" userLabel="bAdd">
+            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+            <color key="backgroundColor" name="n white"/>
+            <constraints>
+                <constraint firstAttribute="height" constant="35" id="oC9-pj-3oh"/>
+                <constraint firstAttribute="width" constant="35" id="x2B-8i-15D"/>
+            </constraints>
+            <color key="tintColor" name="n yellow"/>
+            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+            <state key="normal" image="plus" catalog="system">
+                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="bold"/>
+            </state>
+            <connections>
+                <action selector="AddPressed:" destination="-1" eventType="touchUpInside" id="yJG-c3-JhI"/>
+            </connections>
+            <point key="canvasLocation" x="-227" y="-338"/>
+        </button>
     </objects>
     <resources>
         <image name="chevron.backward" catalog="system" width="97" height="128"/>

@@ -26,7 +26,9 @@ class FProduct: Mappable {
     var cksRequest: String?
     var timeRequest: Int?
     
-    init(){}
+    init(){
+        self.image = "anhSanPhamMacDinh"
+    }
     required init?(map: ObjectMapper.Map) {
         mapping(map: map)
     }

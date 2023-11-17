@@ -16,6 +16,8 @@ class ThemMonAnVC: BaseVC {
     var item = FProduct()
     var actionOK: ClosureAction?
     var trangThaiSua: Int = 1
+    var trangThaiLayAnh: Int = 0
+    
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +32,7 @@ class ThemMonAnVC: BaseVC {
         self.item = item
         self.trangThaiSua = trangThai
         tieuDe = "Sửa món ăn"
-
+        print("item update \(self.item.toJSON())")
     }
     func getCategories(){
         guard let id = Common.userMaster.id else {return}
@@ -50,14 +52,23 @@ class ThemMonAnVC: BaseVC {
     }
     func createProduct(){
         item.sign()
-        self.showLoading()
         ServiceManager.common.createProduct(param: item){
             (response) in
-            self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
                 self.showAlert(message: "Thành công!")
-                self.actionOK?()
-                self.onBackNav()
+                self.item =  Mapper<FProduct>().map(JSONObject: response?.data) ?? FProduct()
+                
+                let vc = MonAnThemAnhVC()
+                vc.bindData(e: self.item)
+                self.pushVC(controller: vc)
+                vc.uploadThanhCong = {
+                    [weak self] url in
+                    guard let self = self else {return}
+                    self.item.image = url
+                    self.trangThaiLayAnh = 1
+                    self.updateProduct()
+                }
+                
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể thêm mới")
             }
@@ -65,18 +76,42 @@ class ThemMonAnVC: BaseVC {
     }
     func updateProduct(){
         item.sign()
-        self.showLoading()
         ServiceManager.common.updateProduct(param: item){
             (response) in
-            self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
                 self.showAlert(message: "Thành công!")
-                self.actionOK?()
-                self.onBackNav()
+                if self.trangThaiLayAnh == 0 {
+                    print("Chon anh")
+                    
+                    let vc = MonAnThemAnhVC()
+                    vc.bindData(e: self.item)
+                   
+                    self.pushVC(controller: vc)
+                    vc.uploadThanhCong = {
+                        [weak self] url in
+                        guard let self = self else {return}
+                        self.item.image = url
+                        self.trangThaiLayAnh = 1
+                        self.updateProduct()
+//                        self.onBackNav()
+                    }
+                    vc.uploadMacDinh = {
+                        [weak self] in
+                        guard let self = self else {return}
+                        print("ket thuc")
+                        self.onBackNav()
+                    }
+                }else{
+                    print("ket thuc")
+                    self.onBackNav()
+                }
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể sửa")
             }
         }
+    }
+    func taiAnhSanPham(item: FProduct){
+       
     }
 }
 extension ThemMonAnVC: UITableViewDelegate, UITableViewDataSource {

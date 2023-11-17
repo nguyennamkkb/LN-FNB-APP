@@ -29,6 +29,7 @@ fileprivate class ListCommonService {
     
     static let taoBaoCaoHomNay = bill + "/taoBaoCaoHomNay"
     static let taoBaoCaoTheoThoiGian = bill + "/taoBaoCaoTheoThoiGian"
+    static let taiAnhSanPham = ServiceManager.ROOT + "images/uploadAnhSanPham"
     
 }
 
@@ -49,6 +50,7 @@ fileprivate enum ECommonURLs {
     
     case taoBaoCaoHomNay
     case taoBaoCaoTheoThoiGian
+    case taiAnhSanPham
     
     
     func getPath() -> String {
@@ -85,7 +87,9 @@ fileprivate enum ECommonURLs {
             return ListCommonService.taoBaoCaoHomNay
         case .taoBaoCaoTheoThoiGian:
             return ListCommonService.taoBaoCaoTheoThoiGian
-        }
+        case .taiAnhSanPham:
+            return ListCommonService.taiAnhSanPham
+}
 
     }
 }
@@ -729,6 +733,26 @@ class CommonServices {
             completion(nil)
         }
         BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    func taiAnhSanPhamLen(param: FPramUploadImage, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.taiAnhSanPham.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
             if success {
                 if result != nil{
                     if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {

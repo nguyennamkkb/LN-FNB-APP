@@ -229,6 +229,18 @@ extension UIImage {
         }
         return imageData.base64EncodedString(options: .lineLength64Characters)
     }
+    func resizeImage(maxWidth: CGFloat) -> UIImage {
+        let aspectRatio = self.size.width / self.size.height
+        let newWidth = min(maxWidth, self.size.width)
+        let newHeight = newWidth / aspectRatio
+        
+        UIGraphicsBeginImageContext(CGSize(width: newWidth, height: newHeight))
+        self.draw(in: CGRect(x: 0, y: 0, width: newWidth, height: newHeight))
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage ?? self
+    }
     convenience init?(color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) {
         let rect = CGRect(origin: .zero, size: size)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0.0)

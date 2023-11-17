@@ -113,6 +113,9 @@
 		0BB43F0A29FAD82F00F1DE85 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */; };
 		0BB43F0B29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */; };
 		0BBA69042ACEF58200963438 /* FOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBA69032ACEF58200963438 /* FOrder.swift */; };
+		0BBF73B62B07C0B500C7E5E3 /* MonAnThemAnhVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBF73B42B07C0B500C7E5E3 /* MonAnThemAnhVC.swift */; };
+		0BBF73B72B07C0B500C7E5E3 /* MonAnThemAnhVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BBF73B52B07C0B500C7E5E3 /* MonAnThemAnhVC.xib */; };
+		0BBF73B92B07DB8600C7E5E3 /* FPramUploadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BBF73B82B07DB8600C7E5E3 /* FPramUploadImage.swift */; };
 		0BC72AF42ADEC38C00CC69A1 /* BillCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC72AF22ADEC38C00CC69A1 /* BillCell.swift */; };
 		0BC72AF52ADEC38C00CC69A1 /* BillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC72AF32ADEC38C00CC69A1 /* BillCell.xib */; };
 		0BC72AF82ADEE47F00CC69A1 /* BillItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC72AF62ADEE47F00CC69A1 /* BillItemCell.swift */; };
@@ -304,6 +307,9 @@
 		0BB43EFC29FAD82F00F1DE85 /* Rubik-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Black.ttf"; sourceTree = "<group>"; };
 		0BB43EFD29FAD82F00F1DE85 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
 		0BBA69032ACEF58200963438 /* FOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOrder.swift; sourceTree = "<group>"; };
+		0BBF73B42B07C0B500C7E5E3 /* MonAnThemAnhVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonAnThemAnhVC.swift; sourceTree = "<group>"; };
+		0BBF73B52B07C0B500C7E5E3 /* MonAnThemAnhVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonAnThemAnhVC.xib; sourceTree = "<group>"; };
+		0BBF73B82B07DB8600C7E5E3 /* FPramUploadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FPramUploadImage.swift; sourceTree = "<group>"; };
 		0BC72AF22ADEC38C00CC69A1 /* BillCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillCell.swift; sourceTree = "<group>"; };
 		0BC72AF32ADEC38C00CC69A1 /* BillCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BillCell.xib; sourceTree = "<group>"; };
 		0BC72AF62ADEE47F00CC69A1 /* BillItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillItemCell.swift; sourceTree = "<group>"; };
@@ -633,6 +639,8 @@
 				0BD56ADC2AC5E81400A41312 /* ThemMonAnCell.xib */,
 				0BD56ADF2AC5EDFD00A41312 /* ThemMonAnVC.swift */,
 				0BD56AE02AC5EDFD00A41312 /* ThemMonAnVC.xib */,
+				0BBF73B42B07C0B500C7E5E3 /* MonAnThemAnhVC.swift */,
+				0BBF73B52B07C0B500C7E5E3 /* MonAnThemAnhVC.xib */,
 			);
 			path = ThucDon;
 			sourceTree = "<group>";
@@ -767,6 +775,7 @@
 				0BBA69032ACEF58200963438 /* FOrder.swift */,
 				0B4445ED2ADBD41500E7C098 /* FBill.swift */,
 				0BCCBD362B0534810014C109 /* FThongKeHomNay.swift */,
+				0BBF73B82B07DB8600C7E5E3 /* FPramUploadImage.swift */,
 			);
 			path = 2.Models;
 			sourceTree = "<group>";
@@ -994,6 +1003,7 @@
 				0BD56AD62AC5E55100A41312 /* QLMonAnCell.xib in Resources */,
 				0BF42ACE2AB6066B00592A0E /* Roboto-CondensedItalic.ttf in Resources */,
 				0BA5D5192AB6FB2D0031FBF9 /* MonAnCell.xib in Resources */,
+				0BBF73B72B07C0B500C7E5E3 /* MonAnThemAnhVC.xib in Resources */,
 				0BF42ACF2AB6066B00592A0E /* Roboto-Italic.ttf in Resources */,
 				0BF42AC22AB6066B00592A0E /* Roboto-Medium.ttf in Resources */,
 				0BB43F0029FAD82F00F1DE85 /* Rubik-SemiBoldItalic.ttf in Resources */,
@@ -1130,6 +1140,7 @@
 				0B6B10632AE819E50009849F /* KichHoatTaiKhoanVC.swift in Sources */,
 				0BF42AE22AB619F300592A0E /* SingUpInfoCell.swift in Sources */,
 				0BD56AE12AC5EDFD00A41312 /* ThemMonAnVC.swift in Sources */,
+				0BBF73B92B07DB8600C7E5E3 /* FPramUploadImage.swift in Sources */,
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
 				0BF42AE62AB61B1800592A0E /* SignUpInfoVC.swift in Sources */,
 				0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */,
@@ -1144,6 +1155,7 @@
 				0BA5D5142AB6D74D0031FBF9 /* ChonMonVC.swift in Sources */,
 				0B45BC992AB9CC670073A380 /* BluetoothHelper.swift in Sources */,
 				0B49A26E2B0100ED00B59A23 /* BaoCaoTheoNgayCell.swift in Sources */,
+				0BBF73B62B07C0B500C7E5E3 /* MonAnThemAnhVC.swift in Sources */,
 				0BA5D5182AB6FB2D0031FBF9 /* MonAnCell.swift in Sources */,
 				0B81D61E2AC736E70003CFF6 /* BanDatTruocVC.swift in Sources */,
 				0BE00C032AC023AF002C1C04 /* BanDangPhucVuVC.swift in Sources */,

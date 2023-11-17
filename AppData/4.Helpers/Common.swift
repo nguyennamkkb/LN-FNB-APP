@@ -152,6 +152,26 @@ class Common {
         }
         return image
     }
-    
+    public static func convertImageToBase64(image: UIImage, maxWidth: CGFloat, maxSizeKB: Int) -> String? {
+        // Resize the image
+        let resizedImage = image.resizeImage(maxWidth: maxWidth)
+        
+        // Convert the resized image to JPEG with a compression quality of 0.5
+        if let imageData = resizedImage.jpegData(compressionQuality: 0.2) {
+            // Check if the image size is below the specified limit
+            if imageData.count > maxSizeKB * 1024 {
+                // If the image size is still larger than the limit, adjust the compression quality
+                let compressionRatio = CGFloat(maxSizeKB * 1024) / CGFloat(imageData.count)
+                if let adjustedImageData = resizedImage.jpegData(compressionQuality: compressionRatio) {
+                    return adjustedImageData.base64EncodedString(options: .lineLength64Characters)
+                }
+            } else {
+                // If the image size is below the limit, directly encode to base64
+                return imageData.base64EncodedString(options: .lineLength64Characters)
+            }
+        }
+        
+        return nil
+    }
 
 }

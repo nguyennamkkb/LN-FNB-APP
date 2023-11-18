@@ -67,8 +67,7 @@ class LoginVC: BaseVC {
     
     
     func login(email: String, password: String){
-//        print(email)
-//        print(password)
+
         let paramRequest = LoginParam(email: email, password: password)
         ServiceManager.common.signIn(param: paramRequest){
             (response) in
@@ -78,13 +77,31 @@ class LoginVC: BaseVC {
                 CacheManager.share.setRegister(true)
                 let data = Mapper<PStore>().map(JSONObject: response?.data)
                 data?.password = paramRequest.password
+                
                 CacheManager.share.setUserMaster(value: data?.toJSONString())
                 Common.userMaster = data ?? PStore()
                 self.wrapRoot(vc: TabBarVC())
+                
             } else if response?.data != nil, response?.statusCode == 199 {
+                
                 let vc = KichHoatTaiKhoanVC()
                 vc.bindData(email: paramRequest.email ?? "")
                 self.pushVC(controller: vc)
+                
+                vc.actionThanhCong = {
+                    let vcAL = AlertVC()
+                    vcAL.bindData(s: "Kích hoat thành công")
+                    vcAL.modalPresentationStyle = .overFullScreen
+                    self.present(vcAL, animated: false)
+                    
+                    vcAL.actionFinish = {
+                        self.login(email: email, password: password)
+                    }
+                    
+                }
+                
+                
+                
             } else if response?.statusCode == 0 {
                 self.lbMessage.isHidden = false
                 self.lbMessage.text = "Thông báo: email hoặc mật khẩu không đúng"

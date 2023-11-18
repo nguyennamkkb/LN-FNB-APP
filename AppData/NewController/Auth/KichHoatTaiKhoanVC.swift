@@ -9,7 +9,8 @@ import UIKit
 
 class KichHoatTaiKhoanVC: BaseVC {
 
-
+    var actionThanhCong: ClosureAction?
+    @IBOutlet var lbBaoLoi: UILabel!
     @IBOutlet var lbMess: UILabel!
     @IBOutlet var tfOtp: UITextField!
     @IBOutlet var v1: UIView!
@@ -29,7 +30,10 @@ class KichHoatTaiKhoanVC: BaseVC {
         self.onBackNav()
     }
     @IBAction func xacNhanPressed(_ sender: Any) {
-        guard let otp = tfOtp.text, otp.count == 6  else {return}
+        guard let otp = tfOtp.text, otp.count == 6  else {
+            lbBaoLoi.isHidden = false
+            lbBaoLoi.text = "Mã OTP 6 số không đúng"
+            return}
         verifyUser(otp: otp)
     }
     func verifyUser(otp: String){
@@ -41,17 +45,11 @@ class KichHoatTaiKhoanVC: BaseVC {
             (response) in
             self.hideLoading()
             if response?.statusCode == 200 {
-                let vc = AlertVC()
-                vc.bindData(s: "Thành công")
-                vc.modalPresentationStyle = .overFullScreen
-                self.present(vc, animated: false)
-                self.presentFullScreen(vc: vc)
-                vc.actionFinish = {
-                    self.onBackNav()
-                }
+                self.onBackNav()
+                self.actionThanhCong?()
                 
             } else {
-                self.showAlert(message: response?.message ?? "")
+                self.lbBaoLoi.text = "Mã OTP 6 số không đúng"
             }
         }
     }

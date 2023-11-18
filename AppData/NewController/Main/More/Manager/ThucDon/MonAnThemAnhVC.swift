@@ -29,8 +29,11 @@ class MonAnThemAnhVC: BaseVC {
         bChonAnhKhac.layer.borderWidth = 1
         bChonAnhKhac.layer.borderColor = C.Color.NYellow?.cgColor
         
-        let url = URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/"+urlImage)
-        anhSanPham.kf.setImage(with: url)
+        if let url = URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/"+(item.image ?? "anhSanPhamMacDinh")) {
+            anhSanPham.loadImageFromUrl(from: url)
+        }else {
+            anhSanPham.kf.setImage(with:URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/anhSanPhamMacDinh"))
+        }
     }
     func bindData(e: FProduct){
         item = e
@@ -65,7 +68,7 @@ class MonAnThemAnhVC: BaseVC {
     @IBAction func xacNhanPressed(_ sender: Any) {
         if base64String.count < 100 {
             uploadMacDinh?()
-            self.onBackNav()
+            self.onBackNav(animated: false)
         }
         let anhSanPham = FPramUploadImage()
         anhSanPham.user_id = Common.userMaster.id
@@ -78,7 +81,7 @@ class MonAnThemAnhVC: BaseVC {
             if response?.data != nil, response?.statusCode == 200 {
                 self.showAlert(message: "Thành công!")
                 self.uploadThanhCong?(response?.data as! String)
-                self.onBackNav()
+                self.onBackNav(animated: false)
             } else if response?.statusCode == 0 {
                 self.lbMess.isHidden = false
                 self.lbMess.text = "Không thể tải ảnh lên lúc này, ảnh mặc định sẽ hiển thị thay thể, chọn dấu x để bỏ qua bước này"

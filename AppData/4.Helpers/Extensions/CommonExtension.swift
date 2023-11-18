@@ -285,8 +285,36 @@ extension UIImage {
         
         return newImage
     }
+    
 }
-
+extension UIImageView {
+    // Hàm này sẽ load một hình ảnh từ url và hiển thị nó trên UIImageView
+    func loadImageFromUrl(from url: URL) {
+        // Tạo một URLSession để tải dữ liệu từ url
+        let session = URLSession.shared
+        // Tạo một task để tải dữ liệu từ url
+        let task = session.dataTask(with: url) { data, response, error in
+            // Kiểm tra xem có lỗi không
+            if let error = error {
+                // Nếu có lỗi, in ra lỗi và thoát khỏi hàm
+                print(error.localizedDescription)
+                return
+            }
+            // Kiểm tra xem có dữ liệu không
+            if let data = data {
+                // Nếu có dữ liệu, tạo một UIImage từ dữ liệu
+                let image = UIImage(data: data)
+                // Cập nhật giao diện trên main thread
+                DispatchQueue.main.async {
+                    // Gán hình ảnh cho UIImageView
+                    self.image = image
+                }
+            }
+        }
+        // Bắt đầu task
+        task.resume()
+    }
+}
 extension UIViewController {
     public func showSheet(controller: UIViewController, sizes: [SheetSize]) {
         let controller = SheetViewController(controller:controller, sizes: sizes)

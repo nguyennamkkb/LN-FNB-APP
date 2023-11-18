@@ -25,37 +25,25 @@ class ThemMonAnVC: BaseVC {
         tableView.delegate = self
         tableView.dataSource = self
         self.tableView.registerCell(nibName: "ThemMonAnCell")
-        getCategories()
         lbTieuDe.text = tieuDe
+        
     }
-    func bindDataSua(item: FProduct, trangThai: Int){
+    func bindData(listCategory: [FCategory]){
+        self.listCategory = listCategory
+    }
+    func bindDataSua(item: FProduct, trangThai: Int, listCategory: [FCategory]){
+        self.listCategory = listCategory
         self.item = item
         self.trangThaiSua = trangThai
         tieuDe = "Sửa món ăn"
         print("item update \(self.item.toJSON())")
     }
-    func getCategories(){
-        guard let id = Common.userMaster.id else {return}
-        let param = ParamSearch(user_id: id, status: 1, keySearch: nil)
-        ServiceManager.common.getAllCategories(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
-            (response) in
-            if response?.data != nil, response?.statusCode == 200 {
-                self.listCategory = Mapper<FCategory>().mapArray(JSONObject: response!.data ) ?? [FCategory]()
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } else if response?.statusCode == 0 {
-              
-            }
-        }
-
-    }
+    
     func createProduct(){
         item.sign()
         ServiceManager.common.createProduct(param: item){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
-                self.showAlert(message: "Thành công!")
                 self.item =  Mapper<FProduct>().map(JSONObject: response?.data) ?? FProduct()
                 
                 let vc = MonAnThemAnhVC()
@@ -79,10 +67,9 @@ class ThemMonAnVC: BaseVC {
         ServiceManager.common.updateProduct(param: item){
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
-                self.showAlert(message: "Thành công!")
                 if self.trangThaiLayAnh == 0 {
                     print("Chon anh")
-                    
+                    print("item")
                     let vc = MonAnThemAnhVC()
                     vc.bindData(e: self.item)
                    
@@ -93,17 +80,17 @@ class ThemMonAnVC: BaseVC {
                         self.item.image = url
                         self.trangThaiLayAnh = 1
                         self.updateProduct()
-//                        self.onBackNav()
+                    
                     }
                     vc.uploadMacDinh = {
                         [weak self] in
                         guard let self = self else {return}
                         print("ket thuc")
-                        self.onBackNav()
+                        self.onBackNav(animated: false)
                     }
                 }else{
-                    print("ket thuc")
-                    self.onBackNav()
+                    self.actionOK?()
+                    self.onBackNav(animated: false)
                 }
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể sửa")
@@ -123,7 +110,10 @@ extension ThemMonAnVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ThemMonAnCell", for: indexPath) as? ThemMonAnCell else {return UITableViewCell()}
         cell.bindDataCategories(list: listCategory)
-
+        if trangThaiSua == 2 {
+            cell.bindData(item: item )
+        }
+        
         cell.passData = {
             [weak self] data in
             guard let self = self else {return}
@@ -135,9 +125,7 @@ extension ThemMonAnVC: UITableViewDelegate, UITableViewDataSource {
             }
             
         }
-        if trangThaiSua == 2 {
-            cell.bindData(item: item )
-        }
+
         return cell
     }
 }

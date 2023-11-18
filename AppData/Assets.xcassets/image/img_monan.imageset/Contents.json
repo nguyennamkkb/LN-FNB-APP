@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "img-monan.jpeg",
+      "filename" : "anhSanPham 1.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "anhSanPham.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "anhSanPham 2.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }

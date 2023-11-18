@@ -22,8 +22,9 @@ class AlertVC: UIViewController {
         vAleart.layer.shadowRadius = 10
         lbMessage?.text = message ?? ""
         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            self.actionFinish?()
             self.dismiss(animated: false)
+            self.actionFinish?()
+          
         }
     }
     func bindData(s: String){

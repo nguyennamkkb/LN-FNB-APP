@@ -6,9 +6,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Roboto-Black.ttf">
+            <string>Roboto-Black</string>
+        </array>
         <array key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
         </array>
@@ -23,6 +27,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KichHoatTaiKhoanVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
                 <outlet property="bXacNhan" destination="iht-eH-SPd" id="PKI-7p-rya"/>
+                <outlet property="lbBaoLoi" destination="QjY-kV-79r" id="VBa-yw-ySD"/>
                 <outlet property="lbMess" destination="7r3-W4-ZIY" id="nB5-Wu-v6L"/>
                 <outlet property="tfOtp" destination="gTY-rI-WqT" id="HIj-uz-ag4"/>
                 <outlet property="v1" destination="vAu-OQ-Pvh" id="za5-qw-3h9"/>
@@ -83,7 +88,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqu-wt-Wnh" userLabel="OTP">
                     <rect key="frame" x="15" y="189.66666666666666" width="363" height="74.999999999999972"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mã xác nhận" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgC-MX-FmX" userLabel="otp">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nhập mã OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgC-MX-FmX" userLabel="otp">
                             <rect key="frame" x="0.0" y="0.0" width="363" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="20" id="5PU-At-BJd"/>
@@ -93,13 +98,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vAu-OQ-Pvh">
-                            <rect key="frame" x="0.0" y="25" width="363" height="50"/>
+                            <rect key="frame" x="131.66666666666666" y="25" width="100" height="50"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nhập mã xác nhận từ email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-rI-WqT" userLabel="Nhập otp">
-                                    <rect key="frame" x="10" y="0.0" width="343" height="50"/>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="6 số OTP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gTY-rI-WqT" userLabel="Nhập otp">
+                                    <rect key="frame" x="5" y="0.0" width="90" height="50"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="textColor" name="white"/>
-                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                    <color key="textColor" name="n black"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     <userDefinedRuntimeAttributes>
                                         <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
@@ -110,23 +115,23 @@
                             </subviews>
                             <color key="backgroundColor" name="n white"/>
                             <constraints>
-                                <constraint firstItem="gTY-rI-WqT" firstAttribute="leading" secondItem="vAu-OQ-Pvh" secondAttribute="leading" constant="10" id="6aj-cp-H21"/>
-                                <constraint firstAttribute="trailing" secondItem="gTY-rI-WqT" secondAttribute="trailing" constant="10" id="B68-na-Q0B"/>
-                                <constraint firstAttribute="bottom" secondItem="gTY-rI-WqT" secondAttribute="bottom" id="Rz6-uu-qaS"/>
-                                <constraint firstAttribute="height" constant="50" id="Yvw-ji-ZXI"/>
-                                <constraint firstItem="gTY-rI-WqT" firstAttribute="top" secondItem="vAu-OQ-Pvh" secondAttribute="top" id="haQ-bO-iBq"/>
+                                <constraint firstItem="gTY-rI-WqT" firstAttribute="leading" secondItem="vAu-OQ-Pvh" secondAttribute="leading" constant="5" id="9Dz-rF-Qoz"/>
+                                <constraint firstAttribute="height" constant="50" id="AP5-12-nDT"/>
+                                <constraint firstAttribute="trailing" secondItem="gTY-rI-WqT" secondAttribute="trailing" constant="5" id="Rgl-Tr-P14"/>
+                                <constraint firstItem="gTY-rI-WqT" firstAttribute="top" secondItem="vAu-OQ-Pvh" secondAttribute="top" id="hIm-8B-KVg"/>
+                                <constraint firstAttribute="width" constant="100" id="oE8-wB-aX0"/>
+                                <constraint firstAttribute="bottom" secondItem="gTY-rI-WqT" secondAttribute="bottom" id="ze9-gH-QeZ"/>
                             </constraints>
                         </view>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="vAu-OQ-Pvh" firstAttribute="centerX" secondItem="hqu-wt-Wnh" secondAttribute="centerX" id="8at-3Y-RBA"/>
                         <constraint firstItem="JgC-MX-FmX" firstAttribute="top" secondItem="hqu-wt-Wnh" secondAttribute="top" id="99r-Sh-cNO"/>
                         <constraint firstAttribute="trailing" secondItem="JgC-MX-FmX" secondAttribute="trailing" id="PcD-Re-6o5"/>
-                        <constraint firstItem="vAu-OQ-Pvh" firstAttribute="leading" secondItem="hqu-wt-Wnh" secondAttribute="leading" id="WTP-sh-hNK"/>
                         <constraint firstAttribute="height" constant="75" id="X8h-GQ-LqL"/>
-                        <constraint firstAttribute="bottom" secondItem="vAu-OQ-Pvh" secondAttribute="bottom" id="m2z-48-3jV"/>
+                        <constraint firstAttribute="bottom" secondItem="vAu-OQ-Pvh" secondAttribute="bottom" id="YOa-iS-60X"/>
                         <constraint firstItem="JgC-MX-FmX" firstAttribute="leading" secondItem="hqu-wt-Wnh" secondAttribute="leading" id="rc4-pv-1Au"/>
-                        <constraint firstAttribute="trailing" secondItem="vAu-OQ-Pvh" secondAttribute="trailing" id="yWL-aZ-Joo"/>
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iht-eH-SPd">
@@ -142,6 +147,12 @@
                         <action selector="xacNhanPressed:" destination="-1" eventType="touchUpInside" id="cVg-89-5VZ"/>
                     </connections>
                 </button>
+                <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QjY-kV-79r">
+                    <rect key="frame" x="15" y="343.66666666666669" width="363" height="19"/>
+                    <fontDescription key="fontDescription" name="Roboto-Black" family="Roboto" pointSize="16"/>
+                    <color key="textColor" systemColor="systemRedColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="n wgrey"/>
@@ -149,13 +160,16 @@
                 <constraint firstItem="iht-eH-SPd" firstAttribute="top" secondItem="hqu-wt-Wnh" secondAttribute="bottom" constant="20" id="25p-5W-68s"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7r3-W4-ZIY" secondAttribute="trailing" constant="15" id="4dC-qe-KEm"/>
                 <constraint firstItem="iht-eH-SPd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="9zg-um-WhH"/>
+                <constraint firstItem="QjY-kV-79r" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="CqF-UQ-6Ar"/>
                 <constraint firstItem="7r3-W4-ZIY" firstAttribute="top" secondItem="SiH-S2-Bix" secondAttribute="bottom" constant="20" id="G9T-CV-KZX"/>
                 <constraint firstItem="ndT-W0-Xl6" firstAttribute="bottom" secondItem="SiH-S2-Bix" secondAttribute="bottom" id="KSF-dC-yZn"/>
                 <constraint firstItem="ndT-W0-Xl6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Kc8-5B-ruO"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QjY-kV-79r" secondAttribute="trailing" constant="15" id="LL7-ek-Lgt"/>
                 <constraint firstItem="SiH-S2-Bix" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mpy-f1-wKx"/>
                 <constraint firstItem="7r3-W4-ZIY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="MtZ-xo-VLy"/>
                 <constraint firstItem="hqu-wt-Wnh" firstAttribute="top" secondItem="7r3-W4-ZIY" secondAttribute="bottom" constant="20" id="OBc-eP-MkQ"/>
                 <constraint firstItem="ndT-W0-Xl6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="9" id="WtX-5H-Fyx"/>
+                <constraint firstItem="QjY-kV-79r" firstAttribute="top" secondItem="iht-eH-SPd" secondAttribute="bottom" constant="15" id="ZfL-Pj-rTT"/>
                 <constraint firstItem="SiH-S2-Bix" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="a1N-fs-hCH"/>
                 <constraint firstItem="hqu-wt-Wnh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="aaK-rQ-xmf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iht-eH-SPd" secondAttribute="trailing" constant="15" id="bHU-pl-IGi"/>
@@ -163,7 +177,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hqu-wt-Wnh" secondAttribute="trailing" constant="15" id="ksl-1L-duD"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ndT-W0-Xl6" secondAttribute="trailing" constant="9" id="xhw-2i-qEW"/>
             </constraints>
-            <point key="canvasLocation" x="134" y="21"/>
+            <point key="canvasLocation" x="133.58778625954199" y="20.422535211267608"/>
         </view>
     </objects>
     <resources>
@@ -186,5 +200,8 @@
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

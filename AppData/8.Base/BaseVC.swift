@@ -124,10 +124,10 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     //    }
     
     
-    func onBackNav() {
-        let vc = self.navigationController?.popViewController(animated: animation)
+    func onBackNav(animated: Bool? = true) {
+        let vc = self.navigationController?.popViewController(animated: animated ?? true)
         if vc == nil{
-            dismiss(animated: animation, completion: nil)
+            dismiss(animated: animated ?? true, completion: nil)
         }
     }
     func wrapRoot(vc: UIViewController){

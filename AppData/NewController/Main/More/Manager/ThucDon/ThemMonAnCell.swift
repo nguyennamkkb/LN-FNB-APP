@@ -32,8 +32,7 @@ class ThemMonAnCell: UITableViewCell {
         super.awakeFromNib()
         setupUI()
         
-        
-       
+
     }
     func setupUI(){
         V1.layer.cornerRadius = C.CornerRadius.corner10
@@ -47,6 +46,8 @@ class ThemMonAnCell: UITableViewCell {
     }
     func bindDataCategories(list: [FCategory]){
         self.listCategory = list
+        categorySelected = listCategory.itemAtIndex(index: 0) ?? FCategory()
+        lbCategory.text = categorySelected.name ?? "Chọn danh mục"
 
     }
     func bindData(item: FProduct){
@@ -57,8 +58,13 @@ class ThemMonAnCell: UITableViewCell {
         tfDescription.text = item.description
         categorySelected = listCategory.first(where: { $0.id == item.category_id }) ?? FCategory()
         lbCategory.text = categorySelected.name ?? "Chọn danh mục"
-        
-        imgMonAn.kf.setImage(with:URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/"+(item.image ?? "anhSanPhamMacDinh")))
+//        let url = URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/"+(item.image ?? "anhSanPhamMacDinh"))
+
+        if let url = URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/"+(item.image ?? "anhSanPhamMacDinh")) {
+            imgMonAn.loadImageFromUrl(from: url)
+        }else {
+            imgMonAn.kf.setImage(with:URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/anhSanPhamMacDinh"))
+        }
     }
     @IBAction func chonDanhMucPressed(_ sender: UIButton) {
         var list =  [String]()

@@ -14,6 +14,7 @@ class MonAnVC: BaseVC {
     let refreshControl = UIRefreshControl()
     @IBOutlet var keySearch: UITextField!
     var tableData = [FProduct]()
+    var listCategory = [FCategory]()
     @IBOutlet var tableView: UITableView!
     @IBOutlet var vSearch: UIView!
     @IBOutlet var bAdd: UIButton!
@@ -24,16 +25,18 @@ class MonAnVC: BaseVC {
         tableView.dataSource = self
         self.tableView.registerCell(nibName: "QLMonAnCell")
         getProducts()
-        
+        getCategories()
     }
     @IBAction func searchPressed(_ sender: Any) {
         getProducts()
     }
     @IBAction func AddPressed(_ sender: Any) {
         let vc = ThemMonAnVC()
+        vc.bindData(listCategory: listCategory)
         vc.actionOK = {
             [weak self]  in
             guard let self = self else {return}
+            self.showAlert(message: "Thành công")
             self.getProducts()
         }
         self.pushVC(controller: vc)
@@ -83,6 +86,22 @@ class MonAnVC: BaseVC {
             }
         }
     }
+    func getCategories(){
+        guard let id = Common.userMaster.id else {return}
+        let param = ParamSearch(user_id: id, status: 1, keySearch: nil)
+        ServiceManager.common.getAllCategories(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
+            (response) in
+            if response?.data != nil, response?.statusCode == 200 {
+                self.listCategory = Mapper<FCategory>().mapArray(JSONObject: response!.data ) ?? [FCategory]()
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            } else if response?.statusCode == 0 {
+              
+            }
+        }
+
+    }
 }
 extension MonAnVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -99,9 +118,10 @@ extension MonAnVC: UITableViewDelegate, UITableViewDataSource {
             [weak self] data in
             guard let self = self else {return}
             let vc = ThemMonAnVC()
-            vc.bindDataSua(item: data, trangThai: 2)
+            vc.bindDataSua(item: data, trangThai: 2,listCategory: self.listCategory)
             vc.actionOK = {
                 self.getProducts()
+                self.showAlert(message: "Thành công")
             }
             self.pushVC(controller: vc)
         }

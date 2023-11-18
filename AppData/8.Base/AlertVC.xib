@@ -27,31 +27,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcJ-qR-7K6" userLabel="vAleart">
-                    <rect key="frame" x="40" y="109" width="313" height="100"/>
+                    <rect key="frame" x="20" y="412.33333333333331" width="349" height="52.333333333333314"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông báo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxh-x3-dXG">
-                            <rect key="frame" x="5" y="0.0" width="303" height="100"/>
-                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông báoThông báoThông báoThông báoThông báoThông báo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxh-x3-dXG">
+                            <rect key="frame" x="10" y="5" width="329" height="42.333333333333336"/>
+                            <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
                             <color key="textColor" name="n yellow"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" name="n white"/>
                     <constraints>
-                        <constraint firstItem="fxh-x3-dXG" firstAttribute="leading" secondItem="IcJ-qR-7K6" secondAttribute="leading" constant="5" id="Lzt-qs-1gk"/>
-                        <constraint firstItem="fxh-x3-dXG" firstAttribute="top" secondItem="IcJ-qR-7K6" secondAttribute="top" id="Yln-uh-3Yz"/>
-                        <constraint firstAttribute="height" constant="100" id="gwf-Ui-NK5"/>
-                        <constraint firstAttribute="trailing" secondItem="fxh-x3-dXG" secondAttribute="trailing" constant="5" id="uvg-5j-aVo"/>
-                        <constraint firstAttribute="bottom" secondItem="fxh-x3-dXG" secondAttribute="bottom" id="vMG-Qp-Jbf"/>
+                        <constraint firstAttribute="trailing" secondItem="fxh-x3-dXG" secondAttribute="trailing" constant="10" id="PjK-vS-K7Q"/>
+                        <constraint firstItem="fxh-x3-dXG" firstAttribute="leading" secondItem="IcJ-qR-7K6" secondAttribute="leading" constant="10" id="QrS-Kq-gVk"/>
+                        <constraint firstItem="fxh-x3-dXG" firstAttribute="top" secondItem="IcJ-qR-7K6" secondAttribute="top" constant="5" id="l5C-Mf-lZd"/>
+                        <constraint firstAttribute="bottom" secondItem="fxh-x3-dXG" secondAttribute="bottom" constant="5" id="qjL-W7-NlQ"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.10756173039114239" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="IcJ-qR-7K6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="1dC-FA-zQn"/>
-                <constraint firstItem="IcJ-qR-7K6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="cS0-60-LQ1"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IcJ-qR-7K6" secondAttribute="trailing" constant="40" id="m9d-n2-oCL"/>
+                <constraint firstItem="IcJ-qR-7K6" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Ca6-ct-NFh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IcJ-qR-7K6" secondAttribute="trailing" constant="24" id="PNa-Mb-cGS"/>
+                <constraint firstItem="IcJ-qR-7K6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="pGA-EB-gNR"/>
             </constraints>
             <point key="canvasLocation" x="79" y="21"/>
         </view>

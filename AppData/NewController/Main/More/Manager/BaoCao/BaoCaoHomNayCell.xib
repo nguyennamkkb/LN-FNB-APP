@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -342,13 +342,6 @@
                                 <color key="textColor" name="n black"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chart.xyaxis.line" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kst-bW-hTq">
-                                <rect key="frame" x="10" y="61.999999999999957" width="331" height="177.33333333333331"/>
-                                <color key="tintColor" name="n yellow"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="180" id="8AH-vZ-zAb"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ngày 1/11/2023" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUh-2D-lfr">
                                 <rect key="frame" x="10.000000000000007" y="250.66666666666663" width="117.66666666666669" height="19"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
@@ -385,11 +378,18 @@
                                 <color key="textColor" name="n black"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfl-Rj-9nG">
+                                <rect key="frame" x="15" y="60.666666666666629" width="321" height="180"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="OmO-22-K2J"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="ENa-DQ-JVu" firstAttribute="top" secondItem="6jo-eZ-V4p" secondAttribute="top" constant="10" id="3xH-Rn-Nno"/>
-                            <constraint firstAttribute="trailing" secondItem="kst-bW-hTq" secondAttribute="trailing" constant="10" id="9fL-69-1Am"/>
+                            <constraint firstItem="Hfl-Rj-9nG" firstAttribute="top" secondItem="R9X-Iw-Z5c" secondAttribute="bottom" constant="10" id="7bs-bf-GfL"/>
                             <constraint firstItem="221-vX-OuS" firstAttribute="top" secondItem="1eR-Qp-6Np" secondAttribute="bottom" constant="15" id="9hr-3s-sNQ"/>
                             <constraint firstItem="nx8-Vg-Y1y" firstAttribute="top" secondItem="yUh-2D-lfr" secondAttribute="bottom" constant="10" id="HAM-Dy-Zuz"/>
                             <constraint firstItem="gVw-rt-M76" firstAttribute="top" secondItem="nx8-Vg-Y1y" secondAttribute="bottom" constant="10" id="Lry-5K-h0J"/>
@@ -397,10 +397,9 @@
                             <constraint firstAttribute="height" constant="425" id="OCo-hK-Dku"/>
                             <constraint firstItem="1eR-Qp-6Np" firstAttribute="leading" secondItem="6jo-eZ-V4p" secondAttribute="leading" constant="10" id="SOG-Q8-PJF"/>
                             <constraint firstItem="yUh-2D-lfr" firstAttribute="leading" secondItem="6jo-eZ-V4p" secondAttribute="leading" constant="10" id="SZp-YL-lqn"/>
-                            <constraint firstItem="yUh-2D-lfr" firstAttribute="top" secondItem="kst-bW-hTq" secondAttribute="bottom" constant="10" id="XTP-Ka-oer"/>
+                            <constraint firstItem="yUh-2D-lfr" firstAttribute="top" secondItem="Hfl-Rj-9nG" secondAttribute="bottom" constant="10" id="Ypu-vu-8lt"/>
                             <constraint firstItem="1eR-Qp-6Np" firstAttribute="top" secondItem="Id6-Ao-XXU" secondAttribute="bottom" constant="15" id="Yr7-5k-pqG"/>
                             <constraint firstItem="Id6-Ao-XXU" firstAttribute="leading" secondItem="6jo-eZ-V4p" secondAttribute="leading" constant="20" id="aL5-F2-tt0"/>
-                            <constraint firstItem="kst-bW-hTq" firstAttribute="top" secondItem="R9X-Iw-Z5c" secondAttribute="bottom" constant="10" id="awO-9o-cSY"/>
                             <constraint firstItem="Id6-Ao-XXU" firstAttribute="top" secondItem="gVw-rt-M76" secondAttribute="bottom" constant="10" id="bse-Ah-Api"/>
                             <constraint firstItem="gVw-rt-M76" firstAttribute="leading" secondItem="6jo-eZ-V4p" secondAttribute="leading" constant="20" id="dzH-Ig-IcJ"/>
                             <constraint firstItem="R9X-Iw-Z5c" firstAttribute="leading" secondItem="6jo-eZ-V4p" secondAttribute="leading" constant="10" id="edL-2j-Sp1"/>
@@ -408,7 +407,8 @@
                             <constraint firstItem="nx8-Vg-Y1y" firstAttribute="leading" secondItem="6jo-eZ-V4p" secondAttribute="leading" constant="10" id="l84-YM-wXc"/>
                             <constraint firstAttribute="trailing" secondItem="ENa-DQ-JVu" secondAttribute="trailing" constant="5" id="n8l-rQ-tIb"/>
                             <constraint firstItem="R9X-Iw-Z5c" firstAttribute="top" secondItem="ENa-DQ-JVu" secondAttribute="bottom" constant="5" id="o89-hg-XA6"/>
-                            <constraint firstItem="kst-bW-hTq" firstAttribute="leading" secondItem="6jo-eZ-V4p" secondAttribute="leading" constant="10" id="yhe-Go-yhd"/>
+                            <constraint firstAttribute="trailing" secondItem="Hfl-Rj-9nG" secondAttribute="trailing" constant="15" id="ovR-AC-9x0"/>
+                            <constraint firstItem="Hfl-Rj-9nG" firstAttribute="leading" secondItem="6jo-eZ-V4p" secondAttribute="leading" constant="15" id="pIq-Xr-45X"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -429,6 +429,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="bReload" destination="r69-e1-bQf" id="Ued-Lu-CO6"/>
+                <outlet property="chartView" destination="Hfl-Rj-9nG" id="TK1-bK-TcT"/>
                 <outlet property="lbAnTaiBan" destination="qSO-pJ-HSh" id="LA5-to-VVl"/>
                 <outlet property="lbChuaDen" destination="Yk9-u4-wba" id="Mzj-Ts-wqd"/>
                 <outlet property="lbDoanhThu" destination="3C0-vY-Rr9" id="kZc-rX-2Fe"/>
@@ -454,7 +455,6 @@
     </objects>
     <resources>
         <image name="arrow.clockwise.circle" catalog="system" width="128" height="123"/>
-        <image name="chart.xyaxis.line" catalog="system" width="128" height="102"/>
         <namedColor name="green">
             <color red="0.14900000393390656" green="0.64499998092651367" blue="0.29800000786781311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -8,6 +8,7 @@
 import Printer
 import UIKit
 import WebKit
+import Kingfisher
 
 class DangPhucVuVC: BaseVC {
 
@@ -38,6 +39,8 @@ class DangPhucVuVC: BaseVC {
     }
     
     @IBAction func dangXuatPressed(_ sender: Any) {
+        ImageCache.default.clearMemoryCache()
+        ImageCache.default.clearDiskCache()
         let vc = LoginVC()
         self.wrapRoot(vc: vc)
     }
@@ -47,6 +50,8 @@ class DangPhucVuVC: BaseVC {
         self.pushVC(controller: vc)
     }
     @IBAction func inThuPressed(_ sender: Any) {
+       
+
         let vc = AlertVC()
         vc.bindData(s: "Đang in thử")
         vc.modalPresentationStyle = .overFullScreen

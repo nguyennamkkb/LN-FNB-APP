@@ -60,6 +60,10 @@ class MoreVC: BaseVC {
 //        self.wrapRoot(vc: LoginVC())
 //    }
 //
+    @IBAction func lienHePressed(_ sender: Any) {
+        let vc = LienHeVC()
+        self.present(vc, animated: true)
+    }
     @IBAction func baoCaoPressed(_ sender: Any) {
         let vc = BaoCaoHomNayVC()
         self.pushVC(controller: vc)

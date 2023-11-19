@@ -52,6 +52,8 @@
 		0B5D18642A0AA355004E47FD /* PBookCalender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18632A0AA355004E47FD /* PBookCalender.swift */; };
 		0B5D18662A0AA54F004E47FD /* FProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18652A0AA54F004E47FD /* FProduct.swift */; };
 		0B5D18682A0AA5F3004E47FD /* PServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5D18672A0AA5F3004E47FD /* PServices.swift */; };
+		0B64EA502B0A10700045701E /* LienHeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B64EA4E2B0A10700045701E /* LienHeVC.swift */; };
+		0B64EA512B0A10700045701E /* LienHeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B64EA4F2B0A10700045701E /* LienHeVC.xib */; };
 		0B69E3FE2AC345C200C11C2F /* MonTrenBanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69E3FC2AC345C200C11C2F /* MonTrenBanCell.swift */; };
 		0B69E3FF2AC345C200C11C2F /* MonTrenBanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B69E3FD2AC345C200C11C2F /* MonTrenBanCell.xib */; };
 		0B69E4022AC3494A00C11C2F /* PhieuBepVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B69E4002AC3494A00C11C2F /* PhieuBepVC.swift */; };
@@ -246,6 +248,8 @@
 		0B5D18632A0AA355004E47FD /* PBookCalender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PBookCalender.swift; sourceTree = "<group>"; };
 		0B5D18652A0AA54F004E47FD /* FProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FProduct.swift; sourceTree = "<group>"; };
 		0B5D18672A0AA5F3004E47FD /* PServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PServices.swift; sourceTree = "<group>"; };
+		0B64EA4E2B0A10700045701E /* LienHeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LienHeVC.swift; sourceTree = "<group>"; };
+		0B64EA4F2B0A10700045701E /* LienHeVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LienHeVC.xib; sourceTree = "<group>"; };
 		0B69E3FC2AC345C200C11C2F /* MonTrenBanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonTrenBanCell.swift; sourceTree = "<group>"; };
 		0B69E3FD2AC345C200C11C2F /* MonTrenBanCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonTrenBanCell.xib; sourceTree = "<group>"; };
 		0B69E4002AC3494A00C11C2F /* PhieuBepVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhieuBepVC.swift; sourceTree = "<group>"; };
@@ -616,6 +620,8 @@
 				0B3FB91F2AC7D249003FBCB5 /* QLHoaDon */,
 				0B81D60F2AC71E7A0003CFF6 /* QLBan */,
 				0BD56AB62AC5A51500A41312 /* ThucDon */,
+				0B64EA4E2B0A10700045701E /* LienHeVC.swift */,
+				0B64EA4F2B0A10700045701E /* LienHeVC.xib */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -991,6 +997,7 @@
 				0B3FB91E2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib in Resources */,
 				0BE038F029F81F6F002CB20F /* LaunchScreen.storyboard in Resources */,
 				0BF42ACC2AB6066B00592A0E /* Roboto-BoldItalic.ttf in Resources */,
+				0B64EA512B0A10700045701E /* LienHeVC.xib in Resources */,
 				0BF42ADB2AB6139100592A0E /* SignUpVC.xib in Resources */,
 				0BF42AC32AB6066B00592A0E /* Roboto-Light.ttf in Resources */,
 				0B81D6172AC724FD0003CFF6 /* BanCell.xib in Resources */,
@@ -1150,6 +1157,7 @@
 				0B45BC9C2ABA0DEA0073A380 /* DangPhucVuVC.swift in Sources */,
 				0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */,
 				0BE0392A29F82039002CB20F /* ExUIDevice.swift in Sources */,
+				0B64EA502B0A10700045701E /* LienHeVC.swift in Sources */,
 				0BF42AAC2AB601A400592A0E /* LoginVC.swift in Sources */,
 				0B5D18602A0AA132004E47FD /* PCustomer.swift in Sources */,
 				0BA5D5142AB6D74D0031FBF9 /* ChonMonVC.swift in Sources */,

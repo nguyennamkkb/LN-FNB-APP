@@ -19,7 +19,7 @@ class ChonMonVC: BaseVC{
     var listProductFinal: [FProduct] = [FProduct]()
     @IBOutlet var tfSoNguoi: UITextField!
     let refreshControl = UIRefreshControl()
-    var tableData: [FCategory] = []
+    var tableData: [FCategory] = [FCategory]()
     @IBOutlet var keySearch: UITextField!
     @IBOutlet var lbBanDaChon: UILabel!
     @IBOutlet var tableView: UITableView!

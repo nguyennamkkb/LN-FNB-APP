@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MonAnCell: UITableViewCell {
-
+    
     @IBOutlet weak var vAction: UIView!
     var passData: ((FProduct,Int,Int)->Void)?
     @IBOutlet var lbCount: UILabel!
@@ -34,11 +35,13 @@ class MonAnCell: UITableViewCell {
         lbGia.text = "\(item.price ?? 0)".currencyFormatting() + "đ"
         lbTenMonAn.text = item.name ?? ""
         self.item.count = item.count ?? 0
+        imgItem.kf.setImage(with:URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/"+(item.image ?? "anhSanPhamMacDinh")))
+        
         updateUICongTru()
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     
@@ -47,13 +50,10 @@ class MonAnCell: UITableViewCell {
         vAction.layer.cornerRadius = C.CornerRadius.corner10
         vAction.layer.borderColor = C.Color.NGrey?.cgColor
         vAction.layer.borderWidth = 0.2
-//        imgItem.layer.borderWidth = 0.2
-//        imgItem.layer.borderColor = C.Color.Navi?.cgColor
-//        imgItem.layer.cornerRadius = C.CornerRadius.corner10
-
+        
         btnTru.addBorder(edges: [.right], color: C.Color.NGrey!, thickness: 0.2)
         btnCong.addBorder(edges: [.left], color: C.Color.NGrey!, thickness: 0.2)
-
+        
         lbCount.alpha = 0.1
     }
     @IBAction func congPressed(_ sender: Any) {

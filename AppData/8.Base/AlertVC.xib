@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,10 +27,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcJ-qR-7K6" userLabel="vAleart">
-                    <rect key="frame" x="20" y="412.33333333333331" width="349" height="52.333333333333314"/>
+                    <rect key="frame" x="20" y="407.33333333333331" width="349" height="62.333333333333314"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông báoThông báoThông báoThông báoThông báoThông báo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxh-x3-dXG">
-                            <rect key="frame" x="10" y="5" width="329" height="42.333333333333336"/>
+                            <rect key="frame" x="10" y="10" width="329" height="42.333333333333336"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="18"/>
                             <color key="textColor" name="n yellow"/>
                             <nil key="highlightedColor"/>
@@ -40,8 +40,8 @@
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="fxh-x3-dXG" secondAttribute="trailing" constant="10" id="PjK-vS-K7Q"/>
                         <constraint firstItem="fxh-x3-dXG" firstAttribute="leading" secondItem="IcJ-qR-7K6" secondAttribute="leading" constant="10" id="QrS-Kq-gVk"/>
-                        <constraint firstItem="fxh-x3-dXG" firstAttribute="top" secondItem="IcJ-qR-7K6" secondAttribute="top" constant="5" id="l5C-Mf-lZd"/>
-                        <constraint firstAttribute="bottom" secondItem="fxh-x3-dXG" secondAttribute="bottom" constant="5" id="qjL-W7-NlQ"/>
+                        <constraint firstItem="fxh-x3-dXG" firstAttribute="top" secondItem="IcJ-qR-7K6" secondAttribute="top" constant="10" id="l5C-Mf-lZd"/>
+                        <constraint firstAttribute="bottom" secondItem="fxh-x3-dXG" secondAttribute="bottom" constant="10" id="qjL-W7-NlQ"/>
                     </constraints>
                 </view>
             </subviews>

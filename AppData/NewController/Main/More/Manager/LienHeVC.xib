@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LienHeVC" customModule="LN_FNB" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKn-vq-qLf">
+                    <rect key="frame" x="16" y="57" width="358" height="298.33333333333331"/>
+                    <mutableString key="text">Ứng dụng quản lý nhà hàng của bạn, giúp bạn nắm bắt mọi thứ trong tầm tay:
+    Tình trạng bàn trống/đang phục vụ/đặt trước: Biết chính xác tình trạng bàn trống, bàn đang phục vụ và bàn đã đặt trước để sắp xếp nhân viên và phục vụ khách hàng một cách hợp lý.     Chọn món dễ dàng: Dễ dàng chọn món, thay đổi món từ thực đơn trực quan     In phiếu bếp, hóa đơn: In phiếu bếp nhanh chóng, chính xác để đảm bảo món ăn được phục vụ đúng giờ. In hóa đơn chuyên nghiệp, đẹp mắt để nâng cao trải nghiệm của khách hàng.     Theo dõi doanh thu: Theo dõi doanh thu theo ngày, tháng, quý, năm để nắm bắt tình hình kinh doanh của nhà hàng và đưa ra các quyết định kinh doanh phù hợp.</mutableString>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" name="n black"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liên hệ với tôi theo: * Email/Skype: nguyennam.kkb@gmail.com * Website: nguyenluongnam.name.vn" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqm-vP-YBa">
+                    <rect key="frame" x="15" y="371.33333333333331" width="360" height="56"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" name="n yellow"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPx-4I-bRA">
+                    <rect key="frame" x="15" y="761" width="360" height="44"/>
+                    <color key="backgroundColor" name="n yellow"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="JYB-zP-yXn"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="Đóng"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Aqm-vP-YBa" secondAttribute="trailing" constant="15" id="0Nk-mk-kXS"/>
+                <constraint firstItem="Aqm-vP-YBa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="5bH-Ir-xFQ"/>
+                <constraint firstAttribute="trailing" secondItem="uKn-vq-qLf" secondAttribute="trailing" constant="16" id="6cM-aF-42p"/>
+                <constraint firstItem="fPx-4I-bRA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="BRf-Oa-7BT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fPx-4I-bRA" secondAttribute="bottom" constant="5" id="OHX-FF-gsU"/>
+                <constraint firstItem="uKn-vq-qLf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ttd-Fi-h53"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fPx-4I-bRA" secondAttribute="trailing" constant="15" id="nKn-c6-b3g"/>
+                <constraint firstItem="uKn-vq-qLf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="rBC-ZL-COS"/>
+                <constraint firstItem="Aqm-vP-YBa" firstAttribute="top" secondItem="uKn-vq-qLf" secondAttribute="bottom" constant="16" id="vlq-Ch-PSh"/>
+            </constraints>
+            <point key="canvasLocation" x="-16.030534351145036" y="-11.267605633802818"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="n black">
+            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="n yellow">
+            <color red="0.95200002193450928" green="0.49099999666213989" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

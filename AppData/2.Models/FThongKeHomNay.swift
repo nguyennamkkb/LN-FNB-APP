@@ -79,6 +79,10 @@ class RPTheoGio: Mappable {
     
     var date: String?
     var value: [GiaTriTheoGio]?
+    var tongTienMat: Int?
+    var tongTienCK: Int?
+    var tongHoaDon: Int?
+    var tongKhach: Int?
 
     
     init(){
@@ -91,7 +95,10 @@ class RPTheoGio: Mappable {
     func mapping(map: ObjectMapper.Map) {
         date <- map["date"]
         value <- map["value"]
-   
+        tongTienMat <- map["tongTienMat"]
+        tongTienCK <- map["tongTienCK"]
+        tongHoaDon <- map["tongHoaDon"]
+        tongKhach <- map["tongKhach"]
     }
 }
 

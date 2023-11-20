@@ -45,10 +45,11 @@ class BaoCaoHomNayCell: UITableViewCell, ChartViewDelegate {
         vChuaHoanThanh.layer.cornerRadius = C.CornerRadius.corner10
         vDaHoanThanh.layer.cornerRadius = C.CornerRadius.corner10
         vTheoTungGio.layer.cornerRadius = C.CornerRadius.corner10
-        barChartView = BarChartView(frame: CGRect(x: -10, y: 0, width: chartView.frame.width - 29 , height: chartView.frame.height))
+        //        barChartView = BarChartView(frame: CGRect(x: -10, y: 0, width: chartView.frame.width - 29 , height: chartView.frame.height))
+        barChartView = BarChartView(frame: CGRect(x: 0, y: 0, width: chartView.frame.width , height: chartView.frame.height))
         chartView.addSubview(barChartView)
         barChartView.delegate = self
-       
+        
     }
     func bindData(e: FThongKeHomNay){
         item = e
@@ -93,7 +94,7 @@ class BaoCaoHomNayCell: UITableViewCell, ChartViewDelegate {
         
         let data = BarChartData(dataSet: dataSet)
         barChartView.data = data
-        
+        barChartView.tintColor = UIColor.red
         barChartView.doubleTapToZoomEnabled = false
         // Hide all the labels and axes
         barChartView.xAxis.drawLabelsEnabled = false
@@ -107,22 +108,23 @@ class BaoCaoHomNayCell: UITableViewCell, ChartViewDelegate {
         barChartView.xAxis.drawGridLinesEnabled = false
         barChartView.leftAxis.drawGridLinesEnabled = false
         barChartView.rightAxis.drawGridLinesEnabled = false
-        
+        setupDataGioDauTIen()
     }
     func chartValueNothingSelected(_ chartView: ChartViewBase) {
-            // Hide or do something when no column is selected
-        }
+        // Hide or do something when no column is selected
+    }
     
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
-           // Show the data value for the selected column
-           let e = data.itemAtIndex(index: Int(entry.x))
-        lbTheoNgayNgay.text = "Giờ: \(e?.date ?? "")"
-        lbTNTongDoanhThu.text = "Doanh thu:"+" \((e?.tongTienCK ?? 0) + (e?.tongTienMat ?? 0))".currencyFormatting()
-        lbTNTongCK.text = "• Chuyển khoản:" + "\(e?.tongTienCK ?? 0)".currencyFormatting()
-        lbTNTongTienMat.text = "• Tiền mặt:" + "\((e?.tongTienMat ?? 0))".currencyFormatting()
+        // Show the data value for the selected column
+        let e = data.itemAtIndex(index: Int(entry.x))
+        lbTheoNgayNgay.text = "Giờ từ: \(e?.date ?? ""):00 đến \(e?.date ?? ""):59 "
+        let tong: Int = (e?.tongTienCK ?? 0) + (e?.tongTienMat ?? 0)
+        lbTNTongDoanhThu.text = "Doanh thu: "+"\(tong)".currencyFormatting()
+        lbTNTongCK.text = "• Chuyển khoản: " + "\(e?.tongTienCK ?? 0)".currencyFormatting()
+        lbTNTongTienMat.text = "• Tiền mặt: " + "\((e?.tongTienMat ?? 0))".currencyFormatting()
         lbTNTongHoaDon.text = "Hoá đơn: " + "\((e?.tongHoaDon ?? 0))".currencyFormatting()
         lbTNTongSoKhach.text = "Số khách: " + "\((e?.tongKhach ?? 0))".currencyFormatting()
-       }
+    }
     func xuLyDuLieuTheoGio(){
         for x in 0..<data.count {
             var tongHoaDon: Int = 0
@@ -151,8 +153,10 @@ class BaoCaoHomNayCell: UITableViewCell, ChartViewDelegate {
     }
     func setupDataGioDauTIen(){
         let e = data.itemAtIndex(index: 0)
-        lbTheoNgayNgay.text = "Giờ: \(e?.date ?? "")"
-        lbTNTongDoanhThu.text = "Doanh thu:"+" \((e?.tongTienCK ?? 0) + (e?.tongTienMat ?? 0))".currencyFormatting()
+        
+        lbTheoNgayNgay.text = "Giờ từ: \(e?.date ?? ""):00 đến \(e?.date ?? ""):59 "
+        let tong: Int = (e?.tongTienCK ?? 0) + (e?.tongTienMat ?? 0)
+        lbTNTongDoanhThu.text = "Doanh thu: "+"\(tong)".currencyFormatting()
         lbTNTongCK.text = "• Chuyển khoản:" + "\(e?.tongTienCK ?? 0)".currencyFormatting()
         lbTNTongTienMat.text = "• Tiền mặt:" + "\((e?.tongTienMat ?? 0))".currencyFormatting()
         lbTNTongHoaDon.text = "Hoá đơn: " + "\((e?.tongHoaDon ?? 0))".currencyFormatting()

@@ -25,7 +25,8 @@ class QLHoaDonVC: BaseVC {
         tableView.delegate = self
         self.tableView.registerCell(nibName: "HoaDonCell")
         vFilter.layer.cornerRadius = C.CornerRadius.corner10
-
+        tuNgay = Common.dateStringToMilis(dateString: Common.layThoiGianNgayThangNamHienTai(date: Date())) ?? 0
+        denNgay = tuNgay + 86399999
         setupData()
         getHoaDons()
     }

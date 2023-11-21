@@ -107,6 +107,18 @@ extension BanDatTruocVC: UITableViewDelegate, UITableViewDataSource {
             }
             self.present(sheet, animated: true)
         }
+        
+        cell.actionUpdate = {
+            [weak self] data in
+            guard let self = self else {return}
+            let vc = ThemBanDatTruocVC()
+            vc.bindDataUpdate(e: data)
+            vc.actionReload = {
+                self.getOrders()
+            }
+            let sheet = SheetViewController(controller: vc, sizes: [.fixed(520)])
+            self.present(sheet, animated: true)
+        }
         return cell
     }
     

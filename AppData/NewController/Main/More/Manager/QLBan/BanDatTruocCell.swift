@@ -17,6 +17,7 @@ class BanDatTruocCell: UITableViewCell {
     @IBOutlet weak var lbThoiGIanDen: UILabel!
     @IBOutlet weak var lbTenBan: UILabel!
     var actionDelete: ClosureCustom<FOrder>?
+    var actionUpdate: ClosureCustom<FOrder>?
     @IBOutlet var bDelete: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,6 +32,9 @@ class BanDatTruocCell: UITableViewCell {
     }
     @IBAction func deletePressed(_ sender: Any) {
         actionDelete?(item)
+    }
+    @IBAction func suaDatBanPressed(_ sender: Any) {
+        actionUpdate?(item)
     }
     
 }

@@ -98,7 +98,6 @@ class BanDangPhucVuVC: BaseVC {
                 self.item.list_item = listProducts.toJSONString()
                 self.item.person = n
                 DispatchQueue.main.async {
-                   
                     self.setupData()
                     self.bCapNhat.isHidden = false
                     self.updateMoney()
@@ -142,7 +141,12 @@ class BanDangPhucVuVC: BaseVC {
         }
         item.list_item = listItem.toJSONString()
         item.total = getMoney()
-        item.status = 1
+        if item.total ==  0 {
+            item.status = 2
+        }else {
+            item.status = 1
+        }
+        
         item.sign()
         self.showLoading()
         ServiceManager.common.updateOrder(param: item){

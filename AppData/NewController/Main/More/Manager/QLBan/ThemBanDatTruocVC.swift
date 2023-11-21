@@ -12,7 +12,8 @@ import RSSelectionMenu
 class ThemBanDatTruocVC: BaseVC {
 
     
-    
+    @IBOutlet var lbTitle: UILabel!
+    var tieuDe: String = "Đăt trước bàn"
     @IBOutlet var tfGhiChu: UITextField!
     var actionReload: ClosureAction?
     @IBOutlet weak var dpTime: UIDatePicker!
@@ -27,10 +28,26 @@ class ThemBanDatTruocVC: BaseVC {
     @IBOutlet var v2: UIView!
     @IBOutlet var V1: UIView!
     @IBOutlet var bXacNhan: UIButton!
+    
+    
+    var trangThaiCapNhat: Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         getTables()
         setupUI()
+        
+        lbTitle.text = tieuDe
+        setupData()
+    }
+    func setupData(){
+        tfSoNguoi.text = "\(order.person ?? 5)"
+        tfGhiChu.text = "\(order.note ?? "")"
+        tfTenBan.text = "\(order.table ?? "")"
+        if order.time != nil {
+            let date = Date(timeIntervalSince1970: (Double(order.time ?? "0") ?? 1000) / 1000)
+            dpTime.date = date
+        }
+       
     }
     func setupUI() {
         bXacNhan.layer.cornerRadius = C.CornerRadius.corner10
@@ -38,6 +55,11 @@ class ThemBanDatTruocVC: BaseVC {
         v3.layer.cornerRadius = C.CornerRadius.corner10
         v2.layer.cornerRadius = C.CornerRadius.corner10
         V1.layer.cornerRadius = C.CornerRadius.corner10
+    }
+    func bindDataUpdate(e: FOrder){
+        order = e
+        trangThaiCapNhat = 1
+        tieuDe = "Sửa đăt trước bàn"
     }
     @IBAction func chonBanTrongPressed(_ sender: Any) {
         let selectionMenu = RSSelectionMenu(selectionStyle: .multiple, dataSource: dsTenBan) { (cell, name, indexPath) in
@@ -61,7 +83,6 @@ class ThemBanDatTruocVC: BaseVC {
                 for e in self.listTable {
                     self.dsTenBan.append(e.name ?? "")
                 }
-
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể tải danh sách bàn")
             }
@@ -78,12 +99,32 @@ class ThemBanDatTruocVC: BaseVC {
         order.status = 2
         order.note = note
         order.time = "\(dpTime.date.millisecondsSince1970)"
-        createOrder()
+        if trangThaiCapNhat == 1 {
+            updateOrder()
+        }else {
+            createOrder()
+        }
+        
     }
     func createOrder(){
         self.showLoading()
         order.sign()
         ServiceManager.common.createDatTruoc(param: order){
+            (response) in
+            self.hideLoading()
+            if response?.data != nil, response?.statusCode == 200 {
+                self.showAlert(message: "Thành công!")
+                self.actionReload?()
+                self.onBackNav()
+            } else if response?.statusCode == 0 {
+                self.showAlert(message: "Không thể thêm mới")
+            }
+        }
+    }
+    func updateOrder(){
+        self.showLoading()
+        order.sign()
+        ServiceManager.common.updateOrder(param: order){
             (response) in
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {

@@ -29,6 +29,9 @@ class BaoCaoHomNayVC: BaseVC {
     func setupUI(){
         bXemNgayKhac.layer.cornerRadius = C.CornerRadius.corner10
     }
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
+    }
     @IBAction func xemNgayKhacPressed(_ sender: Any) {
         let vc = BaoCaoTheoNgayVC()
         self.pushVC(controller: vc)

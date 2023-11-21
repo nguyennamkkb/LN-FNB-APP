@@ -92,22 +92,6 @@
                                     <constraint firstItem="sxI-3d-Z8r" firstAttribute="leading" secondItem="jiu-Jj-9jV" secondAttribute="trailing" constant="5" id="rkQ-WT-y84"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dV1-H9-4cL" userLabel="delete">
-                                <rect key="frame" x="372" y="10" width="30" height="30"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="I3X-4N-26A"/>
-                                    <constraint firstAttribute="height" constant="30" id="vK4-it-9sj"/>
-                                </constraints>
-                                <color key="tintColor" systemColor="systemRedColor"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="xmark" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
-                                </state>
-                                <connections>
-                                    <action selector="deletePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zEE-0r-5ET"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ad-mC-fPs">
                                 <rect key="frame" x="10" y="70" width="392" height="20"/>
                                 <subviews>
@@ -135,11 +119,44 @@
                                     <constraint firstAttribute="height" constant="20" id="nYE-O7-gF4"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dV1-H9-4cL" userLabel="delete">
+                                <rect key="frame" x="372" y="10" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="I3X-4N-26A"/>
+                                    <constraint firstAttribute="height" constant="30" id="vK4-it-9sj"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="xmark" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="deletePressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="zEE-0r-5ET"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qt-cy-5K5" userLabel="bEdit">
+                                <rect key="frame" x="337" y="10" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="jAs-AW-146"/>
+                                    <constraint firstAttribute="width" constant="30" id="myj-qk-7DA"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemYellowColor"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="applepencil" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
+                                </state>
+                                <connections>
+                                    <action selector="suaDatBanPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="enf-wp-ot4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" name="n white"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="6ad-mC-fPs" secondAttribute="bottom" constant="10" id="0Nn-4c-Mk3"/>
                             <constraint firstItem="dV1-H9-4cL" firstAttribute="top" secondItem="w7J-Eg-qqG" secondAttribute="top" constant="10" id="0dz-9W-g3R"/>
+                            <constraint firstItem="2Qt-cy-5K5" firstAttribute="centerY" secondItem="dV1-H9-4cL" secondAttribute="centerY" id="2MV-vv-Eov"/>
                             <constraint firstItem="VOo-kd-QtZ" firstAttribute="leading" secondItem="w7J-Eg-qqG" secondAttribute="leading" constant="10" id="75Q-s2-Su6"/>
                             <constraint firstAttribute="height" constant="100" id="8te-nA-OE3"/>
                             <constraint firstAttribute="trailing" secondItem="MfZ-Ru-dkd" secondAttribute="trailing" constant="10" id="92P-nW-yJK"/>
@@ -151,6 +168,7 @@
                             <constraint firstItem="6ad-mC-fPs" firstAttribute="leading" secondItem="w7J-Eg-qqG" secondAttribute="leading" constant="10" id="bsE-re-YNH"/>
                             <constraint firstAttribute="trailing" secondItem="dV1-H9-4cL" secondAttribute="trailing" constant="10" id="f4C-Ec-XMf"/>
                             <constraint firstItem="VOo-kd-QtZ" firstAttribute="top" secondItem="MfZ-Ru-dkd" secondAttribute="bottom" constant="5" id="g9F-0s-h42"/>
+                            <constraint firstItem="dV1-H9-4cL" firstAttribute="leading" secondItem="2Qt-cy-5K5" secondAttribute="trailing" constant="5" id="pb9-9X-Gvq"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -175,6 +193,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="applepencil" catalog="system" width="128" height="115"/>
         <image name="ic_calender" width="13.333333015441895" height="15"/>
         <image name="ic_person" width="35" height="35"/>
         <image name="note.text" catalog="system" width="128" height="107"/>
@@ -190,6 +209,9 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

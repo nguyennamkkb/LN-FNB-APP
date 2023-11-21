@@ -68,7 +68,6 @@ class BaoCaoHomNayCell: UITableViewCell, ChartViewDelegate {
         data = item.rpTheoGio ?? [RPTheoGio]()
         xuLyDuLieuTheoGio()
         setupHorizontalBarChart()
-        
     }
     @IBAction func reloadPressed(_ sender: Any) {
         actionReload?()
@@ -153,8 +152,9 @@ class BaoCaoHomNayCell: UITableViewCell, ChartViewDelegate {
     }
     func setupDataGioDauTIen(){
         let e = data.itemAtIndex(index: 0)
-        
-        lbTheoNgayNgay.text = "Giờ từ: \(e?.date ?? ""):00 đến \(e?.date ?? ""):59 "
+        if e?.date != nil {
+            lbTheoNgayNgay.text = "Giờ từ: \(e?.date ?? ""):00 đến \(e?.date ?? ""):59 "
+        }
         let tong: Int = (e?.tongTienCK ?? 0) + (e?.tongTienMat ?? 0)
         lbTNTongDoanhThu.text = "Doanh thu: "+"\(tong)".currencyFormatting()
         lbTNTongCK.text = "• Chuyển khoản:" + "\(e?.tongTienCK ?? 0)".currencyFormatting()

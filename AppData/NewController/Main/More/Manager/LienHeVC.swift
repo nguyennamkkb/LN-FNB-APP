@@ -9,13 +9,17 @@ import UIKit
 
 class LienHeVC: BaseVC{
 
+    @IBOutlet weak var bLienHe: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        bLienHe.layer.cornerRadius = C.CornerRadius.corner10
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func dongPressed(_ sender: Any) {
+        self.onBackNav()
+    }
+    
     /*
     // MARK: - Navigation
 

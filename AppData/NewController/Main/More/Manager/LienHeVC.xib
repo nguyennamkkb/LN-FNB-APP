@@ -17,6 +17,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LienHeVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
+                <outlet property="bLienHe" destination="fPx-4I-bRA" id="EYI-IX-Wli"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,8 +28,8 @@
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKn-vq-qLf">
                     <rect key="frame" x="16" y="57" width="358" height="298.33333333333331"/>
-                    <mutableString key="text">Ứng dụng quản lý nhà hàng của bạn, giúp bạn nắm bắt mọi thứ trong tầm tay:
-    Tình trạng bàn trống/đang phục vụ/đặt trước: Biết chính xác tình trạng bàn trống, bàn đang phục vụ và bàn đã đặt trước để sắp xếp nhân viên và phục vụ khách hàng một cách hợp lý.     Chọn món dễ dàng: Dễ dàng chọn món, thay đổi món từ thực đơn trực quan     In phiếu bếp, hóa đơn: In phiếu bếp nhanh chóng, chính xác để đảm bảo món ăn được phục vụ đúng giờ. In hóa đơn chuyên nghiệp, đẹp mắt để nâng cao trải nghiệm của khách hàng.     Theo dõi doanh thu: Theo dõi doanh thu theo ngày, tháng, quý, năm để nắm bắt tình hình kinh doanh của nhà hàng và đưa ra các quyết định kinh doanh phù hợp.</mutableString>
+                    <string key="text">Ứng dụng quản lý nhà hàng của bạn, giúp bạn nắm bắt mọi thứ trong tầm tay:
+    Tình trạng bàn trống/đang phục vụ/đặt trước: Biết chính xác tình trạng bàn trống, bàn đang phục vụ và bàn đã đặt trước để sắp xếp nhân viên và phục vụ khách hàng một cách hợp lý.     Chọn món dễ dàng: Dễ dàng chọn món, thay đổi món từ thực đơn trực quan     In phiếu bếp, hóa đơn: In phiếu bếp nhanh chóng, chính xác để đảm bảo món ăn được phục vụ đúng giờ. In hóa đơn chuyên nghiệp, đẹp mắt để nâng cao trải nghiệm của khách hàng.     Theo dõi doanh thu: Theo dõi doanh thu theo ngày, tháng, quý, năm để nắm bắt tình hình kinh doanh của nhà hàng và đưa ra các quyết định kinh doanh phù hợp.</string>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                     <color key="textColor" name="n black"/>
                     <nil key="highlightedColor"/>
@@ -48,6 +49,9 @@
                     <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                     <state key="normal" title="Đóng"/>
+                    <connections>
+                        <action selector="dongPressed:" destination="-1" eventType="touchUpInside" id="9Em-tc-Ahj"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

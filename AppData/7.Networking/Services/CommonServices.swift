@@ -233,7 +233,7 @@ class CommonServices {
             }
         }
     }
-    func updateUSer(param: PStore, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+    func updateUser(param: PStore, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.user.getPath()
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)

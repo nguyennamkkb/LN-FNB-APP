@@ -33,8 +33,8 @@
 		0B3FB9352AC7FC63003FBCB5 /* CuaHangCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B3FB9332AC7FC63003FBCB5 /* CuaHangCell.xib */; };
 		0B4445EE2ADBD41500E7C098 /* FBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4445ED2ADBD41500E7C098 /* FBill.swift */; };
 		0B45BC992AB9CC670073A380 /* BluetoothHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45BC982AB9CC670073A380 /* BluetoothHelper.swift */; };
-		0B45BC9C2ABA0DEA0073A380 /* DangPhucVuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45BC9A2ABA0DEA0073A380 /* DangPhucVuVC.swift */; };
-		0B45BC9D2ABA0DEA0073A380 /* DangPhucVuVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B45BC9B2ABA0DEA0073A380 /* DangPhucVuVC.xib */; };
+		0B45BC9C2ABA0DEA0073A380 /* CaiDatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45BC9A2ABA0DEA0073A380 /* CaiDatVC.swift */; };
+		0B45BC9D2ABA0DEA0073A380 /* CaiDatVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B45BC9B2ABA0DEA0073A380 /* CaiDatVC.xib */; };
 		0B45BCA52ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B45BCA32ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.swift */; };
 		0B45BCA62ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B45BCA42ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.xib */; };
 		0B49A26A2B01000300B59A23 /* BaoCaoHomNayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B49A2682B01000300B59A23 /* BaoCaoHomNayVC.swift */; };
@@ -200,6 +200,7 @@
 		0BF42AEB2AB6215E00592A0E /* ForgetPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BF42AE92AB6215E00592A0E /* ForgetPasswordVC.xib */; };
 		0BFD87312A518535005DE099 /* ParamSearchBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD87302A518535005DE099 /* ParamSearchBook.swift */; };
 		88DEC3F89A4A91239A9AA21C /* Pods_LN_FNB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E2AFB68C1BE3B68A6C0C0EC /* Pods_LN_FNB.framework */; };
+		9AC129262B238624002ADE8E /* FThongKeTheoNgay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC129252B238624002ADE8E /* FThongKeTheoNgay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -229,8 +230,8 @@
 		0B3FB9332AC7FC63003FBCB5 /* CuaHangCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CuaHangCell.xib; sourceTree = "<group>"; };
 		0B4445ED2ADBD41500E7C098 /* FBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBill.swift; sourceTree = "<group>"; };
 		0B45BC982AB9CC670073A380 /* BluetoothHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothHelper.swift; sourceTree = "<group>"; };
-		0B45BC9A2ABA0DEA0073A380 /* DangPhucVuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangPhucVuVC.swift; sourceTree = "<group>"; };
-		0B45BC9B2ABA0DEA0073A380 /* DangPhucVuVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DangPhucVuVC.xib; sourceTree = "<group>"; };
+		0B45BC9A2ABA0DEA0073A380 /* CaiDatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaiDatVC.swift; sourceTree = "<group>"; };
+		0B45BC9B2ABA0DEA0073A380 /* CaiDatVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CaiDatVC.xib; sourceTree = "<group>"; };
 		0B45BCA32ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPrinterSelectTableViewController.swift; sourceTree = "<group>"; };
 		0B45BCA42ABA12CA0073A380 /* BluetoothPrinterSelectTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BluetoothPrinterSelectTableViewController.xib; sourceTree = "<group>"; };
 		0B49A2682B01000300B59A23 /* BaoCaoHomNayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaoCaoHomNayVC.swift; sourceTree = "<group>"; };
@@ -401,6 +402,7 @@
 		3198EAE189DC674652D74074 /* Pods-LN POS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LN POS.debug.xcconfig"; path = "Target Support Files/Pods-LN POS/Pods-LN POS.debug.xcconfig"; sourceTree = "<group>"; };
 		3E2AFB68C1BE3B68A6C0C0EC /* Pods_LN_FNB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LN_FNB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F740E68D111F233932ED53 /* Pods-LN POS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LN POS.release.xcconfig"; path = "Target Support Files/Pods-LN POS/Pods-LN POS.release.xcconfig"; sourceTree = "<group>"; };
+		9AC129252B238624002ADE8E /* FThongKeTheoNgay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FThongKeTheoNgay.swift; sourceTree = "<group>"; };
 		A445E638468BEE3772F3A9DB /* Pods-POS App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-POS App.debug.xcconfig"; path = "Target Support Files/Pods-POS App/Pods-POS App.debug.xcconfig"; sourceTree = "<group>"; };
 		AB4C5316C07904D20A2148F1 /* Pods-LN FNB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LN FNB.release.xcconfig"; path = "Target Support Files/Pods-LN FNB/Pods-LN FNB.release.xcconfig"; sourceTree = "<group>"; };
 		D97165A029FA240C00D08327 /* Rubik-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Light.ttf"; sourceTree = "<group>"; };
@@ -558,8 +560,8 @@
 		0BA5D5262AB7691F0031FBF9 /* Serving */ = {
 			isa = PBXGroup;
 			children = (
-				0B45BC9A2ABA0DEA0073A380 /* DangPhucVuVC.swift */,
-				0B45BC9B2ABA0DEA0073A380 /* DangPhucVuVC.xib */,
+				0B45BC9A2ABA0DEA0073A380 /* CaiDatVC.swift */,
+				0B45BC9B2ABA0DEA0073A380 /* CaiDatVC.xib */,
 				0BE00C012AC023AF002C1C04 /* BanDangPhucVuVC.swift */,
 				0BE00C022AC023AF002C1C04 /* BanDangPhucVuVC.xib */,
 				0B69E3FC2AC345C200C11C2F /* MonTrenBanCell.swift */,
@@ -782,6 +784,7 @@
 				0B4445ED2ADBD41500E7C098 /* FBill.swift */,
 				0BCCBD362B0534810014C109 /* FThongKeHomNay.swift */,
 				0BBF73B82B07DB8600C7E5E3 /* FPramUploadImage.swift */,
+				9AC129252B238624002ADE8E /* FThongKeTheoNgay.swift */,
 			);
 			path = 2.Models;
 			sourceTree = "<group>";
@@ -993,7 +996,7 @@
 				0BB43F0929FAD82F00F1DE85 /* Rubik-Medium.ttf in Resources */,
 				0BD56ABA2AC5A52B00A41312 /* ThucDonVC.xib in Resources */,
 				0B6B10642AE819E50009849F /* KichHoatTaiKhoanVC.xib in Resources */,
-				0B45BC9D2ABA0DEA0073A380 /* DangPhucVuVC.xib in Resources */,
+				0B45BC9D2ABA0DEA0073A380 /* CaiDatVC.xib in Resources */,
 				0B3FB91E2AC7B961003FBCB5 /* ThemBanDatTruocVC.xib in Resources */,
 				0BE038F029F81F6F002CB20F /* LaunchScreen.storyboard in Resources */,
 				0BF42ACC2AB6066B00592A0E /* Roboto-BoldItalic.ttf in Resources */,
@@ -1150,11 +1153,12 @@
 				0BBF73B92B07DB8600C7E5E3 /* FPramUploadImage.swift in Sources */,
 				0BE0392C29F82039002CB20F /* ExTextField.swift in Sources */,
 				0BF42AE62AB61B1800592A0E /* SignUpInfoVC.swift in Sources */,
+				9AC129262B238624002ADE8E /* FThongKeTheoNgay.swift in Sources */,
 				0B5D18622A0AA2DC004E47FD /* PEmployee.swift in Sources */,
 				0BBA69042ACEF58200963438 /* FOrder.swift in Sources */,
 				0B76B93F2A7441F900B91761 /* PReport.swift in Sources */,
 				0BE0391C29F82039002CB20F /* ConnectionManager.swift in Sources */,
-				0B45BC9C2ABA0DEA0073A380 /* DangPhucVuVC.swift in Sources */,
+				0B45BC9C2ABA0DEA0073A380 /* CaiDatVC.swift in Sources */,
 				0BE038E529F81F6D002CB20F /* ViewController.swift in Sources */,
 				0BE0392A29F82039002CB20F /* ExUIDevice.swift in Sources */,
 				0B64EA502B0A10700045701E /* LienHeVC.swift in Sources */,

@@ -47,6 +47,7 @@ class LoginVC: BaseVC {
     }
     @IBAction func quenMKPressed(_ sender: Any) {
         let vc = ForgetPasswordVC()
+        vc.bindDataTitle(newTitle: "Quên mật khẩu")
         self.pushVC(controller: vc)
     }
     

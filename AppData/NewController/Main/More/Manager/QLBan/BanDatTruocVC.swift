@@ -23,9 +23,9 @@ class BanDatTruocVC: BaseVC {
         tableView.dataSource = self
         tableView.delegate = self
         self.tableView.registerCell(nibName: "BanDatTruocCell")
-
-        getOrders()
         setupUI()
+        getOrders()
+        
     }
     
     @IBAction func bCapNhatPressed(_ sender: Any) {

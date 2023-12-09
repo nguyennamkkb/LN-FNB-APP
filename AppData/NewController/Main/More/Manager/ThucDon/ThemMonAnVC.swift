@@ -68,8 +68,7 @@ class ThemMonAnVC: BaseVC {
             (response) in
             if response?.data != nil, response?.statusCode == 200 {
                 if self.trangThaiLayAnh == 0 {
-                    print("Chon anh")
-                    print("item")
+                  
                     let vc = MonAnThemAnhVC()
                     vc.bindData(e: self.item)
                    
@@ -80,20 +79,22 @@ class ThemMonAnVC: BaseVC {
                         self.item.image = url
                         self.trangThaiLayAnh = 1
                         self.updateProduct()
+                        return
                     
                     }
                     vc.uploadMacDinh = {
-                        [weak self] in
-                        guard let self = self else {return}
-                        print("ket thuc")
+                        self.actionOK?()
                         self.onBackNav(animated: false)
+                        return
                     }
                 }else{
                     self.actionOK?()
                     self.onBackNav(animated: false)
+                    return
                 }
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể sửa")
+                return
             }
         }
     }

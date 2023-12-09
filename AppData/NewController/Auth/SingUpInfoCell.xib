@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -233,70 +233,8 @@
                             <constraint firstItem="Ila-xL-ZJq" firstAttribute="top" secondItem="E17-Gt-Ox8" secondAttribute="bottom" constant="5" id="s3G-xK-v4A"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fOy-S2-8Xi" userLabel="chon logo">
-                        <rect key="frame" x="0.0" y="340" width="358" height="199"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fju-sP-ZMT">
-                                <rect key="frame" x="0.0" y="0.0" width="90" height="44"/>
-                                <color key="backgroundColor" name="n yellow"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="JJg-hx-9N2"/>
-                                    <constraint firstAttribute="height" constant="44" id="tyM-8n-mWA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Chọn logo"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nosign" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Zxe-44-VoH">
-                                <rect key="frame" x="159" y="1" width="199" height="197.66666666666666"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="199" id="6D0-L3-Hdk"/>
-                                    <constraint firstAttribute="width" constant="199" id="AGD-GM-5lI"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="fju-sP-ZMT" firstAttribute="leading" secondItem="fOy-S2-8Xi" secondAttribute="leading" id="5d4-Vh-yPE"/>
-                            <constraint firstAttribute="height" constant="199" id="7kd-5M-TTk"/>
-                            <constraint firstItem="fju-sP-ZMT" firstAttribute="top" secondItem="fOy-S2-8Xi" secondAttribute="top" id="WOW-Q2-Tov"/>
-                            <constraint firstAttribute="trailing" secondItem="Zxe-44-VoH" secondAttribute="trailing" id="hfW-Id-99S"/>
-                            <constraint firstItem="Zxe-44-VoH" firstAttribute="centerY" secondItem="fOy-S2-8Xi" secondAttribute="centerY" id="oES-iw-pMo"/>
-                        </constraints>
-                    </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NaV-My-WUQ" userLabel="chon qr">
-                        <rect key="frame" x="0.0" y="549" width="358" height="199"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWT-Kw-lGB">
-                                <rect key="frame" x="0.0" y="0.0" width="90" height="44"/>
-                                <color key="backgroundColor" name="n yellow"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="65q-3r-BJn"/>
-                                    <constraint firstAttribute="width" constant="90" id="Zgb-MT-C0U"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Chọn QR"/>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nosign" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="SPs-yO-Xaj">
-                                <rect key="frame" x="159" y="1" width="199" height="197.66666666666666"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="199" id="Odv-Ab-XSc"/>
-                                    <constraint firstAttribute="width" constant="199" id="zsF-hf-pGh"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="MWT-Kw-lGB" firstAttribute="leading" secondItem="NaV-My-WUQ" secondAttribute="leading" id="Lk3-Dj-kid"/>
-                            <constraint firstAttribute="height" constant="199" id="S8O-jS-OZJ"/>
-                            <constraint firstItem="SPs-yO-Xaj" firstAttribute="centerY" secondItem="NaV-My-WUQ" secondAttribute="centerY" id="V10-YJ-xeV"/>
-                            <constraint firstAttribute="trailing" secondItem="SPs-yO-Xaj" secondAttribute="trailing" id="nNf-Dh-K3y"/>
-                            <constraint firstItem="MWT-Kw-lGB" firstAttribute="top" secondItem="NaV-My-WUQ" secondAttribute="top" id="vsQ-Np-3Jh"/>
-                        </constraints>
-                    </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39P-7b-jCz">
-                        <rect key="frame" x="0.0" y="768" width="358" height="44"/>
+                        <rect key="frame" x="0.0" y="346" width="358" height="44"/>
                         <color key="backgroundColor" name="n yellow"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="Lv5-qW-FMM"/>
@@ -313,32 +251,24 @@
                     <constraint firstItem="9x9-mh-o6o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0kR-FA-WgB"/>
                     <constraint firstItem="9x9-mh-o6o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2Vi-SQ-0NW"/>
                     <constraint firstAttribute="trailing" secondItem="hfp-zm-kGT" secondAttribute="trailing" id="5S6-xR-uOS"/>
-                    <constraint firstItem="fOy-S2-8Xi" firstAttribute="top" secondItem="0D4-xP-p2i" secondAttribute="bottom" constant="10" id="9Wj-EF-bXa"/>
-                    <constraint firstItem="39P-7b-jCz" firstAttribute="top" secondItem="NaV-My-WUQ" secondAttribute="bottom" constant="20" id="CeS-Kw-x6G"/>
                     <constraint firstItem="39P-7b-jCz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EI0-UH-vrS"/>
-                    <constraint firstItem="NaV-My-WUQ" firstAttribute="top" secondItem="fOy-S2-8Xi" secondAttribute="bottom" constant="10" id="F10-pq-DJY"/>
                     <constraint firstAttribute="trailing" secondItem="39P-7b-jCz" secondAttribute="trailing" id="FU3-rh-Rfr"/>
                     <constraint firstAttribute="trailing" secondItem="9x9-mh-o6o" secondAttribute="trailing" id="O63-d6-7nb"/>
                     <constraint firstAttribute="trailing" secondItem="0D4-xP-p2i" secondAttribute="trailing" id="RSd-bN-Azq"/>
-                    <constraint firstItem="NaV-My-WUQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SJF-oh-Q9E"/>
-                    <constraint firstAttribute="trailing" secondItem="fOy-S2-8Xi" secondAttribute="trailing" id="Trt-Xe-l5d"/>
                     <constraint firstItem="BeA-Be-ebF" firstAttribute="top" secondItem="hfp-zm-kGT" secondAttribute="bottom" constant="10" id="Vw2-nZ-xkJ"/>
-                    <constraint firstItem="fOy-S2-8Xi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WdT-zW-Y1z"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="39P-7b-jCz" secondAttribute="bottom" constant="5" id="XqZ-j9-buO"/>
                     <constraint firstItem="BeA-Be-ebF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Z4t-EU-IuY"/>
                     <constraint firstItem="0D4-xP-p2i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZK1-Zu-LSv"/>
                     <constraint firstItem="0D4-xP-p2i" firstAttribute="top" secondItem="BeA-Be-ebF" secondAttribute="bottom" constant="10" id="fQL-Qy-odt"/>
                     <constraint firstItem="hfp-zm-kGT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fQb-yS-L2U"/>
                     <constraint firstAttribute="trailing" secondItem="BeA-Be-ebF" secondAttribute="trailing" id="vao-6I-tls"/>
-                    <constraint firstAttribute="trailing" secondItem="NaV-My-WUQ" secondAttribute="trailing" id="w7e-Rf-bKH"/>
+                    <constraint firstItem="39P-7b-jCz" firstAttribute="top" secondItem="0D4-xP-p2i" secondAttribute="bottom" constant="16" id="wve-KL-kM6"/>
                     <constraint firstItem="hfp-zm-kGT" firstAttribute="top" secondItem="9x9-mh-o6o" secondAttribute="bottom" constant="10" id="zPe-mR-Zrf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="btnChonLogo" destination="fju-sP-ZMT" id="MjS-n9-Dex"/>
-                <outlet property="btnChonQR" destination="MWT-Kw-lGB" id="sB1-Hf-hLq"/>
                 <outlet property="btnXacNhan" destination="39P-7b-jCz" id="5eP-T3-nyn"/>
                 <outlet property="tfDiaChi" destination="KNz-Bk-bl3" id="8WT-SK-fVV"/>
                 <outlet property="tfHoTen" destination="fBk-tM-OT2" id="7zp-ld-ABR"/>
@@ -353,18 +283,17 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="nosign" catalog="system" width="128" height="123"/>
         <namedColor name="gray">
             <color red="0.69199997186660767" green="0.70599997043609619" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="n black">
-            <color red="0.1157124117" green="0.14910301570000001" blue="0.19870966670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="n white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="n yellow">
-            <color red="0.95155936480000003" green="0.49133276939999998" blue="0.2037396729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.95200002193450928" green="0.49099999666213989" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

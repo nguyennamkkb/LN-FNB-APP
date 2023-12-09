@@ -45,7 +45,7 @@ class BaoCaoHomNayCell: UITableViewCell, ChartViewDelegate {
         vChuaHoanThanh.layer.cornerRadius = C.CornerRadius.corner10
         vDaHoanThanh.layer.cornerRadius = C.CornerRadius.corner10
         vTheoTungGio.layer.cornerRadius = C.CornerRadius.corner10
-        //        barChartView = BarChartView(frame: CGRect(x: -10, y: 0, width: chartView.frame.width - 29 , height: chartView.frame.height))
+
         barChartView = BarChartView(frame: CGRect(x: 0, y: 0, width: chartView.frame.width , height: chartView.frame.height))
         chartView.addSubview(barChartView)
         barChartView.delegate = self

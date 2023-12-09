@@ -10,29 +10,36 @@ import UIKit
 import WebKit
 import Kingfisher
 
-class DangPhucVuVC: BaseVC {
+class CaiDatVC: BaseVC {
 
+    @IBOutlet weak var vDatLatMK: UIView!
     @IBOutlet var bThuIn: UIButton!
     @IBOutlet var vDangXuat: UIView!
     @IBOutlet var vChonMayIn: UIView!
     @IBOutlet var vCuaHang: UIView!
     
     
-    
-    
-    
-    
-    private let dummyPrinter =
-    DummyPrinter()
+    private let dummyPrinter = DummyPrinter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         dummyPrinter.ticketRender = self
         bThuIn.layer.cornerRadius = C.CornerRadius.corner5
+        vDatLatMK.layer.cornerRadius = C.CornerRadius.corner10
         vChonMayIn.layer.cornerRadius = C.CornerRadius.corner10
         vCuaHang.layer.cornerRadius = C.CornerRadius.corner10
         vDangXuat.layer.cornerRadius = C.CornerRadius.corner10
         
+    }
+    @IBAction func thongTinCuaHangPressed(_ sender: Any) {
+        let vc = SignUpInfoVC()
+        vc.bindDataSua(item: Common.userMaster)
+        self.pushVC(controller: vc)
+    }
+    @IBAction func datLaiMatKhauPressed(_ sender: Any) {
+        let vc = ForgetPasswordVC()
+        vc.bindDataTitle(newTitle: "Đăt lại mật khẩu")
+        self.pushVC(controller: vc)
     }
     @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
@@ -107,7 +114,7 @@ class DangPhucVuVC: BaseVC {
     
 }
 
-extension DangPhucVuVC: TicketRender {
+extension CaiDatVC: TicketRender {
     func printerDidGenerate(_ printer: DummyPrinter, html htmlTicket: String) {
 //        DispatchQueue.main.async { [weak self] in
 //            self?.webView.loadHTMLString(htmlTicket, baseURL: nil)

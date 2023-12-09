@@ -46,7 +46,8 @@ class HomeVC: BaseVC {
         tenBanDaChon.text = ""
     }
     @IBAction func banDatTruocPressed(_ sender: Any) {
-        self.pushVC(controller: BanDatTruocVC())
+        let vc = BanDatTruocVC()
+        self.pushVC(controller: vc)
     }
     @IBAction func chonMonPressed(_ sender: UIButton) {
 //        print(listTableSelected.toJSON())

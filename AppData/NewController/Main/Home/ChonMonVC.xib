@@ -12,13 +12,16 @@
         <array key="Roboto-Medium.ttf">
             <string>Roboto-Medium</string>
         </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
     </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChonMonVC" customModule="LN_FNB" customModuleProvider="target">
             <connections>
                 <outlet property="bCart" destination="mpU-NF-FTK" id="agh-3b-CnZ"/>
+                <outlet property="bChonLai" destination="Jcv-MJ-1ln" id="7K6-gb-ZII"/>
                 <outlet property="bXacNhanThemMon" destination="aXm-JQ-yGC" id="hQz-pG-CyV"/>
-                <outlet property="keySearch" destination="rZ3-ke-DEZ" id="Day-Og-PP9"/>
                 <outlet property="lbBanDaChon" destination="QOR-Gi-Dsw" id="Feh-p6-9iL"/>
                 <outlet property="lbCountCart" destination="CnH-BP-Mcb" id="6pP-Pa-d7G"/>
                 <outlet property="tableView" destination="FuI-X5-d5w" id="MEX-pB-a6E"/>
@@ -45,45 +48,30 @@
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c14-ci-08p" userLabel="viewSearch">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c14-ci-08p" userLabel="viewSearch">
                             <rect key="frame" x="112" y="9.6666666666666714" width="231" height="25"/>
                             <subviews>
-                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nhập tên món" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rZ3-ke-DEZ">
-                                    <rect key="frame" x="5" y="0.0" width="191" height="25"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcv-MJ-1ln">
+                                    <rect key="frame" x="121" y="-2.6666666666666714" width="100" height="30"/>
+                                    <color key="backgroundColor" name="n white"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="25" id="CcQ-xX-He1"/>
+                                        <constraint firstAttribute="height" constant="30" id="AuC-aI-gfw"/>
+                                        <constraint firstAttribute="width" constant="100" id="PbW-9A-9Xe"/>
                                     </constraints>
-                                    <color key="textColor" name="white"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="color" keyPath="placeHolderColor">
-                                            <color key="value" name="gray"/>
-                                        </userDefinedRuntimeAttribute>
-                                    </userDefinedRuntimeAttributes>
-                                </textField>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jcv-MJ-1ln">
-                                    <rect key="frame" x="201" y="0.0" width="25" height="25"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="25" id="AuC-aI-gfw"/>
-                                        <constraint firstAttribute="width" constant="25" id="PbW-9A-9Xe"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" image="ic_find"/>
+                                    <state key="normal" title="Chọn lại">
+                                        <color key="titleColor" name="n yellow"/>
+                                    </state>
                                     <connections>
-                                        <action selector="searchPressed:" destination="-1" eventType="touchUpInside" id="zzJ-Lv-I0Z"/>
+                                        <action selector="chonLaiPressed:" destination="-1" eventType="touchUpInside" id="CjV-2H-YJb"/>
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" name="navi"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="Jcv-MJ-1ln" secondAttribute="trailing" constant="5" id="1TM-Gy-IeY"/>
+                                <constraint firstAttribute="trailing" secondItem="Jcv-MJ-1ln" secondAttribute="trailing" constant="10" id="1TM-Gy-IeY"/>
                                 <constraint firstAttribute="height" constant="25" id="Ktg-bo-23x"/>
-                                <constraint firstItem="Jcv-MJ-1ln" firstAttribute="leading" secondItem="rZ3-ke-DEZ" secondAttribute="trailing" constant="5" id="VZj-dA-3VQ"/>
-                                <constraint firstItem="rZ3-ke-DEZ" firstAttribute="leading" secondItem="c14-ci-08p" secondAttribute="leading" constant="5" id="Wcs-Pd-CRD"/>
-                                <constraint firstItem="rZ3-ke-DEZ" firstAttribute="centerY" secondItem="c14-ci-08p" secondAttribute="centerY" id="hi9-xl-Cab"/>
                                 <constraint firstItem="Jcv-MJ-1ln" firstAttribute="centerY" secondItem="c14-ci-08p" secondAttribute="centerY" id="zHa-Cy-6CT"/>
                             </constraints>
                         </view>
@@ -172,18 +160,18 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ayN-h3-egz">
-                            <rect key="frame" x="343" y="1" width="35" height="25"/>
+                            <rect key="frame" x="328" y="1" width="50" height="25"/>
                             <color key="backgroundColor" name="n white"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="25" id="RP6-qZ-eVP"/>
-                                <constraint firstAttribute="width" constant="35" id="lbr-gg-Wf2"/>
+                                <constraint firstAttribute="width" constant="50" id="lbr-gg-Wf2"/>
                             </constraints>
                             <color key="textColor" name="n black"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                             <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số khách:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dnW-9O-aib" userLabel="Số người:">
-                            <rect key="frame" x="281" y="5" width="62" height="16.666666666666668"/>
+                            <rect key="frame" x="266" y="5" width="62" height="16.666666666666668"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
@@ -229,10 +217,6 @@
     </objects>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
-        <image name="ic_find" width="15" height="15"/>
-        <namedColor name="gray">
-            <color red="0.69199997186660767" green="0.70599997043609619" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="n black">
             <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -244,9 +228,6 @@
         </namedColor>
         <namedColor name="n yellow">
             <color red="0.95200002193450928" green="0.49099999666213989" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="navi">
-            <color red="0.1809999942779541" green="0.23800000548362732" blue="0.289000004529953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

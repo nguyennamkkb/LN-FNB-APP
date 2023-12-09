@@ -11,6 +11,7 @@ import ObjectMapper
 class ChonMonVC: BaseVC{
     
     
+    @IBOutlet weak var bChonLai: UIButton!
     var passDataThemMon: (([FProduct],Int)->Void)?
     @IBOutlet var bCart: UIButton!
     @IBOutlet var bXacNhanThemMon: UIButton!
@@ -24,6 +25,7 @@ class ChonMonVC: BaseVC{
     @IBOutlet var lbBanDaChon: UILabel!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var viewSearch: UIView!
+    
     
     var trangThaiChonThemMon: Int = 0
     var banDaChon: String = ""
@@ -39,6 +41,16 @@ class ChonMonVC: BaseVC{
         
         
     }
+    
+    @IBAction func chonLaiPressed(_ sender: Any) {
+        self.tableData.removeAll()
+        getCategories()
+        listProductSelected.removeAll()
+        listProductFinal.removeAll()
+        refreshControl.endRefreshing()
+        
+        print("chon lai")
+    }
     @IBAction func searchPressed(_ sender: Any) {
         getCategories()
     }
@@ -53,7 +65,8 @@ class ChonMonVC: BaseVC{
         }
         
         viewSearch.layer.cornerRadius = C.CornerRadius.corner10
-        tfSoNguoi.layer.cornerRadius = C.CornerRadius.corner5
+        bChonLai.layer.cornerRadius = C.CornerRadius.corner10
+        tfSoNguoi.layer.cornerRadius = C.CornerRadius.corner10
         lbCountCart.layer.cornerRadius = C.CornerRadius.corner5
         bXacNhanThemMon.layer.cornerRadius = C.CornerRadius.corner10
         refreshControl.tintColor = .white
@@ -65,7 +78,6 @@ class ChonMonVC: BaseVC{
         tfSoNguoi.text = "\(soNguoi)"
     }
     @objc func refresh(_ sender: AnyObject) {
-        
         self.tableData.removeAll()
         getCategories()
         listProductSelected.removeAll()
@@ -108,7 +120,7 @@ class ChonMonVC: BaseVC{
                 for (index, product) in e.products!.enumerated() {
                     if let newProduct = productMap[product.id!] {
                         e.products![index] = newProduct
-                        print(newProduct)
+                        
                     }
                 }
             }
@@ -120,10 +132,10 @@ class ChonMonVC: BaseVC{
     
     func getCategories(){
         dismissKeyboard()
-        let keySearch = keySearch.text
+//        let keySearch = keySearch.text
         guard let id = Common.userMaster.id else {return}
         
-        let param = ParamSearch(user_id: id, status: 1, keySearch: keySearch ?? "")
+        let param = ParamSearch(user_id: id, status: 1, keySearch: nil)
         
         ServiceManager.common.getAllCategories(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in

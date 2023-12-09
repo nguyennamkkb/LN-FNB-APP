@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -22,7 +22,6 @@
             <connections>
                 <outlet property="anhSanPham" destination="3V4-AB-WSm" id="PtP-Kx-3W6"/>
                 <outlet property="bChonAnhKhac" destination="W7C-KS-rxG" id="izn-H0-uvo"/>
-                <outlet property="bClose" destination="4pU-zu-GNY" id="LK8-H7-MqK"/>
                 <outlet property="bXacNhan" destination="Uyh-aO-E0M" id="u2y-ed-408"/>
                 <outlet property="lbMess" destination="CC6-ma-7sZ" id="Ixj-bx-bd9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -46,28 +45,13 @@
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4pU-zu-GNY" userLabel="bClose">
-                            <rect key="frame" x="343" y="4.6666666666666643" width="35" height="35"/>
-                            <color key="backgroundColor" name="n white"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="35" id="Yie-i0-QeZ"/>
-                                <constraint firstAttribute="width" constant="35" id="iL3-FX-BoQ"/>
-                            </constraints>
-                            <color key="tintColor" systemColor="systemPinkColor"/>
-                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                            <state key="normal" image="xmark" catalog="system">
-                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium" weight="bold"/>
-                            </state>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="CSV-F1-ahA" secondAttribute="trailing" id="3yc-Ym-H7I"/>
-                        <constraint firstAttribute="trailing" secondItem="4pU-zu-GNY" secondAttribute="trailing" constant="15" id="HPe-fC-kHf"/>
                         <constraint firstAttribute="height" constant="44" id="ISz-nz-YJP"/>
                         <constraint firstItem="CSV-F1-ahA" firstAttribute="top" secondItem="lHI-0S-fuY" secondAttribute="top" id="LhY-KA-mFN"/>
                         <constraint firstItem="CSV-F1-ahA" firstAttribute="leading" secondItem="lHI-0S-fuY" secondAttribute="leading" id="Lm0-Oh-5qr"/>
-                        <constraint firstItem="4pU-zu-GNY" firstAttribute="centerY" secondItem="lHI-0S-fuY" secondAttribute="centerY" id="nzB-rm-Vat"/>
                         <constraint firstAttribute="bottom" secondItem="CSV-F1-ahA" secondAttribute="bottom" id="wnS-4c-tD7"/>
                     </constraints>
                 </view>
@@ -141,7 +125,6 @@
         </view>
     </objects>
     <resources>
-        <image name="xmark" catalog="system" width="128" height="113"/>
         <namedColor name="n white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -154,11 +137,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

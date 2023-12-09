@@ -71,7 +71,7 @@ class MoreVC: BaseVC {
     }
     
     @IBAction func caiDatPressed(_ sender: Any) {
-        let vc = DangPhucVuVC()
+        let vc = CaiDatVC()
         self.pushVC(controller: vc)
     }
     

@@ -9,6 +9,7 @@ import UIKit
 
 class ForgetPasswordVC: BaseVC {
 
+    @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet var tfMatKhau: UITextField!
     @IBOutlet var tfOtp: UITextField!
     @IBOutlet var tfEmail: UITextField!
@@ -18,9 +19,11 @@ class ForgetPasswordVC: BaseVC {
     @IBOutlet var view2: UIView!
     @IBOutlet var btnSendOtp: UIButton!
     @IBOutlet var view1: UIView!
+    var nTitle: String = "Quên mật khẩu"
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        lbTitle.text = nTitle
     }
     	
     func setupUI(){
@@ -31,6 +34,9 @@ class ForgetPasswordVC: BaseVC {
         bXacNhan.layer.cornerRadius = C.CornerRadius.corner10
         
         lbMessage.isHidden  = true
+    }
+    func bindDataTitle(newTitle: String){
+        nTitle = newTitle
     }
     func thongBao(){
         let vc = AlertVC()

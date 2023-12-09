@@ -10,6 +10,7 @@ import UIKit
 class BanDangPhucVuCell: UITableViewCell {
     
     
+    @IBOutlet weak var lbGio: UILabel!
     @IBOutlet weak var vItem: UIView!
     var item = FOrder()
     @IBOutlet var lbSoNguoi: UILabel!
@@ -34,6 +35,7 @@ class BanDangPhucVuCell: UITableViewCell {
         }else {
             vItem.backgroundColor = UIColor(hex: "#FFFF0050")
         }
+        lbGio.text = "⏰ Giờ: " + Common.getDateFormatFromMiliseonds(time: Int64(item.time ?? "0") ?? 0)
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

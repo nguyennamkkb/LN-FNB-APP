@@ -18,11 +18,9 @@ class MonAnThemAnhVC: BaseVC {
     @IBOutlet var anhSanPham: UIImageView!
     var item = FProduct()
     var urlImage: String = "anhSanPhamMacDinh"
-    @IBOutlet var bClose: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        bClose.layer.cornerRadius = C.CornerRadius.corner10
         bXacNhan.layer.cornerRadius = C.CornerRadius.corner10
         bChonAnhKhac.layer.cornerRadius = C.CornerRadius.corner10
         anhSanPham.layer.cornerRadius = C.CornerRadius.corner10
@@ -67,8 +65,9 @@ class MonAnThemAnhVC: BaseVC {
     }
     @IBAction func xacNhanPressed(_ sender: Any) {
         if base64String.count < 100 {
-            uploadMacDinh?()
             self.onBackNav(animated: false)
+            uploadMacDinh?()
+            return;
         }
         let anhSanPham = FPramUploadImage()
         anhSanPham.user_id = Common.userMaster.id

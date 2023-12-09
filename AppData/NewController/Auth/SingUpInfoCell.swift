@@ -17,8 +17,6 @@ class SingUpInfoCell: UITableViewCell {
     
     var actionXacNhan: ClosureCustom<PStore>?
     @IBOutlet var btnXacNhan: UIButton!
-    @IBOutlet var btnChonLogo: UIButton!
-    @IBOutlet var btnChonQR: UIButton!
     @IBOutlet var view4: UIView!
     @IBOutlet var view3: UIView!
     @IBOutlet var view2: UIView!
@@ -29,13 +27,15 @@ class SingUpInfoCell: UITableViewCell {
         setupUI()
         // Initialization code
     }
-    func bindData(item: PStore){
-        
+    func bindData(item: PStore?){
+        tfHoTen.text = item?.name_own ?? ""
+        tfTenCuaHang.text = item?.storeName  ?? ""
+        tfDiaChi.text = item?.address  ?? ""
+        tfSDT.text = item?.phone  ?? ""
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
+
     }
     func getData(){
         guard let hoTen =  tfHoTen.text else {return}
@@ -54,8 +54,6 @@ class SingUpInfoCell: UITableViewCell {
         view2.layer.cornerRadius = C.CornerRadius.corner10
         view3.layer.cornerRadius = C.CornerRadius.corner10
         view4.layer.cornerRadius = C.CornerRadius.corner10
-        btnChonLogo.layer.cornerRadius = C.CornerRadius.corner10
-        btnChonQR.layer.cornerRadius = C.CornerRadius.corner10
         btnXacNhan.layer.cornerRadius = C.CornerRadius.corner10
     }
     @IBAction func xacNhanPressed(_ sender: Any) {

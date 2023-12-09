@@ -54,7 +54,7 @@ class LocHoaDonVC: BaseVC {
         guard let tuNgay = tfTuNgay.text else {return}
         guard let denNgay = tfDenNgay.text else {return}
         let tuNgayMilis:Int64 = Common.dateStringToMilis(dateString: tuNgay) ?? 0
-        let denNgayMilis:Int64 = tuNgayMilis + 86399999
+        let denNgayMilis:Int64 = Common.dateStringToMilis(dateString: denNgay) ?? 0 + 86399999
         layThoiGian?(tuNgayMilis,denNgayMilis)
         self.onBackNav()
     }

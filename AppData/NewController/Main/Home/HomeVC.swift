@@ -86,7 +86,7 @@ class HomeVC: BaseVC {
                     self.collectionView.reloadData()
                 }
             } else if response?.statusCode == 0 {
-                self.showAlert(message: "Không thể thêm mới")
+                self.showAlert(message: "Không có dữ liệu")
             }
             self.hideLoading()
         }

@@ -18,6 +18,12 @@ class ThemMonAnVC: BaseVC {
     var trangThaiSua: Int = 1
     var trangThaiLayAnh: Int = 0
     
+    
+
+    
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
+    }
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +62,12 @@ class ThemMonAnVC: BaseVC {
                     self.trangThaiLayAnh = 1
                     self.updateProduct()
                 }
+                vc.uploadMacDinh = {
+                    print("UP load anh mac dinh")
+                    self.onBackNav(animated: false)
+                    self.actionOK?()
+                    return
+                }
                 
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể thêm mới")
@@ -83,8 +95,9 @@ class ThemMonAnVC: BaseVC {
                     
                     }
                     vc.uploadMacDinh = {
-                        self.actionOK?()
+                        print("UP load anh mac dinh")
                         self.onBackNav(animated: false)
+                        self.actionOK?()
                         return
                     }
                 }else{

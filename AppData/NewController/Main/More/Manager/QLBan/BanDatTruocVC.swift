@@ -30,6 +30,7 @@ class BanDatTruocVC: BaseVC {
     
     @IBAction func bCapNhatPressed(_ sender: Any) {
         getOrders()
+        self.showAlert(message: "Thành công")
     }
     @IBAction func backPressed(_ sender: Any) {
         self.onBackNav()
@@ -58,13 +59,12 @@ class BanDatTruocVC: BaseVC {
     func getOrders(){
        
         guard let id = Common.userMaster.id else {return}
-        self.showLoading()
         let param = ParamSearch(user_id: id, status: 2)
         ServiceManager.common.getAllOrder(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
-            self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
                 self.tableData = Mapper<FOrder>().mapArray(JSONObject: response!.data ) ?? [FOrder]()
+             
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
@@ -80,6 +80,7 @@ class BanDatTruocVC: BaseVC {
             (response) in
             self.hideLoading()
             if response?.data != nil, response?.statusCode == 200 {
+                self.showAlert(message: "Thành công")
                 self.getOrders()
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể xoá")
@@ -102,10 +103,11 @@ extension BanDatTruocVC: UITableViewDelegate, UITableViewDataSource {
             guard let self = self else {return}
             let vc = MessageVC()
             let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
+            self.present(sheet, animated: true)
             vc.actionOK = {
                 self.deleteOrder(idOrder: data.id ?? 0)
             }
-            self.present(sheet, animated: true)
+           
         }
         
         cell.actionUpdate = {

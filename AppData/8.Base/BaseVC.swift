@@ -31,7 +31,6 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         alertView.backgroundColor = UIColor(hex: "#0A0A0A")
         alertView.frame = CGRect(x: 40, y: -50, width: self.view.frame.width - 80, height: 44)
         alertView.layer.cornerRadius = 15
-        messageLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 80, height: 44))
         messageLabel.text = ""
         messageLabel.numberOfLines = 0
         messageLabel.textAlignment = .center
@@ -43,6 +42,19 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         alertView.layer.shadowRadius = 10
         alertView.layer.borderColor = UIColor.gray.cgColor
         alertView.layer.borderWidth = 1
+        messageLabel.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            // Trung tâm messageLabel theo chiều ngang
+            messageLabel.centerXAnchor.constraint(equalTo: alertView.centerXAnchor),
+            // Trung tâm messageLabel theo chiều dọc
+            messageLabel.centerYAnchor.constraint(equalTo: alertView.centerYAnchor),
+            // Mở rộng messageLabel để lấp đầy chiều rộng và chiều cao của alertView
+            messageLabel.leadingAnchor.constraint(equalTo: alertView.leadingAnchor),
+            messageLabel.trailingAnchor.constraint(equalTo: alertView.trailingAnchor),
+            messageLabel.topAnchor.constraint(equalTo: alertView.topAnchor),
+            messageLabel.bottomAnchor.constraint(equalTo: alertView.bottomAnchor)
+        ])
         
     }
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -125,6 +137,7 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
     
     
     func onBackNav(animated: Bool? = true) {
+        print("onBackNav")
         let vc = self.navigationController?.popViewController(animated: animated ?? true)
         if vc == nil{
             dismiss(animated: animated ?? true, completion: nil)
@@ -135,9 +148,11 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         window.switchRootViewController(UINavigationController(rootViewController: vc))
     }
     func showLoading(){
+        print("showLoading")
         present(activityScreen, animated: false, completion: nil)
     }
     func hideLoading(){
+        print("hideLoading")
         activityScreen.closeActivity()
     }
   

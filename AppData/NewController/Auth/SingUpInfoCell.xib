@@ -234,7 +234,7 @@
                         </constraints>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39P-7b-jCz">
-                        <rect key="frame" x="0.0" y="346" width="358" height="44"/>
+                        <rect key="frame" x="0.0" y="509" width="358" height="44"/>
                         <color key="backgroundColor" name="n yellow"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="44" id="Lv5-qW-FMM"/>
@@ -246,30 +246,88 @@
                             <action selector="xacNhanPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="X2C-1k-6RB"/>
                         </connections>
                     </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="twH-uM-3nS">
+                        <rect key="frame" x="0.0" y="344.66666666666669" width="150" height="146.99999999999994"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="twH-uM-3nS" secondAttribute="height" id="UEb-zf-P3G"/>
+                            <constraint firstAttribute="width" constant="150" id="db7-jh-z1C"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Up-es-iVR">
+                        <rect key="frame" x="150" y="458" width="208" height="35"/>
+                        <color key="backgroundColor" name="n white"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="L1w-qQ-k26"/>
+                        </constraints>
+                        <color key="tintColor" name="n yellow"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Chọn QR">
+                            <fontDescription key="titleFontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="btnChonQrTuMay:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QTD-1d-1tS"/>
+                        </connections>
+                    </button>
+                    <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="deg-xS-gkB">
+                        <rect key="frame" x="0.0" y="499.66666666666674" width="150" height="147"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="CME-yf-E3K"/>
+                            <constraint firstAttribute="width" secondItem="deg-xS-gkB" secondAttribute="height" id="rtC-zL-kfL"/>
+                        </constraints>
+                    </imageView>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNG-Ng-vEV">
+                        <rect key="frame" x="150" y="613" width="208" height="35"/>
+                        <color key="backgroundColor" name="white"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="rMc-aT-Gaz"/>
+                        </constraints>
+                        <color key="tintColor" name="n yellow"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Chọn logo">
+                            <fontDescription key="titleFontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="btnChonLogoPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QzW-1n-Oc7"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="9x9-mh-o6o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0kR-FA-WgB"/>
                     <constraint firstItem="9x9-mh-o6o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="2Vi-SQ-0NW"/>
                     <constraint firstAttribute="trailing" secondItem="hfp-zm-kGT" secondAttribute="trailing" id="5S6-xR-uOS"/>
+                    <constraint firstItem="dNG-Ng-vEV" firstAttribute="bottom" secondItem="deg-xS-gkB" secondAttribute="bottom" id="B2u-KF-Tv1"/>
+                    <constraint firstItem="dNG-Ng-vEV" firstAttribute="leading" secondItem="deg-xS-gkB" secondAttribute="trailing" id="BRk-OD-dgu"/>
                     <constraint firstItem="39P-7b-jCz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="EI0-UH-vrS"/>
                     <constraint firstAttribute="trailing" secondItem="39P-7b-jCz" secondAttribute="trailing" id="FU3-rh-Rfr"/>
+                    <constraint firstItem="twH-uM-3nS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Fru-19-d1S"/>
+                    <constraint firstItem="deg-xS-gkB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="H3H-3C-60O"/>
                     <constraint firstAttribute="trailing" secondItem="9x9-mh-o6o" secondAttribute="trailing" id="O63-d6-7nb"/>
                     <constraint firstAttribute="trailing" secondItem="0D4-xP-p2i" secondAttribute="trailing" id="RSd-bN-Azq"/>
+                    <constraint firstAttribute="trailing" secondItem="dNG-Ng-vEV" secondAttribute="trailing" id="VEt-Fl-Rnk"/>
                     <constraint firstItem="BeA-Be-ebF" firstAttribute="top" secondItem="hfp-zm-kGT" secondAttribute="bottom" constant="10" id="Vw2-nZ-xkJ"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="39P-7b-jCz" secondAttribute="bottom" constant="5" id="XqZ-j9-buO"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="39P-7b-jCz" secondAttribute="bottom" constant="30" id="XqZ-j9-buO"/>
                     <constraint firstItem="BeA-Be-ebF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Z4t-EU-IuY"/>
                     <constraint firstItem="0D4-xP-p2i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZK1-Zu-LSv"/>
+                    <constraint firstItem="39P-7b-jCz" firstAttribute="bottom" secondItem="0Up-es-iVR" secondAttribute="bottom" constant="60" id="bMD-gy-n4d"/>
+                    <constraint firstItem="twH-uM-3nS" firstAttribute="top" secondItem="0D4-xP-p2i" secondAttribute="bottom" constant="13" id="bqG-2S-Oo3"/>
                     <constraint firstItem="0D4-xP-p2i" firstAttribute="top" secondItem="BeA-Be-ebF" secondAttribute="bottom" constant="10" id="fQL-Qy-odt"/>
                     <constraint firstItem="hfp-zm-kGT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="fQb-yS-L2U"/>
+                    <constraint firstItem="0Up-es-iVR" firstAttribute="bottom" secondItem="twH-uM-3nS" secondAttribute="bottom" id="lJe-5g-kzY"/>
+                    <constraint firstItem="0Up-es-iVR" firstAttribute="leading" secondItem="twH-uM-3nS" secondAttribute="trailing" id="rlg-Jm-Qg1"/>
+                    <constraint firstItem="deg-xS-gkB" firstAttribute="top" secondItem="twH-uM-3nS" secondAttribute="bottom" constant="5" id="vGG-WH-s0u"/>
                     <constraint firstAttribute="trailing" secondItem="BeA-Be-ebF" secondAttribute="trailing" id="vao-6I-tls"/>
-                    <constraint firstItem="39P-7b-jCz" firstAttribute="top" secondItem="0D4-xP-p2i" secondAttribute="bottom" constant="16" id="wve-KL-kM6"/>
+                    <constraint firstAttribute="trailing" secondItem="0Up-es-iVR" secondAttribute="trailing" id="ybS-8g-pvg"/>
                     <constraint firstItem="hfp-zm-kGT" firstAttribute="top" secondItem="9x9-mh-o6o" secondAttribute="bottom" constant="10" id="zPe-mR-Zrf"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="anhLogo" destination="deg-xS-gkB" id="Ziz-TS-qKg"/>
+                <outlet property="anhQR" destination="twH-uM-3nS" id="sVk-To-Hap"/>
                 <outlet property="btnXacNhan" destination="39P-7b-jCz" id="5eP-T3-nyn"/>
+                <outlet property="imgLogo" destination="deg-xS-gkB" id="Ilf-dR-NKU"/>
+                <outlet property="imgQR" destination="twH-uM-3nS" id="2Lt-YG-MeN"/>
                 <outlet property="tfDiaChi" destination="KNz-Bk-bl3" id="8WT-SK-fVV"/>
                 <outlet property="tfHoTen" destination="fBk-tM-OT2" id="7zp-ld-ABR"/>
                 <outlet property="tfSDT" destination="dOr-YW-JEQ" id="CNa-dx-WGJ"/>
@@ -283,6 +341,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <namedColor name="gray">
             <color red="0.69199997186660767" green="0.70599997043609619" blue="0.73299998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -294,6 +353,9 @@
         </namedColor>
         <namedColor name="n yellow">
             <color red="0.95200002193450928" green="0.49099999666213989" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

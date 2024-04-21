@@ -35,6 +35,9 @@ class BaseNetWorking {
                 }else {
                     if response.value != nil {
                         do {
+                            
+                            
+                            
                             let data = Data((response.result.value ?? "").utf8)
                             if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
                                 #if DEBUG

@@ -152,7 +152,7 @@ class BaseVC: UIViewController, UIImagePickerControllerDelegate, UINavigationCon
         present(activityScreen, animated: false, completion: nil)
     }
     func hideLoading(){
-        print("hideLoading")
+//        print("hideLoading")
         activityScreen.closeActivity()
     }
   

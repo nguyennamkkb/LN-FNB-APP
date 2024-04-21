@@ -38,9 +38,11 @@ class MonTrenBanCell: UITableViewCell {
         lbGia.text = "Gia: " + "\(item.price ?? 0)".currencyFormatting() + "đ"
         lbName.text = "\(item.name ?? "")"
         lbCount.text = "\(item.count ?? 0)"
+//        print(item.count ?? 0)
         if item.count == 0 {
             lbCount.alpha = 0.1
-            
+        }else{
+            lbCount.alpha = 1
         }
     }
     func setupUI(){
@@ -50,6 +52,7 @@ class MonTrenBanCell: UITableViewCell {
         vItem.layer.cornerRadius = C.CornerRadius.corner10
         btnTru.addBorder(edges: [.right], color: C.Color.NGrey!, thickness: 0.2)
         btnCong.addBorder(edges: [.left], color: C.Color.NGrey!, thickness: 0.2)
+        lbCount.alpha = 1
     }
     @IBAction func congPressed(_ sender: Any) {
         guard let count = item.count else {return}

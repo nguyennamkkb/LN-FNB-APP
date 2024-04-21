@@ -43,7 +43,9 @@ class HomeVC: BaseVC {
     }
     @IBAction func capNhatPressed(_ sender: Any) {
         getTables()
-        tenBanDaChon.text = ""
+        listTableSelected.removeAll()
+        tenBanDaChon.text = "Còn trống: \(getTableEmpty())"
+        collectionView.refreshControl?.endRefreshing()
     }
     @IBAction func banDatTruocPressed(_ sender: Any) {
         let vc = BanDatTruocVC()
@@ -78,7 +80,9 @@ class HomeVC: BaseVC {
         
         ServiceManager.common.getAllTables(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
+            
             if response?.data != nil, response?.statusCode == 200 {
+               
                 self.collectionData = Mapper<FTable>().mapArray(JSONObject: response!.data ) ?? [FTable]()
                 
                 DispatchQueue.main.async {
@@ -101,15 +105,17 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TableCell", for: indexPath) as? TableCell else {return UICollectionViewCell()}
         let item = collectionData.itemAtIndex(index: indexPath.row) ?? FTable()
-        cell.bindData(item: item)
+        cell.bindData(index: indexPath.row, item: item)
         cell.passDataSelect = {
-            [weak self] data in
+            [weak self] index, data in
             guard let self = self else {return}
+            collectionData.itemAtIndex(index: index)?.status = 3
             addSelect(item: data)
         }
         cell.passDataDelete = {
-            [weak self] data in
+            [weak self] index, data in
             guard let self = self else {return}
+            collectionData.itemAtIndex(index: index)?.status = 1
             deleteSelect(item: data)
         }
         cell.actionBanDangPhucVu = {

@@ -49,6 +49,7 @@ class KichHoatTaiKhoanVC: BaseVC {
                 self.actionThanhCong?()
                 
             } else {
+                self.lbBaoLoi.isHidden = false
                 self.lbBaoLoi.text = "Mã OTP 6 số không đúng"
             }
         }

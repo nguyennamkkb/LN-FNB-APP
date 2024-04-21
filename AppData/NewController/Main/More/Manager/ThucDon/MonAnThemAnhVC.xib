@@ -39,6 +39,19 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHI-0S-fuY" userLabel="nav">
                     <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                     <subviews>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhi-R4-J7h" userLabel="back">
+                            <rect key="frame" x="15" y="4.6666666666666643" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="9FS-9R-0Ng"/>
+                                <constraint firstAttribute="width" constant="35" id="vXQ-Vh-4jy"/>
+                            </constraints>
+                            <color key="tintColor" name="white"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="chevron.backward" catalog="system"/>
+                            <connections>
+                                <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="8E2-Ym-S9x"/>
+                            </connections>
+                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chọn ảnh món ăn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSV-F1-ahA">
                             <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="17"/>
@@ -52,6 +65,8 @@
                         <constraint firstAttribute="height" constant="44" id="ISz-nz-YJP"/>
                         <constraint firstItem="CSV-F1-ahA" firstAttribute="top" secondItem="lHI-0S-fuY" secondAttribute="top" id="LhY-KA-mFN"/>
                         <constraint firstItem="CSV-F1-ahA" firstAttribute="leading" secondItem="lHI-0S-fuY" secondAttribute="leading" id="Lm0-Oh-5qr"/>
+                        <constraint firstItem="Nhi-R4-J7h" firstAttribute="leading" secondItem="lHI-0S-fuY" secondAttribute="leading" constant="15" id="YxA-fo-J4T"/>
+                        <constraint firstItem="Nhi-R4-J7h" firstAttribute="centerY" secondItem="lHI-0S-fuY" secondAttribute="centerY" id="dza-pW-ack"/>
                         <constraint firstAttribute="bottom" secondItem="CSV-F1-ahA" secondAttribute="bottom" id="wnS-4c-tD7"/>
                     </constraints>
                 </view>
@@ -125,6 +140,7 @@
         </view>
     </objects>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <namedColor name="n white">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -138,7 +154,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

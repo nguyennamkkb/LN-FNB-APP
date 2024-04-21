@@ -63,8 +63,7 @@ class ChonMonVC: BaseVC{
             bCart.isHidden = false
             bXacNhanThemMon.isHidden = true
         }
-        
-        viewSearch.layer.cornerRadius = C.CornerRadius.corner10
+
         bChonLai.layer.cornerRadius = C.CornerRadius.corner10
         tfSoNguoi.layer.cornerRadius = C.CornerRadius.corner10
         lbCountCart.layer.cornerRadius = C.CornerRadius.corner5
@@ -93,6 +92,9 @@ class ChonMonVC: BaseVC{
     }
     func bindData(ban: String){
         banDaChon = ban
+    }
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
     }
     
     func bindDataThemMon(listSelected: [FProduct], ban: String, soNguoi: Int){

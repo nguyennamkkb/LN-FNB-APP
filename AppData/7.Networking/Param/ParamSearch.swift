@@ -11,6 +11,7 @@ import ObjectMapper
 
 class ParamSearch: Mappable {
     var user_id: Int?
+    var id: Int?
     var status: Int?
     var keySearch: String?
     var name: String?
@@ -39,6 +40,7 @@ class ParamSearch: Mappable {
 
     func mapping(map: ObjectMapper.Map) {
         user_id <- map["user_id"]
+        id <- map["id"]
         status <- map["status"]
         keySearch <- map["keySearch"]
         name <- map["name"]

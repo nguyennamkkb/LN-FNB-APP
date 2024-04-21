@@ -30,6 +30,9 @@ fileprivate class ListCommonService {
     static let taoBaoCaoHomNay = bill + "/taoBaoCaoHomNay"
     static let taoBaoCaoTheoThoiGian = bill + "/taoBaoCaoTheoThoiGian"
     static let taiAnhSanPham = ServiceManager.ROOT + "images/uploadAnhSanPham"
+    static let uploadAnhLogo = ServiceManager.ROOT + "images/uploadAnhLogo"
+    static let uploadAnhQR = ServiceManager.ROOT + "images/uploadAnhQR"
+    
     
 }
 
@@ -51,6 +54,8 @@ fileprivate enum ECommonURLs {
     case taoBaoCaoHomNay
     case taoBaoCaoTheoThoiGian
     case taiAnhSanPham
+    case uploadAnhLogo
+    case uploadAnhQR
     
     
     func getPath() -> String {
@@ -89,6 +94,11 @@ fileprivate enum ECommonURLs {
             return ListCommonService.taoBaoCaoTheoThoiGian
         case .taiAnhSanPham:
             return ListCommonService.taiAnhSanPham
+        case .uploadAnhLogo:
+            
+            return ListCommonService.uploadAnhLogo
+        case .uploadAnhQR:
+            return ListCommonService.uploadAnhQR
 }
 
     }
@@ -279,9 +289,11 @@ class CommonServices {
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }
+        print(router)
         BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
             if success {
                 if result != nil{
+                    
                     if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
                         completion(baseResponse)
                     }
@@ -749,6 +761,46 @@ class CommonServices {
     
     func taiAnhSanPhamLen(param: FPramUploadImage, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         let router = ECommonURLs.taiAnhSanPham.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    func taiAnhQR(param: FPramUploadImage, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.uploadAnhQR.getPath()
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .post, parameter: param.toJSON()) { (success, result, error) in
+            if success {
+                if result != nil{
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+                    completion(nil)
+                }
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
+    func taiAnhLogo(param: FPramUploadImage, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.uploadAnhLogo.getPath()
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
         }

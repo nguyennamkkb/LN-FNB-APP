@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -35,8 +35,23 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybI-hf-8FH" userLabel="nav">
                     <rect key="frame" x="0.0" y="59" width="378" height="44"/>
                     <subviews>
+                        <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BoJ-v0-rxN" userLabel="back">
+                            <rect key="frame" x="15" y="4.6666666666666643" width="35" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="35" id="Rwc-od-buR"/>
+                                <constraint firstAttribute="height" constant="35" id="ThA-y2-b4s"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="V32-8r-ewS"/>
+                                <constraint firstAttribute="width" constant="35" id="oTt-x7-i0B"/>
+                            </constraints>
+                            <color key="tintColor" name="white"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" image="chevron.backward" catalog="system"/>
+                            <connections>
+                                <action selector="backPressed:" destination="-1" eventType="touchUpInside" id="8s9-Z8-we5"/>
+                            </connections>
+                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đã chọn" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjP-e2-N2m" userLabel="da chon">
-                            <rect key="frame" x="15" y="10" width="74" height="24"/>
+                            <rect key="frame" x="152" y="10" width="74" height="24"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="20"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
@@ -61,17 +76,19 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="5ah-ym-QWE" secondAttribute="trailing" id="0I0-Ak-I4D"/>
+                        <constraint firstItem="BoJ-v0-rxN" firstAttribute="centerY" secondItem="ybI-hf-8FH" secondAttribute="centerY" id="DqV-WD-n6u"/>
+                        <constraint firstItem="BoJ-v0-rxN" firstAttribute="leading" secondItem="ybI-hf-8FH" secondAttribute="leading" constant="15" id="HZ0-3l-Xl4"/>
                         <constraint firstAttribute="height" constant="44" id="Lee-LM-3uI"/>
                         <constraint firstItem="bjP-e2-N2m" firstAttribute="centerY" secondItem="ybI-hf-8FH" secondAttribute="centerY" id="Sw5-qW-ilq"/>
                         <constraint firstItem="5ah-ym-QWE" firstAttribute="centerY" secondItem="ybI-hf-8FH" secondAttribute="centerY" id="VWO-XP-VTd"/>
-                        <constraint firstItem="bjP-e2-N2m" firstAttribute="leading" secondItem="ybI-hf-8FH" secondAttribute="leading" constant="15" id="o0B-Yh-Bc5"/>
+                        <constraint firstItem="bjP-e2-N2m" firstAttribute="centerX" secondItem="ybI-hf-8FH" secondAttribute="centerX" id="mbq-xO-NjU"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aah-On-jOg" userLabel="Vtable">
                     <rect key="frame" x="0.0" y="103" width="393" height="35"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bàn: A1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="08M-Ud-jYQ" userLabel="Bàn: A1">
-                            <rect key="frame" x="14.999999999999996" y="8" width="55.666666666666657" height="19"/>
+                            <rect key="frame" x="14.999999999999996" y="8" width="56.666666666666657" height="19"/>
                             <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="16"/>
                             <color key="textColor" name="white"/>
                             <nil key="highlightedColor"/>
@@ -148,6 +165,7 @@
         </view>
     </objects>
     <resources>
+        <image name="chevron.backward" catalog="system" width="97" height="128"/>
         <namedColor name="n black">
             <color red="0.11599999666213989" green="0.14900000393390656" blue="0.19900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

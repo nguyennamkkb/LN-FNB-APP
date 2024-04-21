@@ -37,6 +37,7 @@ class QLHoaDonVC: BaseVC {
         
     }
     func getHoaDons(){
+        self.showLoading()
         guard let _ = Common.userMaster.id else {return}
         ServiceManager.common.getAllBill(param: "?\(Utility.getParamFromDirectory(item: param.toJSON()))"){
             (response) in
@@ -45,21 +46,27 @@ class QLHoaDonVC: BaseVC {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
+           
             } else if response?.statusCode == 0 {
                 self.showAlert(message: "Không thể thêm mới")
             }
         }
+        self.hideLoading()
     }
     @IBAction func locPressed(_ sender: Any) {
         let vc = LocHoaDonVC()
         vc.layThoiGian = {
-            [weak self] (tu,den) in
+            [weak self] (tu,den,maHoaDon) in
             guard let self = self else {return}
             self.param.from = tu
             self.param.to = den
+            self.param.id = maHoaDon == 0 ? nil :  maHoaDon
+//            self.param.id = if maHoaDon == 0 { nil } else { maHoaDon}
             self.getHoaDons()
         }
-        let sheet = SheetViewController(controller: vc, sizes: [.fixed(250)])
+        vc.bindData(tuNgay: param.from ?? 0, denNgay: param.to ?? 0)
+        let sheet = SheetViewController(controller: vc, sizes: [.fixed(350)])
+        
         self.present(sheet, animated: true)
     }
     @IBAction func backPressed(_ sender: Any) {

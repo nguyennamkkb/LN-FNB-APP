@@ -19,6 +19,10 @@ class BillCell: UITableViewCell {
     @IBOutlet var lbSoDienThoai: UILabel!
     @IBOutlet var lbDiaChi: UILabel!
     @IBOutlet var lbTenCuaHang: UILabel!
+    @IBOutlet weak var lbMaHoaDon: UILabel!
+    @IBOutlet weak var imgQR: UIImageView!
+    
+    
     @IBOutlet weak var tableViewHeightConstraint: NSLayoutConstraint!
     var heightItem: Int = 70
     var order = FOrder()
@@ -42,9 +46,10 @@ class BillCell: UITableViewCell {
     }
     
     func setupData(){
-        lbTenCuaHang.text = Common.userMaster.storeName
+        lbTenCuaHang.text = Common.userMaster.storeName?.uppercased()
         lbDiaChi.text = Common.userMaster.address
         lbSoDienThoai.text = Common.userMaster.phone
+        lbMaHoaDon.text = "HĐ: #\(bill.id ?? 0)"
         lbBan.text = "Bàn: \(order.table ?? "")"
         lbSoNguoi.text = "Số người: \(order.person ?? 0)"
         lbGio.text = "Giờ: \(Common.getDateFormatFromMiliseonds(time: Int64(((bill.timeRequest == nil) ? order.time : "\(bill.timeRequest ?? 0)")!) ?? 0))"
@@ -52,6 +57,9 @@ class BillCell: UITableViewCell {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+        
+        
+        
     }
 }
 

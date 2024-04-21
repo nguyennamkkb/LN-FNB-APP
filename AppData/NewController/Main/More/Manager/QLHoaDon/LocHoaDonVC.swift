@@ -9,25 +9,37 @@ import UIKit
 
 class LocHoaDonVC: BaseVC {
     
-    var layThoiGian: ((Int64,Int64)->Void)?
+    var layThoiGian: ((Int64,Int64,Int)->Void)?
     @IBOutlet weak var bXacNhan: UIButton!
     let datePickerTuNgay = UIDatePicker()
     let datePickerDenNgay = UIDatePicker()
     @IBOutlet weak var tfDenNgay: UITextField!
     @IBOutlet weak var tfTuNgay: UITextField!
+    @IBOutlet weak var tfMaHoaDon: UITextField!
+    
     @IBOutlet weak var v2: UIView!
     @IBOutlet weak var v1: UIView!
     var tuNgay: String = ""
     var denNgay: String = ""
+    
+    var dateTuNgay: Date = Date()
+    var dateDenNgay: Date = Date()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         v1.layer.cornerRadius = C.CornerRadius.corner10
         v2.layer.cornerRadius = C.CornerRadius.corner10
         bXacNhan.layer.cornerRadius = C.CornerRadius.corner10
+        tfMaHoaDon.layer.cornerRadius = C.CornerRadius.corner10
+
         
         setupData()
         setupDatePicker()
+    }
+    func bindData(tuNgay: Int64,denNgay: Int64) {
+        dateTuNgay = Date(timeIntervalSince1970: Double(tuNgay) / 1000)
+        dateDenNgay = Date(timeIntervalSince1970: Double(denNgay) / 1000)
     }
     func setupDatePicker(){
         //tu ngay
@@ -37,6 +49,7 @@ class LocHoaDonVC: BaseVC {
         if #available(iOS 13.4, *) {
             datePickerTuNgay.preferredDatePickerStyle = .wheels
         }
+        datePickerTuNgay.setDate(dateTuNgay, animated: true)
         tfTuNgay.inputView = datePickerTuNgay
         
         //den ngay
@@ -46,6 +59,7 @@ class LocHoaDonVC: BaseVC {
         if #available(iOS 13.4, *) {
             datePickerDenNgay.preferredDatePickerStyle = .wheels
         }
+        datePickerDenNgay.setDate(dateDenNgay, animated: true)
         tfDenNgay.inputView = datePickerDenNgay
         
     }
@@ -53,15 +67,16 @@ class LocHoaDonVC: BaseVC {
 
         guard let tuNgay = tfTuNgay.text else {return}
         guard let denNgay = tfDenNgay.text else {return}
+        
+        let maHoaDon = tfMaHoaDon.text ?? "0"
         let tuNgayMilis:Int64 = Common.dateStringToMilis(dateString: tuNgay) ?? 0
-        let denNgayMilis:Int64 = Common.dateStringToMilis(dateString: denNgay) ?? 0 + 86399999
-        layThoiGian?(tuNgayMilis,denNgayMilis)
+        let denNgayMilis:Int64 = (Common.dateStringToMilis(dateString: denNgay) ?? 0 ) + 86399999
+        layThoiGian?(tuNgayMilis,denNgayMilis,Int(maHoaDon) ?? 0)
         self.onBackNav()
     }
     func setupData(){
-        tfTuNgay.text = formatDate(date: Date())
-        tfDenNgay.text = formatDate(date: Date())
-        
+        tfTuNgay.text = formatDate(date: dateTuNgay)
+        tfDenNgay.text = formatDate(date: dateDenNgay)
     }
    
     @objc func dateChangeTu(datePicker: UIDatePicker) {

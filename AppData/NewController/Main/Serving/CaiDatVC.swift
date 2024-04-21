@@ -48,6 +48,8 @@ class CaiDatVC: BaseVC {
     @IBAction func dangXuatPressed(_ sender: Any) {
         ImageCache.default.clearMemoryCache()
         ImageCache.default.clearDiskCache()
+        KingfisherManager.shared.cache.clearCache()
+
         let vc = LoginVC()
         self.wrapRoot(vc: vc)
     }
@@ -72,6 +74,7 @@ class CaiDatVC: BaseVC {
         <<~ .layout(.lineSpace(.l1_8))
         <<< CommonPrint.removeVietnameseDiacritics(from: "IN THU")
         <<~ .page(.printAndFeed(lines: 1))
+        <<< CommonPrint.removeVietnameseDiacritics(from: "quetnhanh.vn")
         <<< CommonPrint.removeVietnameseDiacritics(from: "Ung dung LN Quan ly nha hang")
         <<~ .cursor(.lineFeed)
         <<< Command.cursor(.lineFeed)

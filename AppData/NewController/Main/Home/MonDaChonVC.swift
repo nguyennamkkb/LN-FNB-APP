@@ -35,6 +35,11 @@ class MonDaChonVC: BaseVC {
     func setupUI(){
         btnXacNhan.layer.cornerRadius = C.CornerRadius.corner10
     }
+    
+    
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
+    }
     @IBAction func xacNhanPressed(_ sender: Any) {
         guard let personNumber = soNguoi else {return}
         guard let table = table else {return}

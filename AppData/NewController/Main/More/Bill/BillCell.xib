@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,11 +22,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="720" id="KGk-i7-Jjw" customClass="BillCell" customModule="LN_FNB" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="496" height="720"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="812" id="KGk-i7-Jjw" customClass="BillCell" customModule="LN_FNB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="496" height="812"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="496" height="720"/>
+                <rect key="frame" x="0.0" y="0.0" width="496" height="812"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ten cua hang" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgW-Wb-JLd">
@@ -58,7 +58,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d75-t6-dr9" userLabel="line">
-                        <rect key="frame" x="15" y="221.66666666666666" width="466" height="0.33333333333334281"/>
+                        <rect key="frame" x="15" y="253.33333333333334" width="466" height="0.33333333333334281"/>
                         <color key="backgroundColor" name="n gray"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="nCj-fF-6Dz"/>
@@ -71,64 +71,79 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bàn: A1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2k-Mt-KnC">
-                        <rect key="frame" x="15" y="159" width="466" height="21.333333333333343"/>
+                        <rect key="frame" x="15" y="186" width="466" height="21.333333333333343"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                         <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Giờ: 12:30 8/9/2023" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRR-n5-5a9">
-                        <rect key="frame" x="15" y="190.33333333333334" width="161.66666666666666" height="21.333333333333343"/>
+                        <rect key="frame" x="15" y="222.33333333333334" width="161.66666666666666" height="21.333333333333343"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21.333333333333343" id="wzL-bc-qLS"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                         <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Số người: 5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H8u-8Y-8we">
-                        <rect key="frame" x="390" y="190.33333333333334" width="91" height="21.333333333333343"/>
+                        <rect key="frame" x="390" y="222.33333333333334" width="91" height="21.333333333333343"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                         <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Món" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUo-Bw-2eA">
-                        <rect key="frame" x="15.000000000000004" y="232" width="44.333333333333343" height="26"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="DV" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUo-Bw-2eA">
+                        <rect key="frame" x="15.000000000000002" y="263.66666666666669" width="28.666666666666671" height="26"/>
                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
                         <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thành tiền" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRF-yg-0IH">
-                        <rect key="frame" x="376" y="232" width="105" height="26"/>
+                        <rect key="frame" x="376" y="263.66666666666669" width="105" height="26"/>
                         <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="22"/>
                         <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pgm-Vq-lhI">
-                        <rect key="frame" x="15" y="268" width="466" height="200"/>
+                        <rect key="frame" x="15" y="299.66666666666669" width="466" height="200"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="200" id="jAY-qG-VyZ"/>
                         </constraints>
                     </tableView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q8Q-9z-30r" userLabel="line">
-                        <rect key="frame" x="15" y="478" width="466" height="0.66666666666668561"/>
+                        <rect key="frame" x="15" y="509.66666666666669" width="466" height="0.66666666666668561"/>
                         <color key="backgroundColor" name="n gray"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="0.5" id="W5t-Kv-SDZ"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tổng tiền" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBy-7O-Yom">
-                        <rect key="frame" x="15" y="488.66666666666669" width="75.333333333333329" height="21.333333333333314"/>
+                        <rect key="frame" x="15" y="520.33333333333337" width="75.333333333333329" height="21.333333333333371"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                         <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="104.000đ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOK-Li-H5V">
-                        <rect key="frame" x="405" y="488.66666666666669" width="76" height="21.333333333333314"/>
+                        <rect key="frame" x="405" y="520.33333333333337" width="76" height="21.333333333333371"/>
                         <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                         <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cảm ơn quý khách!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vD8-4a-m1k">
-                        <rect key="frame" x="15" y="530" width="466" height="26"/>
+                        <rect key="frame" x="15" y="561.66666666666663" width="466" height="26"/>
                         <fontDescription key="fontDescription" name="Roboto-BoldItalic" family="Roboto" pointSize="22"/>
+                        <color key="textColor" name="n black"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ma hoa don" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfa-lu-8LF">
+                        <rect key="frame" x="15" y="154" width="466" height="22"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                        <color key="textColor" name="n black"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="quetnhanh.vn" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XCI-wF-1Rv">
+                        <rect key="frame" x="0.0" y="592.66666666666663" width="496" height="19"/>
+                        <fontDescription key="fontDescription" name="Roboto-BoldItalic" family="Roboto" pointSize="16"/>
                         <color key="textColor" name="n black"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -136,7 +151,6 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="qBy-7O-Yom" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="0rY-B1-ahd"/>
-                    <constraint firstItem="q2k-Mt-KnC" firstAttribute="top" secondItem="Fdq-Ic-xvk" secondAttribute="bottom" constant="15" id="0zt-k9-Yb3"/>
                     <constraint firstAttribute="trailing" secondItem="q2k-Mt-KnC" secondAttribute="trailing" constant="15" id="4hv-Ka-XuI"/>
                     <constraint firstAttribute="trailing" secondItem="H8u-8Y-8we" secondAttribute="trailing" constant="15" id="6yk-vG-6PW"/>
                     <constraint firstItem="Pgm-Vq-lhI" firstAttribute="top" secondItem="lUo-Bw-2eA" secondAttribute="bottom" constant="10" id="9jW-an-oBr"/>
@@ -145,7 +159,7 @@
                     <constraint firstAttribute="trailing" secondItem="EWa-Nz-uO1" secondAttribute="trailing" constant="15" id="G4a-0E-03S"/>
                     <constraint firstItem="Q8Q-9z-30r" firstAttribute="top" secondItem="Pgm-Vq-lhI" secondAttribute="bottom" constant="10" id="JSi-Rm-DWi"/>
                     <constraint firstAttribute="trailing" secondItem="Pgm-Vq-lhI" secondAttribute="trailing" constant="15" id="MlP-8f-kJ1"/>
-                    <constraint firstItem="H8u-8Y-8we" firstAttribute="centerY" secondItem="zRR-n5-5a9" secondAttribute="centerY" id="NdV-O1-oMC"/>
+                    <constraint firstItem="zRR-n5-5a9" firstAttribute="top" secondItem="q2k-Mt-KnC" secondAttribute="bottom" constant="15" id="NMm-Or-jA1"/>
                     <constraint firstItem="wgW-Wb-JLd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="NfW-vO-1ro"/>
                     <constraint firstItem="lUo-Bw-2eA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="ONa-VT-beZ"/>
                     <constraint firstAttribute="trailing" secondItem="vin-Er-FkR" secondAttribute="trailing" constant="15" id="OpP-Zz-s8i"/>
@@ -157,27 +171,34 @@
                     <constraint firstItem="Pgm-Vq-lhI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="RJN-kQ-2jQ"/>
                     <constraint firstAttribute="trailing" secondItem="d75-t6-dr9" secondAttribute="trailing" constant="15" id="SYh-ET-Q0K"/>
                     <constraint firstItem="q2k-Mt-KnC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Sv8-MX-Neb"/>
-                    <constraint firstItem="zRR-n5-5a9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="VqT-kc-igN"/>
+                    <constraint firstItem="yfa-lu-8LF" firstAttribute="leading" secondItem="q2k-Mt-KnC" secondAttribute="leading" id="Y0t-YS-3e7"/>
+                    <constraint firstItem="d75-t6-dr9" firstAttribute="top" secondItem="zRR-n5-5a9" secondAttribute="bottom" constant="9.6666666666666288" id="YcO-jX-yXb"/>
+                    <constraint firstItem="zRR-n5-5a9" firstAttribute="centerY" secondItem="H8u-8Y-8we" secondAttribute="centerY" id="ZMM-RH-227"/>
                     <constraint firstItem="d75-t6-dr9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Zow-ee-qGE"/>
                     <constraint firstAttribute="trailing" secondItem="mOK-Li-H5V" secondAttribute="trailing" constant="15" id="a1I-tr-CT8"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="XCI-wF-1Rv" secondAttribute="bottom" id="aXi-NW-cwu"/>
                     <constraint firstItem="vD8-4a-m1k" firstAttribute="top" secondItem="qBy-7O-Yom" secondAttribute="bottom" constant="20" id="axa-Gx-djJ"/>
+                    <constraint firstItem="XCI-wF-1Rv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ceE-TR-WcY"/>
                     <constraint firstAttribute="trailing" secondItem="vD8-4a-m1k" secondAttribute="trailing" constant="15" id="ck7-5j-6sP"/>
+                    <constraint firstItem="XCI-wF-1Rv" firstAttribute="top" secondItem="vD8-4a-m1k" secondAttribute="bottom" constant="5" id="dr7-bV-Fzb"/>
                     <constraint firstAttribute="trailing" secondItem="wgW-Wb-JLd" secondAttribute="trailing" constant="15" id="gE7-Tn-Kcu"/>
                     <constraint firstItem="TRF-yg-0IH" firstAttribute="centerY" secondItem="lUo-Bw-2eA" secondAttribute="centerY" id="gYg-lL-b7K"/>
                     <constraint firstItem="nrE-Kw-C0d" firstAttribute="top" secondItem="wgW-Wb-JLd" secondAttribute="bottom" constant="10" id="kbf-5V-kcc"/>
-                    <constraint firstItem="zRR-n5-5a9" firstAttribute="top" secondItem="q2k-Mt-KnC" secondAttribute="bottom" constant="10" id="klx-Jk-Lwb"/>
+                    <constraint firstItem="yfa-lu-8LF" firstAttribute="top" secondItem="Fdq-Ic-xvk" secondAttribute="bottom" constant="10" id="kgE-bu-W5t"/>
                     <constraint firstAttribute="trailing" secondItem="Q8Q-9z-30r" secondAttribute="trailing" constant="15" id="knu-p8-8RH"/>
                     <constraint firstItem="Fdq-Ic-xvk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="lwE-OS-7IE"/>
                     <constraint firstItem="qBy-7O-Yom" firstAttribute="top" secondItem="Q8Q-9z-30r" secondAttribute="bottom" constant="10" id="mW8-Bd-ZyP"/>
                     <constraint firstItem="EWa-Nz-uO1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="miZ-HB-rVq"/>
                     <constraint firstItem="wgW-Wb-JLd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="muf-3C-pnu"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vD8-4a-m1k" secondAttribute="bottom" constant="10" id="nDM-bl-Oyi"/>
                     <constraint firstItem="vin-Er-FkR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="oE0-Qi-QEW"/>
+                    <constraint firstItem="q2k-Mt-KnC" firstAttribute="top" secondItem="yfa-lu-8LF" secondAttribute="bottom" constant="10" id="os5-R5-IwM"/>
                     <constraint firstItem="vD8-4a-m1k" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="q4U-6a-Klw"/>
-                    <constraint firstItem="d75-t6-dr9" firstAttribute="top" secondItem="zRR-n5-5a9" secondAttribute="bottom" constant="10" id="r9s-bV-tVp"/>
+                    <constraint firstAttribute="trailing" secondItem="XCI-wF-1Rv" secondAttribute="trailing" id="s0t-e1-Yup"/>
                     <constraint firstItem="nrE-Kw-C0d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="tMZ-IM-MKz"/>
+                    <constraint firstItem="zRR-n5-5a9" firstAttribute="leading" secondItem="d75-t6-dr9" secondAttribute="leading" id="twE-ge-7TD"/>
                     <constraint firstItem="Fdq-Ic-xvk" firstAttribute="top" secondItem="EWa-Nz-uO1" secondAttribute="bottom" constant="10" id="uPH-l7-XQa"/>
                     <constraint firstItem="EWa-Nz-uO1" firstAttribute="top" secondItem="vin-Er-FkR" secondAttribute="bottom" constant="10" id="uh9-rJ-sDn"/>
+                    <constraint firstItem="yfa-lu-8LF" firstAttribute="trailing" secondItem="q2k-Mt-KnC" secondAttribute="trailing" id="wHY-Hj-Blw"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -186,6 +207,7 @@
                 <outlet property="lbBan" destination="q2k-Mt-KnC" id="dx9-JO-eeU"/>
                 <outlet property="lbDiaChi" destination="nrE-Kw-C0d" id="YME-NM-aMM"/>
                 <outlet property="lbGio" destination="zRR-n5-5a9" id="uaL-mq-Bw9"/>
+                <outlet property="lbMaHoaDon" destination="yfa-lu-8LF" id="Zbv-gS-X4h"/>
                 <outlet property="lbSoDienThoai" destination="vin-Er-FkR" id="JqO-Vc-1L5"/>
                 <outlet property="lbSoNguoi" destination="H8u-8Y-8we" id="qsr-cK-hab"/>
                 <outlet property="lbTenCuaHang" destination="wgW-Wb-JLd" id="pNn-nd-cw2"/>
@@ -193,7 +215,7 @@
                 <outlet property="tableView" destination="Pgm-Vq-lhI" id="Ozr-8J-mfK"/>
                 <outlet property="tableViewHeightConstraint" destination="jAY-qG-VyZ" id="g9s-E8-Cv7"/>
             </connections>
-            <point key="canvasLocation" x="320" y="255.92417061611374"/>
+            <point key="canvasLocation" x="320" y="288.62559241706163"/>
         </tableViewCell>
     </objects>
     <resources>

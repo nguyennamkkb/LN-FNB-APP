@@ -12,7 +12,7 @@ import FittedSheets
 class BanDangPhucVuVC: BaseVC {
     
     
-    @IBOutlet var VACTION: UIView!
+    @IBOutlet weak var vAction: UIView!
     @IBOutlet var bCapNhat: UIButton!
     var actionReload: ClosureAction?
     @IBOutlet var lbSoNguoi: UILabel!
@@ -51,6 +51,7 @@ class BanDangPhucVuVC: BaseVC {
         btnThanhToan.layer.cornerRadius = C.CornerRadius.corner5
         bCapNhat.layer.cornerRadius = C.CornerRadius.corner10
         bCapNhat.isHidden = true
+        vAction.isHidden = true
     }
 
     func deleteOrder(){
@@ -68,6 +69,7 @@ class BanDangPhucVuVC: BaseVC {
         }
     }
     @IBAction func MorePressed(_ sender: Any) {
+        self.setupData()
         let vc = ActionBanDangPhucVuVC()
         vc.actionPhieuBep = {
             if self.listItem.count == 0 {
@@ -99,7 +101,8 @@ class BanDangPhucVuVC: BaseVC {
                 self.item.person = n
                 DispatchQueue.main.async {
                     self.setupData()
-                    self.bCapNhat.isHidden = false
+//                    self.bCapNhat.isHidden = false
+                    self.vAction.isHidden = false
                     self.updateMoney()
                 }
                
@@ -157,7 +160,8 @@ class BanDangPhucVuVC: BaseVC {
                     self.tableView.reloadData()
                 }
                 self.actionReload?()
-                self.bCapNhat.isHidden = true
+//                self.bCapNhat.isHidden = true
+                self.vAction.isHidden = true
                 let vc = AlertVC()
                 vc.bindData(s: "Thành công")
                 vc.modalPresentationStyle = .overFullScreen
@@ -168,9 +172,15 @@ class BanDangPhucVuVC: BaseVC {
         }
     }
     @IBAction func capNhatPressed(_ sender: Any) {
-        bCapNhat.isHidden = true
+//        bCapNhat.isHidden = true
+        vAction.isHidden = true
         updateOrder()
     }
+    @IBAction func huyThayDoiPressed(_ sender: Any) {
+        vAction.isHidden = true
+        self.setupData()
+    }
+    
 }
 extension BanDangPhucVuVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -185,7 +195,8 @@ extension BanDangPhucVuVC: UITableViewDelegate, UITableViewDataSource {
             [weak self] data in
             guard let self = self else {return}
             listItem[indexPath.row] = data
-            self.bCapNhat.isHidden = false
+//            self.bCapNhat.isHidden = false
+            self.vAction.isHidden = false
             self.updateMoney()
         }
         return cell

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import FittedSheets
+import MobileCoreServices
 
 
 typealias ClosureAction = ()->Void
@@ -133,9 +134,9 @@ extension Array {
 
 extension String {
     func removeAccents() -> String {
-            let string = self as NSString
-            let folded = string.folding(options: .diacriticInsensitive, locale: Locale.current)
-            return folded
+        return self.folding(options: .diacriticInsensitive, locale: nil)
+                       .replacingOccurrences(of: "đ", with: "d")
+                       .replacingOccurrences(of: "Đ", with: "D")
         }
     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
@@ -213,8 +214,39 @@ extension UIView {
         self.layer.mask = mask
     }
 }
-
+extension CGImage {
+    func imageSizeInBytes() -> Int {
+        let bytesPerPixel = 4 // Giả sử mỗi điểm ảnh có 4 byte (RGBA)
+        let bytesPerRow = bytesPerPixel * self.width
+        return bytesPerRow * self.height
+    }
+}
 extension UIImage {
+    func reducePixelQuality(quality: CGFloat) -> UIImage? {
+            guard let imageData = self.jpegData(compressionQuality: quality) else { return nil }
+            return UIImage(data: imageData)
+        }
+//    func reducePixelQuality(quality: CGFloat) -> CGImage? {
+//            guard let cgImage = self.cgImage else { return nil }
+//            
+//            let imageData = NSMutableData()
+//            guard let destination = CGImageDestinationCreateWithData(imageData, kUTTypeJPEG, 1, nil) else { return nil }
+//            
+//            let options: [NSString: Any] = [kCGImageDestinationLossyCompressionQuality: quality]
+//            CGImageDestinationAddImage(destination, cgImage, options as CFDictionary)
+//            CGImageDestinationFinalize(destination)
+//            
+//            guard let source = CGImageSourceCreateWithData(imageData as CFData, nil) else { return nil }
+//            
+//            let cgImageOptions: [NSString: Any] = [
+//                kCGImageSourceShouldCache: false,
+//                kCGImageSourceCreateThumbnailFromImageAlways: true,
+//                kCGImageSourceThumbnailMaxPixelSize: max(self.size.width, self.size.height)
+//            ]
+//            
+//            guard let thumbnail = CGImageSourceCreateThumbnailAtIndex(source, 0, cgImageOptions as CFDictionary) else { return nil }
+//            return thumbnail
+//        }
     func resized(toWidth width: CGFloat) -> UIImage {
         let canvasSize = CGSize(width: width, height: CGFloat(ceil(width/size.width * size.height)))
         let format = imageRendererFormat

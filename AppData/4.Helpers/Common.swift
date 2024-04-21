@@ -12,7 +12,7 @@ import func CommonCrypto.CC_MD5
 import typealias CommonCrypto.CC_LONG
 
 class Common {
-    public static var KEY_APP = "50829317681RT3RUH3EZ"
+    public static var KEY_APP = "50829317681RT3RUH3EZASDSC"
     public static var isInternet = false//false bat tinh năng ckeck ẩn menu để false
     public static var isRunningUpOffW = false
     public static var MillisecondsOfDay: Int64 = 86400000 - 1

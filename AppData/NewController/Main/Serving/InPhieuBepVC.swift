@@ -87,13 +87,14 @@ class InPhieuBepVC: BaseVC {
         <<< CommonPrint.removeVietnameseDiacritics(from: "Gio: " + gioIn)
     
         <<< Dividing.`default`()
-        <<< KVItem("Mon", "So luong")
+        <<< KVItem("DV", "So luong")
         <<< setLbItem()
         <<< Dividing.`default`()
         	
         <<~ .layout(.justification(.center))
         <<~ .page(.printAndFeed(lines: 1))
-        <<< CommonPrint.removeVietnameseDiacritics(from: "Ung dung LN FnB")
+        <<< CommonPrint.removeVietnameseDiacritics(from: "quetnhanh.vn")
+        <<< CommonPrint.removeVietnameseDiacritics(from: "Hỗ trợ quản lý miễn phí")
         <<~ .cursor(.lineFeed)
         <<< Command.cursor(.lineFeed)
         <<~ .cursor(.lineFeed)

@@ -27,18 +27,22 @@ class MonAnThemAnhVC: BaseVC {
         bChonAnhKhac.layer.borderWidth = 1
         bChonAnhKhac.layer.borderColor = C.Color.NYellow?.cgColor
         
-        if let url = URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/"+(item.image ?? "anhSanPhamMacDinh")) {
+        if let url = URL(string: ServiceManager.ROOT+"images/viewimage/"+(item.image ?? "anhSanPhamMacDinh")) {
             anhSanPham.loadImageFromUrl(from: url)
         }else {
-            anhSanPham.kf.setImage(with:URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/anhSanPhamMacDinh"))
+            anhSanPham.kf.setImage(with:URL(string: ServiceManager.ROOT+"images/viewimage/anhSanPhamMacDinh"))
         }
     }
     func bindData(e: FProduct){
         item = e
         urlImage = e.image ?? "anhSanPhamMacDinh"
     }
-
+    @IBAction func backPressed(_ sender: Any) {
+        self.onBackNav()
+    }
+    
     @IBAction func chonAnhTuMay(_ sender: Any) {
+        self.showLoading()
         // Tạo một đối tượng UIImagePickerController
         let imagePicker = UIImagePickerController()
         
@@ -52,6 +56,7 @@ class MonAnThemAnhVC: BaseVC {
         imagePicker.delegate = self
         
         // Hiển thị đối tượng UIImagePickerController
+        self.hideLoading()
         present(imagePicker, animated: true, completion: nil)
     }
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

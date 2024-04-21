@@ -58,12 +58,11 @@ class ThemMonAnCell: UITableViewCell {
         tfDescription.text = item.description
         categorySelected = listCategory.first(where: { $0.id == item.category_id }) ?? FCategory()
         lbCategory.text = categorySelected.name ?? "Chọn danh mục"
-//        let url = URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/"+(item.image ?? "anhSanPhamMacDinh"))
 
-        if let url = URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/"+(item.image ?? "anhSanPhamMacDinh")) {
+        if let url = URL(string: ServiceManager.ROOT+"images/viewimage/"+(item.image ?? "anhSanPhamMacDinh")) {
             imgMonAn.loadImageFromUrl(from: url)
         }else {
-            imgMonAn.kf.setImage(with:URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/anhSanPhamMacDinh"))
+            imgMonAn.kf.setImage(with:URL(string: ServiceManager.ROOT+"images/viewimage/anhSanPhamMacDinh"))
         }
     }
     @IBAction func chonDanhMucPressed(_ sender: UIButton) {

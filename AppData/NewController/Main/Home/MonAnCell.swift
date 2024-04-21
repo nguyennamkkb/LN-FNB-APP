@@ -35,7 +35,7 @@ class MonAnCell: UITableViewCell {
         lbGia.text = "\(item.price ?? 0)".currencyFormatting() + "đ"
         lbTenMonAn.text = item.name ?? ""
         self.item.count = item.count ?? 0
-        imgItem.kf.setImage(with:URL(string: "http://14.225.254.151:3457/ln-fnb-api/images/viewimage/"+(item.image ?? "anhSanPhamMacDinh")))
+        imgItem.kf.setImage(with:URL(string: ServiceManager.ROOT+"images/viewimage/"+(item.image ?? "anhSanPhamMacDinh")))
         
         updateUICongTru()
     }

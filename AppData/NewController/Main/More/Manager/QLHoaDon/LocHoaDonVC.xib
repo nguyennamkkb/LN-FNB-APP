@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -19,6 +19,7 @@
             <connections>
                 <outlet property="bXacNhan" destination="f8Q-n7-zxy" id="jeI-gS-oZx"/>
                 <outlet property="tfDenNgay" destination="T68-EX-UcF" id="HDK-lg-KuG"/>
+                <outlet property="tfMaHoaDon" destination="s3J-3e-RJU" id="l9h-eX-jFn"/>
                 <outlet property="tfTuNgay" destination="JJa-j1-BK3" id="CfY-Oj-Keb"/>
                 <outlet property="v1" destination="CQt-vO-QAR" id="aRU-0O-Mai"/>
                 <outlet property="v2" destination="1iO-Um-qfV" id="pfF-tJ-o0P"/>
@@ -162,7 +163,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8Q-n7-zxy">
-                    <rect key="frame" x="15" y="192" width="384" height="44"/>
+                    <rect key="frame" x="15" y="281" width="384" height="44"/>
                     <color key="backgroundColor" name="n yellow"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="5t7-Wz-1ah"/>
@@ -174,20 +175,41 @@
                         <action selector="xacNhanPressed:" destination="-1" eventType="touchUpInside" id="TC4-Ak-3d2"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mã hoá đơn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wd-oQ-LlG">
+                    <rect key="frame" x="15" y="192" width="384" height="19"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" name="n black"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="leading" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s3J-3e-RJU">
+                    <rect key="frame" x="15" y="216" width="384" height="45"/>
+                    <color key="backgroundColor" name="n white"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="2wf-XK-isU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                </textField>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="n wgrey"/>
             <constraints>
+                <constraint firstItem="4Wd-oQ-LlG" firstAttribute="top" secondItem="taT-QK-0J1" secondAttribute="bottom" constant="15" id="2AE-Er-Qd6"/>
                 <constraint firstItem="xrW-op-Ul1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2bH-lX-8wk"/>
                 <constraint firstItem="tyV-h7-65B" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="426-Hh-RID"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Wd-oQ-LlG" secondAttribute="trailing" constant="15" id="4lp-GE-7uZ"/>
                 <constraint firstItem="f8Q-n7-zxy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="ARz-7t-nlR"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xrW-op-Ul1" secondAttribute="trailing" id="HzH-Oi-YsW"/>
-                <constraint firstItem="f8Q-n7-zxy" firstAttribute="top" secondItem="taT-QK-0J1" secondAttribute="bottom" constant="15" id="Q2x-28-QJa"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f8Q-n7-zxy" secondAttribute="trailing" constant="15" id="ZTB-YV-Vof"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="s3J-3e-RJU" secondAttribute="trailing" constant="15" id="bFS-pO-99M"/>
                 <constraint firstItem="xrW-op-Ul1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hBh-88-svO"/>
+                <constraint firstItem="4Wd-oQ-LlG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="hgm-f3-URM"/>
+                <constraint firstItem="s3J-3e-RJU" firstAttribute="top" secondItem="4Wd-oQ-LlG" secondAttribute="bottom" constant="5" id="iRm-GC-Zba"/>
                 <constraint firstItem="tyV-h7-65B" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="iyF-Ni-mGO"/>
+                <constraint firstItem="s3J-3e-RJU" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="mod-cl-g0e"/>
                 <constraint firstItem="tyV-h7-65B" firstAttribute="bottom" secondItem="xrW-op-Ul1" secondAttribute="bottom" id="owJ-MD-Lqd"/>
                 <constraint firstItem="taT-QK-0J1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="qY6-ij-9DN"/>
+                <constraint firstItem="f8Q-n7-zxy" firstAttribute="top" secondItem="s3J-3e-RJU" secondAttribute="bottom" constant="20" id="tBr-hx-orF"/>
                 <constraint firstItem="taT-QK-0J1" firstAttribute="top" secondItem="xrW-op-Ul1" secondAttribute="bottom" constant="10" id="txO-Md-Sm0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tyV-h7-65B" secondAttribute="trailing" id="xSZ-OK-XSF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="taT-QK-0J1" secondAttribute="trailing" constant="15" id="z7N-tO-pkE"/>
@@ -202,6 +224,9 @@
         </namedColor>
         <namedColor name="n wgrey">
             <color red="0.95599997043609619" green="0.95599997043609619" blue="0.95599997043609619" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="n white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="n yellow">
             <color red="0.95200002193450928" green="0.49099999666213989" blue="0.20399999618530273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

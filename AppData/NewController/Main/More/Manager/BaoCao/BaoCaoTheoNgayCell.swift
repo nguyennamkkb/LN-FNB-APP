@@ -88,7 +88,7 @@ class BaoCaoTheoNgayCell: UITableViewCell, ChartViewDelegate {
         guard let tuNgay = tfTuNgay.text else {return}
         guard let denNgay = tfDenNgay.text else {return}
         let tuNgayMilis:Int64 = Common.dateStringToMilis(dateString: tuNgay) ?? 0
-        let denNgayMilis:Int64 = Common.dateStringToMilis(dateString: denNgay) ?? 0 + 86399999
+        let denNgayMilis:Int64 = (Common.dateStringToMilis(dateString: denNgay) ?? 0 ) + 86399999
         layThoiGian?(tuNgayMilis,denNgayMilis,tuNgay, denNgay)
     }
     
@@ -185,8 +185,8 @@ class BaoCaoTheoNgayCell: UITableViewCell, ChartViewDelegate {
         lbTNDoanhThu.text = "Doanh thu: " + "\(tongCK + tongTienMat)".currencyFormatting() + "đ"
         lbTNTienMat.text = "Tiền mặt: " + "\(tongTienMat)".currencyFormatting() + "đ"
         lbTNChuyenKhoan.text = "Chuyển khoản: " + "\(tongCK)".currencyFormatting() + "đ"
-        lbTNHoaDon.text = "Hoá đơn" + "\(rpTheoNgay?.value?.count ?? 0)"
-        lbTNSoKhach.text = "Số khách" + "\(tongKhach)".currencyFormatting()
+        lbTNHoaDon.text = "Hoá đơn:  " + "\(rpTheoNgay?.value?.count ?? 0)"
+        lbTNSoKhach.text = "Số khách: " + "\(tongKhach)".currencyFormatting()
     }
     func setupDataGioDauTIen(){
 

@@ -37,5 +37,6 @@ class FPramUploadImage: Mappable {
         let mili = Common.getMilisecondNow()
         self.cksRequest = Common.MD5(string: Common.KEY_APP+"\(mili)")
         self.timeRequest = mili
+        self.createAt = mili
     }
 }

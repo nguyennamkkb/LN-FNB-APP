@@ -58,6 +58,7 @@ class TableCell: UICollectionViewCell {
     }
     @IBAction func chonBanPressed(_ sender: Any) {
         
+        print(item.status ?? 0)
         switch item.status {
         case 1:
             imgTable.image = tableStatus.getImage(.dangGoiMon)()
@@ -68,11 +69,17 @@ class TableCell: UICollectionViewCell {
             passDataDelete?(indexItem,item)
             return
         case 2:
-            actionBanDangPhucVu?()
+            imgTable.image = tableStatus.getImage(.dangGoiMon)()
+            passDataSelect?(indexItem,item)
             return
+//            actionBanDangPhucVu?()
+//            return
         case 4:
-            actionBanDaDatTruoc?()
+            imgTable.image = tableStatus.getImage(.dangGoiMon)()
+            passDataSelect?(indexItem,item)
             return
+//            actionBanDaDatTruoc?()
+//            return
         default:
             break
         }

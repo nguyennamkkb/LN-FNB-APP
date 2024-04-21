@@ -119,16 +119,16 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
             deleteSelect(item: data)
         }
         cell.actionBanDangPhucVu = {
-            let vc = AlertVC()
-            vc.bindData(s: "Bàn đã có người")
-            vc.modalPresentationStyle = .overFullScreen
-            self.present(vc, animated: false)
+//            let vc = AlertVC()
+//            vc.bindData(s: "Bàn đã có người")
+//            vc.modalPresentationStyle = .overFullScreen
+//            self.present(vc, animated: false)
         }
         cell.actionBanDaDatTruoc = {
-            let vc = AlertVC()
-            vc.bindData(s: "Bàn đã đặt trước")
-            vc.modalPresentationStyle = .overFullScreen
-            self.present(vc, animated: false)
+//            let vc = AlertVC()
+//            vc.bindData(s: "Bàn đã đặt trước")
+//            vc.modalPresentationStyle = .overFullScreen
+//            self.present(vc, animated: false)
         }
         return cell
     }
@@ -177,7 +177,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     }
     
 
-    func getTableEmpty() -> Int {
+    func getTableEmpty() -> Int  {
         let empty = collectionData.filter { e in
             if let status = e.status {
                 return status == 1

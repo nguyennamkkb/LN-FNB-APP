@@ -86,7 +86,10 @@ class ChonMonVC: BaseVC{
     @IBAction func cartPressed(_ sender: Any) {
         dismissKeyboard()
         let vc = MonDaChonVC()
-        guard let soNguoi = tfSoNguoi.text, soNguoi.count != 0, listProductFinal.count > 0  else {return}
+        guard let soNguoi = tfSoNguoi.text, soNguoi.count != 0, listProductFinal.count > 0  else {
+            
+            self.showAlert(message: "Chưa chọn món")
+            return}
         vc.bindData(list: listProductFinal, soNguoi: Int(soNguoi) ?? 0, table: banDaChon)
         self.pushVC(controller: vc )
     }

@@ -19,6 +19,11 @@ class LienHeVC: BaseVC{
     @IBAction func dongPressed(_ sender: Any) {
         self.onBackNav()
     }
+    @IBAction func xemTrangWeb(_ sender: Any) {
+        if let url = URL(string: "https://nguyenluongnam.name.vn/?p=340") {
+            UIApplication.shared.open(url)
+        }
+    }
     
     /*
     // MARK: - Navigation

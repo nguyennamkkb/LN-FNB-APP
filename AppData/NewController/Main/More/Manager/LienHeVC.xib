@@ -27,17 +27,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uKn-vq-qLf">
-                    <rect key="frame" x="16" y="57" width="358" height="298.33333333333331"/>
-                    <string key="text">Ứng dụng quản lý nhà hàng của bạn, giúp bạn nắm bắt mọi thứ trong tầm tay:
-    Tình trạng bàn trống/đang phục vụ/đặt trước: Biết chính xác tình trạng bàn trống, bàn đang phục vụ và bàn đã đặt trước để sắp xếp nhân viên và phục vụ khách hàng một cách hợp lý.     Chọn món dễ dàng: Dễ dàng chọn món, thay đổi món từ thực đơn trực quan     In phiếu bếp, hóa đơn: In phiếu bếp nhanh chóng, chính xác để đảm bảo món ăn được phục vụ đúng giờ. In hóa đơn chuyên nghiệp, đẹp mắt để nâng cao trải nghiệm của khách hàng.     Theo dõi doanh thu: Theo dõi doanh thu theo ngày, tháng, quý, năm để nắm bắt tình hình kinh doanh của nhà hàng và đưa ra các quyết định kinh doanh phù hợp.</string>
+                    <rect key="frame" x="16" y="57" width="358" height="112"/>
+                    <string key="text">Ứng dụng giúp bạn:
+    + Xem tình trạng bàn thời gian thực.     + Chọn/Thay đổi món dễ dàng     + In phiếu bếp, hoá đơn nhanh chóng     + Theo dõi doanh thu theo thời gian để nắm bắt đưa ra các quyết định kinh doanh phù hợp.</string>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
                     <color key="textColor" name="n black"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liên hệ với tôi theo: * Email/Skype: nguyennam.kkb@gmail.com * Website: nguyenluongnam.name.vn" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqm-vP-YBa">
-                    <rect key="frame" x="15" y="371.33333333333331" width="360" height="56"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
-                    <color key="textColor" name="n yellow"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPx-4I-bRA">
@@ -53,19 +47,43 @@
                         <action selector="dongPressed:" destination="-1" eventType="touchUpInside" id="9Em-tc-Ahj"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thông tin chi tiết tại:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="enA-Zh-Y51">
+                    <rect key="frame" x="16" y="179" width="156" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSW-gi-frX">
+                    <rect key="frame" x="173" y="172" width="78" height="35"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Tại đây"/>
+                    <connections>
+                        <action selector="xemTrangWeb:" destination="-1" eventType="touchUpInside" id="7xJ-Kl-fD1"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Liên hệ với tôi theo: * Email/Skype: quetnhanh@gmail.com * Zalo: 0395 362 532" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aqm-vP-YBa">
+                    <rect key="frame" x="15" y="227" width="360" height="56"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                    <color key="textColor" name="n yellow"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Aqm-vP-YBa" secondAttribute="trailing" constant="15" id="0Nk-mk-kXS"/>
+                <constraint firstItem="Aqm-vP-YBa" firstAttribute="top" secondItem="RSW-gi-frX" secondAttribute="bottom" constant="20" id="2bh-gR-c25"/>
                 <constraint firstItem="Aqm-vP-YBa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="5bH-Ir-xFQ"/>
                 <constraint firstAttribute="trailing" secondItem="uKn-vq-qLf" secondAttribute="trailing" constant="16" id="6cM-aF-42p"/>
+                <constraint firstItem="RSW-gi-frX" firstAttribute="leading" secondItem="enA-Zh-Y51" secondAttribute="trailing" constant="1" id="Aww-ep-A8N"/>
                 <constraint firstItem="fPx-4I-bRA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="BRf-Oa-7BT"/>
+                <constraint firstItem="enA-Zh-Y51" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="BZZ-ea-qv5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fPx-4I-bRA" secondAttribute="bottom" constant="5" id="OHX-FF-gsU"/>
                 <constraint firstItem="uKn-vq-qLf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Ttd-Fi-h53"/>
+                <constraint firstItem="RSW-gi-frX" firstAttribute="centerY" secondItem="enA-Zh-Y51" secondAttribute="centerY" id="cap-Tq-wae"/>
+                <constraint firstItem="enA-Zh-Y51" firstAttribute="top" secondItem="uKn-vq-qLf" secondAttribute="bottom" constant="10" id="hmJ-Ch-lVt"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fPx-4I-bRA" secondAttribute="trailing" constant="15" id="nKn-c6-b3g"/>
                 <constraint firstItem="uKn-vq-qLf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="rBC-ZL-COS"/>
-                <constraint firstItem="Aqm-vP-YBa" firstAttribute="top" secondItem="uKn-vq-qLf" secondAttribute="bottom" constant="16" id="vlq-Ch-PSh"/>
             </constraints>
             <point key="canvasLocation" x="-16.030534351145036" y="-11.267605633802818"/>
         </view>

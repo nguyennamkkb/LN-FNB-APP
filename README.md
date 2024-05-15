@@ -1,5 +1,5 @@
 # QFnB - Hỗ trợ quản lý Nhà hàng, quán ăn nhỏ miễn phí
-[Hình ảnh của ứng dụng](https://drive.google.com/drive/folders/1-B6Grujemh3SQk8aHv67V_avWw1qrJ2S?usp=sharing)
+[Hình ảnh của ứng dụng](https://drive.google.com/drive/folders/1-46VXQOSnBAKWrug-P49ClVqGLDys4Xo?usp=sharing)
 
 # Chức năng
 1. Quản lý danh mục và món ăn, kèm hình ảnh
